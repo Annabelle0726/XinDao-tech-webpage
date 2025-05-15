@@ -50,7 +50,7 @@ section {
 }
 
 .section-header h2 {
-    font-size: 13px;
+    font-size: 2rem;
     letter-spacing: 1px;
     font-weight: 700;
     margin: 0;
@@ -61,9 +61,9 @@ section {
 .section-header p {
     margin: 10px 0 0 0;
     padding: 0;
-    font-size: 35px;
+    font-size: 1rem;
     line-height: 42px;
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: #012970;
 }
 
@@ -568,14 +568,14 @@ section {
 }
 
 .about h3 {
-    font-size: 14px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #4154f1;
     text-transform: uppercase;
 }
 
 .about h2 {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: 700;
     color: #012970;
 }
@@ -630,7 +630,7 @@ section {
 }
 
 .values .box h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #012970;
     font-weight: 700;
     margin-bottom: 18px;
@@ -749,7 +749,7 @@ section {
 }
 
 .features .feature-box h3 {
-    font-size: 18px;
+    font-size: 1.5rem;
     color: #012970;
     font-weight: 700;
     margin: 0;
@@ -1196,7 +1196,7 @@ section {
 .contact .info-box {
     color: #444444;
     background: #fafbff;
-    padding: 30px;
+    padding: 0 20px;
 }
 
 .contact .info-box i {
