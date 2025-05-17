@@ -191,13 +191,18 @@ section {
     margin-right: 6px;
 }
 
+
 .header .logo span {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+.header .logo span,
+.footer .footer-top .footer-info .logo span {
+    font-weight: 650;
     letter-spacing: 1px;
     color: #012970;
-    font-family: "Nunito", sans-serif;
-    margin-top: 3px;
+    margin-top: -3px;
 }
 
 /*--------------------------------------------------------------
@@ -457,7 +462,7 @@ section {
 
 .hero h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 700;
     color: #012970;
 }
@@ -465,7 +470,7 @@ section {
 .hero h2 {
     color: #444444;
     margin: 15px 0 0 0;
-    font-size: 26px;
+    font-size: 1.5rem;
 }
 
 .hero .btn-get-started {
@@ -528,11 +533,11 @@ section {
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 1.5rem;
     }
 
     .hero h2 {
-        font-size: 24px;
+        font-size: 1rem;
     }
 
     .hero .hero-img img {
@@ -575,7 +580,7 @@ section {
 }
 
 .about h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: #012970;
 }
@@ -602,13 +607,13 @@ section {
     letter-spacing: 1px;
 }
 
-.about .btn-read-more i {
+.btn-read-more i {
     margin-left: 5px;
     font-size: 18px;
     transition: 0.3s;
 }
 
-.about .btn-read-more:hover i {
+.btn-read-more:hover i {
     transform: translateX(5px);
 }
 
@@ -654,7 +659,7 @@ section {
 .counts .count-box {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 15px 25px;
     width: 100%;
     background: #fff;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
@@ -728,7 +733,7 @@ section {
 .counts .count-box.active {
     background: #4154f1;
     color: #fff;
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 .counts .count-box.active h3,
@@ -906,7 +911,7 @@ section {
     font-size: 18px;
 }
 
-/* Sky Blue - MOM */
+/* Sky Blue - SPC */
 .services .service-box.sky-blue {
     border-bottom: 3px solid #2db6fa;
 }
@@ -960,7 +965,7 @@ section {
     background: #17a2b8;
 }
 
-/* Steel Blue - WMS */
+/* Steel Blue - EAM */
 .services .service-box.steel-blue {
     border-bottom: 3px solid #4682b4;
 }
@@ -996,7 +1001,7 @@ section {
     background: #5bc0de;
 }
 
-/* Powder Blue - ERP */
+/* Powder Blue - EMS */
 .services .service-box.powder-blue {
     border-bottom: 3px solid #7ec8e3;
 }
@@ -1091,7 +1096,7 @@ section {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/team-shape.svg) no-repeat center bottom;
+
     background-size: contain;
     z-index: 1;
 }
@@ -1356,19 +1361,13 @@ section {
 }
 
 .footer .footer-top .footer-info .logo span {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #012970;
-    font-family: "Nunito", sans-serif;
-    margin-top: 3px;
+    font-size: 1rem;
 }
 
 .footer .footer-top .footer-info p {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Nunito", sans-serif;
 }
 
 .footer .footer-top .social-links a {
@@ -1385,7 +1384,7 @@ section {
 }
 
 .footer .footer-top h4 {
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #012970;
     text-transform: uppercase;
