@@ -1,0 +1,74 @@
+.accordion-collapse {
+    border: 0;
+}
+
+.accordion-button {
+    padding: 15px 15px 20px 0;
+    font-weight: 600;
+    border: 0;
+    font-size: 18px;
+    color: #444444;
+    text-align: left;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: none;
+    color: #4154f1;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 0 0 25px 0;
+    border: 0;
+}
+
+#support-sidebar {
+    top: 40%;
+    right: 20px;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    /*border: 1px solid #ddd;*/
+    padding: 12px 10px;
+    border-radius: 10px;
+    /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);*/
+    max-width: 180px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.support-links li {
+    margin-bottom: 10px;
+}
+
+.support-links li a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.support-links li a:hover {
+    background-color: rgba(65, 84, 241, 0.1);
+    box-shadow: 0 0 8px rgba(65, 84, 241, 0.4);
+    color: #0b5ed7;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}

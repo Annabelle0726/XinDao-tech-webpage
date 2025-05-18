@@ -31,7 +31,7 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="index.html">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -41,7 +41,6 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
         <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
             <span>芯导软件</span>
@@ -50,19 +49,87 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto active" href="./index.html">首页</a></li>
-                <li><a class="nav-link scrollto" href="./services.html">产品中心</a></li>
-                <li><a class="nav-link scrollto" href="consulting.html">诊断服务</a></li>
-                <li><a class="nav-link scrollto" href="./cases.html">客户案例</a></li>
-                <li><a class="nav-link scrollto" href="./about.html">关于我们</a></li>
-                <li><a class="nav-link scrollto" href="./contact.html">联系我们</a></li>
+                <li><a class="nav-link scrollto" href="./dx-services.html">数字化转型</a></li>
 
+                <!-- 产品中心菜单触发 -->
+                <li class="dropdown megamenu position-static" id="productCenterDropdown">
+                    <a href="services.html"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
+                </li>
+
+                <li><a class="nav-link scrollto" href="consulting.html">诊断咨询</a></li>
+                <li><a class="nav-link scrollto" href="./about.html">关于我们</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <!-- .navbar -->
-
     </div>
-</header><!-- End Header -->
+
+    <!-- head width megamenu -->
+    <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
+        <div class="container py-4">
+            <div class="row" style="margin: 0 !important;">
+
+                <!-- MES -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/mes.html" class="text-dark fw-bold">
+                        <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
+                    <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+                </div>
+
+                <!-- EAM -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/eam.html" class="text-dark fw-bold">
+                        <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
+                    <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
+                </div>
+
+                <!-- LIMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/lims.html" class="text-dark fw-bold">
+                        <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
+                    <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
+                </div>
+
+                <!-- QMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/qms.html" class="text-dark fw-bold">
+                        <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
+                    <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
+                </div>
+
+                <!-- EMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/ems.html" class="text-dark fw-bold">
+                        <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
+                    <p class="text-muted">监控能源使用，提升能效水平，支持“双碳”目标落地</p>
+                </div>
+
+                <!--                SPC-->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/spc.html" class="text-dark fw-bold">
+                        <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
+                    <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
+                </div>
+
+                <!-- TMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/tms.html" class="text-dark fw-bold">
+                        <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
+                    <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
+                </div>
+
+                <!-- BI -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/bi.html" class="text-dark fw-bold">
+                        <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
+                    <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
@@ -352,16 +419,7 @@
                 <!-- SPC -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-box sky-blue">
-                        <svg t="1747467762066" class="icon" viewBox="0 0 1041 1024" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" p-id="5230"
-                             data-spm-anchor-id="a313x.search_index.0.i10.32063a81ByRdwN" width="32" height="32">
-                            <path d="M477.586585 592.56225V69.761872c-30.210036 0-59.760803 2.813743-88.411 8.19131C168.510038 119.400955 1.546912 313.101105 1.546912 545.801544c0 262.906167 213.133506 476.035364 476.039673 476.035364 221.333434 0 407.376583-151.045871 460.682581-355.690749 4.946673-18.96799 8.785945-48.639408 11.384241-73.583909H477.586585z"
-                                  fill="#1196db" p-id="5231" data-spm-anchor-id="a313x.search_index.0.i7.32063a81ByRdwN"
-                                  class=""></path>
-                            <path d="M549.231467 38.013541v482.063582h460.290467c0-0.555854 0.017236-1.111709 0.017236-1.667563 0.004309-258.679089-204.269999-469.61934-460.307703-480.396019z"
-                                  fill="#99d1ee" p-id="5232" data-spm-anchor-id="a313x.search_index.0.i9.32063a81ByRdwN"
-                                  class="selected"></path>
-                        </svg>
+                        <i class="bi bi-bar-chart-line icon"></i>
                         <h3>SPC统计过程控制</h3>
                         <p>通过实时控制图和趋势分析，发现过程波动异常，降低质量风险并持续改进</p>
                         <a href="#" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
@@ -431,7 +489,7 @@
                 <div class="col-lg-3 col-6 footer-links text-start">
                     <h4>核心产品与服务<br><small class="text-muted">PRODUCTS & SERVICES</small></h4>
                     <ul class="list-unstyled ps-0">
-                        <li><a href="services/dx-services.html"><i
+                        <li><a href="dx-services.html"><i
                                 class="bi bi-arrow-right-circle text-primary me-1"></i>中⼩企业数字化转型服务</a></li>
                         <li><a href="services/mes.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>MES
                             生产制造系统</a></li>
@@ -445,7 +503,7 @@
                             能源管理系统</a></li>
                         <li><a href="services/spc.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>SPC
                             统计过程控制系统</a></li>
-                        <li><a href="services/consulting.html"><i
+                        <li><a href="consulting.html"><i
                                 class="bi bi-arrow-right-circle text-primary me-1"></i>诊断咨询</a></li>
                     </ul>
                 </div>
