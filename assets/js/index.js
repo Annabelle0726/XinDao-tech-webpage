@@ -20,3 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.getElementById("loadMoreBtn").addEventListener("click", function () {
+    document.querySelectorAll(".more-item").forEach(el => el.classList.remove("d-none"));
+    this.style.display = "none"; // 隐藏按钮
+});

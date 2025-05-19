@@ -10,28 +10,28 @@
 }
 
 .contact .info-box i {
-    font-size: 38px;
+    /*font-size: 1rem;*/
     line-height: 0;
     color: #4154f1;
 }
 
 .contact .info-box h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #012970;
-    font-weight: 700;
+    font-weight: 600;
     margin: 20px 0 10px 0;
 }
 
 .contact .info-box p {
     padding: 0;
     line-height: 24px;
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 0;
 }
 
 .contact .php-email-form {
     background: #fafbff;
-    padding: 30px;
+    padding: 1rem;
     height: 100%;
 }
 
@@ -77,10 +77,9 @@
 }
 
 .contact .php-email-form input, .contact .php-email-form textarea {
-    border-radius: 0;
     box-shadow: none;
     font-size: 14px;
-    border-radius: 0;
+    border-radius: 4px;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
@@ -94,6 +93,8 @@
 .contact .php-email-form textarea {
     padding: 12px 15px;
 }
+
+
 
 .contact .php-email-form button[type="submit"] {
     background: #4154f1;

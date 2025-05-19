@@ -31,7 +31,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="support.html">
+  <link rel="stylesheet" href="assets/css/support.css">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -53,7 +53,7 @@
 
         <!-- 产品中心菜单触发 -->
         <li class="dropdown megamenu position-static" id="productCenterDropdown">
-          <a href="services.html"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
+          <a href="products.html"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
         </li>
 
         <li><a class="nav-link scrollto" href="consulting.html">诊断咨询</a></li>
@@ -491,20 +491,20 @@
           <div class="vr h-100 mx-auto" style="width:1px; background-color:#ccc;"></div>
         </div>
         <!-- 友情链接 -->
+
+        <!-- 友情链接 -->
         <div class="col-lg-2 col-6 footer-links">
           <h4>快速链接<br><small class="text-muted">QUICK LINKS</small></h4>
           <ul>
             <li><a href="index.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 首页</a>
             </li>
-            <li><a href="services.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
+            <li><a href="products.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
             </a></li>
-            <li><a href="consulting.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 诊断服务
-            </a></li>
-            <li><a href="cases.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 客户案例
-            </a></li>
+
             <li><a href="about.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 关于我们</a>
             </li>
-
+            <li><a href="about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 联系我们</a>
+            </li>
             <li><a href="support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 常见问题</a>
             </li>
             <li><a href="support.html#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 服务条款</a>
@@ -535,8 +535,11 @@
               能源管理系统</a></li>
             <li><a href="services/spc.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>SPC
               统计过程控制系统</a></li>
-            <li><a href="consulting.html"><i
-                    class="bi bi-arrow-right-circle text-primary me-1"></i>诊断咨询</a></li>
+            <li><a href="consulting.html#digital-factory"><i
+                    class="bi bi-arrow-right-circle text-primary me-1"></i>数字化工厂的诊断咨询</a></li>
+
+            <li><a href="consulting.html#lean-consulting"><i
+                    class="bi bi-arrow-right-circle text-primary me-1"></i>工厂的精益生产咨询</a></li>
           </ul>
         </div>
 
@@ -562,9 +565,18 @@
 
 </footer>
 <!-- End Footer -->
+<div id="support-sidebar" class="position-fixed">
+  <ul class="support-links list-unstyled">
+    <li><a href="#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 常见问题</a></li>
+    <li><a href="#aftersales"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 售后服务</a></li>
+    <li><a href="#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 服务条款</a></li>
+    <li><a href="#privacy"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 隐私政策</a></li>
+  </ul>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+</div>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
