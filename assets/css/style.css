@@ -14,6 +14,7 @@
 
 
 body {
+    user-select: none;
     font-family: "Source Han Sans SC", "Alibaba PuHuiTi", "Noto Sans", "Roboto", sans-serif;
     color: #2A2A2A;
     -webkit-font-smoothing: antialiased;
@@ -39,18 +40,18 @@ h1, h2, h3, h4, h5, h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-    padding: 60px 0;
+    padding: 45px 0;
     overflow: hidden;
 }
 
 .section-header {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     margin-top: 30px;
 }
 
 .section-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
     font-weight: 700;
     margin: 0;
@@ -61,7 +62,7 @@ section {
 .section-header p {
     margin: 10px 0 0 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 42px;
     color: #012970;
 }
@@ -124,6 +125,73 @@ section {
     content: "/";
 }
 
+/* -------------------------------------------
+# img
+--------------------------------------------- */
+img.img-fluid {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)
+}
+
+
+/*--------------------------------------------------
+# btn
+---------------------------------------------------*/
+
+
+.btn-read-more {
+    position: relative;
+    overflow: hidden;
+    padding: 14px 38px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #4154f1, #6370ff);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(65, 84, 241, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.4s ease;
+    font-weight: 600;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /*backdrop-filter: blur(10px);*/
+}
+
+.btn-read-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.btn-read-more:hover::before {
+    left: 130%;
+}
+
+.btn-read-more:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(65, 84, 241, 0.4);
+    color: #fff
+}
+
+.btn-read-more span {
+    font-family: var(--font-btn-cn), var(--font-btn-en), sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+.btn-read-more i {
+    margin-left: 6px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-read-more:hover i {
+    transform: translateX(6px);
+}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -695,8 +763,9 @@ header.header.fixed-top {
     font-size: 22px;
     box-shadow: 0 6px 20px rgba(65, 84, 241, 0.4);
     transition: all 0.3s ease;
-    right: -5px;
-    bottom: -135px
+    right: 5px;
+    bottom:
+            35px
 }
 
 .back-to-top i {
@@ -715,9 +784,6 @@ header.header.fixed-top {
     opacity: 1;
 }
 
-.back-to-top {
-
-}
 
 .back-to-top:hover {
     transform: translateY(-4px);

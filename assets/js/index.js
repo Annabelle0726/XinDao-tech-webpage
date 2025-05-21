@@ -1,25 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
     const boxes = document.querySelectorAll(".count-box");
     const bgImg = document.getElementById("counts-bg-img");
+    const root = document.body; // 或 document.querySelector('.counts')
 
     boxes.forEach(box => {
         box.addEventListener("click", function () {
-            // 切换 active 样式
+            // 切换 active
             boxes.forEach(b => b.classList.remove("active"));
             this.classList.add("active");
 
-            // 切换背景图
+            // 背景图片切换
             const newBg = this.getAttribute("data-bg");
             if (bgImg.src !== newBg) {
                 bgImg.style.opacity = 0;
                 setTimeout(() => {
                     bgImg.src = newBg;
                     bgImg.style.opacity = 1;
-                }, 100);
+                }, 170);
+            }
+
+            // 设置阴影类型（反差原则）
+            const bgType = this.getAttribute("data-bg-type");
+            if (bgType === "dark") {
+                root.classList.add("shadow-light");
+                root.classList.remove("shadow-dark");
+            } else {
+                root.classList.add("shadow-dark");
+                root.classList.remove("shadow-light");
             }
         });
     });
 });
+
 
 document.getElementById("loadMoreBtn").addEventListener("click", function () {
     const hiddenItems = document.querySelectorAll(".more-item");
@@ -57,4 +69,12 @@ VANTA.NET({
     points: 12.0,
     maxDistance: 20.0,
     spacing: 18.0
+});
+
+new Typed("#typed", {
+    strings: ["芯导数字化系统", "连接数据 驱动智能", "数字化一站式解决方案"],
+    typeSpeed: 120,
+    backSpeed: 100,
+    backDelay: 1500,
+    loop: true
 });

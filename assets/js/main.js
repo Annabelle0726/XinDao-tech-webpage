@@ -221,9 +221,6 @@
 
 // NavBar
 
-
-
-
 const dropdown = document.getElementById('productCenterDropdown');
 const megamenu = document.getElementById('megamenuPanel');
 
