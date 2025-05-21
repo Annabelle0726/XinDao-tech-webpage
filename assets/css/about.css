@@ -1,3 +1,149 @@
+/*---------------------------
+hero
+-----------------------------*/
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*z-index: 1;*/
+    opacity: 0.3;
+    pointer-events: none; /* 不能响应鼠标事件 */
+    z-index: 0;
+    transition: all 2.5s ease;
+}
+
+.hero-section:hover #particles-js {
+    /*box-shadow: 0 0 12px #00c2ff;*/
+    /*background-color: rgba(0, 194, 255, 0.2);*/
+    opacity: 1;
+    transform: scale(1.15);
+    border-color: #00c2ff;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 80, 160, 0.4); /* 亮一点的科技蓝遮罩 */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 24, 64, 0.65); /* 科技蓝遮罩 */
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0,123,255,0.65), transparent 60%);
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: url('assets/img/about/波浪能.svg') no-repeat center bottom;
+    background-size: cover;
+    z-index: 2;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.lead {
+    color: #d0e6ff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.highlight {
+    color: #00c2ff;
+    font-weight: 600;
+}
+
+.bounce-hover {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.bounce-hover:hover {
+    animation: bounceY 0.6s ease-in-out;
+}
+
+@keyframes bounceY {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    60%  { transform: translateY(0); }
+    80%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.btn-custom {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #00c2ff;
+    box-shadow: 0 0 10px #00c2ff;
+    color: #fff;
+}
+
+/*-------------------------------------
+# about
+---------------------------------------*/
+
+#about p {
+    /*color: #111;*/
+    text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    font-size: 0.9rem;
+    /*line-height: 1.75;*/
+}
+
+.about .container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    /*padding: 2rem 2rem;*/
+}
+
+.section-divider {
+    height: 80px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f7fc 100%);
+}
+
 
 /*--------------------------------------------------------------
 # Features
@@ -5,14 +151,21 @@
 .features .feature-box {
     padding: 24px 20px;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-    transition: 0.3s;
     height: 100%;
+    /*background-color: #ffffff;*/
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
+
+/*.features .feature-box:hover {*/
+/*    transform: translateY(-6px);*/
+/*    box-shadow: 0 8px 24px rgba(0, 128, 255, 0.1);*/
+/*}*/
 
 .features .feature-box h6 {
     font-size: 1.2rem;
     color: #012970;
-    font-weight: 500;
+    font-weight: 550;
     margin: 0;
 }
 
@@ -35,7 +188,7 @@
     margin-top: 120px;
 }
 
-.features .feature-tabs h3 {
+h3 {
     color: #012970;
     font-weight: 700;
     font-size: 32px;
@@ -54,7 +207,6 @@
 
 .features .feature-tabs .nav-link {
     background: none;
-    text-transform: uppercase;
     font-size: 15px;
     font-weight: 600;
     color: #012970;
@@ -85,15 +237,17 @@
 }
 
 .features .feature-icons {
-    margin-top: 120px;
+    margin-top: 50px;
+    border-radius: 12px;
 }
 
 .features .feature-icons h3 {
+    font-size: 36px;
+    font-weight: 700;
     color: #012970;
-    font-weight: 650;
-    font-size: 1.25rem;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
@@ -107,7 +261,7 @@
 }
 
 .features .feature-icons .content .icon-box h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 650;
     margin: 0 0 10px 0;
     color: #012970;
@@ -124,3 +278,12 @@
     font-size: 15px;
     color: #848484;
 }
+
+.icon-rounded {
+    background-color: transparent !important;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+

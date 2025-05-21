@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 .team {
     background: #fff;
-    padding: 60px 0;
+    padding: 15px 0;
 }
 
 .team .member {
@@ -19,6 +19,8 @@
 .team .member .member-img {
     position: relative;
     overflow: hidden;
+    height: 200px;
+    object-fit: contain;
 }
 
 .team .member .member-img:after {
@@ -68,22 +70,22 @@
 .team .member .member-info h4 {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 18px;
     color: #012970;
 }
 
 .team .member .member-info span {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #aaaaaa;
 }
 
 .team .member .member-info p {
     font-style: italic;
-    font-size: 14px;
+    font-size: 13px;
     padding-top: 15px;
-    line-height: 26px;
+    line-height: 22px;
     color: #5e5e5e;
 }
 

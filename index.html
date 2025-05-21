@@ -31,9 +31,15 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/index.css">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
 </head>
 
 <body>
@@ -132,7 +138,8 @@
 <!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center">
+<section id="hero" class="hero d-flex align-items-center" style="position: relative; overflow: hidden;">
+    <div id="hero-bg" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div>
 
     <div class="container">
         <div class="row">
@@ -210,7 +217,7 @@
                 </div>
 
                 <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="assets/img/about.jpeg" class="img-fluid" alt="">
+                    <img src="assets/img/index/about.jpeg" class="img-fluid" alt="">
                 </div>
 
             </div>
@@ -314,7 +321,7 @@
 
                 <div class="col-lg-4">
                     <div class="box" data-aos="fade-up" data-aos-delay="100">
-                        <img src="assets/img/values-1.png" class="img-fluid" alt="">
+                        <img src="assets/img/index/values-1.png" class="img-fluid" alt="">
                         <h3>深耕制造现场</h3>
                         <p>
                             我们专注于制造业现场的工艺流程、质量管理与车间执行，直击实际痛点，打造务实高效的数字化系统，避免“空中楼阁”式方案。</p>
@@ -323,7 +330,7 @@
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="box" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/img/values-2.png" class="img-fluid" alt="">
+                        <img src="assets/img/index/values-2.png" class="img-fluid" alt="">
                         <h3>一体化平台架构</h3>
                         <p>
                             覆盖MES、LIMS、QMS等系统，构建统一数据底座与操作体验，支持跨系统协同与智能化分析，助力中小企业实现稳步转型。</p>
@@ -332,7 +339,7 @@
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="box" data-aos="fade-up" data-aos-delay="300">
-                        <img src="assets/img/values-3.png" class="img-fluid" alt="">
+                        <img src="assets/img/index/values-3.png" class="img-fluid" alt="">
                         <h3>高效部署与灵活定制</h3>
                         <p>
                             采用模块化设计与可配置架构，实现快速上线与个性化适配，满足不同类型企业、不同发展阶段的数字化需求。</p>
@@ -357,7 +364,7 @@
 
 
     <!-- ======= Product & Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services shadow">
         <div class="container" data-aos="fade-up">
             <header class="section-header">
                 <h2>信息化系统</h2>
@@ -383,7 +390,8 @@
                         <i class="bi bi-tools icon"></i>
                         <h3>EAM设备资产管理系统</h3>
                         <p>统一管理设备全生命周期，支持维保计划、故障预警与资产效能分析</p>
-                        <a href="services/eam.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/eam.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -393,7 +401,8 @@
                         <i class="bi bi-file-earmark-text icon"></i>
                         <h3>LIMS实验室信息管理系统</h3>
                         <p>覆盖样本流转、检验执行、数据分析，实现实验室流程自动化与质量追溯</p>
-                        <a href="services/lims.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/lims.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -403,7 +412,8 @@
                         <i class="bi bi-shield-check icon"></i>
                         <h3>QMS质量管理系统</h3>
                         <p>构建覆盖全流程的质量标准体系，实现异常监控、闭环整改和合规可追溯</p>
-                        <a href="services/qms.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/qms.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -413,7 +423,8 @@
                         <i class="bi bi-lightning-charge icon"></i>
                         <h3>EMS能源管理系统</h3>
                         <p>监控企业能耗流向，支持碳排分析、能效对标与节能优化，助力绿色制造</p>
-                        <a href="services/ems.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/ems.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -423,7 +434,8 @@
                         <i class="bi bi-bar-chart-line icon"></i>
                         <h3>SPC统计过程控制</h3>
                         <p>通过实时控制图和趋势分析，发现过程波动异常，降低质量风险并持续改进</p>
-                        <a href="services/spc.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/spc.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -431,30 +443,37 @@
 
             <!--            hidden system load more -->
 
-            <div class="row gy-4 more-item d-none">
+            <div class="row gy-4 more-item mt-3 d-none">
                 <!-- TMS -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-box dark-blue">
                         <i class="bi bi-truck icon"></i>
                         <h3>TMS运输管理系统</h3>
                         <p>支持运输任务调度、在途跟踪、运输费用控制与多承运商协同，优化物流效率与成本控制。</p>
-                        <a href="services/tms.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
+                        <a href="services/tms.html" class="read-more"><span>了解更多</span> <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
-<!--                BI-->
+                <!--                BI-->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-box deep-blue">
-                    <i class="bi bi-pie-chart icon"></i>
-                    <h3>BI商业智能分析</h3>
-                    <p>整合多系统数据源，通过可视化仪表板与分析模型，驱动管理决策与业务洞察。</p>
-                    <a href="services/bi.html" class="read-more"><span>了解更多</span> <i class="bi bi-arrow-right"></i></a>
-                </div>
+                    <div class="service-box deep-blue">
+                        <i class="bi bi-pie-chart icon"></i>
+                        <h3>BI商业智能分析</h3>
+                        <p>整合多系统数据源，通过可视化仪表板与分析模型，驱动管理决策与业务洞察。</p>
+                        <a href="services/bi.html" class="read-more"><span>了解更多</span>
+                            <i class="bi bi-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="text-center">
-                <button id="loadMoreBtn" class="cta-btn mt-4">查看更多系统</button>
+            <div class="text-start">
+                <button id="loadMoreBtn" class="load-more-btn d-flex justify-content-center align-items-center">
+                    <i id="loadMoreIcon" class="bi bi-plus-circle me-2"></i>
+                    <span id="loadMoreText">查看更多系统</span>
+                </button>
             </div>
+
+
         </div>
     </section>
 
@@ -482,7 +501,7 @@
 
                 </div>
                 <div class="col-lg-1 d-none d-lg-block">
-                    <div class="vr h-100 mx-auto" style="width:1px; background-color:#ccc;"></div>
+                    <div class="vr h-100 mx-auto"></div>
                 </div>
                 <!-- 友情链接 -->
                 <div class="col-lg-2 col-6 footer-links">

@@ -218,15 +218,20 @@
 
 })();
 
+
+// NavBar
+
+
+
+
 const dropdown = document.getElementById('productCenterDropdown');
 const megamenu = document.getElementById('megamenuPanel');
 
-// 显示
+
 dropdown.addEventListener('mouseenter', () => {
     megamenu.style.display = 'block';
 });
 
-// 隐藏
 dropdown.addEventListener('mouseleave', () => {
     // 延迟关闭给用户一点时间移过去
     setTimeout(() => {
@@ -236,7 +241,6 @@ dropdown.addEventListener('mouseleave', () => {
     }, 200);
 });
 
-// 如果鼠标移出 megamenu 本体，也关闭
 megamenu.addEventListener('mouseleave', () => {
     megamenu.style.display = 'none';
 });
@@ -245,3 +249,4 @@ megamenu.addEventListener('mouseleave', () => {
 megamenu.addEventListener('mouseenter', () => {
     megamenu.style.display = 'block';
 });
+

@@ -38,12 +38,19 @@
     <link rel="stylesheet" href="assets/css/about.css">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
+    <script src="assets/js/transparent-nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js "></script>
+
 </head>
 
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+<!-- ======= Nav & Header ======= -->
+<header id="header" class="header transparent fixed-top ">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
@@ -135,100 +142,290 @@
     </div>
 </header>
 
-<!-- ======= Features Section ======= -->
-<section id="features" class="features ">
 
-    <!-- Feature Icons：服务流程图 -->
-    <div class="row feature-icons" data-aos="fade-up">
-        <h3>我们的服务流程，让系统真正落地</h3>
-        <div class="row">
-            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-                <img src="https://web-assets.bcg.com/dims4/default/84c4b97/2147483647/strip/true/crop/1444x1625+722+0/resize/320x360!/format/webp/quality/90/?url=http%3A%2F%2Fboston-consulting-group-brightspot.s3.amazonaws.com%2Fa6%2Fa2%2Fe36f021841ef9d69c6e8db069d6b%2Fmanufacturing-overview-hero-rectangle.jpg"
-                     class="img-fluid p-5" alt="">
+<section class="hero-section text-white d-flex align-items-center position-relative shadow"
+         style="background: linear-gradient(rgba(0, 80, 160, 0.6), rgba(0, 80, 160, 0.4)),
+         url('https://britenet.eu/content/uploads/2024/02/65ba4e28ed800ea87dbafba6_Digital-transformation.jpg')
+         center center / cover no-repeat; height: 100vh; font-family: 'Space Grotesk', sans-serif;">
+    <div id="particles-js"></div>
+    <div class="container text-center position-relative" style="z-index: 1;" data-aos="fade-up">
+
+        <h1 class="display-4 fw-bold mb-5">关于我们</h1>
+
+        <p class="lead m-3 lead" style="color: #d6e4ff; font-weight: 600">打造值得信赖的工业数字化合作伙伴</p>
+
+        <p class="h5 m-2">
+            <span class="text-light" style="color: #afc9f9;">专注于：</span>
+            <span id="typed-text" class="text-info highlight"></span>
+        </p>
+
+
+        <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mt-5">
+
+            <p class="m-0" style="color: #ffffff; font-weight: 600;">
+                已为超过 <span class="fw-bold" style="color: #00e3ff;">100+</span> 家制造企业提供数字化转型方案
+            </p>
+            <a href="#about" class="btn btn-custom text-white btn-lg">
+                了解我们的故事 &nbsp; &nbsp;
+                <i class="bi bi-chevron-double-down bounce-hover"
+                   style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.8)"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div style="background: linear-gradient(to top,
+  #0077b6 0%, #00b4d8 50%, #90e0ef 100%);
+width: 100%;
+height:1.5vh; margin-top: -3px"></div>
+
+<section id="about" class="about"
+         style="background: linear-gradient(
+         to bottom, #0077b6 0%, #00b4d8 15%, #90e0ef 30%, #caf0f8 40%, #ffffff 100%);">
+    <div class="container " data-aos="fade-up">
+
+        <header class="section-header text-center p-3 mt-5">
+
+            <h2 class="m-3">芯导软件（江苏）有限公司</h2>
+            <p>深耕工业软件，赋能智能制造</p>
+        </header>
+        <div class="row align-items-center">
+            <!-- 左侧文字 -->
+            <div class="col-lg-6 mb-lg-0">
+                <div class="p-3">
+                    <div class="card-body">
+                        <p>
+                            &emsp;&emsp;芯导软件（江苏）有限公司成立于 2023 年 5 月，注册资本 1000
+                            万元，位于江苏省南通市紫琅科技城。公司专注于工业软件开发与制造企业数字化转型咨询，
+                            致力于通过技术创新与行业深耕，助力客户构建智能制造核心能力
+                        </p>
+                        <p>
+                            &emsp;&emsp;公司目前拥有 22
+                            名员工，核心团队来自知名工业软件企业，涵盖系统架构、制造流程、质量控制、项目管理等多个领域。
+                            主营业务包括智能制造相关的工业软件产品研发、实施及数字化诊断与咨询服务，核心产品涵盖
+                            MES、QMS、EAM、EMS 等系统模块
+                        </p>
+                        <p>
+                            &emsp;&emsp;自成立以来，公司已成功服务于包括浪潮云洲、浪潮工创基础设施、中国移动、中国电信、中天科技等行业领先客户，
+                            并在多个行业实现系统上线落地与价值交付。2024
+                            年，公司通过国家科技型中小企业评价，预计将在 2025 年获得高新技术企业认定
+                        </p>
+                        <p>
+                            &emsp;&emsp;芯导软件秉持“专注、专业、创新、共赢”的理念，以客户需求为导向，持续提升产品平台化能力和项目交付质量，
+                            打造值得信赖的工业数字化合作伙伴
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-xl-8 mt-5 mt-xl-0 d-flex">
-                <div class="row align-self-center gy-4">
+            <!-- 右侧图片 -->
+            <div class="col-lg-6 text-center">
+                <img class="img-fluid rounded shadow p-3"
+                     src="assets/img/about/4bbf4c3f-2602-4b9d-a8fd-1a574c2a54c6.jfif" alt="公司办公环境">
+            </div>
+        </div>
 
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>行业深耕，理解客户需求</h6>
-                                <p class="small text-muted mb-0">
-                                    我们长期服务于离散制造、电子、新能源等行业，具备深入的一线理解与项目经验，能够精准识别客户数字化痛点与诉求。</p>
+    </div>
+</section>
+
+
+<section class="about"
+         style="background: linear-gradient(to top, #0077b6 0%, #00b4d8 15%, #90e0ef 30%, #caf0f8 40%, #ffffff 100%);">
+
+    <div class="container text-center" data-aos="fade-up">
+        <!-- 团队介绍 -->
+        <section id="team" class="team ">
+            <div class="" data-aos="fade-up">
+                <header class="section-header">
+                    <h2>团队介绍</h2>
+                    <p>覆盖技术研发、用户体验、销售服务的全栈团队</p>
+                </header>
+
+                <div class="row gy-4  rounded p-4">
+
+                    <!-- 创始人 -->
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member d-flex flex-column h-100">
+                            <div class="member-img">
+                                <img src="assets/img/about/team/team.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info mt-auto">
+                                <h4>创始人</h4>
+                                <span>企业战略与数字化转型专家</span>
+                                <p>具备20年的生产管理、质量管理、技术管理和制造业数字化、流程信息化建设的丰富经验</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>方法论驱动的方案设计</h6>
-                                <p class="small text-muted mb-0">
-                                    基于标准化的咨询方法与系统架构设计能力，为客户量身定制可实施、可落地、可持续演进的信息化方案。</p>
+                    <!-- 技术部 -->
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member d-flex flex-column h-100">
+                            <div class="member-img">
+                                <img src="assets/img/about/team/category_kid_placeholder.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info mt-auto">
+                                <h4>技术部</h4>
+                                <span>系统研发与交付支持</span>
+                                <p>负责核心平台架构设计与持续优化，支持私有化部署与信创兼容</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>平台化产品与模块化交付</h6>
-                                <p class="small text-muted mb-0">
-                                    系统采用平台化设计理念，功能模块灵活组合，满足企业多样化场景需求，提升交付效率与上线灵活性。</p>
+                    <!-- 销售部 -->
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member d-flex flex-column h-100">
+                            <div class="member-img">
+                                <img src="assets/img/about/team/51e19836-10b1-492e-a8e1-3005061d829e.png"
+                                     class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info mt-auto">
+                                <h4>销售部</h4>
+                                <span>行业解决方案顾问</span>
+                                <p>深入客户需求场景，提供全流程解决方案，覆盖系统选型、业务梳理、诊断咨询与项目规划</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>强大的集成与兼容能力</h6>
-                                <p class="small text-muted mb-0">
-                                    支持与ERP、MES、设备层系统无缝集成，适配国产化信创环境，具备高度兼容性与扩展性。</p>
+                    <!-- 诊断与咨询组 -->
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+                        <div class="member d-flex flex-column h-100">
+                            <div class="member-img">
+                                <img src="assets/img/about/team/3a0ff5c7-a246-4a3a-bb22-3f88dc99a468.png"
+                                     class="img-fluid" alt="">
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>全周期项目管理机制</h6>
-                                <p class="small text-muted mb-0">
-                                    从需求调研到交付上线，全流程采用阶段性控制与质量把关机制，确保项目交付可控、透明、可追踪。</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                        <div class="feature-box d-flex align-items-start">
-                            <i class="bi bi-check-circle flex-shrink-0 me-3"></i>
-                            <div>
-                                <h6>持续运营与服务支持</h6>
-                                <p class="small text-muted mb-0">
-                                    系统上线后提供7×24技术支持、定期运维巡检及功能优化，保障客户系统持续稳定运行。</p>
+                            <div class="member-info mt-auto">
+                                <h4>诊断与咨询组</h4>
+                                <span>数字化评估与项目规划</span>
+                                <p>基于多年行业积累，为制造企业提供数字化成熟度诊断、差距分析与系统落地路径建议</p>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
+        </section>
+        <!-- End Team Section -->
+    </div>
+</section>
 
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features"
+         style="margin-top: -2px;
+          background: linear-gradient(to bottom, #0077b6 0%, #00b4d8 15%, #90e0ef 30%, #caf0f8 40%, #ffffff 100%);">
+
+    <!-- Feature Icons：服务流程图 -->
+    <div class="row feature-icons" data-aos="fade-up">
+        <h3>我们的服务流程，让系统真正落地</h3>
+        <div class="container-fluid">
+            <div class="row">
+<div class="col-1"></div>
+                <div class="col-4 text-center p-4" data-aos="fade-right" data-aos-delay="100">
+                    <img src="https://web-assets.bcg.com/dims4/default/84c4b97/2147483647/strip/true/crop/1444x1625+722+0/resize/320x360!/format/webp/quality/90/?url=http%3A%2F%2Fboston-consulting-group-brightspot.s3.amazonaws.com%2Fa6%2Fa2%2Fe36f021841ef9d69c6e8db069d6b%2Fmanufacturing-overview-hero-rectangle.jpg"
+                         class="img-fluid p-4 rounded shadow" alt="">
+                </div>
+
+                <div class="col-6 mt-5 mt-xl-0 d-flex">
+                    <div class="row align-self-center gy-4">
+
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">行业深耕，理解客户需求</h6>
+                                </div>
+
+                                <p class="small text-muted mb-0">
+                                    我们长期服务于离散制造、电子、新能源等行业，具备深入的一线理解与项目经验，能够精准识别客户数字化痛点与诉求。
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- 方法论驱动的方案设计 -->
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">方法论驱动的方案设计</h6>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    基于标准化的咨询方法与系统架构设计能力，为客户量身定制可实施、可落地、可持续演进的信息化方案。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 平台化产品与模块化交付 -->
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">平台化产品与模块化交付</h6>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    系统采用平台化设计理念，功能模块灵活组合，满足企业多样化场景需求，提升交付效率与上线灵活性。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 强大的集成与兼容能力 -->
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">强大的集成与兼容能力</h6>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    支持与ERP、MES、设备层系统无缝集成，适配国产化信创环境，具备高度兼容性与扩展性。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 全周期项目管理机制 -->
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">全周期项目管理机制</h6>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    从需求调研到交付上线，全流程采用阶段性控制与质量把关机制，确保项目交付可控、透明、可追踪。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 持续运营与服务支持 -->
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                            <div class="feature-box d-flex flex-column align-items-start p-3 rounded bg-transparent">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle flex-shrink-0 me-2 icon-rounded"></i>
+                                    <h6 class="mb-0">持续运营与服务支持</h6>
+                                </div>
+                                <p class="small text-muted mb-0">
+                                    系统上线后提供7×24技术支持、定期运维巡检及功能优化，保障客户系统持续稳定运行。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div><!-- End Feature Icons -->
+    </div>
 
+    <!-- End Feature Icons -->
     <!-- 实施方式介绍 -->
-    <div class="container" data-aos="fade-up">
+    <div class="container mt-3 " data-aos="fade-up">
+
 
         <div class="row feature-tabs" data-aos="fade-up" style="margin-top: 60px;">
-            <div class="col-lg-6">
-                <h3>项目实施方式</h3>
+            <div class="col-1"></div>
 
+            <div class="col-5">
+                <h3>项目实施方式</h3>
                 <ul class="nav nav-pills mb-3">
                     <li>
                         <a class="nav-link active" data-bs-toggle="pill" href="#tab1">标准流程</a>
@@ -274,94 +471,24 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <img src="assets/img/MESsystem.png" class="img-fluid" alt="">
+            <div class="col-6">
+                <img src="assets/img/about/MESsystem.png" class="img-fluid" alt="">
             </div>
         </div>
 
     </div>
 
-    <!-- 团队介绍 -->
-    <section id="team" class="team">
-        <div class="container" data-aos="fade-up">
-            <header class="section-header">
-                <h2>团队介绍</h2>
-                <p>覆盖技术研发、用户体验、销售服务的全栈团队</p>
-            </header>
-
-            <div class="row gy-4">
-
-                <!-- CEO/创始人 -->
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="assets/img/team/team.png"
-                                 class="img-fluid" alt="">
-                            <div class="member-info">
-                                <h4>创始人</h4>
-                                <span>企业战略与数字化转型专家</span>
-                                <p>具备20年的生产管理、质量管理、技术管理和制造业数字化、流程信息化建设的丰富经验</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                    <!-- 技术部 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/category_kid_placeholder.png"
-                                     class="img-fluid" alt="">
-                            </div>
-                            <div class="member-info">
-                                <h4>技术部</h4>
-                                <span>系统研发与交付支持</span>
-                                <p>负责核心平台架构设计与持续优化，支持私有化部署与信创兼容</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 销售与客户成功 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/51e19836-10b1-492e-a8e1-3005061d829e.png" class="img-fluid"
-                                     alt="">
-                            </div>
-                            <div class="member-info">
-                                <h4>销售部</h4>
-                                <span>行业解决方案顾问</span>
-                                <p>深入客户需求场景，提供全流程解决方案，覆盖系统选型、业务梳理、诊断咨询与项目规划</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 诊断与咨询团队 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/3a0ff5c7-a246-4a3a-bb22-3f88dc99a468.png" class="img-fluid"
-                                     alt="">
-                            </div>
-                            <div class="member-info">
-                                <h4>诊断与咨询组</h4>
-                                <span>数字化评估与项目规划</span>
-                                <p>基于多年行业积累，为制造企业提供数字化成熟度诊断、差距分析与系统落地路径建议</p>
-                            </div>
-                        </div>
-                    </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- End Team Section -->
-
-</section><!-- End Features Section -->
+</section>
+<!-- End Features Section -->
 
 <!-- ======= Clients Section ======= -->
-<section id="clients" class="clients">
-
+<section id="clients" class="clients " style="margin-top: -1px;
+  background: linear-gradient(to top,
+    rgba(0, 119, 182, 0.3) 0%,
+    rgba(144, 224, 239, 0.2) 10%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.9) 100%);
+">
     <div class="container" data-aos="fade-up">
 
         <header class="section-header">
@@ -371,12 +498,18 @@
 
         <div class="clients-slider swiper-container">
             <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide"><img src="assets/img/clients/client-1.jfif" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-2.jfif" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-3.jfif" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-4.jfif" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-5.jfif" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-6.jfif" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-1.jfif" class="img-fluid" alt="">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-2.jfif" class="img-fluid" alt="">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-3.jfif" class="img-fluid" alt="">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-4.jfif" class="img-fluid" alt="">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-5.jfif" class="img-fluid" alt="">
+                </div>
+                <div class="swiper-slide"><img src="assets/img/about/clients/client-6.jfif" class="img-fluid" alt="">
+                </div>
                 <div class="swiper-slide"><img
                         src="https://img0.baidu.com/it/u=1527951335,964452783&fm=253&fmt=auto&app=138&f=JPEG?w=1165&h=500"
                         class="img-fluid" alt=""></div>
@@ -392,15 +525,18 @@
     </div>
 
 </section><!-- End Clients Section -->
+<div style="background: linear-gradient(to bottom,
+  rgba(0, 119, 182, 0.3) 0%,
+    rgba(144, 224, 239, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.9) 100%);
+width: 100%;
+height: 10vh;"></div>
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-    <div class="container">
-
-    </div>
-
-    <div style="margin-top: 50px;" class="container" data-aos="fade-up">
-        <header class="section-header">
+<section id="contact" class="contact shadow" >
+    <div class="container" data-aos="fade-up">
+        <header  class="section-header">
             <h2>联系我们</h2>
             <p>如您有系统建设、项目合作或方案咨询，欢迎随时留言或致电</p>
         </header>
@@ -479,7 +615,7 @@
 
                         <div class="col-md-12">
                             <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
-                                 src="/assets/img/address.jfif" alt="">
+                                 src="/assets/img/about/address.jfif" alt="">
                         </div>
                     </div>
                 </form>
@@ -493,7 +629,7 @@
 
 
 <!-- ======= Footer ======= --><!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
+<footer id="footer" class="footer shadow">
 
     <div class="footer-top">
         <div class="container">
@@ -588,37 +724,65 @@
 <!-- End Footer -->
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
-<script>const mapContainer = document.getElementById('map-container');
 
-// 创建 Google Map iframe
-const googleIframe = document.createElement('iframe');
-googleIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6181.572093955551!2d121.03638037746597!3d32.53655991319475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b05247e4a1dba5%3A0xa4df9ff219c21a67!2z5Y2X6YCa57Sr55Gv5YyW5bel56eR5oqA5pyJ6ZmQ5YWs5Y-4!5e1!3m2!1szh-TW!2s!4v1746792443578!5m2!1szh-TW!2s";
-googleIframe.style.width = "100%";
-googleIframe.style.height = "100%";
-googleIframe.style.border = "0";
-googleIframe.loading = "lazy";
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+<script>
+    const mapContainer = document.getElementById('map-container');
+    // 创建 Google Map iframe
+    const googleIframe = document.createElement('iframe');
+    googleIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6181.572093955551!2d121.03638037746597!3d32.53655991319475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b05247e4a1dba5%3A0xa4df9ff219c21a67!2z5Y2X6YCa57Sr55Gv5YyW5bel56eR5oqA5pyJ6ZmQ5YWs5Y-4!5e1!3m2!1szh-TW!2s!4v1746792443578!5m2!1szh-TW!2s";
+    googleIframe.style.width = "100%";
+    googleIframe.style.height = "100%";
+    googleIframe.style.border = "0";
+    googleIframe.loading = "lazy";
 
-const timeout = 500;
+    const timeout = 500;
 
-let loaded = false;
+    let loaded = false;
 
-googleIframe.onload = () => {
-    loaded = true;
-};
+    googleIframe.onload = () => {
+        loaded = true;
+    };
 
-mapContainer.innerHTML = "";
-mapContainer.appendChild(googleIframe);
+    mapContainer.innerHTML = "";
+    mapContainer.appendChild(googleIframe);
 
-setTimeout(() => {
-    if (!loaded) {
-        mapContainer.innerHTML = `
-        <img src="assets/img/map.png"
+    setTimeout(() => {
+        if (!loaded) {
+            mapContainer.innerHTML = `
+        <img src="assets/img/about/map.png"
              alt="地图加载失败，已切换为静态图"
              style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
       `;
-    }
-}, timeout);
+        }
+    }, timeout);
 </script>
+
+<script>
+    // Typed.js 打字动画
+    document.addEventListener("DOMContentLoaded", function () {
+        new Typed('#typed-text', {
+            strings: ['数字化工厂诊断', 'MES制造执行系统', 'LIMS实验室管理系统', 'QMS质量管理平台', 'EAM设备资产管理', '中小企业转型咨询'],
+            typeSpeed: 60,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+    });
+    tsParticles.load("particles-js", {
+        particles: {
+            number: {value: 40},
+            size: {value: 3},
+            color: {value: "#ffffff"},
+            move: {enable: true, speed: 0.6},
+            opacity: {value: 0.6},
+            links: {enable: true, distance: 150, color: "#ffffff", opacity: 0.2}
+        },
+        background: {color: "transparent"}
+    });
+
+</script>
+
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>

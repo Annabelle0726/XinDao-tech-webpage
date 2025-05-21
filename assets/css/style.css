@@ -52,7 +52,7 @@ section {
 .section-header h2 {
     font-size: 1.75rem;
     letter-spacing: 1px;
-    font-weight: 650;
+    font-weight: 700;
     margin: 0;
     color: #4154f1;
     text-transform: uppercase;
@@ -143,6 +143,23 @@ section {
     padding: 20px 0;
 }
 
+/* 默认透明导航 */
+.header.transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.transparent .navbar a, .header.transparent a span, .header.transparent a i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/* 滚动后变白 + 阴影 */
+.header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
 
 
 .header.header-scrolled {
@@ -165,6 +182,28 @@ section {
     font-size: 1.5rem;
 }
 
+.hero-content-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    max-width: 720px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.section-shadow-divider {
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient transparent - color - transparent */
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 
 .header .logo span,
 .footer .footer-top .footer-info .logo span {
@@ -250,10 +289,11 @@ header.header.fixed-top {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.megamenu-panel .container .row .col-lg-4 h6{
+.megamenu-panel .container .row .col-lg-4 h6 {
     color: #1a1a1a;
     font-size: 1rem;
 }
+
 .megamenu-panel .col-lg-4:hover {
     background: #e0f2fc;
     box-shadow: 0 4px 12px rgba(0, 128, 255, 0.15);
@@ -297,24 +337,34 @@ header.header.fixed-top {
     color: #fff;
 }
 
-.cta-btn {
-    margin-left: 40%;
+.load-more-btn {
     font-family: var(--font-btn-cn), var(--font-btn-en), sans-serif;
-    font-weight: 500;
     font-size: 15px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 25px;
-    transition: 0.5s;
-    margin-top: 10px;
-    border: 2px solid #4154f1;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
     color: #4154f1;
+    background-color: white;
+    border: 2px solid #4154f1;
+    margin-top: 20px;
+
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: left;
+    cursor: pointer;
 }
 
-.cta-btn:hover {
+.load-more-btn:hover {
+    background-color: #4154f1;
     color: #fff;
-    background: #4154f1;
+    box-shadow: 0 4px 10px rgba(65, 84, 241, 0.2);
+    transform: translateY(-1px);
+}
+
+.load-more-btn i {
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .navbar .getstarted:hover {
@@ -507,7 +557,7 @@ header.header.fixed-top {
 
 
 .footer .footer-top {
-    background: white url(../img/footer-bg.png) no-repeat right top;
+    background: white url(../img/footer/footer-bg.png) no-repeat right top;
     background-size: contain;
     border-top: 1px solid #e1ecff;
     border-bottom: 1px solid #e1ecff;
@@ -621,6 +671,11 @@ header.header.fixed-top {
     color: #012970;
 }
 
+.vr.h-100.mx-auto {
+    width: 1px;
+    filter: motionBlur(opacity 0.8);
+    background-color:rgba(0,0,0,0.15) !important;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
