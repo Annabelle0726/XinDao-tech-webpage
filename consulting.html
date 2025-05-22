@@ -31,16 +31,17 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/consulting.css">
-    <link rel="stylesheet" href="assets/css/support.css">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/consulting.css">
+    <link rel="stylesheet" href="assets/css/support.css">
 </head>
 
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+<header id="header" class="header fixed-top transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
@@ -132,22 +133,102 @@
 </header>
 <!-- End Header -->
 
+<!-- Hero Section -->
+<section class="hero-img text-white d-flex align-items-center justify-content-center position-relative"
+         style="height: 100vh;">
+    <!-- 粒子效果可选 -->
+    <div id="particles-js"></div>
+
+    <div class="container text-center" data-aos="fade-up">
+        <h1 class="display-4 fw-bold text-shadow">诊断服务</h1>
+        <p class="lead fw-medium text-shadow-sm">夯实基础，明确方向，助力企业智改数转落地</p>
+        <a href="#section-overview" class="btn btn-outline-light mt-3 px-4 py-2">了解更多</a>
+    </div>
+</section>
+
+
+<!-- 核心导语 -->
+<section class="py-5 bg-light-gradient">
+    <div class="container">
+        <div class="section-header">
+            <h2>芯导诊断咨询服务</h2>
+            <div class="divider mx-auto"></div>
+            <p class="lead">看得见的问题，才能解决；选对的路径，才能高效转型。</p>
+            <p>芯导专注为中小制造企业提供 QMS、MES、LIMS、EAM、EMS
+                等数字化系统解决方案，融合数字化咨询、系统实施与流程优化能力，助力企业构建精益化、智能化、可持续的智慧工厂</p>
+        </div>
+    </div>
+</section>
+
 <!-- 数字化工厂诊断部分 -->
 <section id="digital-factory" class="py-5 mt-2">
     <div class="container">
-        <h3>数字化工厂诊断咨询</h3>
-        <p>我们提供从现状评估、IT/OT 架构梳理到数字化改进建议的一站式诊断服务，助力企业科学制定数字化转型路径。</p>
+        <div class="section-header">
+            <h2>数字化工厂诊断咨询</h2>
+            <p>我们提供从现状评估、IT/OT 架构梳理到数字化改进建议的一站式诊断服务，助力企业科学制定数字化转型路径</p>
+        </div>
+
+        <div class="divider"></div>
+        <ul class="list-unstyled">
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>业务流程梳理与信息流追踪</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>现有系统评估与差距分析</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>数据架构与数字能力等级测评</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>数字化战略方向建议与实施路径</li>
+        </ul>
+        <p class="small text-muted">聚焦企业当前管理现状、系统架构与业务流程，通过专业工具与访谈方法识别数字化短板与改造潜力</p>
+
     </div>
+
 </section>
 
 <!-- 精益生产诊断部分 -->
 <section id="lean-consulting" class="py-5 bg-light mt-2">
     <div class="container">
-        <h3>精益生产诊断咨询</h3>
-        <p>基于精益理念对工厂现场进行流程梳理、瓶颈分析及改善建议，实现制造效率提升与成本优化。</p>
+        <div class="section-header">
+            <h2>精益生产诊断咨询</h2>
+            <p>基于精益理念对工厂现场进行流程梳理、瓶颈分析及改善建议，实现制造效率提升与成本优化。</p>
+        </div>
+
+        <ul class="list-unstyled">
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>精益价值流分析</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>设备 OEE 效率提升诊断</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>浪费识别与优化建议</li>
+            <li class="mb-3"><i class="bi bi-check-circle consulting-icon me-2"></i>管理机制与执行力提升咨询</li>
+        </ul>
+        <p class="small text-muted">基于价值流图分析、瓶颈识别与标准作业梳理，提升制造现场效率与响应能力。</p>
+
     </div>
 </section>
 
+<!-- 服务流程 -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h4 class="section-title text-center">我们的咨询流程</h4>
+        <div class="divider mx-auto"></div>
+        <div class="row text-center pt-4 g-4">
+            <div class="col-md-3">
+                <i class="bi bi-search consulting-icon mb-2"></i>
+                <h6>问题识别</h6>
+                <p class="small text-muted">现场走访，梳理管理痛点与系统短板</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-bar-chart consulting-icon mb-2"></i>
+                <h6>策略制定</h6>
+                <p class="small text-muted">结合行业经验制定数字化蓝图与阶段目标</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-diagram-3 consulting-icon mb-2"></i>
+                <h6>改造建议</h6>
+                <p class="small text-muted">设计系统改造路径、数据治理与平台整合</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-arrow-repeat consulting-icon mb-2"></i>
+                <h6>效率提升</h6>
+                <p class="small text-muted">建立指标闭环机制，实现转型闭环</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- ======= Footer ======= -->
@@ -157,19 +238,38 @@
         <div class="container">
             <div class="row gy-4">
                 <!-- 公司信息 -->
-                <div class="col-lg-3 col-md-12 footer-info">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <img src="assets/img/logo.png" alt="">
-                        <span>芯导软件（江苏）有限公司</span>
-                    </a>
-                    <p>
-                        芯导软件专注于为制造业提供数字化转型解决方案，涵盖MES、LIMS、QMS等工业软件系统。
-                        依托多年行业实践，我们助力企业实现数据驱动的智能运营，为客户打造稳定、可拓展的数字基础
-                    </p>
+                <div class="col-lg-3 col-md-12 footer-info d-flex flex-column gap-lg-4">
+                    <div class="">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <img src="assets/img/logo.png" alt="">
+                            <span>芯导软件（江苏）有限公司</span>
+                        </a>
+                        <p>
+                            芯导软件专注于为制造业提供数字化转型解决方案，涵盖MES、LIMS、QMS等工业软件系统。
+                            依托多年行业实践，我们助力企业实现数据驱动的智能运营，为客户打造稳定、可拓展的数字基础
+                        </p>
+                    </div>
+                    <div class=""
+                         style="opacity: 1;transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);">
+                        <a target="_blank"
+                           href="芯导宣传彩页.pdf" download=""
+                           title="Download File"
+                           style="gap: 5px; font-size: 1rem; font-weight: 500; width: max-content;
+                               display: flex; place-items: center; place-content: center; text-decoration: none;
+                               font-style: normal; letter-spacing: 0; text-align: center; padding: 10px; color: rgb(255, 255, 255);
+                               background-color: rgb(29, 73, 162); border-radius: 50px; user-select: none; white-space: nowrap; cursor: pointer;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                 fill="var(--token-88b52595-49cd-4c53-a9d4-ad51444e62a8, rgb(255, 255, 255))"
+                                 viewBox="0 0 256 256" style="order: 0; flex-shrink: 0;">
+                                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"></path>
+                            </svg>
+                            芯导宣传彩页</a>
+                    </div>
 
                 </div>
+
                 <div class="col-lg-1 d-none d-lg-block">
-                    <div class="vr h-100 mx-auto" style="width:1px; background-color:#ccc;"></div>
+                    <div class="vr h-100 mx-auto"></div>
                 </div>
                 <!-- 友情链接 -->
                 <div class="col-lg-2 col-6 footer-links">
@@ -184,7 +284,9 @@
                         </li>
                         <li><a href="about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 联系我们</a>
                         </li>
-                        <li><a href="support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 常见问题</a>
+
+                        <li><a href="support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            常见问题</a>
                         </li>
                         <li><a href="support.html#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 服务条款</a>
                         </li>
@@ -231,6 +333,7 @@
                         <strong>邮箱：</strong>354592173@qq.com<br>
                     </p>
                 </div>
+
             </div>
         </div>
     </div>
@@ -238,7 +341,7 @@
     <!-- 版权声明 -->
     <div class="container">
         <div class="text-center py-3 small text-muted">
-            &copy; 2025 <strong>芯导软件（江苏）有限公司</strong> 版权所有 | All Rights Reserved.
+            &copy; 2025 <strong>芯导软件（江苏）有限公司</strong> 版权所有 | All Rights Reserved
         </div>
     </div>
 
@@ -247,7 +350,8 @@
 
 <div id="consulting-sidebar" class="position-fixed">
     <ul class="support-links list-unstyled">
-        <li><a href="#digital-factory"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 数字化工厂诊断</a></li>
+        <li><a href="#digital-factory"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 数字化工厂诊断</a>
+        </li>
         <li><a href="#lean-consulting"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 精益生产诊断</a>
         </li>
     </ul>
@@ -255,16 +359,45 @@
         <i class="bi bi-arrow-up-short"></i>
     </a>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 60, density: { enable: true, value_area: 800 } },
+            color: { value: "#00cfff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.3 },
+            size: { value: 3 },
+            line_linked: { enable: true, distance: 120, color: "#00cfff", opacity: 0.3, width: 1 },
+            move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                repulse: { distance: 100 },
+                push: { particles_nb: 4 }
+            }
+        },
+        retina_detect: true
+    });
+</script>
+
+
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/purecounter/purecounter.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
 <!-- Template Main JS File -->
+<script src="assets/js/transparent-nav.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/consulting.js"></script>
 </body>

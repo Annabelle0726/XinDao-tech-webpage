@@ -1,0 +1,32 @@
+.hero-img {
+    background: linear-gradient(rgba(0, 16, 40, 0.6), rgba(0, 16, 40, 0.6)),
+    url("../img/consulting/Digital-Transformation-Consulting-1.jpg") center/cover no-repeat;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-img .container {
+    z-index: 2;
+    position: relative;
+}
+
+.text-shadow {
+    text-shadow: 0 0 12px rgba(0, 183, 255, 0.7);
+}
+
+.text-shadow-sm {
+    text-shadow: 0 0 6px rgba(0, 183, 255, 0.4);
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+}

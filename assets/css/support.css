@@ -74,3 +74,8 @@
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
+
+.back-to-top {
+    right: -15px !important;
+    bottom: -135px !important;
+}

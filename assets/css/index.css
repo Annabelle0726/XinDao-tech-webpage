@@ -120,7 +120,6 @@ section {
     background: rgba(255, 255, 255, 0.1);
     /*border: 1px solid rgba(255, 255, 255, 0.15);*/
     backdrop-filter: blur(10px);
-
 }
 
 .fancy-btn::before {
@@ -375,7 +374,6 @@ section {
 .counts .count-box {
     display: flex;
     align-items: center;
-
     box-sizing: border-box;
     padding: 1.5rem 1.2rem;
     width: 100%;

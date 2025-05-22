@@ -6,7 +6,6 @@
     --font-heading-cn: "HarmonyOS Sans", "Alibaba PuHuiTi", "Source Han Sans SC", sans-serif;
     --font-body-cn: "Source Han Sans SC", "Alibaba PuHuiTi", sans-serif;
     --font-btn-cn: "Alibaba PuHuiTi", "HarmonyOS Sans", sans-serif;
-
     --font-heading-en: "Inter", "Poppins", "Montserrat", sans-serif;
     --font-body-en: "Noto Sans", "Roboto", sans-serif;
     --font-btn-en: "Inter", sans-serif;
@@ -211,30 +210,6 @@ img.img-fluid {
     padding: 20px 0;
 }
 
-/* 默认透明导航 */
-.header.transparent {
-    background-color: transparent !important;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.header.transparent .navbar a, .header.transparent a span, .header.transparent a i {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-
-/* 滚动后变白 + 阴影 */
-.header.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-
-
-.header.header-scrolled {
-    background: #fff;
-    padding: 15px 0;
-    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-}
 
 .header .logo {
     line-height: 0;
@@ -341,13 +316,14 @@ header.header.fixed-top {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 90vw;
-    max-width: 1200px;
+    width: 100%;
+    /*max-width: 120px;*/
     background: linear-gradient(145deg, #e6f4fb, #f8fcff);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 12px 30px rgba(0, 68, 128, 0.08);
     display: none;
     z-index: 9999;
+    transition: ease 0.3s all;
 }
 
 .megamenu-panel .col-lg-4 {
@@ -502,6 +478,35 @@ header.header.fixed-top {
     .navbar .dropdown .dropdown:hover > ul {
         left: -100%;
     }
+}
+
+.header.no-transition {
+    transition: none !important;
+}
+
+
+/* 默认透明导航 */
+.header.transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.transparent .navbar a, .header.transparent a span, .header.transparent a i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/* 滚动后变白 + 阴影 */
+.header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.header.header-scrolled {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
 /**
@@ -764,8 +769,7 @@ header.header.fixed-top {
     box-shadow: 0 6px 20px rgba(65, 84, 241, 0.4);
     transition: all 0.3s ease;
     right: 5px;
-    bottom:
-            35px
+    bottom: 35px
 }
 
 .back-to-top i {
