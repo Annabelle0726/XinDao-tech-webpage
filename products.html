@@ -39,7 +39,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+<header id="header" class="header fixed-top transparent">
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
       <img src="assets/img/logo.png" alt="">
@@ -52,11 +52,11 @@
         <li><a class="nav-link scrollto" href="./dx-services.html">数字化转型</a></li>
 
         <!-- 产品中心菜单触发 -->
-        <li class="dropdown megamenu position-static" id="productCenterDropdown">
-          <a class="nav-link scrollto active" href="./products.html"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
+        <li class="dropdown megamenu position-static active" id="productCenterDropdown">
+          <a href="products.html"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
         </li>
 
-        <li><a class="nav-link scrollto" href="consulting.html">诊断咨询</a></li>
+        <li><a class="nav-link scrollto " href="consulting.html">诊断咨询</a></li>
         <li><a class="nav-link scrollto" href="./about.html">关于我们</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -129,6 +129,8 @@
     </div>
   </div>
 </header>
+<!-- End Header -->
+
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
@@ -164,21 +166,18 @@
               依托多年行业实践，我们助力企业实现数据驱动的智能运营，为客户打造稳定、可拓展的数字基础
             </p>
           </div>
-          <div class=""
-               style="opacity: 1;transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);">
+          <div style="transform: perspective(1200px) translateZ(0);">
             <a target="_blank"
-               href="芯导宣传彩页.pdf" download=""
+               href="芯导宣传彩页.pdf"
+               download=""
                title="Download File"
-               style="gap: 5px; font-size: 1rem; font-weight: 500; width: max-content;
-                               display: flex; place-items: center; place-content: center; text-decoration: none;
-                               font-style: normal; letter-spacing: 0; text-align: center; padding: 10px; color: rgb(255, 255, 255);
-                               background-color: rgb(29, 73, 162); border-radius: 50px; user-select: none; white-space: nowrap; cursor: pointer;">
+               class="tech-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                   fill="var(--token-88b52595-49cd-4c53-a9d4-ad51444e62a8, rgb(255, 255, 255))"
-                   viewBox="0 0 256 256" style="order: 0; flex-shrink: 0;">
-                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"></path>
+                   viewBox="0 0 256 256">
+                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
               </svg>
-              芯导宣传彩页</a>
+              芯导宣传彩页
+            </a>
           </div>
 
         </div>
@@ -276,6 +275,7 @@
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
 <!-- Template Main JS File -->
+<script src="assets/js/transparent-nav.js"></script>
 <script src="assets/js/products.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

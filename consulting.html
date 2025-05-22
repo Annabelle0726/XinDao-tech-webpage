@@ -35,7 +35,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/consulting.css">
-    <link rel="stylesheet" href="assets/css/support.css">
 </head>
 
 <body>
@@ -139,26 +138,106 @@
     <!-- 粒子效果可选 -->
     <div id="particles-js"></div>
 
-    <div class="container text-center" data-aos="fade-up">
-        <h1 class="display-4 fw-bold text-shadow">诊断服务</h1>
-        <p class="lead fw-medium text-shadow-sm">夯实基础，明确方向，助力企业智改数转落地</p>
-        <a href="#section-overview" class="btn btn-outline-light mt-3 px-4 py-2">了解更多</a>
+    <div class="container text-center text-white" data-aos="fade-up">
+        <h1 class="display-4 fw-bold text-shadow">芯导诊断咨询服务</h1>
+        <p class="lead fw-medium text-shadow-sm mb-4">
+            夯实基础，明确方向，助力企业智改数转落地
+        </p>
+
+        <!-- 核心导语部分 -->
+        <div class="consulting-intro px-lg-5 mx-auto" style="max-width: 800px;">
+            <p class="lead fst-italic mb-2">
+                看得见的问题，才能解决；选对的路径，才能高效转型
+            </p>
+            <div class="section-divider my-3 mx-auto"></div>
+
+            <div class="row" style="text-align: left"><p class="col-6 small text-light">
+                芯导专注于为中小制造企业提供数字化诊断与工业软件部署服务，涵盖 MES、QMS、LIMS、EAM、EMS 等核心系统模块
+            </p>
+                <p class="col-6 small text-light">
+                    我们融合流程优化、系统实施与精益管理能力，协助企业从“诊断-设计-交付-优化”各阶段稳步推进，构建可持续演进的智慧工厂
+                </p></div>
+        </div>
+
+        <!-- CTA 按钮 -->
+        <a href="#diagnostic-pain" class="btn-glass btn-consulting mt-5">
+            开始诊断 <i class="bi bi-arrow-right-circle"></i>
+        </a>
     </div>
 </section>
 
+<!-- 数字化转型典型困境 Section -->
+<section class="text-white py-5 position-relative overflow-hidden" id="diagnostic-pain">
+    <div class="diagnostic-overlay"></div> <!-- 背景模糊层 -->
 
-<!-- 核心导语 -->
-<section class="py-5 bg-light-gradient">
-    <div class="container">
-        <div class="section-header">
-            <h2>芯导诊断咨询服务</h2>
-            <div class="divider mx-auto"></div>
-            <p class="lead">看得见的问题，才能解决；选对的路径，才能高效转型。</p>
-            <p>芯导专注为中小制造企业提供 QMS、MES、LIMS、EAM、EMS
-                等数字化系统解决方案，融合数字化咨询、系统实施与流程优化能力，助力企业构建精益化、智能化、可持续的智慧工厂</p>
+    <div class="container position-relative z-2" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+            <h2 class="text-white fw-bold mb-3 display-6">您的企业是否正面临这些数字化转型困境？</h2>
+            <p class="lead text-white-50">数字化不是选择题，而是生存题。以下困境，您是否感同身受？</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- 卡片 1 -->
+            <div class="col-md-4">
+                <div class="diagnostic-card bg-gradient-blue text-white" data-id="1">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-eye-slash-fill me-2 text-warning"></i>“盲人摸象”的转型困局
+                        </h5>
+                        <ul class="list-unstyled small mb-0">
+                            <li>🔹 不清楚企业数字化水平在行业中的位置</li>
+                            <li>🔹 投入大量资金却成效不明</li>
+                            <li>🔹 系统孤立，产生“数据孤岛”</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="col-md-4">
+                <div class="diagnostic-card bg-gradient-indigo text-white" data-id="2">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-puzzle-fill me-2 text-success"></i>“头痛医头”的解决方案
+                        </h5>
+                        <ul class="list-unstyled small mb-0">
+                            <li>🔹 系统上马匆忙，与实际需求脱节</li>
+                            <li>🔹 重复投资、缺乏顶层设计</li>
+                            <li>🔹 员工抵触，系统上线后使用率低</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="col-md-4">
+                <div class="diagnostic-card bg-gradient-cyan text-white" data-id="3">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-cloud-fog2-fill me-2 text-info"></i>“雾里看花”的效益评估
+                        </h5>
+                        <ul class="list-unstyled small mb-0">
+                            <li>🔹 难以量化转型成效</li>
+                            <li>🔹 缺乏持续优化的数据支持</li>
+                            <li>🔹 无法对接政策扶持路径</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 提示文字 + 跳转按钮 -->
+        <div class="text-center mt-5">
+            <p class="text-light small mb-3">如果您正在经历这些问题，芯导将是您可信赖的转型伙伴。</p>
+            <a href="#digital-factory" class="btn btn-glass btn-lg px-4 py-2">
+                开始诊断 <i class="bi bi-arrow-down-circle ms-2"></i>
+            </a>
         </div>
     </div>
 </section>
+
+
+
 
 <!-- 数字化工厂诊断部分 -->
 <section id="digital-factory" class="py-5 mt-2">
@@ -249,21 +328,18 @@
                             依托多年行业实践，我们助力企业实现数据驱动的智能运营，为客户打造稳定、可拓展的数字基础
                         </p>
                     </div>
-                    <div class=""
-                         style="opacity: 1;transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);">
+                    <div style="transform: perspective(1200px) translateZ(0);">
                         <a target="_blank"
-                           href="芯导宣传彩页.pdf" download=""
+                           href="芯导宣传彩页.pdf"
+                           download=""
                            title="Download File"
-                           style="gap: 5px; font-size: 1rem; font-weight: 500; width: max-content;
-                               display: flex; place-items: center; place-content: center; text-decoration: none;
-                               font-style: normal; letter-spacing: 0; text-align: center; padding: 10px; color: rgb(255, 255, 255);
-                               background-color: rgb(29, 73, 162); border-radius: 50px; user-select: none; white-space: nowrap; cursor: pointer;">
+                           class="tech-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                 fill="var(--token-88b52595-49cd-4c53-a9d4-ad51444e62a8, rgb(255, 255, 255))"
-                                 viewBox="0 0 256 256" style="order: 0; flex-shrink: 0;">
-                                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"></path>
+                                 viewBox="0 0 256 256">
+                                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
                             </svg>
-                            芯导宣传彩页</a>
+                            芯导宣传彩页
+                        </a>
                     </div>
 
                 </div>
@@ -349,43 +425,17 @@
 <!-- End Footer -->
 
 <div id="consulting-sidebar" class="position-fixed">
-    <ul class="support-links list-unstyled">
-        <li><a href="#digital-factory"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 数字化工厂诊断</a>
-        </li>
-        <li><a href="#lean-consulting"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 精益生产诊断</a>
-        </li>
+    <ul class="diagnostic-links list-unstyled">
+        <li><a href="#digital-factory"><i class="bi bi-arrow-right-circle me-1"></i> 数字化工厂诊断</a></li>
+        <li><a href="#lean-consulting"><i class="bi bi-arrow-right-circle me-1"></i> 精益生产诊断</a></li>
     </ul>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center ">
         <i class="bi bi-arrow-up-short"></i>
     </a>
 </div>
 
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 60, density: { enable: true, value_area: 800 } },
-            color: { value: "#00cfff" },
-            shape: { type: "circle" },
-            opacity: { value: 0.3 },
-            size: { value: 3 },
-            line_linked: { enable: true, distance: 120, color: "#00cfff", opacity: 0.3, width: 1 },
-            move: { enable: true, speed: 1 }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { enable: true, mode: "repulse" },
-                onclick: { enable: true, mode: "push" }
-            },
-            modes: {
-                repulse: { distance: 100 },
-                push: { particles_nb: 4 }
-            }
-        },
-        retina_detect: true
-    });
-</script>
 
 
 <!-- Vendor JS Files -->

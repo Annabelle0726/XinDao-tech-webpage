@@ -145,7 +145,7 @@ img.img-fluid {
     border-radius: 8px;
     background: linear-gradient(145deg, #4154f1, #6370ff);
     color: #fff;
-    box-shadow: 0 8px 20px rgba(65, 84, 241, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(65, 84, 241, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: all 0.4s ease;
     font-weight: 600;
     perspective: 800px;
@@ -161,7 +161,7 @@ img.img-fluid {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     transform: skewX(-20deg);
     transition: 0.5s;
 }
@@ -192,12 +192,117 @@ img.img-fluid {
     transform: translateX(6px);
 }
 
+
+.load-more-btn {
+    font-family: var(--font-btn-cn), var(--font-btn-en), sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #4154f1;
+    background-color: white;
+    border: 2px solid #4154f1;
+    margin-top: 20px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+}
+
+.load-more-btn:hover {
+    background-color: #4154f1;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(65, 84, 241, 0.2);
+    transform: translateY(-1px);
+}
+
+.load-more-btn i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.tech-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ade8f4, #48cae4); /* 主科技蓝渐变 */
+    box-shadow:
+            inset 0 0 4px rgba(202, 240, 248, 0.3),
+            0 6px 8px rgba(0, 180, 216, 0.3),
+            0 0 0 2px rgba(0, 180, 216, 0.8),
+            0 0 0 5px rgba(0, 119, 182, 0.8);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+/* 上层灰蓝玻璃罩 */
+.tech-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: rgba(72, 202, 228, 0.1); /* 灰蓝罩 */
+    box-shadow:
+            inset 0 2px 6px rgba(255, 255, 255, 0.1),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 按钮内容放在上层 */
+.tech-button > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 悬浮时去掉玻璃罩 + 提亮 */
+.tech-button:hover::before {
+    background: rgba(200, 240, 255, 0); /* 灰蓝罩消失 */
+    box-shadow: none;
+}
+
+/* 悬浮时微提 + 加光 */
+.tech-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+            inset 0 0 4px #0077b6,
+            0 6px 8px #0077b6,
+            0 0 0 2px #0077b6,
+            0 0 0 6px #caf0f8;
+    color: #ffffff;
+}
+
+
+/* 按下时回弹效果 */
+.tech-button:active {
+    transform: translateY(1px);
+}
+
+/* SVG 图标适当放大 */
+.tech-button svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
     [data-aos-delay] {
-        transition-delay: 0 !important;
+        transition-delay: 0ms !important;
     }
 }
 
@@ -373,48 +478,6 @@ header.header.fixed-top {
     color: #4154f1;
 }
 
-.navbar .getstarted {
-    background: #4154f1;
-    padding: 8px 20px;
-    margin-left: 30px;
-    border-radius: 4px;
-    color: #fff;
-}
-
-.load-more-btn {
-    font-family: var(--font-btn-cn), var(--font-btn-en), sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-
-    color: #4154f1;
-    background-color: white;
-    border: 2px solid #4154f1;
-    margin-top: 20px;
-
-    padding: 10px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    text-align: left;
-    cursor: pointer;
-}
-
-.load-more-btn:hover {
-    background-color: #4154f1;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(65, 84, 241, 0.2);
-    transform: translateY(-1px);
-}
-
-.load-more-btn i {
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-.navbar .getstarted:hover {
-    color: #fff;
-    background: #5969f3;
-}
 
 .navbar .dropdown ul {
     display: block;
@@ -485,7 +548,7 @@ header.header.fixed-top {
 }
 
 
-/* 默认透明导航 */
+/* transparent class */
 .header.transparent {
     background-color: transparent !important;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -509,9 +572,9 @@ header.header.fixed-top {
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
-/**
+/** -------------------------------------
 * Mobile Navigation 
-*/
+---------------------------------------*/
 .mobile-nav-toggle {
     color: #012970;
     font-size: 28px;
@@ -747,7 +810,7 @@ header.header.fixed-top {
 .vr.h-100.mx-auto {
     width: 1px;
     filter: motionBlur(opacity 0.8);
-    background-color:rgba(0,0,0,0.15) !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 /*--------------------------------------------------------------
