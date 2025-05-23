@@ -428,14 +428,14 @@ header.header.fixed-top {
     box-shadow: 0 12px 30px rgba(0, 68, 128, 0.08);
     display: none;
     z-index: 9999;
-    transition: ease 0.3s all;
+    transition: ease 450ms all;
 }
 
 .megamenu-panel .col-lg-4 {
     background: inherit;
     border-radius: 10px;
     padding: 8px 10px;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition: background 450ms ease, box-shadow 450ms ease;
 }
 
 .megamenu-panel .container .row .col-lg-4 h6 {

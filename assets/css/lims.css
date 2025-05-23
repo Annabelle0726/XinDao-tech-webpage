@@ -1,0 +1,193 @@
+.hero-section {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
+            url('../img/lims/6731ff2ccb2d35476db29d3d6ab8ad60.jpeg') center/cover;
+}
+
+.hero-glass-effect {
+    background:
+            linear-gradient(135deg,
+            rgba(255,255,255,0.08) 0%,
+            rgba(255,255,255,0.03) 100%);
+    backdrop-filter:
+            brightness(115%)
+            saturate(120%)
+            contrast(90%);
+    /*-webkit-mask: radial-gradient(circle at 50% 50%,*/
+    /*        black 30%,*/
+    /*        transparent 70%);*/
+}
+
+.counter {
+    transition: all 1s ease-out;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.highlight-card {
+    border-left: 4px solid #0d6efd;
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =================================
+核心功能
+========================================== */
+.timeline-section {
+    backdrop-filter:
+            brightness(1.1)             /* 微提亮 */
+            contrast(0.95)              /* 降低对比度 */
+            saturate(1.2);              /* 轻微增强饱和度 */
+    background-blend-mode: overlay; /* 混合模式增强光感 */
+    padding: 3rem 0;
+    background-size: cover;
+    background: linear-gradient(145deg,
+    rgba(0, 150, 199, 0.25), /* 主科技蓝（#0096c7）低透明度 */ rgba(0, 180, 216, 0.55) /* 浅科技蓝（#00b4d8） */
+    ) center;
+    box-shadow:
+            inset 0 0 15px rgba(72, 202, 228, 0.3); /* 科技蓝内发光 */
+}
+
+.timeline-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    width: 30%;
+    z-index: 2;
+}
+
+.timeline-dot {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(145deg, #13a2e4, #0f85c5);
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow:
+            0 0 8px rgba(17, 150, 219, 0.6),
+            inset 0 0 5px rgba(255, 255, 255, 0.2);
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
+}
+
+/* Hover effect */
+.timeline-dot:hover {
+    transform: translateY(-8px) scale(1.05) rotateX(10deg);
+    box-shadow:
+            0 0 20px rgba(17, 150, 219, 0.9),
+            0 0 40px rgba(17, 150, 219, 0.4),
+            inset 0 0 8px rgba(255, 255, 255, 0.3);
+    background: radial-gradient(circle at 30% 30%, #1ec3ff, #0b6fb0);
+}
+
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    height: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.flip-card-front {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.flip-card-front div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.flip-card-front h5 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transform: translateY(3px);
+}
+
+.flip-card-front p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding:5px 20px 20px 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.flip-card-back ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
