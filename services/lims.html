@@ -35,6 +35,8 @@
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/lims.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 </head>
 <body>
 
@@ -133,30 +135,69 @@
 <!-- End Header -->
 
 <section class="hero-section vh-100 position-relative overflow-hidden">
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+
+    <div class="molecule-animation">
+        <div class="atom"></div>
+        <div class="bond"></div>
+        <div class="atom"></div>
+    </div>
+
     <!-- 光面滤镜层 -->
     <div class="hero-glass-effect position-absolute w-100 h-100"></div>
 
     <div class="container h-100 position-relative">
-        <div class="row align-items-center h-100">
-            <div class="col-lg-8">
-                <h1 class="display-4 fw-bold mb-4 text-white">实验室数据管理的
+        <div class="row align-items-center justify-content-center h-100 text-center">
+            <div class="col-lg-10">
+
+                <h1 class="display-4 fw-bold mb-2 text-white">实验室数据管理的
                     <span class="text-primary">数字革命</span>
                 </h1>
-                <p class="lead text-white-80 mb-5">当传统方法成为科研进步的枷锁，您需要更智能的解决方案</p>
+                <p class="lead text-white mb-4">当传统方法成为科研进步的枷锁，您需要更智能的解决方案</p>
 
                 <!-- 动态数字仪表 -->
-                <div class="d-flex gap-4 mb-5">
+                <div class="d-flex justify-content-center gap-5 mb-4">
                     <div class="text-center">
-                        <div class="fs-1 fw-bold text-primary counter" data-target="72">0</div>
-                        <div class="text-white-60">实验室常见</div>
-                        <div class="text-white">数据失误点</div>
+                        <div class="fs-1 fw-bold text-primary counter" data-target="64">0</div>
+                        <div class="text-white">实验室常见数据失误点</div>
                     </div>
                     <div class="text-center">
-                        <div class="fs-1 fw-bold text-primary counter" data-target="240">0</div>
-                        <div class="text-white-60">平均每年</div>
-                        <div class="text-white">人工小时浪费</div>
+                        <div class="fs-1 fw-bold text-primary counter" data-target="318">0</div>
+                        <div class="text-white">平均每年人工小时浪费</div>
                     </div>
                 </div>
+
+                <!-- Get Started 按钮 -->
+                <a href="#pain" class="glass-button">
+                    立即开始
+                </a>
 
             </div>
         </div>
@@ -165,7 +206,7 @@
 
 
 <!-- 痛点展示区 -->
-<section class="">
+<section class="" id="pain">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -682,7 +723,7 @@
                     </div>
                     <div style="transform: perspective(1200px) translateZ(0);">
                         <a target="_blank"
-                           href="../芯导宣传彩页.pdf"
+                           href="../pdf/芯导宣传彩页.pdf"
                            download=""
                            title="Download File"
                            class="tech-button">

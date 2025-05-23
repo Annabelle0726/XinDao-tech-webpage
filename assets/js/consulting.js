@@ -20,10 +20,34 @@ document.querySelectorAll('a.scrollto[href^="#"]').forEach(anchor => {
 
 particlesJS("particles-js", {
     particles: {
-        number: {value: 60, density: {enable: true, value_area: 800}},
-        color: {value: "#00cfff"},
+        number: {value: 20, density: {enable: true, value_area: 800}},
+        color: {value: "#caf0f8"},
         shape: {type: "circle"},
-        opacity: {value: 0.3},
+        opacity: {value: 0.5},
+        size: {value: 4},
+        line_linked: {enable: true, distance: 120, color: "#00cfff", opacity: 0.4, width: 2},
+        move: {enable: true, speed: 1}
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: {enable: true, mode: "repulse"},
+            onclick: {enable: true, mode: "push"}
+        },
+        modes: {
+            repulse: {distance: 100},
+            push: {particles_nb: 4}
+        }
+    },
+    retina_detect: true
+});
+
+particlesJS("particles-js1", {
+    particles: {
+        number: {value: 30, density: {enable: true, value_area: 800}},
+        color: {value: "#90e0ef"},
+        shape: {type: "circle"},
+        opacity: {value: 0.5},
         size: {value: 4},
         line_linked: {enable: true, distance: 120, color: "#00cfff", opacity: 0.4, width: 2},
         move: {enable: true, speed: 1}

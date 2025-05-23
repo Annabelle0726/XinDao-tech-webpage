@@ -1,26 +1,135 @@
 .hero-section {
-    background:
-            linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
-            url('../img/lims/6731ff2ccb2d35476db29d3d6ab8ad60.jpeg') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url('../img/lims/32c47f3b-607e-4352-8494-b046ec6da4bb.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-glass-effect {
-    background:
-            linear-gradient(135deg,
-            rgba(255,255,255,0.08) 0%,
-            rgba(255,255,255,0.03) 100%);
-    backdrop-filter:
-            brightness(115%)
-            saturate(120%)
-            contrast(90%);
-    /*-webkit-mask: radial-gradient(circle at 50% 50%,*/
-    /*        black 30%,*/
-    /*        transparent 70%);*/
+    background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: brightness(110%) saturate(120%) contrast(90%);
+    mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 70%);
+    /*-webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 70%);*/
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p {
+    position: relative;
+    z-index: 2;
 }
 
 .counter {
+    font-variant-numeric: tabular-nums;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 6px rgba(17, 150, 219, 0.8);
     transition: all 1s ease-out;
+    z-index: 2;
 }
+a.glass-button {
+    position: relative !important;
+    all: unset;
+    z-index: 3;
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px) brightness(115%);
+    box-shadow: 0 0 12px rgba(17, 150, 219, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+a.glass-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 24px rgba(17, 150, 219, 0.9);
+    transform: translateY(-2px) scale(1.05);
+}
+
+
+.molecule-animation {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+}
+
+/* 原有定位样式保持不变 */
+.molecule-animation:nth-child(1) {
+    top: 20%;
+    right: 5%;
+}
+
+.molecule-animation:nth-child(2) {
+    top: 25%;
+    right: 5%;
+}
+
+.molecule-animation:nth-child(3) {
+    top: 15%;
+    right: 5%;
+}
+
+/* 第4、5、6个原子水平翻转 */
+.molecule-animation:nth-child(4),
+.molecule-animation:nth-child(5),
+.molecule-animation:nth-child(6) {
+    left: 5%;
+    transform: scaleX(-1); /* 水平镜像翻转 */
+}
+
+/* 单独调整垂直位置 */
+.molecule-animation:nth-child(4) {
+    bottom: 20%;
+}
+
+.molecule-animation:nth-child(5) {
+    bottom: 25%;
+}
+
+.molecule-animation:nth-child(6) {
+    bottom: 15%;
+}
+
+.atom {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 180, 216, 0.8);
+    box-shadow: 0 0 15px #00b4d8;
+    animation: pulse 2s infinite alternate;
+}
+.bond {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(202, 240, 248, 0.7), transparent);
+    animation: bondGlow 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.3); }
+}
+@keyframes bondGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+
+.data-stream {
+    position: absolute;
+    color: rgba(202, 240, 248, 0.15);
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: rotateX(45deg);
+    user-select: none;
+}
+/* =========================== pain =================================*/
 
 .feature-icon {
     width: 60px;

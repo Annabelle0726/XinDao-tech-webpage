@@ -1,10 +1,10 @@
-#particles-js {
+#particles-js, #particles-js1 {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.45;
+    opacity: 0.5;
     z-index: 0;
     pointer-events: none;
 }
@@ -33,40 +33,93 @@
     text-shadow: 0 0 6px rgba(0, 183, 255, 0.4);
 }
 
-
-
 .btn-consulting {
     margin-top: 30px;
     padding: 14px 36px;
     font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    background: rgba(0, 180, 255, 0.15); /* 蓝色基调 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.35s ease;
-    box-shadow: 0 4px 14px rgba(0, 180, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow:
+            0 4px 14px rgba(0, 180, 255, 0.35),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* 悬停效果 */
 .btn-consulting:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 180, 255, 0.5);
+    background: rgba(0, 200, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow:
+            0 6px 20px rgba(0, 180, 255, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* 按下效果 */
+.btn-consulting:active {
+    transform: translateY(1px);
+    box-shadow:
+            0 2px 8px rgba(0, 180, 255, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2) inset;
+    transition-duration: 0.1s;
 }
 
 .btn-consulting i {
     font-size: 18px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
 .btn-consulting:hover i {
-    transform: translateX(4px);
+    transform: translateY(2px);
+    animation: bounce 1.5s infinite;
+}
+
+.btn-consulting span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-consulting:hover span {
+    transform: translateX(2px);
+}
+
+.btn-consulting::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.7s ease;
+    opacity: 0;
+}
+
+.btn-consulting:hover::after {
+    opacity: 1;
+    top: -20%;
+    left: -20%;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 .section-divider {
@@ -98,33 +151,33 @@
 
 #diagnostic-pain {
     height: 100vh;
-    background: url("../img/consulting/pain.jpg") center center / cover no-repeat;
     position: relative;
     z-index: 1;
+    background: url("../img/consulting/pain1.png") center no-repeat;
 }
 
-.diagnostic-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.bg-wrapper {
+    position: relative;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(6px);
-    background-color: rgba(0, 20, 50, 0.4); /* 深色冷调滤镜 */
-    z-index: 0;
 }
 
+
+
+
 .diagnostic-card {
-    padding: 24px;
+    padding: 12px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease-in-out;
     transform: perspective(800px) rotateX(0deg) rotateY(0deg);
-    cursor: pointer;
     opacity: 0.85;
+    height: 200px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
 }
 
 .diagnostic-card:hover {
@@ -143,37 +196,116 @@
 }
 
 .bg-gradient-blue {
-    background: linear-gradient(135deg, #4a6cf7, #6a9cf7);
+    background: linear-gradient(135deg, #3dd5f3, #6a9cf7);
 }
 
 .bg-gradient-indigo {
-    background: linear-gradient(135deg, #5f59f7, #8a7cf7);
+    background: linear-gradient(135deg, #20c997, #90e0ef);
 }
 
 .bg-gradient-cyan {
     background: linear-gradient(135deg, #3cd1f3, #00b4d8);
 }
 
+.diagnostic-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 /* Glass Button */
 .btn-glass {
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #fff !important;
     border: 1px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(2px);
     transition: 0.3s ease;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 550;
 }
 
-.btn-glass:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 136, 255, 0.3);
+/* 科技蓝版本 */
+.btn-glass-blue {
+    background: rgba(0, 119, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 68, 255, 0.2);
 }
+
+.btn-glass-blue:hover {
+    background: rgba(0, 119, 255, 0.25);
+    box-shadow: 0 6px 25px rgba(0, 89, 255, 0.35);
+}
+
+/* 透明白版本 */
+.btn-glass-white {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-glass-white:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================================
+# digital-factory
+==================================*/
+
+#digital-factory {
+    background: url("../img/consulting/pain2.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =============================
 # sidebar
 =============================== */
+/* 隐藏用 */
+.hidden {
+    display: none !important;
+}
+
+/* 切换按钮样式 */
+.glass-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px) saturate(160%);
+    -webkit-backdrop-filter: blur(4px) saturate(160%);
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glass-toggle-btn:hover {
+    background: rgba(0, 153, 255, 0.15);
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.3);
+    color: #00bfff;
+}
 
 #consulting-sidebar {
     top: 40%;
@@ -182,13 +314,16 @@
     z-index: 999;
     padding: 12px 14px;
     border-radius: 12px;
-    max-width: 180px;
+    max-width: 210px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: saturate(160%) blur(3px);
     -webkit-backdrop-filter: saturate(160%) blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 8px 28px rgba(0, 153, 255, 0.15);
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+
 }
 
 .diagnostic-links {
@@ -213,6 +348,35 @@
     box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
     color: #00bfff;
 }
+
+/* ========================
+# download
+================ */
+/* SVG 图标匹配当前文字颜色 */
+.diagnostic-links li a svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    fill: currentColor;
+}
+
+/* hover 效果：按钮颜色+icon动画 */
+.diagnostic-links li a:hover svg {
+    transform: scale(1.1);
+    color: #00bfff;
+}
+
+/* 让下载按钮 hover 看起来更明显 */
+.diagnostic-links li a:hover {
+    background-color: rgba(0, 153, 255, 0.25);
+    color: #00ccff;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+}
+
+
+
 
 .back-to-top {
     right: -15px !important;
