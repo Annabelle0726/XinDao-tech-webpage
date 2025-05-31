@@ -12,38 +12,278 @@
     --darkest-blue: #03045e;
 }
 
+/* ================== hr ======================= */
 
 
 
-:root {
-    --primary: #00a8ff;
-    --secondary: #9c27b0;
-    --dark: #121212;
-    --light: #f5f5f5;
-    --gray: #333;
-    --card-bg: rgba(30, 30, 30, 0.8);
-    --lightest-blue: #caf0f8;
-    --lighter-blue: #ade8f4;
-    --lighter-blue-1: #90e0ef;
-    --lighter-blue-2: #48cae4;
-    --blue-1: #00b4d8;
-    --blue-2: #0096c7;
-    --dark-blue: #0077b6;
-    --darker-blue: #023e8a;
-    --darkest-blue: #03045e;
+.gradient-transition1, .gradient-transition2, .gradient-transition3, .gradient-transition4,
+.gradient-transition5 {
+    width: 100%;
+    height: 4px;
+    filter: blur(2px);
+    opacity: 0.8;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 2;
+}
+
+.gradient-transition1 {
+    background: linear-gradient(to right, transparent, rgba(0, 153, 255, 0.6), transparent);
+}
+.gradient-transition2 {
+    background: linear-gradient(to right, transparent, rgba(0, 163, 255, 0.55), transparent);
 }
 
 
-#dx-hero {
+
+
+/* =============================================== */
+
+/* ======================== hero =========================================*/
+
+
+#hero {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    background: center no-repeat linear-gradient(var(--lighter-blue), var(--lighter-blue-1));
+    background: linear-gradient(135deg, #0a0f2c, #1a1f3c); /* 深科技蓝底 */
+    overflow: hidden;
+    color: white;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(0,255,255,0.08), transparent 70%);
+    z-index: 0;
+}
+
+#hero canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.4);
 }
 
 
+/* ================================= end hero =======================================*/
 
 
 
+/* ================================== loop ======================================*/
 
+#loop {
+    background-color: #1a213a; /* 略浅 */
+}
+
+.digital-transformation {
+    width: 100%;
+    flex-direction: column;
+    background: linear-gradient(145deg, #1a213a 0%, #0e142e 100%);
+    color: #f0f0f0;
+    padding: 6rem 2.5rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 50px rgba(0, 153, 255, 0.15),
+    0 5px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ gap: 2rem;   overflow: hidden;
+}
+
+/* 科技感背景装饰 */
+.digital-transformation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+            radial-gradient(circle at 20% 30%, rgba(0, 195, 255, 0.08) 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(105, 90, 255, 0.1) 0%, transparent 40%);
+    z-index: 0;
+}
+
+#loop .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+#loop .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    letter-spacing: 1px;
+}
+
+#loop .header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #a0c1ff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.company {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(25, 118, 210, 0.15);
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #64b5f6;
+    border: 1px solid rgba(100, 181, 246, 0.3);
+}
+
+.path-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.path-item {
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: 250px;
+    background: rgba(16, 22, 45, 0.6);
+    border-radius: 10px;
+    padding: 1.8rem;
+    border: 1px solid rgba(64, 140, 255, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.path-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    opacity: 0.7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.path-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 114, 255, 0.25);
+    border-color: rgba(64, 140, 255, 0.4);
+    background: rgba(20, 30, 60, 0.7);
+}
+
+.path-item:hover::before {
+    transform: scaleX(1);
+}
+
+.path-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #4facfe;
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+.path-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e0f0ff;
+    font-weight: 600;
+}
+
+.path-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a0c1ff;
+}
+
+.connectors {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.connector {
+    position: absolute;
+    stroke: rgba(0, 194, 255, 0.3);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.4; }
+}
+
+.pulse {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .path-item {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .path-item {
+        flex: 1 1 100%;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+/* ==================== end loop =========================== */
 
 
 
