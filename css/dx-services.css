@@ -15,12 +15,28 @@
 
 
 
-
+:root {
+    --primary: #00a8ff;
+    --secondary: #9c27b0;
+    --dark: #121212;
+    --light: #f5f5f5;
+    --gray: #333;
+    --card-bg: rgba(30, 30, 30, 0.8);
+    --lightest-blue: #caf0f8;
+    --lighter-blue: #ade8f4;
+    --lighter-blue-1: #90e0ef;
+    --lighter-blue-2: #48cae4;
+    --blue-1: #00b4d8;
+    --blue-2: #0096c7;
+    --dark-blue: #0077b6;
+    --darker-blue: #023e8a;
+    --darkest-blue: #03045e;
+}
 
 
 #dx-hero {
     height: 100vh;
-    background: url("../assets/img/dx/fdb858263fe2c87dff4d1a3c4135939b.jpeg") center no-repeat;
+    background: center no-repeat linear-gradient(var(--lighter-blue), var(--lighter-blue-1));
 }
 
 
