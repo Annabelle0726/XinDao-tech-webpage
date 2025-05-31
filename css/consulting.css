@@ -1,0 +1,811 @@
+#particles-js, #particles-js1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.hero-img {
+    background: linear-gradient(rgba(0, 16, 40, 0.25),
+    rgba(0, 16, 40, 0.65)),
+    url("../assets/img/consulting/Digital-Transformation-Consulting-1.jpg") center/cover no-repeat;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-img .container {
+    z-index: 2;
+    position: relative;
+}
+
+.text-shadow {
+    text-shadow: 0 0 12px rgba(0, 183, 255, 0.7);
+}
+
+.text-shadow-sm {
+    text-shadow: 0 0 6px rgba(0, 183, 255, 0.4);
+}
+
+.btn-consulting {
+    margin-top: 30px;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    background: rgba(0, 180, 255, 0.15); /* 蓝色基调 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow:
+            0 4px 14px rgba(0, 180, 255, 0.35),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 悬停效果 */
+.btn-consulting:hover {
+    background: rgba(0, 200, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow:
+            0 6px 20px rgba(0, 180, 255, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+/* 按下效果 */
+.btn-consulting:active {
+    transform: translateY(1px);
+    box-shadow:
+            0 2px 8px rgba(0, 180, 255, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2) inset;
+    transition-duration: 0.1s;
+}
+
+.btn-consulting i {
+    font-size: 18px;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.btn-consulting:hover i {
+    transform: translateY(2px);
+    animation: bounce 1.5s infinite;
+}
+
+.btn-consulting span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-consulting:hover span {
+    transform: translateX(2px);
+}
+
+.btn-consulting::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.7s ease;
+    opacity: 0;
+}
+
+.btn-consulting:hover::after {
+    opacity: 1;
+    top: -20%;
+    left: -20%;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background-color: rgba(0, 183, 255, 0.75);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.consulting-intro h2 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.consulting-intro p.small {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.consulting-intro p.lead {
+    font-size: 16.5px;
+    color: whitesmoke;
+}
+
+/* ==============================
+ 深蓝浅蓝渐变
+========================== */
+
+.angled-divider-deep-to-blue {
+    height: 80px;  /* 控制斜角高度 */
+    background: linear-gradient(
+            to bottom right,
+            #0a1a3a 0%,     /* 上部section颜色 */
+            #0a1a3a 50%,    /* 切割起点 */
+            #1a3a7a 50.1%,
+            #1a3a7a 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+}
+
+
+/* ========================
+# #pain
+================================== */
+
+#diagnostic-pain {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.2)),
+            url("../assets/img/consulting/pain1.png") center no-repeat;
+}
+
+.bg-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+.diagnostic-card {
+    padding: 12px;
+    border-radius: 16px;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+    opacity: 0.85;
+    height: 200px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+}
+
+.diagnostic-card:hover {
+    opacity: 1;
+    transform: scale(1.03) rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 16px 40px rgba(0, 123, 255, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.diagnostic-card.active {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: scale(1.05) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 0 30px rgba(65, 84, 241, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #3dd5f3, #6a9cf7);
+}
+
+.bg-gradient-indigo {
+    background: linear-gradient(135deg, #20c997, #90e0ef);
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(135deg, #3cd1f3, #00b4d8);
+}
+
+.diagnostic-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Glass Button */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2px);
+    transition: 0.3s ease;
+    border-radius: 50px;
+    font-weight: 550;
+}
+
+/* 科技蓝版本 */
+.btn-glass-blue {
+    background: rgba(0, 119, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 68, 255, 0.2);
+}
+
+.btn-glass-blue:hover {
+    background: rgba(0, 119, 255, 0.25);
+    box-shadow: 0 6px 25px rgba(0, 89, 255, 0.35);
+}
+
+/* 透明白版本 */
+.btn-glass-white {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-glass-white:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
+}
+
+/*  ========================================
+# 浅蓝渐变 hr
+================================================ */
+
+
+/* 颜色定义 */
+:root {
+    --deep-blue: #0a2a5a;     /* 深蓝 */
+    --tech-blue: #1a6bff;     /* 科技蓝 (主背景) */
+    --tech-blue-light: #4d8eff;
+    --tech-blue-lighter: #80abff;
+    --blue-deep: #0077b6;
+    --blue-main: #0096c7;
+    --blue-light: #00b4d8;
+    --blue-soft: #48cae4;
+    --blue-mist: #90e0ef;
+    --blue-fog: #e0f5ff;          /* 极浅蓝灰 */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-light-muted: rgba(255, 255, 255, 0.75);
+    --tech-blue-soft: #a8c5ff;
+    --tech-blue-fog: #d4e5ff;
+}
+
+/* 斜角过渡 (高度80px，向下倾斜) */
+.angled-transition-1 {
+    height: 80px;
+    background: linear-gradient(
+            to bottom right,
+            var(--deep-blue) 0%,
+            var(--deep-blue) 50%,
+            var(--tech-blue-light) 50.1%,  /* 切角起始位置 */
+            var(--tech-blue-light) 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%); /* 30%控制倾斜度 */
+    margin-top: -1px; /* 消除缝隙 */
+}
+
+
+
+
+
+
+
+
+/* =============================================================
+# digital-factory
+==================================================================*/
+
+#digital-factory {
+    background: linear-gradient(
+            to bottom,
+            var(--tech-blue-light) 0%,    /* 与过渡层终点颜色一致 */
+            var(--tech-blue) 30%,         /* 主色 */
+            var(--tech-blue-lighter) 100% /* 底部渐亮 */
+    );
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* 正向三角分割（向下倾斜） */
+.angled-transition-2 {
+    height: 80px;
+    background: linear-gradient(
+            to bottom right,
+            var(--tech-blue-lighter) 0%,
+            var(--tech-blue-light) 50%,
+            var(--tech-blue-light) 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+    margin-top: -1px;
+}
+
+/* 标题字体特效（发光） */
+.section-title-glow {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(0, 183, 255, 0.5),
+    0 0 24px rgba(0, 140, 255, 0.35);
+    letter-spacing: 1.2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* 强调词渐变 */
+.highlight-gradient {
+    font-weight: 600;
+    background: linear-gradient(120deg, #00d4ff, #48cae4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* === 高级玻璃态容器（带柔光内边框） === */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25), inset 0 0 1px rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 2rem 0.5rem;
+}
+
+/* === 列表排版优化 === */
+.consulting-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.consulting-list li {
+    position: relative;
+    padding: 12px 0 12px 36px;
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.65;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.consulting-list li:last-child {
+    border-bottom: none;
+}
+
+/* 图标统一位置和亮色风格 */
+.consulting-list i {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 16px;
+    color: #00ffd5; /* 明亮科技绿蓝 */
+    /*text-shadow: 0 0 6px rgba(0, 255, 213, 0.5);*/
+}
+
+/* 标题字体调性 */
+.consulting-content h4 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+    color: #ffffff;
+}
+
+/* 可选：给每个关键词强调加一下虚线底色 */
+.consulting-list strong {
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(120deg, rgba(0,255,255,0.1), rgba(255,255,255,0.05));
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+
+
+.video-wrapper video {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 183, 255, 0.1);
+}
+
+.consulting-content.bg-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ==================== 表格 1 =========================== */
+.glass-feature-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.flow-list {
+    z-index: 3;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.flow-list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    font-size: 14.2px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.flow-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #00d9ff;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+.svg-connection {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/*  ========================== hr =======================  */
+
+.bg-tech-blue {
+    background: linear-gradient(to right, var(--blue-deep), var(--blue-main));
+}
+
+
+
+/* -------------------------- 工厂------------------------- */
+
+#lean-consulting {
+    background: linear-gradient(
+            to bottom,
+            var(--blue-light) 0%,
+            var(--blue-soft) 50%,
+            var(--blue-mist) 100%
+    );
+    padding: 3rem 0;
+}
+
+/* ------------- top part cards --------------- */
+
+.bg-glass-light {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem 2rem 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+#lean-consulting .consulting-list i{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#lean-consulting .consulting-list li {
+    color: #caf0f8;
+}
+
+/* ---------- bottom part cards ------------ */
+#lean-consulting .col-lg-8 ul {
+    color: #00b4d8 !important;
+}
+
+#lean-consulting .col-lg-4 ul {
+    color: #0096c7 !important;
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.feature-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+.feature-connected-line {
+    position: relative;
+}
+
+.feature-connected-line::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.feature-connected-line .col-md-3 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#lean-consulting .col-md-3 ul li {
+    color: #0077b6;
+    font-weight: 480;
+    font-size: 0.85rem;
+}
+
+/* --------------------------- hr ---------------------------- */
+
+.angled-transition-3 {
+    height: 80px;
+    background: linear-gradient(
+            to bottom right,
+            var(--blue-light) 0%,
+            var(--blue-soft) 50%,
+            var(--blue-mist) 50.1%,
+            var(--blue-mist) 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+    margin-top: -1px;
+}
+
+/* -------------------------- 服务流程 ------------------------------ */
+
+#consulting-process {
+    background: linear-gradient(
+            to bottom,
+            var(--blue-mist) 0%,
+            var(--blue-fog) 75%,
+    white 100%
+    );
+    padding: 3rem 0;
+}
+
+/* Process Timeline Styles */
+.process-timeline {
+    padding: 2rem 0;
+}
+
+.process-card {
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent;
+    border-radius: 8px 10px;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-top-color: var(--bs-primary);
+}
+
+.process-step-number {
+    width: 32px;
+    height: 32px;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.process-icon .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover .icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.process-features li {
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .timeline-line {
+        display: none;
+    }
+
+    .process-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.process-step-number {
+    animation: pulse 2s infinite;
+}
+
+/* =============================
+# sidebar
+=============================== */
+/* 隐藏用 */
+.hidden {
+    display: none !important;
+}
+
+/* 切换按钮样式 */
+.glass-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px) saturate(160%);
+    -webkit-backdrop-filter: blur(4px) saturate(160%);
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glass-toggle-btn:hover {
+    background: rgba(0, 153, 255, 0.15);
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.3);
+    color: #00bfff;
+}
+
+#consulting-sidebar {
+    top: 40%;
+    right: 20px;
+    position: fixed;
+    z-index: 999;
+    padding: 12px 14px;
+    border-radius: 12px;
+    max-width: 210px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: saturate(160%) blur(3px);
+    -webkit-backdrop-filter: saturate(160%) blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px rgba(0, 153, 255, 0.15);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+
+}
+
+.diagnostic-links {
+    margin: 0;
+}
+
+.diagnostic-links li a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.diagnostic-links li a:hover {
+    background-color: rgba(0, 153, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+    color: #00bfff;
+}
+
+/* ========================
+# download
+================ */
+/* SVG 图标匹配当前文字颜色 */
+.diagnostic-links li a svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    fill: currentColor;
+}
+
+/* hover 效果：按钮颜色+icon动画 */
+.diagnostic-links li a:hover svg {
+    transform: scale(1.1);
+    color: #00bfff;
+}
+
+/* 让下载按钮 hover 看起来更明显 */
+.diagnostic-links li a:hover {
+    background-color: rgba(0, 153, 255, 0.25);
+    color: #00ccff;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+}
+
+/* =============== 深蓝sidebar ==================== */
+
+/* 加深蓝背景，提升可读性 */
+#consulting-sidebar.sidebar-highlighted {
+    background: rgba(0, 80, 160, 0.85);
+    border: 1px solid rgba(0, 136, 255, 0.3);
+    box-shadow: 0 0 18px rgba(0, 123, 255, 0.35);
+    backdrop-filter: blur(6px) saturate(160%);
+}
+
+/* 可选：让文字更突出 */
+#consulting-sidebar.sidebar-highlighted .diagnostic-links li a {
+    color: #ffffff;
+}
+
+#consulting-sidebar.sidebar-highlighted .diagnostic-links li a:hover {
+    background-color: rgba(0, 153, 255, 0.2);
+    color: #00d4ff;
+}
+
+
+
+.back-to-top {
+    right: -15px !important;
+    bottom: -135px !important;
+}

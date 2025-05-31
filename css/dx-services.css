@@ -1,0 +1,305 @@
+
+:root {
+    --primary: #00a8ff;
+    --lightest-blue: #caf0f8;
+    --lighter-blue: #ade8f4;
+    --lighter-blue-1: #90e0ef;
+    --lighter-blue-2: #48cae4;
+    --blue-1: #00b4d8;
+    --blue-2: #0096c7;
+    --dark-blue: #0077b6;
+    --darker-blue: #023e8a;
+    --darkest-blue: #03045e;
+}
+
+
+
+
+
+
+
+#dx-hero {
+    height: 100vh;
+    background: url("../assets/img/dx/fdb858263fe2c87dff4d1a3c4135939b.jpeg") center no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==================================================================
+ # 架构图整体样式 Section
+ ================================================================== */
+.architecture-section {
+    background: #f9fcfe;
+    padding: 80px 0;
+    color: #1a3b5d;
+}
+
+/* ======= 总标题 / 副标题 ======= */
+.grid-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #2c5d94;
+    margin-bottom: 8px;
+}
+
+.grid-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #5b7fa4;
+    margin-bottom: 50px;
+}
+
+.grid-subtitle::after {
+    content: "";
+    display: block;
+    margin: 12px auto 0;
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4bb5f7, #3A8DFF);
+}
+
+/* ======= 主系统模块（每个模块） ======= */
+.integration-system {
+    margin-bottom: 40px;
+    display: flex;
+    border: 1px dashed #d3e6f6;
+    border-left: 4px solid #3A8DFF;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 12px rgba(58, 141, 255, 0.06);
+    align-items: flex-start;
+    position: relative;
+}
+
+/* ======= 左侧系统大标题（如 SaaS） ======= */
+.left-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #2b8ec6;
+    padding-top: 12px;
+    padding-right: 20px;
+     min-width: 140px;
+    text-align: left;
+}
+
+.left-title.col-2{
+    width: 13%;
+}
+
+/* ======= 右侧内容容器 ======= */
+.right-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 30px;
+    flex: 1;
+}
+
+/* ======= 子标题样式 ======= */
+.sub-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #295f8f;
+    background: #eef7fb;
+    border-left: 4px solid #4bb5f7;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* ======= 多子项容器 ======= */
+.sub-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ======= 子项 ======= */
+.sub-items span {
+    background: #f1f8fc;
+    color: #005b88;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 0 1px #d0eafd;
+    cursor: default;
+}
+
+.sub-items span:hover {
+    background: #d0eafd;
+    box-shadow: 0 0 8px rgba(80, 174, 248, 0.6);
+}
+
+/* ======= PaaS 特化样式（三列） ======= */
+.paas .right-content .col {
+    flex: 0 0 33%;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+/* ======= IaaS 仅标题区域 ======= */
+.single-title {
+    font-size: 1rem;
+    font-weight: 500;
+    background: #eef7fb;
+    color: #2e5874;
+    padding: 10px 15px;
+    border-left: 4px solid #4bb5f7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item-only {
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #f6f9fc;
+    color: #1a3b5d;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    min-width: 100px;
+    margin-bottom: 8px;
+    box-shadow: inset 0 0 0 1px #dce9f1;
+    transition: 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-only:hover {
+    background-color: #d7edfa;
+    color: #004d79;
+    box-shadow: 0 0 6px rgba(0, 132, 220, 0.3);
+}
+
+/* ======= 边缘层容器布局优化 ======= */
+.side .right-content {
+    gap: 5px 10px;
+}
+
+.side .right-content .col {
+    min-width: 120px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 8px 16px;
+}
+
+/* ======= 响应式优化 ======= */
+@media (max-width: 1200px) {
+    .paas .right-content .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-title {
+        text-align: left;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .right-content {
+        padding-left: 0;
+    }
+
+    .sub-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sub-items span,
+    .item-only {
+        flex: 1 0 calc(50% - 8px);
+    }
+}
+
+/* ------------------- toast ------------------- */
+
+
+.toast-container {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast-message {
+    position: relative;
+    background: linear-gradient(135deg, rgba(10, 22, 43, 0.85), rgba(14, 34, 61, 0.95));
+    color: #d4f1ff;
+    border: 1px solid rgba(80, 190, 255, 0.4);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-top: 12px;
+    box-shadow:
+            0 0 12px rgba(80, 190, 255, 0.3),
+            inset 0 0 20px rgba(10, 80, 120, 0.3);
+    font-size: 0.95rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    overflow: hidden;
+}
+
+.toast-message::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 180, 255, 0.15) 10%, transparent 60%);
+    animation: scan-glow 4s linear infinite;
+    z-index: 0;
+}
+
+.toast-message::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px dashed rgba(80, 190, 255, 0.15);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-message.hide {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+@keyframes scan-glow {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
+}
