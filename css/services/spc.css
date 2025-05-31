@@ -1,0 +1,579 @@
+:root {
+    --primary: #00a8ff;
+    --lightest-blue: #caf0f8;
+    --lighter-blue: #ade8f4;
+    --lighter-blue-1: #90e0ef;
+    --lighter-blue-2: #48cae4;
+    --blue-1: #00b4d8;
+    --blue-2: #0096c7;
+    --dark-blue: #0077b6;
+    --darker-blue: #023e8a;
+    --darkest-blue: #03045e;
+}
+
+/* ============================ architecture =========================================== */
+
+
+/* 标题样式 */
+.section-title {
+    color: #005f91;
+    text-shadow: 0 2px 4px rgba(0, 60, 120, 0.2);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #0077b6;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.architecture-divider {
+    height: 3px;
+    width: 120px;
+    background: linear-gradient(90deg, #005f91, #4da9ff);
+    margin: 10px auto 20px;
+    border-radius: 3px;
+}
+
+
+/* ========================== grid =====================*/
+
+
+/* ================================== 架构图 ===================================== */
+#architecture-spc {
+    background: linear-gradient(135deg, #a0d8ff, #c0e4ff, #d8f0fa);
+    padding: 6rem 0rem;
+}
+
+.architecture-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.architecture-section .section-title {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    font-weight: 650;
+}
+
+.architecture-section .section-subtitle {
+    font-size: 1.1rem;
+    color: #0077b6;
+    font-weight: 490;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.12),
+    0 2px 8px rgba(0, 180, 216, 0.18);
+    backdrop-filter: blur(6px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.architecture-divider {
+    width: 180px;
+    height: 4px;
+    background: linear-gradient(90deg,
+    transparent 0%,
+    #00bce0 20%, #6dd9f0 50%, #00bce0 80%,
+    transparent 100%);
+    margin: 1.5rem auto;
+    clip-path: polygon(0% 50%, 20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.4),
+    inset 0 0 4px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+}
+
+/* 主容器布局 */
+.spc-architecture-grid {
+    padding: 0 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 9fr 2fr;
+    gap: 1rem 1.45rem;
+    align-items: stretch;
+    width: 90%;
+    height: 90vh;
+}
+
+/* 左侧竖排区域 */
+.spc-side-title {
+    place-content: center;
+    display: grid;
+    grid-template-rows: 0.65fr 0.75fr 1fr;
+    grid-column: 1;
+    border-radius: 14px;
+    padding: 1rem 0.5rem;
+    gap: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.spc-side-title .vertical-title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 575;
+    font-size: 1.2rem;
+    padding: 2rem 0.75rem;
+    border-radius: 10px;
+    color: var(--blue-2);
+    background: linear-gradient(180deg, var(--lighter-blue-1), var(--lightest-blue));
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.14), 0 0 12px rgba(0, 180, 216, 0.08);
+    text-shadow: 0 0 4px rgba(0, 180, 216, 0.25);
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+
+/* 中间模块 */
+.spc-center-blocks {
+    display: grid;
+    grid-template-rows: 0.65fr 0.75fr 1fr;
+    grid-column: 2;
+    gap: 1.25rem;
+}
+
+.spc-center-blocks .data-center {
+    margin-bottom: 0.5rem;
+}
+
+.spc-block {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 60, 255, 0.08);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+.block-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #005f91;
+    margin-bottom: 0.75rem;
+}
+
+.block-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.block-items.two-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+}
+
+.block-items.two-rows .row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 35px;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.item {
+    position: relative;
+    cursor: pointer !important;
+    flex: 1 1 120px;
+    background: rgba(0, 180, 216, 0.12);
+    border: 1px solid rgba(0, 180, 216, 0.08);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.81rem;
+    text-align: center;
+    color: #0096c7;
+    font-weight: 535;
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+    background: var(--lighter-blue-1);
+    color: #023e8a;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.1);
+}
+
+.business-center .block-items .item {
+    flex: 1 1 90px;
+    font-size: 0.72rem;
+}
+
+/* 第三栏区域 */
+.spc-side-right {
+    place-content: center;
+    display: grid;
+    grid-template-rows: 0.7fr 0.7fr;
+    grid-column: 3;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 0.25rem;
+    gap: 1.25rem;
+    box-shadow: inset 0 0 8px rgba(0, 119, 182, 0.1);
+    backdrop-filter: blur(6px);
+}
+
+.spc-side-group {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1),
+    0 4px 12px rgba(0, 150, 200, 0.05);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.spc-side-group .side-title {
+    font-size: 1.1rem;
+    font-weight: 575;
+    color: #00b4d8;
+    border-left: 4px solid #00b4d8;
+    padding-left: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.spc-side-group .item {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 0.6rem;
+    color: #48cae4 !important;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 3px 8px rgba(0, 180, 216, 0.05);
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+}
+
+/* 管理组排布 */
+.spc-center-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    grid-row: 3;
+}
+
+.spc-center-group .spc-block {
+    flex: 1 1 50%;
+    min-width: 320px;
+}
+
+/* Toast 样式 */
+.toast-container {
+    position: fixed;
+    top: 3.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.toast-message {
+    position: relative;
+    background: rgba(245, 250, 255, 0.88);
+    border: 0.56px solid rgba(72, 202, 228, 0.3);
+    border-radius: 9px;
+    padding: 0.8rem 1.25rem;
+    color: #1976d2;
+    font-size: 0.95rem;
+    max-width: 360px;
+    min-width: 260px;
+    overflow: hidden;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.12),
+    0 8px 32px rgba(100, 180, 255, 0.25),
+    0 4px 12px rgba(0, 80, 160, 0.15);
+    backdrop-filter: blur(12px);
+    transform: translateX(100%) scale(0.97);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    animation: toastPopIn 0.6s ease;
+}
+
+.toast-message.fade-out {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.95);
+    transition: transform 0.8s ease-in, opacity 0.6s ease-in;
+}
+
+.toast-content {
+    position: relative;
+    z-index: 2;
+    line-height: 1.5;
+}
+
+.toast-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 25%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0) 75%
+    );
+    z-index: 1;
+    pointer-events: none;
+    animation: shimmer 6s linear infinite;
+}
+
+
+/* ====================== end grid =========================*/
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .spc-architecture-grid {
+        grid-template-columns: 100px repeat(3, 1fr) 130px;
+    }
+
+    .vertical-title {
+        width: 90px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .spc-architecture-grid {
+        grid-template-columns: 80px repeat(3, 1fr) 110px;
+        gap: 8px;
+    }
+
+    .spc-block, .spc-side-group {
+        padding: 12px;
+    }
+
+    .item {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .spc-architecture-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .spc-side-title {
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .vertical-title {
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 10px 15px;
+        margin: 0 8px;
+        min-width: 100px;
+    }
+
+    .spc-center-blocks {
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-columns: 1fr;
+    }
+
+    .spc-side-right {
+        grid-column: 1;
+        grid-row: 3;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .spc-side-group {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 0;
+    }
+}
+
+
+/* ==================== Toast ==================== */
+/* Toast 容器放到底部右侧 */
+.toast-container {
+    position: fixed;
+    /*bottom: 1.5rem;*/
+    top: 3.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.toast-message {
+    position: relative;
+    background: rgba(245, 250, 255, 0.88); /* 陶瓷感淡蓝灰，亮调 */
+    border: 0.56px solid rgba(72, 202, 228, 0.3); /* 柔和亮蓝边框 */
+    border-radius: 9px;
+    padding: 0.8rem 1.25rem 0.8rem 1.25rem;
+    color: #1976d2; /* 深一点的科技蓝字体 */
+    font-size: 0.95rem;
+    max-width: 360px;
+    min-width: 260px;
+    overflow: hidden;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.12),
+    0 8px 32px rgba(100, 180, 255, 0.25),
+    0 4px 12px rgba(0, 80, 160, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateX(100%) scale(0.97);
+    opacity: 0;
+    transition: all 0.6s ease;
+    will-change: transform, opacity;
+}
+
+/* 显示时 */
+.toast-message.show {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    animation: toastPopIn 0.6s ease;
+}
+
+/* 消失时 */
+.toast-message.fade-out {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.95);
+    transition: transform 0.8s ease-in, opacity 0.6s ease-in;
+}
+
+/* 内容区 */
+.toast-content {
+    position: relative;
+    z-index: 2;
+    line-height: 1.5;
+}
+
+/* 内部柔光流动感 */
+.toast-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 25%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0) 75%
+    );
+    z-index: 1;
+    pointer-events: none;
+    animation: shimmer 6s linear infinite;
+}
+
+/* 流光边框动画 */
+.toast-message::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+            90deg,
+            rgba(100, 220, 255, 0.3),
+            rgba(200, 240, 255, 0.6),
+            rgba(100, 220, 255, 0.3)
+    );
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0.8;
+    animation: glowBorder 4s linear infinite;
+}
+
+/* 动画定义 */
+@keyframes glowBorder {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes toastPopIn {
+    0% {
+        transform: translateX(100%) scale(0.9);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-4%) scale(1.02);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+    }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .toast-container {
+        right: 1rem;
+        left: 1rem;
+        bottom: 1rem;
+        align-items: center;
+    }
+
+    .toast-message {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+/* =============================== end architecture================================== */

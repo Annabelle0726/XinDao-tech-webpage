@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>芯导 · 用数字化连接生产与未来</title>
+    <meta name="keywords"
+          content="芯导,数字化转型,LIMS系统,QMS质量管理,EAM资产管理,MES制造执行系统,EMS能源管理,SPC统计过程控制,工业软件,制造业数字化,中小企业信息化,制造运营,数据合规">
+    <meta name="description"
+          content="芯导致力于为中小制造企业提供LIMS、QMS、EAM、MES、EMS、SPC等一站式工业软件解决方案，推动企业实现从研发到生产、从实验室到工厂的全流程数字化转型。">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@400&display=swap"
+          rel="stylesheet">
+    <!-- 阿里巴巴普惠体-->
+    <link rel="stylesheet"
+          href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/fontsource-alibaba-puhuiti/4.5.5/index.min.css"/>
+    <!-- 思源黑体 -->
+    <link href="https://cdn.jsdelivr.net/npm/source-han-sans-sc@2.004R/index.min.css" rel="stylesheet">
+
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/consulting.css">
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top transparent">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>芯导软件</span>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto " href="./index.html">首页</a></li>
+                <li><a class="nav-link scrollto" href="./dx-services.html">数字化转型</a></li>
+
+                <!-- 产品中心菜单触发 -->
+                <li class="dropdown megamenu position-static" id="productCenterDropdown">
+                    <a href="#"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
+                </li>
+
+                <li><a class="nav-link scrollto active" href="consulting.html">诊断咨询</a></li>
+                <li><a class="nav-link scrollto" href="./about.html">关于我们</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+
+    <!-- head width megamenu -->
+    <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
+        <div class="container py-4">
+            <div class="row" style="margin: 0 !important;">
+
+                <!-- MES -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/mes.html" class="text-dark fw-bold">
+                        <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
+                    <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+                </div>
+
+                <!-- EAM -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/eam.html" class="text-dark fw-bold">
+                        <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
+                    <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
+                </div>
+
+                <!-- LIMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/lims.html" class="text-dark fw-bold">
+                        <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
+                    <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
+                </div>
+
+                <!-- QMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/qms.html" class="text-dark fw-bold">
+                        <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
+                    <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
+                </div>
+
+                <!-- EMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/ems.html" class="text-dark fw-bold">
+                        <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
+                    <p class="text-muted">监控能源使用，提升能效水平，支持“双碳”目标落地</p>
+                </div>
+
+                <!--                SPC-->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/spc.html" class="text-dark fw-bold">
+                        <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
+                    <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
+                </div>
+
+                <!-- TMS -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/tms.html" class="text-dark fw-bold">
+                        <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
+                    <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
+                </div>
+
+                <!-- BI -->
+                <div class="col-lg-4 mb-1">
+                    <h6><a href="services/bi.html" class="text-dark fw-bold">
+                        <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
+                    <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+<!-- Hero Section -->
+<section class="hero-img text-white d-flex align-items-center justify-content-center position-relative shadow"
+         style="height: 100vh;">
+    <!-- 粒子效果 -->
+    <div id="particles-js"></div>
+    <div class="container text-center text-white">
+        <!-- h1 最先出现，无延迟 -->
+        <h1 class="display-4 fw-bold text-shadow" data-aos="fade-up">芯导诊断咨询服务</h1>
+
+        <!-- p 延迟200ms -->
+        <p class="lead fw-medium text-shadow-sm mb-4" data-aos="fade-up" data-aos-delay="200">
+            夯实基础，明确方向，助力企业智改数转落地
+        </p>
+
+        <!-- 核心导语部分 -->
+        <div class="consulting-intro px-lg-5 mx-auto" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="400">
+            <p class="lead fst-italic mb-2">
+                看得见的问题，才能解决；选对的路径，才能高效转型
+            </p>
+
+        </div>
+
+        <!-- CTA 按钮 延迟最长 -->
+        <a href="#diagnostic-pain" class="btn-glass btn-consulting mt-5" data-aos="fade-up" data-aos-delay="1000">
+            <span>开始诊断</span> <i class="bi bi-arrow-down-circle"></i>
+        </a>
+    </div>
+</section>
+
+
+<div class="angled-divider-deep-to-blue"></div>
+
+<!-- 数字化转型典型困境 Section -->
+<section class="text-white py-5 position-relative overflow-hidden" id="diagnostic-pain">
+    <!-- 粒子效果 -->
+    <div id="particles-js1"></div>
+    <div class="mt-3"></div>
+    <div class="container position-relative z-2 mt-5">
+        <div class="section-header text-center m-4">
+            <h2 class="text-white m-2" data-aos="fade-up">您的企业是否正面临这些数字化转型困境？</h2>
+            <p data-aos="fade-up" data-aos-delay="200">数字化不是选择题，而是生存题
+                <br><br><strong>以下困境，您是否感同身受？</strong></p>
+        </div>
+
+        <!-- 卡片组 -->
+        <div class="row g-4 mb-5">
+            <!-- 卡片 1 (延迟400ms) -->
+            <div class="col-md-4 d-flex align-items-center justify-content-center" data-aos="fade-up"
+                 data-aos-delay="400">
+                <div class="diagnostic-card bg-gradient-blue text-white" data-id="1">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <svg t="1747981971488" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="14984" width="32" height="32">
+                                <path d="M240.64 817.152c-8.192 0-16.384-3.072-22.528-9.216-12.288-12.288-12.288-32.768 0-45.056l542.72-542.72c12.288-12.288 32.768-12.288 45.056 0 12.288 12.288 12.288 32.768 0 45.056l-542.72 542.72c-6.144 6.144-14.336 9.216-22.528 9.216zM371.2 530.944c4.096-4.096 6.656-10.24 6.656-16.384v-1.536C377.856 439.296 437.76 378.88 512 378.88h1.536c6.144 0 11.776-2.048 16.384-6.656l88.576-88.576c12.288-12.288 6.656-32.768-10.24-36.864-31.232-8.192-63.488-13.312-96.768-13.312-241.152 0-430.08 249.856-438.272 260.608-8.704 11.264-8.704 27.136 0 38.4 4.096 5.632 53.76 71.168 132.608 135.168 8.704 7.168 21.504 6.656 29.696-1.536l135.68-135.168zM950.272 494.08c-4.096-5.632-53.248-71.168-132.608-135.168-8.704-7.168-21.504-6.656-29.696 1.536l-135.68 135.68c-4.096 4.096-6.656 10.24-6.656 16.384v1.024c0 74.24-60.416 134.144-134.144 134.144h-1.024c-6.144 0-11.776 2.048-16.384 6.656L404.48 743.936c-12.288 12.288-6.656 32.768 10.24 36.864 30.72 8.192 62.976 12.8 96.256 12.8 241.152 0 430.08-249.856 438.272-260.608 9.216-11.776 9.216-27.648 1.024-38.912z"
+                                      fill="#1296f9" p-id="14985"></path>
+                            </svg>
+                            “盲人摸象”的转型困局
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li>🔹 不清楚企业数字化水平</li>
+                            <li>🔹 投入大量资金却成效不明</li>
+                            <li>🔹 系统孤立，产生"数据孤岛"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 2 (延迟600ms) -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="diagnostic-card bg-gradient-indigo text-white" data-id="2">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <svg t="1747981730136" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="14068" id="mx_n_1747981730138" width="32"
+                                 height="32">
+                                <path d="M748.4416 927.7952h-168.96v-30.72h168.96c10.24 0 15.36-5.12 20.48-15.36 10.24-15.36 15.36-35.84 10.24-56.32-5.12-10.24-5.12-25.6 0-35.84v-5.12l5.12-5.12c10.24-5.12 20.48-10.24 20.48-15.36h30.72c0 15.36-15.36 30.72-30.72 40.96v15.36c10.24 25.6 5.12 56.32-15.36 81.92 0 15.36-20.48 25.6-40.96 25.6z"
+                                      p-id="14069"></path>
+                                <path d="M625.5616 973.8752h-30.72v-56.32h30.72v56.32z m-322.56 0h-30.72v-112.64c-5.12-46.08-25.6-92.16-56.32-122.88-51.2-61.44-81.92-133.12-81.92-209.92-10.24-97.28 40.96-189.44 122.88-235.52 25.6-10.24 51.2-20.48 76.8-20.48l5.12 25.6c-20.48 5.12-46.08 10.24-66.56 20.48-71.68 40.96-117.76 122.88-107.52 209.92 0 71.68 25.6 138.24 76.8 189.44 35.84 35.84 56.32 87.04 61.44 138.24v117.76z m506.88-215.04h-61.44v-30.72h61.44c10.24 0 15.36-5.12 15.36-5.12 0-15.36-5.12-25.6-10.24-40.96l-5.12-20.48 15.36-5.12c25.6-10.24 35.84-15.36 35.84-30.72 0-10.24-25.6-30.72-40.96-51.2l-5.12-5.12c-15.36-15.36-30.72-35.84-46.08-51.2v-51.2c0-81.92-51.2-148.48-128-174.08l10.24-25.6c87.04 30.72 143.36 107.52 148.48 199.68v40.96c10.24 15.36 20.48 25.6 30.72 35.84l10.24 10.24 5.12 5.12c25.6 25.6 46.08 51.2 46.08 71.68 0 25.6-20.48 46.08-40.96 51.2 10.24 15.36 15.36 35.84 10.24 56.32-10.24 10.24-30.72 20.48-51.2 20.48z"
+                                      p-id="14070"></path>
+                                <path d="M487.3216 210.9952h76.8v56.32h-76.8v-56.32z" fill="#A3D4FF"
+                                      p-id="14071"></path>
+                                <path d="M410.5216 236.5952v271.36h-76.8l158.72 163.84 158.72-163.84h-81.92v-271.36"
+                                      fill="#21C38C" p-id="14072"
+                                      data-spm-anchor-id="a313x.search_index.0.i9.17c53a81EsGV9E"
+                                      class="selected"></path>
+                                <path d="M487.3216 692.2752c-5.12 0-10.24 0-10.24-5.12l-158.72-163.84c-5.12-5.12-5.12-10.24-5.12-15.36 0-5.12 10.24-10.24 15.36-10.24h66.56v-261.12h30.72v271.36c0 10.24-5.12 15.36-15.36 15.36h-46.08l122.88 128 122.88-128h-46.08c-10.24 0-15.36-5.12-15.36-10.24v-276.48h30.72v261.12h66.56c5.12 0 10.24 5.12 15.36 10.24 5.12 5.12 0 10.24-5.12 15.36l-158.72 163.84c0 5.12-5.12 5.12-10.24 5.12z m-138.24-322.56h-30.72v-204.8h30.72v204.8z"
+                                      p-id="14073"></path>
+                                <path d="M579.4816 441.3952h-30.72v-230.4h30.72v230.4z m-230.4-15.36h-30.72v-30.72h30.72v30.72z m307.2-30.72h-30.72v-271.36h30.72v271.36z m-230.4 0h-30.72v-271.36h30.72v271.36z m76.8-56.32h-30.72v-230.4h30.72v230.4z m76.8-158.72h-30.72v-30.72h30.72v30.72z m-230.4-40.96h-30.72v-30.72h30.72v30.72z m307.2-46.08h-30.72v-25.6h30.72v25.6z m-230.4 0h-30.72v-25.6h30.72v25.6z m-76.8-15.36h-30.72v-25.6h30.72v25.6z"
+                                      p-id="14074"></path>
+                            </svg>
+                            “头痛医头”的解决方案
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li>🔹 系统上马匆忙，与实际需求脱节</li>
+                            <li>🔹 重复投资、缺乏顶层设计</li>
+                            <li>🔹 员工抵触，系统上线后使用率低</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 3 (延迟800ms) -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="diagnostic-card bg-gradient-cyan text-white" data-id="3">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <svg t="1747981284537" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="10998" width="32" height="32">
+                                <path d="M129.39 627.75a391.746 391.746 0 0 0 46.59 101.89c36.5 56.68 85.74 101.93 142.68 133.02 56.94 31.09 121.59 48 188.91 48 69.49 0 135.74-17.76 193.65-50.38 53.79-30.31 100.37-73.44 135.64-127.1 4.53-6.9 13.68-9.01 20.73-4.73l0.49 0.3c7.38 4.48 9.63 14.2 4.88 21.41a427.117 427.117 0 0 1-58.22 70.54c-25.57 24.99-54.27 46.78-85.37 64.68-32.07 18.46-66.42 32.56-102.05 42.06a426.623 426.623 0 0 1-109.76 14.37c-72.64 0-142.39-18.25-203.84-51.79s-114.57-82.37-153.94-143.51a422.821 422.821 0 0 1-50.29-109.97M117.48 349.74c21.1-50.94 49.24-93.71 89.4-133.87 40.09-40.09 86.79-71.2 137.63-92.29 50.71-21.04 105.55-32.13 162.09-32.26 0.28 0 0.57-0.01 0.85-0.03 33.11-2.26 66.01-0.03 98.49 6.67 32.62 6.72 64.8 17.94 96.33 33.61 27.1 13.47 53.18 30.06 77.58 49.24s47.09 40.94 67.43 64.76c14.73 17.26 27.87 35.21 39.1 53.36 11.23 18.14 20.54 36.47 27.64 54.49 7.22 18.33 11.96 35.91 14.15 52.28 2.16 16.08 1.86 31-0.94 44.36-0.1 0.49-0.17 0.98-0.23 1.48-0.48 4.19-2.11 8.85-5.97 13.31-4.09 4.73-10.68 9.25-21.07 12.75-5.51 1.86-12.07 3.49-19.81 4.91s-16.65 2.64-26.84 3.66c-18.07 1.82-38.78 2.91-60.62 3.64-21.84 0.73-44.8 1.09-67.38 1.45-16.42 0.26-32.39 0.51-47.36 0.89-9.06 0.23-17.76 0.51-25.97 0.87-8.57 0.37-15.86-6.17-16.4-14.74-0.54-8.61 6.08-15.99 14.7-16.37 8.44-0.37 17.34-0.66 26.59-0.9 15.2-0.39 31.35-0.65 47.96-0.91 19.82-0.31 39.97-0.63 59.32-1.2s37.89-1.39 54.47-2.7c20.98-1.66 34.56-3.82 43.33-5.83s12.71-3.89 14.43-4.99l0.03-0.13 0.03-0.13c5.14-22.09 0.4-51.16-12.37-82.58-12.76-31.43-33.54-65.21-60.46-96.76-41.76-48.93-92.07-86.78-146.15-111.4s-111.92-36-168.75-31.96l-0.55 0.02-0.55 0.02c-108.65 0-207.18 44.2-278.54 115.56-35.33 35.33-61 65.31-80.95 111.89"
+                                      p-id="10999" fill="#1296d9"></path>
+                                <path d="M760.6 750.53H214.33c-14.71 0-26.67-11.96-26.67-26.67v-31.62c0-14.7 11.96-26.67 26.67-26.67H760.6c14.7 0 26.67 11.96 26.67 26.67v31.62c0 14.71-11.96 26.67-26.67 26.67z m-543.95-28.99h541.63v-26.98H216.65v26.98zM500.92 349.06H437.8c-3.71 0-6.72-3.01-6.72-6.72v-12.93c0-3.71 3.01-6.72 6.72-6.72h63.12c3.71 0 6.72 3.01 6.72 6.72v12.93c0 3.71-3.01 6.72-6.72 6.72zM500.92 418.05H437.8c-3.71 0-6.72-3.01-6.72-6.72V398.4c0-3.71 3.01-6.72 6.72-6.72h63.12c3.71 0 6.72 3.01 6.72 6.72v12.93c0 3.71-3.01 6.72-6.72 6.72zM505.86 488.32h-77.71c-3.71 0-6.72-3.01-6.72-6.72v-12.93c0-3.71 3.01-6.72 6.72-6.72h77.71c3.71 0 6.72 3.01 6.72 6.72v12.93c0 3.72-3.01 6.72-6.72 6.72z"
+                                      p-id="11000" fill="#1296d9"></path>
+                                <path d="M510.02 691.84H405.14c-7.65 0-15.06-3.18-20.33-8.72-5.27-5.54-8.08-13.09-7.7-20.73l20.76-421.16c0.74-14.96 13.05-26.69 28.03-26.69h66.82c15.1 0 27.42 11.82 28.04 26.91l17.3 421.16c0.31 7.6-2.53 15.1-7.79 20.59-5.26 5.5-12.64 8.64-20.25 8.64z m-96.72-27.66v-0.02 0.02z m0.42-8.57h87.79l-16.63-404.82h-51.21l-19.95 404.82zM313.26 696.37c-5.84 0-16.62-1.13-23.2-8.7-3.76-4.33-5.47-10.01-4.68-15.59l20.76-147.38c1.29-9.14 9.29-18.9 27.88-18.9h42.44v36.24H340.3l-19.03 135.09c1.19-8.48-4.03-14.7-8-16.6v35.84zM619.4 691.84V655.6c-2.32 0.18-8.79 5.26-8.12 13.94l-16.41-214.5h-59.59V418.8h66.82c15.26 0 27.04 9.19 28.01 21.86l17.3 226.12c0.46 5.97-1.6 11.76-5.8 16.29-5.17 5.57-13.26 8.77-22.21 8.77zM116.54 652.19c-16.44-8.12-28.78-25.92-34.76-50.13-10.71-43.36 0.8-96.79 29.34-136.13l21.85 15.86c-29.24 40.3-31.73 86.49-24.98 113.79 3.98 16.12 11.46 27.92 20.51 32.39l-11.96 24.22z"
+                                      p-id="11001" fill="#1296d9"></path>
+                                <path d="M122.46 490.61L110.5 466.4c14.11-6.96 24.56-20.53 28.69-37.22 5.93-24-1.66-52.18-21.37-79.35l21.85-15.86c24.46 33.72 33.6 69.83 25.73 101.68-6.04 24.44-21.69 44.47-42.94 54.96zM94.67 422.93c-7.05-1.56-11.49-8.54-9.93-15.59l2.11-9.5c1.56-7.05 8.54-11.49 15.59-9.93 7.05 1.56 11.49 8.54 9.93 15.59l-2.11 9.5c-1.57 7.05-8.55 11.49-15.59 9.93zM138.51 593.56c-7.05-1.56-11.49-8.54-9.93-15.59l2.11-9.5c1.56-7.05 8.54-11.49 15.59-9.93 7.05 1.56 11.49 8.54 9.93 15.59l-2.11 9.5c-1.56 7.04-8.54 11.49-15.59 9.93z"
+                                      p-id="11002" fill="#1296d9"></path>
+                            </svg>
+                            “雾里看花”的效益评估
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li>🔹 难以量化转型成效</li>
+                            <li>🔹 缺乏持续优化的数据支持</li>
+                            <li>🔹 无法对接政策扶持路径</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center" data-aos="fade-up"
+             data-aos-delay="1200"
+             data-aos-duration="1000"
+             data-aos-easing="ease-out-sine">
+            <p class="small mb-2 lead">
+                如果您正在经历这些问题，芯导将是您可信赖的转型伙伴
+            </p>
+
+            <div class="text-center mt-3">
+                <!-- 提示文字 -->
+                <p class="small mb-4" style="color: whitesmoke"
+                   data-aos="fade-up"
+                   data-aos-delay="800">
+                    选择您需要的诊断服务类型
+                </p>
+
+                <div class="d-flex justify-content-center gap-4">
+                    <!-- 数字化诊断按钮 (科技蓝) -->
+                    <a href="#digital-factory"
+                       class="btn btn-glass btn-glass-blue btn-lg px-4 py-2">
+                        数字化工厂诊断 <i class="bi bi-pc-display-horizontal ms-2"></i>
+                    </a>
+
+                    <a href="#lean-consulting"
+                       class="btn btn-glass btn-glass-white btn-lg px-4 py-2">
+                        精益生产诊断 <i class="bi bi-speedometer2 ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<div class="angled-transition-1"></div>
+<!-- 数字化水平评测诊断 Section -->
+<section id="digital-factory" class="py-5 position-relative overflow-hidden">
+    <div class="container position-relative z-2">
+        <!-- Header -->
+        <div class="section-header text-center d-flex flex-column align-items-center justify-content-center mb-5"
+             data-aos="fade-up">
+            <h2>
+                中小企业数字化水平评测诊断
+            </h2>
+            <p class="section-subtitle px-md-4">
+                基于工信部 <span class="highlight-gradient">《评测指标（2024年版）》</span> 四维评估体系
+            </p>
+        </div>
+
+        <!-- 核心价值 + 视频 -->
+        <div class="row align-items-center mb-5">
+            <!-- 左：核心价值 -->
+            <div class="col-md-5 p-3" data-aos="fade-right">
+                <div class="consulting-content bg-glass">
+                    <h4 class="text-white"><i class="bi bi-stars me-2"></i>工信部标准评测价值</h4>
+                    <ul class="consulting-list">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <strong>权威评估体系：</strong> 15个采集项+16个业务场景的标准化诊断
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <strong>四级水平判定：</strong> 初始级→规范级→集成级→协同级的精准定位
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <strong>政策对接依据：</strong> 专精特新企业认定的数字化水平评价标准
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <strong>场景化改造指引：</strong> 10个约束性场景+6个指导性场景的改造优先级
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 右：短视频区域 -->
+            <div class="col-md-7" data-aos="fade-left">
+                <div class="video-wrapper rounded overflow-hidden shadow-lg">
+                    <video controls class="w-100 rounded-3"
+                           poster="assets/img/consulting/video-cover1.png">
+                        <source src="assets/img/consulting/invideo-ai-1080_芯导软件：制造企业数字化转型的最佳伙伴_2025-05-24.mp4_1748077491656.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- 四维诊断模块 -->
+        <div class="glass-feature-box bg-glass py-5 px-3 position-relative mt-4">
+            <div class="container position-relative z-2">
+                <div class="text-center mb-4">
+                    <h4 class="text-white fw-semibold mb-2">四维诊断标准模块</h4>
+                    <p class="text-light small"
+                       style="color: #cce8ff !important;">依据工信部《评测指标（2024年版）》构建</p>
+                </div>
+
+                <div class="row diagnostic-flow g-4 justify-content-center text-white">
+                    <!-- 数字化基础 -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold text-info">数字化基础</h6>
+                        <ul class="flow-list">
+                            <li>设备数字化率/联网率评估</li>
+                            <li>网络建设分级诊断</li>
+                            <li>数据自动采集覆盖分析</li>
+                            <li>信息系统应用成熟度</li>
+                            <li>网络安全保障措施</li>
+                        </ul>
+                    </div>
+
+                    <!-- 数字化管理 -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold text-warning">数字化管理</h6>
+                        <ul class="flow-list">
+                            <li>规划实施成熟度评估</li>
+                            <li>管理制度完善度诊断</li>
+                            <li>数字化人才建设分析</li>
+                            <li>资金投入合理性评估</li>
+                            <li>组织保障机制审查</li>
+                        </ul>
+                    </div>
+
+                    <!-- 数字化经营 -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold text-success">数字化经营</h6>
+                        <ul class="flow-list">
+                            <li>16个业务场景等级判定</li>
+                            <li>约束性场景达标诊断</li>
+                            <li>产品生命周期数字化</li>
+                            <li>生产执行数字化</li>
+                            <li>供应链数字化</li>
+                            <li>智能管理决策</li>
+                        </ul>
+                    </div>
+
+                    <!-- 数字化成效 -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold text-cyan">数字化成效</h6>
+                        <ul class="flow-list">
+                            <li>绿色低碳成效分析</li>
+                            <li>产品质量提升评估</li>
+                            <li>人均营收变化诊断</li>
+                            <li>成本控制效益测算</li>
+                            <li>市场竞争力变化</li>
+                        </ul>
+                    </div>
+
+                    <!-- 连接箭头（保持原样式） -->
+                    <svg class="svg-connection d-none d-lg-block" viewBox="0 0 1000 120" preserveAspectRatio="none">
+                        <defs>
+                            <marker id="arrowhead"
+                                    markerWidth="14" markerHeight="12"
+                                    refX="12" refY="6"
+                                    orient="auto"
+                                    markerUnits="strokeWidth">
+                                <path d="M0,0 L14,6 L0,12 Z" fill="#00cfff"/>
+                            </marker>
+                        </defs>
+                        <path d="M0 60 Q250 0, 500 60 Q750 120, 988 60"
+                              stroke="#00cfff" stroke-width="2" fill="none"
+                              marker-end="url(#arrowhead)"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== 分割线 angled transition ===== -->
+<div class="angled-transition-2" id="div-2"></div>
+
+<!-- 精益生产诊断咨询 Section -->
+<section id="lean-consulting" class="py-5 text-white position-relative overflow-hidden">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+            <h2>精益生产诊断咨询</h2>
+            <p>以流程为切入点，以效率为核心，全面提升企业运营能力</p>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-5 p-3">
+                <div class="consulting-content bg-glass-light text-white rounded-4">
+                    <h4 class=""><i class="bi bi-stars me-2"></i>服务核心价值</h4>
+                    <ul class="consulting-list">
+                        <li><i class="bi bi-check-circle-fill me-2"></i>显著提升设备综合效率，助力企业达到数字化工厂设备管理高级标准
+                        </li>
+                        <li><i class="bi bi-check-circle-fill me-2"></i>全流程数字化映射分析，覆盖从产品设计到售后服务的完整业务环节
+                        </li>
+                        <li><i class="bi bi-check-circle-fill me-2"></i>标准化作业系统建设，通过数字化手段确保执行规范可追溯
+                        </li>
+                        <li><i class="bi bi-check-circle-fill me-2"></i>生产执行系统深度整合，实现从数据采集到决策优化的闭环管理
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右：视频占位 -->
+            <div class="col-md-7" data-aos="fade-left">
+                <div class="video-wrapper rounded overflow-hidden shadow-lg">
+                    <video controls class="w-100 rounded-3"
+                           poster="assets/img/consulting/preview2.png">
+                        <source src="assets/img/consulting/digital%20tones,%20featuring%20intelligent%20production%20lines,%20robotic%20arms,%20holographic%20dashboards,%20and%20animated%20data%20streams%20The%20scene%20includes%20visual%20ov.mp4"
+                                type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 精益生产诊断亮点展示 -->
+        <div class="row justify-content-between align-items-start mt-5">
+
+            <!-- 左：亮点区域 -->
+            <div class="col-lg-12">
+                <div class="row gx-5 gy-4 align-items-start text-white feature-connected-line">
+
+                    <!-- 价值流分析 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon bg-primary mb-3">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <h6 class="fw-semibold">价值流分析</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>端到端流程可视化分析，精准识别数字化改造关键节点</li>
+                            <li>智能评估各工序增值贡献，为资源配置提供数据支撑</li>
+                            <li>动态价值流看板，实时展现改善效果与数字化水平提升</li>
+                        </ul>
+                    </div>
+
+                    <!-- OEE诊断 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon mb-3">
+                            <svg t="1748411170028" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="5737" width="32" height="32">
+                                <path d="M772.424568 124.087882c10.798945 0 19.998047 11.798848 19.998047 25.697491v750.226735h-559.945318V149.885363c0-13.998633 9.199102-25.69749 19.998047-25.697491h519.949224m0-60.094131h-519.949224c-44.195684 0-79.992188 38.39625-79.992188 85.691632v750.226735h-107.989454v59.994141h895.912508v-59.994141h-107.989454V149.885363c0-47.395372-35.796504-85.791622-79.992188-85.791622z"
+                                      fill="#1296db" opacity=".502" p-id="5738"
+                                      data-spm-anchor-id="a313x.search_index.0.i23.4af13a81SPTHcP"
+                                      class="selected"></path>
+                                <path d="M682.433356 244.076164v79.992189h-339.9668v-79.992189h339.9668m59.994141-59.994141h-459.955082v199.980471h459.955082v-199.980471z"
+                                      fill="#1296f9" p-id="5739"
+                                      data-spm-anchor-id="a313x.search_index.0.i19.4af13a81SPTHcP" class=""></path>
+                                <path d="M392.461674 683.033298h119.988282v-239.976565z" fill="#1296f9" p-id="5740"
+                                      data-spm-anchor-id="a313x.search_index.0.i21.4af13a81SPTHcP" class=""></path>
+                                <path d="M512.449956 613.040133v239.976565l119.988282-239.976565z" fill="#1296f9"
+                                      p-id="5741" data-spm-anchor-id="a313x.search_index.0.i20.4af13a81SPTHcP"
+                                      class=""></path>
+                            </svg>
+                        </div>
+                        <h6 class="fw-semibold">OEE诊断</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>设备效能多维度监测，满足工业互联网平台接入要求</li>
+                            <li>智能分析停机根源，自动生成预防性维护方案</li>
+                            <li>基于实时数据的瓶颈工序优化建议，推动产能持续提升</li>
+                        </ul>
+                    </div>
+
+                    <!-- 浪费识别 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon bg-success mb-3">
+                            <svg t="1748309881274" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="2116" width="32" height="32">
+                                <path d="M512 992C247.04 992 32 776.96 32 512S247.04 32 512 32s480 215.04 480 480-215.04 480-480 480z m0-921.6C268.16 70.4 70.4 268.16 70.4 512s197.76 441.6 441.6 441.6 441.6-197.76 441.6-441.6S755.84 70.4 512 70.4z"
+                                      fill="#ffffff" p-id="2117"></path>
+                                <path d="M738.5088 266.24H284.8768c-21.38112 0-39.1168 18.61632-39.1168 41.0624v343.22432c0 23.10144 17.92 36.08576 39.936 36.08576h186.368l-0.1024 81.3056-66.4576 2.78528c-7.94624 0-13.312 5.67296-13.312 14.00832 0 8.33536 5.36576 14.00832 13.312 14.00832h212.992c7.94624 0 13.312-5.67296 13.312-14.00832 0-8.33536-5.36576-14.00832-13.312-14.00832h-66.56v-84.09088h186.368c22.016 0 39.936-12.34944 39.936-35.4304V307.28192C778.24 284.83584 760.50432 266.24 738.5088 266.24z m-452.8128 28.03712h452.608c6.12352 0 13.312 7.5776 13.312 14.00832v280.24832H272.384V308.28544c0-6.43072 7.80288-14.00832 13.312-14.00832z m239.616 476.42624h-26.624v-84.09088h26.624v84.09088z m212.992-112.10752h-452.608c-6.10304 0-13.312-7.59808-13.312-14.00832v-28.03712h479.232v28.03712c0.6144 7.04512-7.18848 14.00832-13.312 14.00832z m-186.368-294.27712H378.88c-6.26688 0-13.312-7.43424-13.312-14.00832 0-6.5536 7.04512-14.00832 13.312-14.00832h186.368c6.26688 0 13.312 7.43424 13.312 14.00832 0 6.57408-7.04512 14.00832-13.312 14.00832h-13.312z m-53.248 70.08256H378.88c-6.26688 0-13.312-4.15744-13.312-14.0288 0-6.5536 7.04512-14.00832 13.312-14.00832H512c9.40032 0 13.312 7.45472 13.312 14.00832 0 9.87136-3.91168 14.0288-13.312 14.0288h-13.312z m148.39808 109.62944l-84.70528-84.72576c-4.44416-4.42368-6.47168-12.34944 0.49152-19.31264 4.64896-4.64896 14.88896-4.9152 19.31264-0.49152l94.12608 94.12608c6.656 6.63552 4.15744 14.66368-0.49152 19.31264-6.9632 6.9632-12.67712 7.14752-19.31264 0.49152l-9.4208-9.4208z m19.82464-75.30496l-84.72576 84.70528c-4.42368 4.44416-12.34944 6.47168-19.31264-0.49152-4.64896-4.64896-4.9152-14.88896-0.49152-19.31264l94.12608-94.12608c6.63552-6.656 14.66368-4.15744 19.31264 0.49152 6.9632 6.9632 7.14752 12.6976 0.49152 19.31264l-9.4208 9.4208z"
+                                      fill="#ffffff" p-id="2118"></path>
+                            </svg>
+                        </div>
+                        <h6 class="fw-semibold">浪费识别</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>七大类浪费智能检测系统，自动生成改善优先级报告</li>
+                            <li>能源消耗异常实时预警，支持绿色低碳生产目标达成</li>
+                            <li>可视化改善追踪看板，确保优化措施有效落地</li>
+                        </ul>
+                    </div>
+
+                    <!-- 标准化推进 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon bg-info text-dark mb-3">
+                            <svg t="1748311463534" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="4827" width="32" height="32">
+                                <path d="M952.556389 187.30422c-4.818115-6.92604-11.443023-12.34642-19.573592-15.658874L530.067931 3.613586C524.34642 1.204529 518.323776 0 512 0s-12.34642 1.204529-18.067931 3.613586L91.017203 171.645346c-7.829437 3.312454-14.755477 8.732833-19.573592 15.658874s-7.227172 15.056609-7.227172 23.488311v387.255991c0 186.701956 165.923835 338.77371 433.93148 423.692987 9.335098 3.011322 19.27246 3.011322 28.306426 0 268.308778-85.220409 433.630348-236.689899 433.630348-423.692987V210.792531c0-8.431701-2.409057-16.261138-7.227172-23.488311zM767.962358 752.830466c0 8.431701-6.624908 15.056609-15.056609 15.056609h-97.86796c-8.431701 0-15.056609-6.624908-15.05661-15.056609v-33.726805h-63.840023V752.830466c0 8.431701-6.624908 15.056609-15.05661 15.056609h-97.86796c-8.431701 0-15.056609-6.624908-15.05661-15.056609v-33.726805h-63.840023V752.830466c0 8.431701-6.624908 15.056609-15.056609 15.056609H271.395383c-8.431701 0-15.056609-6.624908-15.056609-15.056609v-97.86796c0-8.431701 6.624908-15.056609 15.056609-15.05661h97.867961c8.431701 0 15.056609 6.624908 15.056609 15.05661v33.726804h63.840023v-33.726804c0-8.431701 6.624908-15.056609 15.05661-15.05661h33.726805V511.924717h-97.867961c-8.431701 0-15.056609-6.624908-15.056609-15.056609V271.018968c0-8.431701 6.624908-15.056609 15.056609-15.05661h225.84914c8.431701 0 15.056609 6.624908 15.056609 15.05661v225.84914c0 8.431701-6.624908 15.056609-15.056609 15.056609H527.056609v127.981179h33.726805c8.431701 0 15.056609 6.624908 15.05661 15.05661v33.726804h63.840023v-33.726804c0-8.431701 6.624908-15.056609 15.056609-15.05661h97.867961c8.431701 0 15.056609 6.624908 15.056609 15.05661V752.830466z"
+                                      p-id="4828" data-spm-anchor-id="a313x.search_index.0.i15.b3e63a81Fv1XkE"
+                                      class="selected" fill="#13227a"></path>
+                            </svg>
+                        </div>
+                        <h6 class="fw-semibold">标准化推进</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>全电子化作业指导系统，实现标准文件版本统一管理</li>
+                            <li>增强现实辅助培训系统，大幅缩短新员工熟练周期</li>
+                            <li>智能化的标准作业流程引擎，确保最佳实践快速复制</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- 智能布局优化 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon mb-3"
+                             style="background: #168aad">
+                            <i class="bi bi-columns-gap"></i>
+                        </div>
+                        <h6 class="fw-semibold">智能布局优化</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>三维数字孪生建模，仿真验证布局方案</li>
+                            <li>物流路径AI计算，缩短物料移动距离30%+</li>
+                            <li>人机工程学智能评估，提升作业舒适度</li>
+                        </ul>
+                    </div>
+                    <!-- 数字化安灯系统 -->
+                    <div class="col-md-3">
+                        <div class="feature-icon mb-3"
+                             style="background: #80ed99">
+                            <svg t="1748410959039" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="2183" width="32" height="32">
+                                <path d="M259.55 827.925V583.273c0-146.346 115.33-265.038 257.7-265.038s257.7 118.693 257.7 265.038v244.652h87.97c18.27 0 33.08 15.24 33.08 34.037C896 880.76 881.19 896 862.92 896H161.08c-18.27 0-33.08-15.24-33.08-34.038 0-18.798 14.81-34.037 33.08-34.037h98.471z m276.355-402.883L408.792 640.367h101.66L485 801.86l127.113-215.325H510.45l25.453-161.494h0.001z m194.936-236.53c11.935 7.145 16.013 22.915 9.139 35.188l-45.693 81.718-43.202-25.712 45.695-81.718c6.796-12.273 22.052-16.467 33.91-9.476h0.151zM517.175 128c14.955 0 27.04 11.574 27.04 25.945v92.592h-54.079v-92.67c0-14.292 12.084-25.867 27.039-25.867h-0.001z m-213.516 60.512c11.859-7.07 27.114-2.875 33.988 9.321 0 0 0 0.078 0.075 0.078l45.695 81.718-43.202 25.711-45.695-81.718c-6.872-12.273-2.794-27.965 9.139-35.11zM147.316 350.006c6.797-12.275 22.054-16.547 33.988-9.478 0 0 0.075 0 0.075 0.078l79.152 47.229-24.923 44.587-79.154-47.307c-11.932-7.068-16.012-22.838-9.138-35.11z m739.868 0c6.873 12.272 2.794 28.041-9.139 35.187l-79.154 47.151-24.923-44.587 79.152-47.23c11.858-7.067 27.114-2.873 33.988 9.323 0 0.077 0.075 0.077 0.075 0.154v0.002z"
+                                      fill="#1a9237" p-id="2184"></path>
+                            </svg>
+                        </div>
+                        <h6 class="fw-semibold">数字化安灯系统</h6>
+                        <ul class="small text-white-50 ps-3">
+                            <li>异常事件自动触发多级预警</li>
+                            <li>实时响应看板联动MES/ERP</li>
+                            <li>历史故障大数据分析，预防重复问题</li>
+                        </ul>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col mt-5 mt-lg-0"
+                         style="align-self: flex-end"
+                         data-aos="fade-left">
+                        <div class="bg-glass-light rounded-4 p-4 shadow">
+                            <h5 class="fw-bold text-white"><i class="bi bi-graph-up-arrow me-2"></i>为什么选择芯导精益诊断？
+                            </h5>
+                            <ul class="list-unstyled small mt-3 mb-0" style="color: steelblue">
+                                <li class="mb-2">🔹 提供符合工信部标准的数字化水平评估报告</li>
+                                <li class="mb-2">🔹 重点突破生产管控、质量管理等核心场景改造</li>
+                                <li class="mb-2">🔹 确保与企业现有MES/ERP系统无缝衔接</li>
+                                <li class="mb-2">🔹 定制化成效追踪体系，持续优化市场竞争力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右：说明与引用 -->
+
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ===== 分割线 angled transition ===== -->
+<div class="angled-transition-3" id="div-3"></div>
+
+
+<!-- 数字化评测服务流程 Section -->
+<section class="py-5 position-relative" id="consulting-process">
+    <div class="container position-relative z-2">
+
+        <!-- Header -->
+        <div class="section-header" data-aos="fade-up">
+            <h2>数字化水平评测流程</h2>
+            <p style="line-height: 1.32">
+                严格遵循工信部《评测指标（2024年版）》标准流程<br>
+                四步完成企业数字化水平精准诊断与提升规划
+            </p>
+        </div>
+
+        <!-- Process Timeline -->
+        <div class="process-timeline position-relative">
+            <!-- Connecting line -->
+            <div class="timeline-line position-absolute top-50 start-0 end-0 translate-middle-y bg-primary opacity-10"
+                 style="height: 3px;" data-aos="fade-up" data-aos-delay="420"></div>
+
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-card bg-white rounded-4 shadow-sm p-4 h-100 position-relative">
+                        <div class="process-step-number position-absolute bg-primary text-white fw-bold rounded-circle d-flex align-items-center justify-content-center">
+                            1
+                        </div>
+                        <div class="process-icon mb-3 text-center">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                                <svg t="1748416562896" class="icon" viewBox="0 0 1300 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="9262" width="64" height="64"
+                                     data-spm-anchor-id="a313x.search_index.0.i34.4af13a81SPTHcP">
+                                    <path d="M784.014714 99.204787l10.903312 18.428134-21.294732-2.559463-14.179425 16.124617-4.095141-21.089976-19.707865-8.497417 18.735269-10.442609 2.04757-21.345922 15.715103 14.58894 20.936408-4.658223-9.060499 19.451919zM1067.142514 642.37403l-18.428134 10.903312 2.559463-21.294732-16.073428-14.179425 21.038786-4.14633 8.497417-19.656676 10.442609 18.735269 21.345922 1.996381-14.588939 15.715103 4.658222 20.936408-19.451918-9.00931z"
+                                          fill="#ffffff" p-id="9263"></path>
+                                    <path d="M1067.142514 642.37403l-18.428134 10.903312 2.559463-21.294732-16.073428-14.179425 21.038786-4.14633 8.497417-19.656676 10.442609 18.735269 21.345922 1.996381-14.588939 15.715103 4.658222 20.936408-19.451918-9.00931zM571.886418 100.023815l-17.404348-12.541369 20.526893-6.1939 6.501036-20.424515 12.234233 17.609105 21.448301-0.153567-12.950883 17.097213 6.756982 20.373325-20.270947-7.012928-17.250781 12.694936 0.409514-21.4483zM991.382408 784.373039l-21.192354 3.480869 10.135474-18.888837-9.828338-19.093594 21.089975 3.788005 15.100832-15.254399 2.917788 21.243543 19.144783 9.623581-19.298351 9.367634-3.224923 21.192354-14.844886-15.459156zM427.993407 156.792705l-20.78284-5.323683 16.892456-13.258019-1.330921-21.397111 17.762674 11.927098 19.963811-7.883146-5.886765 20.629272 13.667533 16.534131-21.397111 0.819028-11.517584 18.069809-7.371253-20.117379zM854.19519 896.42633l-20.731651-5.323683 16.841267-13.258019-1.330921-21.397111 17.813863 11.978287 19.912622-7.934335-5.835575 20.629272 13.667532 16.534131-21.4483 0.819028-11.517584 18.069809-7.371253-20.117379zM562.416405 923.607827l10.903313 18.428134-21.294733-2.559463-14.179425 16.073428-4.14633-21.038786-19.656676-8.497418 18.735269-10.442609 1.996381-21.345921 15.715103 14.588939 20.936408-4.658223-9.00931 19.451919zM242.790663 420.724532l-18.479324 10.954502 2.559464-21.294733-16.073428-14.230614 21.038786-4.095141 8.497417-19.707865 10.442609 18.735269 21.345922 2.047571-14.588939 15.715103 4.709412 20.936407-19.451919-9.060499z"
+                                          fill="#ffffff" p-id="9264"></path>
+                                    <path d="M242.790663 420.724532l-18.479324 10.954502 2.559464-21.294733-16.073428-14.230614 21.038786-4.095141 8.497417-19.707865 10.442609 18.735269 21.345922 2.047571-14.588939 15.715103 4.709412 20.936407-19.451919-9.060499zM700.780976 943.878774l-17.404348-12.490179 20.475704-6.24509 6.552225-20.424515 12.234233 17.609106 21.448301-0.102379-12.950883 17.097213 6.756982 20.322136-20.270947-7.012928-17.30197 12.694936 0.460703-21.4483zM303.552315 278.827902l-21.192354 3.42968 10.135473-18.888837-9.828338-19.042405 21.089976 3.788006 15.100832-15.2544 2.917787 21.243543 19.144784 9.623581-19.298351 9.316445-3.224924 21.243544-14.844885-15.459157z"
+                                          fill="#ffffff" p-id="9265"></path>
+                                    <path d="M407.620081 90.604991a486.861057 486.861057 0 0 1 504.521352 11.77353l25.031548-14.435371a511.892605 511.892605 0 0 0-797.528678 459.57718l25.031548-14.384182A486.758678 486.758678 0 0 1 407.620081 90.604991zM893.201406 933.333787a486.861057 486.861057 0 0 1-504.521351-11.619963l-24.980359 14.384183A511.892605 511.892605 0 0 0 1161.177185 476.572015L1136.401583 490.956197a486.912246 486.912246 0 0 1-243.200177 442.37759z"
+                                          fill="#ffffff" p-id="9266"></path>
+                                    <path d="M813.909242 795.839433a326.587482 326.587482 0 0 1-258.147441 29.536203l-29.792149 17.199592a353.205897 353.205897 0 0 0 472.73282-272.429245l-29.792149 17.148403A326.843428 326.843428 0 0 1 813.909242 795.839433zM486.861057 228.099345a326.587482 326.587482 0 0 1 258.14744-29.536204l29.79215-17.199591A353.205897 353.205897 0 0 0 302.016637 453.792794l29.843339-17.148402a326.485103 326.485103 0 0 1 155.001081-208.545047zM1288.280119 374.705387a53.441588 53.441588 0 0 1-14.384182 11.978287l-1044.260914 601.934514a53.799913 53.799913 0 0 1-73.4054-19.759055L7.217686 710.660503a53.697534 53.697534 0 0 1 19.707865-73.405399L1071.442411 35.32059a53.799913 53.799913 0 0 1 73.4054 19.759054l148.80718 258.19863a53.953481 53.953481 0 0 1-5.374872 61.427113zM32.198045 665.716333a28.102904 28.102904 0 0 0-2.815409 32.146855l148.80718 258.19863a28.154093 28.154093 0 0 0 38.443134 10.237852L1261.149811 364.518724a28.154093 28.154093 0 0 0 10.237852-38.443135l-148.755991-258.249819a28.102904 28.102904 0 0 0-38.391945-10.237852L39.722866 659.420054a27.130308 27.130308 0 0 0-7.524821 6.296279z"
+                                          fill="#ffffff" p-id="9267"></path>
+                                    <path d="M360.62834 545.370381l16.226996-9.367634 19.042405 32.965883L465.82227 528.733872l70.948316 122.854225-15.356779 9.00931-7.780767-13.411587-54.055859 31.225449 33.273019 57.587918-16.790077 9.367635-33.22183-57.587918-54.977266 31.737341 8.650985 14.947265-15.356778 9.009309-71.664965-124.389903 70.538801-40.951408z m-8.650985 111.950913l54.926077-31.737342-18.786459-32.50518-54.926076 31.686152z m27.283876 47.247687l54.926077-31.737341L415.144903 639.865756l-54.926077 31.737342z m43.920385-88.352663l54.05586-31.225449-18.786459-32.50518L404.395158 583.55757z m27.283876 47.247687l54.055859-31.225449-19.042404-32.965883-54.05586 31.225448zM622.819732 531.702849c-6.808172 10.237852-12.950883 18.940026-18.530512 26.208901l37.828864 65.522254q11.364016 19.707865-7.729579 30.713556l-20.475704 11.77353-12.285422-13.15564a196.054868 196.054868 0 0 0 19.144783-9.521203 9.418824 9.418824 0 0 0 3.532059-14.640128l-31.942099-55.284401c-7.422443 8.753364-15.766292 18.325755-25.082737 28.563607l-13.002072-13.309208c9.623581-9.111688 19.34954-19.298351 29.229067-30.713556l-29.433824-51.189261-31.89091 18.428134-8.753363-15.356778 31.890909-18.428134L522.130457 452.00117l15.356778-9.00931 22.932789 39.774056 24.673223-14.179425 8.753364 15.356778-24.622034 14.230614 25.59463 44.790603q9.981906-13.667533 18.274566-26.669605z m26.055334-17.35316l57.331972 99.307166-15.152021 8.650985L580.127889 429.989788l96.491756-55.693915q20.885218 36.241996 24.417277 51.18926t-18.069809 26.567226l-15.86867 8.650985-12.336612-11.312826 5.886765-3.429681 3.42968-1.689245 3.736816-2.149949a80.776653 80.776653 0 0 0 11.568773-7.831957 12.694937 12.694937 0 0 0 3.020167-8.497417 125.669635 125.669635 0 0 0-12.592558-28.461229l-66.546039 38.340756 37.009835 64.140143 83.489684-48.169094 8.241471 13.565154a179.162412 179.162412 0 0 1 11.005691 73.354211 216.325815 216.325815 0 0 0 54.977266 5.477251l-3.532059 18.172187a267.105561 267.105561 0 0 1-53.748724-7.371254 146.452474 146.452474 0 0 1-21.4483 51.649964l-15.715103-9.367634a133.092077 133.092077 0 0 0 20.015001-47.606013 138.927653 138.927653 0 0 1-61.939005-42.743032z m27.02793-15.356778a115.380593 115.380593 0 0 0 49.448825 34.450373 159.864061 159.864061 0 0 0-8.139092-58.304568zM798.552464 290.345486l16.278185-9.367635 22.83041 39.518109 78.88265-45.507253 59.635489 103.248739-15.817482 9.162877-7.780767-13.718721-63.065169 36.395564 43.254925 74.941077-16.482942 9.265256-43.254925-74.941077L810.428372 455.584418l7.985525 13.87229-15.817482 9.111688-59.635488-103.248738 78.626704-45.404874z m2.968977 149.882154l62.860412-36.241996-33.887291-58.662893L767.838907 381.564748zM880.45528 394.56682L943.674017 358.324823l-33.836101-58.662892-63.065169 36.395564z"
+                                          fill="#ffffff" p-id="9268"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h5 class="text-center fw-semibold mb-3">企业自评申报</h5>
+                        <ul class="process-features list-unstyled small">
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>在线填报基础信息与业务数据</span>
+                            </li>
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>15个采集项完整度核查</span>
+                            </li>
+                            <li class="d-flex">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>16个业务场景等级自评</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-card bg-white rounded-4 shadow-sm p-4 h-100 position-relative">
+                        <div class="process-step-number position-absolute bg-success text-white fw-bold rounded-circle d-flex align-items-center justify-content-center">
+                            2
+                        </div>
+                        <div class="process-icon mb-3 text-center">
+                            <div class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                                <svg t="1748416658369" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="10517" width="48" height="48">
+                                    <path d="M852.390676 862.597576a14.995854 14.995854 0 0 0-14.995854 14.995854v54.573467H186.607178V709.261074a14.995854 14.995854 0 0 0-29.991707 0v279.735268c0 19.293812 15.697847 34.991658 34.991658 34.991658H832.396871c19.293812 0 34.991658-15.697847 34.991658-34.991658v-111.402912a14.999854 14.999854 0 0 0-14.997853-14.995854z m-14.997854 126.400766a5.003951 5.003951 0 0 1-4.997951 4.997951H191.605129a5.003951 5.003951 0 0 1-4.997951-4.997951v-26.837738h650.787644v26.837738zM828.820906 534.660779h-57.175442c-37.581633-73.003287-107.340952-127.738753-186.610177-149.712538 43.551575-25.285753 72.923288-72.407293 72.923288-126.290767V145.960575a145.124583 145.124583 0 0 0-24.961757-81.551204C606.743075 25.57775 562.301509 0 512 0c-80.483214 0-145.960575 65.479361-145.960575 145.960575v112.698899c0 53.883474 29.371713 101.007014 72.923288 126.290767-79.267226 21.973785-149.028545 76.707251-186.610177 149.712538H195.177094c-21.263792 0-38.563623 17.299831-38.563623 38.563623v86.04916a14.995854 14.995854 0 0 0 29.991707 0v-86.04916a8.579916 8.579916 0 0 1 8.569916-8.569916h633.645812a8.581916 8.581916 0 0 1 8.571916 8.569916v254.379516a14.995854 14.995854 0 0 0 29.991707 0V573.224402c0.002-21.261792-17.297831-38.563623-38.563623-38.563623zM512.002 29.993707c63.943376 0 115.966868 52.023492 115.966867 115.966868v40.061608c-54.027472-9.097911-75.77926-63.831377-76.73925-66.319352a14.997854 14.997854 0 0 0-13.031873-9.649906 14.973854 14.973854 0 0 0-14.189861 7.841924c-0.355997 0.659994-34.959659 62.787387-127.974751 68.927327V145.960575h-0.001999c0.002-63.945376 52.025492-115.966868 115.970867-115.966868z m-115.968868 228.665767v-41.777592c74.815269-4.265958 118.174846-39.90961 138.990643-63.625379 14.677857 23.417771 43.921571 57.075443 92.945092 63.087384v42.315587c0 62.537389-49.767514 113.64289-111.770908 115.860869-1.329987-0.038-2.661974-0.097999-3.991961-0.117999l-0.205998-0.002-0.205998 0.002c-1.329987 0.018-2.661974 0.079999-3.991961 0.117999-62.003394-2.219978-111.768909-53.323479-111.768909-115.860869z m53.527478 276.001305h-162.932409c33.473673-56.037453 88.577135-98.435039 151.092524-118.128847l26.979737 52.415488-15.139852 65.713359z m30.777699 0l12.139882-52.697486h39.043618l12.139882 52.697486h-63.323382z m53.971473-82.689193h-44.617564l-22.119784-42.97158a258.803473 258.803473 0 0 1 18.741817-2.911972l0.257997-0.029999a254.407516 254.407516 0 0 1 17.735827-1.415987c1.259988-0.055999 2.521975-0.081999 3.783963-0.119998 1.303987 0.034 2.597975 0.097999 3.909962 0.097999 1.311987 0 2.607975-0.063999 3.909962-0.097999 1.261988 0.038 2.523975 0.061999 3.783963 0.119998l1.625984 0.078c5.387947 0.277997 10.761895 0.719993 16.107843 1.337987l0.263997 0.029999c6.285939 0.733993 12.533878 1.721983 18.737817 2.911972l-22.121784 42.97158z m40.129608 82.689193l-15.137852-65.711359 26.979737-52.417488c62.51139 19.693808 117.616851 62.093394 151.092524 118.128847H574.43939z"
+                                          fill="#ffffff" p-id="10518"></path>
+                                    <path d="M512 692.997232c-34.221666 0-62.063394 27.841728-62.063394 62.063394s27.841728 62.063394 62.063394 62.063394 62.063394-27.841728 62.063394-62.063394-27.841728-62.063394-62.063394-62.063394z m0 94.135081c-17.683827 0-32.069687-14.387859-32.069687-32.071687 0-17.683827 14.38586-32.071687 32.069687-32.071686s32.071687 14.38586 32.071687 32.071686S529.683827 787.132313 512 787.132313z"
+                                          fill="#ffffff" p-id="10519"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h5 class="text-center fw-semibold mb-3">专业诊断分析</h5>
+                        <ul class="process-features list-unstyled small">
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>数字化基础/管理/成效评分</span>
+                            </li>
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>约束性场景达标验证</span>
+                            </li>
+                            <li class="d-flex">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>四级水平综合判定</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-card bg-white rounded-4 shadow-sm p-4 h-100 position-relative">
+                        <div class="process-step-number position-absolute bg-warning text-white fw-bold rounded-circle d-flex align-items-center justify-content-center">
+                            3
+                        </div>
+                        <div class="process-icon mb-3 text-center">
+                            <div class="icon-wrapper bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                                <svg t="1748416773317" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="12704" width="64" height="64">
+                                    <path d="M160.000011 64.191998v895.679972h735.999977V64.191998H160.000011z m31.999999 31.999999h671.999979V671.999979H192.00001V96.191997zM448.000002 127.999996v127.999996h64.383998v95.871997h-191.999994v130.367996a64.191998 64.191998 0 0 0-47.999999 61.759998c0 35.167999 28.831999 63.999998 63.999998 63.999998 35.135999 0 63.999998-28.831999 63.999998-63.999998 0-29.599999-20.543999-54.559998-47.999998-61.759998v-98.367997h351.999989v89.567997l-74.495998 74.495998 90.559997 90.495997 90.495998-90.495997-74.559998-74.623998v-121.439996h-191.999994V255.999992H607.999997V127.999996h-159.999995z m31.999999 31.999999h95.999997v63.999998h-95.999997V159.999995z m240.447992 342.687989l45.247999 45.247999-45.247999 45.247998-45.311998-45.247998 45.311998-45.247999zM336.384005 511.999984c17.855999 0 31.999999 14.144 31.999999 31.999999s-14.144 31.999999-31.999999 31.999999-31.999999-14.144-31.999999-31.999999 14.144-31.999999 31.999999-31.999999zM192.00001 703.999978h319.99999v223.871993H192.00001V703.999978z m351.999989 0h319.99999v223.871993H543.999999V703.999978zM224.000009 735.999977v31.999999h255.999992v-31.999999H224.000009z m367.999989 0v31.999999h223.999993v-31.999999h-223.999993z m0 63.999998v31.999999h223.999993v-31.999999h-223.999993zM224.000009 863.999973v31.999999h255.999992v-31.999999H224.000009z m367.999989 0v31.999999h223.999993v-31.999999h-223.999993z"
+                                          fill="#ffffff" p-id="12705"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h5 class="text-center fw-semibold mb-3">改造方案制定</h5>
+                        <ul class="process-features list-unstyled small">
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>10个约束性场景改造优先级</span>
+                            </li>
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>设备数字化/联网率提升路径</span>
+                            </li>
+                            <li class="d-flex">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>政策补贴申报匹配建议</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-card bg-white rounded-4 shadow-sm p-4 h-100 position-relative">
+                        <div class="process-step-number position-absolute bg-info text-white fw-bold rounded-circle d-flex align-items-center justify-content-center">
+                            4
+                        </div>
+                        <div class="process-icon mb-3 text-center">
+                            <div class="icon-wrapper bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                                <svg t="1748416855547" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                     xmlns="http://www.w3.org/2000/svg" p-id="15913" width="64" height="64">
+                                    <path d="M532.522667 63.488a31.530667 31.530667 0 0 1 59.306666 0l30.165334 82.389333a472.576 472.576 0 0 0 281.6 281.6l82.304 30.165334a31.530667 31.530667 0 0 1 0 59.306666l-82.304 30.165334a472.576 472.576 0 0 0-281.6 281.6l-30.165334 82.304a31.530667 31.530667 0 0 1-59.306666 0l-30.165334-82.304a472.576 472.576 0 0 0-281.6-281.6l-82.389333-30.165334a31.530667 31.530667 0 0 1 0-59.306666l82.389333-30.165334a472.576 472.576 0 0 0 281.6-281.6z"
+                                          fill="#ffffff" p-id="15914"></path>
+                                    <path d="M823.082667 132.010667a6.058667 6.058667 0 0 1 11.392 0l5.802666 15.829333a90.752 90.752 0 0 0 53.930667 54.186667l15.829333 5.802666a6.058667 6.058667 0 0 1 0 11.392l-15.829333 5.802667a90.752 90.752 0 0 0-53.930667 53.802667l-5.802666 15.829333a6.058667 6.058667 0 0 1-11.392 0l-5.674667-15.829333a90.752 90.752 0 0 0-54.058667-54.058667l-15.829333-5.802667a6.058667 6.058667 0 0 1 0-11.392l15.829333-5.802666a90.752 90.752 0 0 0 54.058667-53.930667z"
+                                          fill="#ffffff" p-id="15915"></path>
+                                    <path d="M155.809436 661.40496m22.627417 22.627417l135.764502 135.764502q22.627417 22.627417 0 45.254834l0 0q-22.627417 22.627417-45.254834 0l-135.764502-135.764502q-22.627417-22.627417 0-45.254834l0 0q22.627417-22.627417 45.254834 0Z"
+                                          fill="#ffffff" p-id="15916"></path>
+                                    <path d="M336.828772 706.659794m-22.627417 22.627417l-135.764502 135.764502q-22.627417 22.627417-45.254834 0l0 0q-22.627417-22.627417 0-45.254834l135.764502-135.764502q22.627417-22.627417 45.254834 0l0 0q22.627417 22.627417 0 45.254834Z"
+                                          fill="#ffffff" p-id="15917"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h5 class="text-center fw-semibold mb-3">持续优化追踪</h5>
+                        <ul class="process-features list-unstyled small">
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>季度数字化水平复评</span>
+                            </li>
+                            <li class="d-flex mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>行业标杆对比分析</span>
+                            </li>
+                            <li class="d-flex">
+                                <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                                <span>专精特新申报持续辅导</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- 公司信息 -->
+                <div class="col-lg-3 col-md-12 footer-info d-flex flex-column gap-lg-4">
+                    <div class="">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <img src="assets/img/logo.png" alt="">
+                            <span>芯导软件（江苏）有限公司</span>
+                        </a>
+                        <p>
+                            芯导软件专注于为制造业提供数字化转型解决方案，涵盖MES、LIMS、QMS等工业软件系统。
+                            依托多年行业实践，我们助力企业实现数据驱动的智能运营，为客户打造稳定、可拓展的数字基础
+                        </p>
+                    </div>
+                    <div style="transform: perspective(1200px) translateZ(0);">
+                        <a target="_blank"
+                           href="pdf/芯导宣传彩页.pdf"
+                           download=""
+                           title="Download File"
+                           class="tech-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                 viewBox="0 0 256 256">
+                                <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
+                            </svg>
+                            芯导宣传彩页
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-1 d-none d-lg-block">
+                    <div class="vr h-100 mx-auto"></div>
+                </div>
+                <!-- 友情链接 -->
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>快速链接<br><small class="text-muted">QUICK LINKS</small></h4>
+                    <ul>
+                        <li><a href="index.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 首页</a>
+                        </li>
+                        <li><a href="products.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
+                        </a></li>
+
+                        <li><a href="about.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 关于我们</a>
+                        </li>
+                        <li><a href="about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 联系我们</a>
+                        </li>
+
+                        <li><a href="support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            常见问题</a>
+                        </li>
+                        <li><a href="support.html#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 服务条款</a>
+                        </li>
+                        <li><a href="support.html#privacy"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            隐私政策</a></li>
+                        <li><a href="support.html#aftersales"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            售后服务</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- 服务分类 -->
+                <div class="col-lg-3 col-6 footer-links text-start">
+                    <h4>核心产品与服务<br><small class="text-muted">PRODUCTS & SERVICES</small></h4>
+                    <ul class="list-unstyled ps-0">
+                        <li><a href="dx-services.html"><i
+                                class="bi bi-arrow-right-circle text-primary me-1"></i>中⼩企业数字化转型服务</a></li>
+                        <li><a href="services/mes.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>MES
+                            生产制造系统</a></li>
+                        <li><a href="services/eam.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>EAM
+                            设备管理系统</a></li>
+                        <li><a href="services/lims.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>LIMS
+                            实验室管理系统</a></li>
+                        <li><a href="services/eam.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>QMS
+                            质量管理系统</a></li>
+                        <li><a href="services/ems.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>EMS
+                            能源管理系统</a></li>
+                        <li><a href="services/eam.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i>SPC
+                            统计过程控制系统</a></li>
+                        <li><a href="consulting.html#digital-factory"><i
+                                class="bi bi-arrow-right-circle text-primary me-1"></i>数字化工厂的诊断咨询</a></li>
+
+                        <li><a href="consulting.html#lean-consulting"><i
+                                class="bi bi-arrow-right-circle text-primary me-1"></i>工厂的精益生产咨询</a></li>
+                    </ul>
+                </div>
+
+                <!-- 联系方式 -->
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>联系我们<br><small class="text-muted">CONTACT US</small></h4>
+                    <p><strong>总公司地址：</strong>江苏省南通市 紫琅科技城10A-806
+                        <br>
+                        <strong>电话：</strong>180-2035-5588<br>
+                        <strong>邮箱：</strong>354592173@qq.com<br>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 版权声明 -->
+    <div class="container">
+        <div class="text-center py-3 small text-muted">
+            &copy; 2025 <strong>芯导软件（江苏）有限公司</strong> 版权所有 | All Rights Reserved
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer -->
+
+<div id="consulting-sidebar" class="position-fixed">
+    <ul id="diagnosticList" class="diagnostic-links list-unstyled">
+        <li><a href="#digital-factory"><i class="bi bi-arrow-right-circle me-1"></i> 数字化工厂诊断</a></li>
+        <li><a href="#lean-consulting"><i class="bi bi-arrow-right-circle me-1"></i> 精益生产诊断</a></li>
+        <li><a href="#consulting-process"><i class="bi bi-arrow-right-circle me-1"></i> 服务流程</a></li>
+
+        <li>
+            <a href="./pdf/诊断咨询.pdf" target="_blank" title="诊断咨询">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     viewBox="0 0 256 256">
+                    <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
+                </svg>
+                诊断咨询彩页
+            </a>
+        </li>
+    </ul>
+    <button id="toggle-diagnostics" class="glass-toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center ">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
+<script>
+    document.getElementById("toggle-diagnostics").addEventListener("click", function () {
+        document.getElementById("diagnosticList").classList.toggle("hidden");
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
+<!-- Vendor JS Files -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="vendor/purecounter/purecounter.js"></script>
+<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="js/transparent-nav.js"></script>
+<script src="js/main.js"></script>
+<script src="js/consulting.js"></script>
+</body>
+</html>
