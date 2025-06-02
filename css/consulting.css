@@ -731,7 +731,6 @@
     transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
-
 }
 
 .diagnostic-links {
@@ -760,7 +759,6 @@
 /* ========================
 # download
 ================ */
-/* SVG 图标匹配当前文字颜色 */
 .diagnostic-links li a svg {
     width: 16px;
     height: 16px;
@@ -770,13 +768,11 @@
     fill: currentColor;
 }
 
-/* hover 效果：按钮颜色+icon动画 */
 .diagnostic-links li a:hover svg {
     transform: scale(1.1);
     color: #00bfff;
 }
 
-/* 让下载按钮 hover 看起来更明显 */
 .diagnostic-links li a:hover {
     background-color: rgba(0, 153, 255, 0.25);
     color: #00ccff;
@@ -785,7 +781,6 @@
 
 /* =============== 深蓝sidebar ==================== */
 
-/* 加深蓝背景，提升可读性 */
 #consulting-sidebar.sidebar-highlighted {
     background: rgba(0, 80, 160, 0.85);
     border: 1px solid rgba(0, 136, 255, 0.3);
@@ -793,7 +788,6 @@
     backdrop-filter: blur(6px) saturate(160%);
 }
 
-/* 可选：让文字更突出 */
 #consulting-sidebar.sidebar-highlighted .diagnostic-links li a {
     color: #ffffff;
 }

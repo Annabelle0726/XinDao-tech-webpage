@@ -42,9 +42,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
-    <script src="assets/js/transparent-nav.js"></script>
+    <script src="js/transparent-nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js "></script>
-
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+          }
+        }
+    </script>
 </head>
 
 <body>
@@ -759,7 +766,8 @@ height: 10vh;"></div>
         class="bi bi-arrow-up-short"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-<script>
+<script >
+
     const mapContainer = document.getElementById('map-container');
     // 创建 Google Map iframe
     const googleIframe = document.createElement('iframe');
@@ -791,8 +799,10 @@ height: 10vh;"></div>
     }, timeout);
 </script>
 
-<script>
-    // Typed.js 打字动画
+<script type="module">
+import * as THREE from 'three';
+
+// Typed.js 打字动画
     document.addEventListener("DOMContentLoaded", function () {
         new Typed('#typed-text', {
             strings: ['数字化工厂诊断', 'MES制造执行系统', 'LIMS实验室管理系统', 'QMS质量管理平台', 'EAM设备资产管理', '中小企业转型咨询'],

@@ -1,58 +1,9 @@
 // ============================================= hero =====================
 
-const canvas = document.getElementById('hero-bg');
-const renderer = new THREE.WebGLRenderer({canvas, alpha: true});
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.z = 300;
-
-const particlesCount = 2000; // 数量加大
-const geometry = new THREE.BufferGeometry();
-const positions = [];
-
-for (let i = 0; i < particlesCount; i++) {
-    positions.push(
-        (Math.random() - 0.5) * 1000,
-        (Math.random() - 0.5) * 1000,
-        (Math.random() - 0.5) * 1000
-    );
-}
-
-geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-
-const material = new THREE.PointsMaterial({
-    color: 0x00ffff,
-    size: 3.5, // 放大粒子
-    sizeAttenuation: true,
-    transparent: true,
-    opacity: 0.5
-});
-
-const particles = new THREE.Points(geometry, material);
-scene.add(particles);
-
-function animate() {
-    requestAnimationFrame(animate);
-    particles.rotation.y += 0.0008;
-    particles.rotation.x += 0.0004;
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.render(scene, camera);
-}
-
-animate();
-
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-
 // ================================ end hero=====================================
 
+
 // =========================== loop ======================================
-
-
 // 添加悬停效果增强科技感
 document.querySelectorAll('.path-item').forEach(item => {
     item.addEventListener('mouseenter', function () {
@@ -64,7 +15,6 @@ document.querySelectorAll('.path-item').forEach(item => {
     });
 });
 
-// 创建科技感连接线
 function createConnectors() {
     const container = document.querySelector('.path-container');
     const items = document.querySelectorAll('.path-item');
@@ -100,18 +50,70 @@ function createConnectors() {
     }
 }
 
-// 页面加载完成后创建连接线
 window.addEventListener('load', createConnectors);
 window.addEventListener('resize', function () {
     document.querySelector('.connectors')?.remove();
     createConnectors();
 });
-
-
 // ========================== end loop =================================
 
 
-// 配置参数
+// =============================================== consulting ==============================================
+document.addEventListener('DOMContentLoaded', function () {
+
+    const valueItems = document.querySelectorAll('.value-item');
+    valueItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            /* 如果已有 .ripple 元素，复用；否则先创建 */
+            let ripple = this.querySelector('.ripple');
+            if (!ripple) {
+                ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+            }
+            /* 确保每次点击都重置动画 */
+            ripple.classList.remove('animate');
+
+            /* 计算波纹半径及位置 */
+            const rect = this.getBoundingClientRect();
+            const diameter = Math.max(rect.width, rect.height);
+            const radius = diameter / 2;
+            ripple.style.width = ripple.style.height = `${diameter}px`;
+            const offsetX = e.clientX - rect.left - radius;
+            const offsetY = e.clientY - rect.top - radius;
+            ripple.style.left = `${offsetX}px`;
+            ripple.style.top = `${offsetY}px`;
+
+            /* 触发动画 */
+            ripple.classList.add('animate');
+
+            /* 如果需要在点击后展开或折叠更多信息，可在此添加逻辑 */
+            // this.classList.toggle('expanded');
+        });
+    });
+
+    /* =============================
+       3. 可选：为 value-item 添加点击展开/折叠详细内容
+       ============================= */
+    // 如需“点击展开/折叠”功能，可利用以下示例逻辑，并在 CSS 中配合 .expanded 类设置更多样式
+    /*
+    valueItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('expanded');
+            // CSS 中可针对 .value-item.expanded 设置额外样式，例如修改高度、背景色，或显示隐藏内容等
+        });
+    });
+    */
+});
+// ========================================== end consulting =================================================
+
+
+// ================================ products ===========================================
+
+// ================================= end products ============================================
+
+
+// ========================================= toast==================================================
 const TOAST_CONFIG = {
     displayDuration: 3000,  // 显示持续时间 (ms)
     fadeDuration: 300,      // 淡出动画时间 (ms)
@@ -183,6 +185,256 @@ document.querySelectorAll('.item-only[data-desc]').forEach(item => {
         showToast(desc);
     });
 });
+// ========================== end toast ===============================
 
-// ===============================================================
-// sidebar
+
+// =========================== foundation =======================
+
+// 基础建设标签切换功能
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#foundation .tab-label').forEach(tab => {
+        tab.addEventListener('click', function () {
+            document.querySelectorAll('#foundation .tab-label').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('#foundation .content-item').forEach(item => item.classList.remove('active'));
+
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(`${tabId}-content`).classList.add('active');
+
+            const colors = [
+                'linear-gradient(145deg, rgba(23, 42, 69, 0.9), rgba(18, 35, 58, 0.85))',
+                'linear-gradient(145deg, rgba(25, 45, 75, 0.9), rgba(20, 38, 65, 0.85))',
+                'linear-gradient(145deg, rgba(28, 50, 85, 0.9), rgba(23, 42, 70, 0.85))',
+                'linear-gradient(145deg, rgba(30, 55, 90, 0.9), rgba(25, 45, 75, 0.85))'
+            ];
+
+            const index = Array.from(this.parentElement.children).indexOf(this);
+            document.getElementById('foundation').style.background = colors[index];
+        });
+    });
+});
+// =========================== end foundation =======================
+
+
+// ========================== intelligent ===============================
+
+
+// 创建连接线
+function createText() {
+    const container = document.querySelector('.pentagon-container');
+    const center = document.querySelector('.center-area');
+    const items = document.querySelectorAll('.ring-item');
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "connections");
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", "100%");
+    svg.style.position = "absolute";
+    svg.style.top = "0";
+    svg.style.left = "0";
+    svg.style.zIndex = "1";
+    container.appendChild(svg);
+
+    const centerRect = center.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    const centerX = centerRect.left + centerRect.width/2 - containerRect.left;
+    const centerY = centerRect.top + centerRect.height/2 - containerRect.top;
+
+    items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        const itemX = itemRect.left + itemRect.width/2 - containerRect.left;
+        const itemY = itemRect.top + itemRect.height/2 - containerRect.top;
+
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("class", "connection");
+        line.setAttribute("x1", centerX);
+        line.setAttribute("y1", centerY);
+        line.setAttribute("x2", itemX);
+        line.setAttribute("y2", itemY);
+        svg.appendChild(line);
+    });
+}
+
+// 初始化
+window.addEventListener('load', function() {
+
+    createText();
+});
+
+// 响应窗口调整
+window.addEventListener('resize', function() {
+    document.querySelector('.connections')?.remove();
+    createText();
+});
+
+// 创建连接线
+function createConnections() {
+    const container = document.querySelector('.pentagon-container');
+    const center = document.querySelector('.center-area');
+    const items = document.querySelectorAll('.ring-item');
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "connections");
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", "100%");
+    svg.style.position = "absolute";
+    svg.style.top = "0";
+    svg.style.left = "0";
+    svg.style.zIndex = "1";
+    container.appendChild(svg);
+
+    const centerRect = center.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    const centerX = centerRect.left + centerRect.width / 2 - containerRect.left;
+    const centerY = centerRect.top + centerRect.height / 2 - containerRect.top;
+
+    items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        const itemX = itemRect.left + itemRect.width / 2 - containerRect.left;
+        const itemY = itemRect.top + itemRect.height / 2 - containerRect.top;
+
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("class", "connection");
+        line.setAttribute("x1", centerX);
+        line.setAttribute("y1", centerY);
+        line.setAttribute("x2", itemX);
+        line.setAttribute("y2", itemY);
+        svg.appendChild(line);
+    });
+}
+
+// 初始化
+window.addEventListener('load', function () {
+
+    createConnections();
+
+    // 初始化显示第一个环节
+    const firstItem = document.querySelector('.ring-item');
+    firstItem.click();
+});
+
+// 响应窗口调整
+window.addEventListener('resize', function () {
+    document.querySelector('.connections')?.remove();
+    createConnections();
+});
+// ======================== end intelligent =================================
+
+// ======================= optimize =============================
+document.addEventListener('DOMContentLoaded', function () {
+    function enhanceNodeHover() {
+        const nodes = document.querySelectorAll('.optimization-node');
+
+        nodes.forEach(node => {
+            const icon = node.querySelector('.node-icon');
+            const title = node.querySelector('.node-title');
+            const desc = node.querySelector('.node-desc');
+            const stats = node.querySelectorAll('.stat-value');
+
+            node.addEventListener('mouseenter', function () {
+                icon.style.transform = 'scale(1.15)';
+                icon.style.boxShadow = '0 0 40px rgba(0, 168, 255, 0.4)';
+                icon.style.background = 'linear-gradient(135deg, rgba(0, 168, 255, 0.2), rgba(100, 181, 246, 0.25))';
+
+                title.style.color = '#00a8ff';
+                title.style.transform = 'translateY(-5px)';
+
+                desc.style.color = '#0088cc';
+
+                stats.forEach(stat => {
+                    stat.style.transform = 'scale(1.2)';
+                    stat.style.color = '#0066ff';
+                });
+            });
+
+            node.addEventListener('mouseleave', function () {
+                icon.style.transform = 'scale(1)';
+                icon.style.boxShadow = '0 10px 30px rgba(0, 102, 204, 0.1)';
+                icon.style.background = 'linear-gradient(135deg, rgba(0, 168, 255, 0.1), rgba(100, 181, 246, 0.15))';
+
+                title.style.color = '#0066cc';
+                title.style.transform = 'translateY(0)';
+
+                desc.style.color = '#336699';
+
+                stats.forEach(stat => {
+                    stat.style.transform = 'scale(1)';
+                    stat.style.color = '#00a8ff';
+                });
+            });
+        });
+    }
+
+    enhanceNodeHover();
+
+    // 添加动态背景光效
+    const container = document.querySelector('.optimization-container');
+    let mouseX = 0, mouseY = 0;
+
+    container.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        const centralCircle = document.querySelector('.central-circle');
+        const rect = container.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const deltaX = (mouseX - centerX) / 50;
+        const deltaY = (mouseY - centerY) / 50;
+
+        centralCircle.style.transform = `translate(calc(-50% + ${deltaX}px), calc(-50% + ${deltaY}px))`;
+    });
+});
+// ========================= end optimize ======================================
+
+
+// =================================== sidebar =======================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("dx-sidebar");
+    const lightSections = ["products", "architecture", "optimization"]; // 偏深色背景
+    const darkSections = ["hero", "consulting", "framework", "foundation", "intelligent"]; // 偏浅色背景
+
+    function getCurrentSection() {
+        const scrollY = window.scrollY + window.innerHeight / 2;
+
+        for (const id of [...lightSections, ...darkSections]) {
+            const section = document.getElementById(id);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                const top = rect.top + window.scrollY;
+                const bottom = top + rect.height;
+                if (scrollY > top && scrollY < bottom) {
+                    return id;
+                }
+            }
+        }
+        return null;
+    }
+
+    function updateSidebarStyle() {
+        const current = getCurrentSection();
+        if (lightSections.includes(current)) {
+            sidebar.classList.remove("dx-sidebar-dark");
+        } else if (darkSections.includes(current)) {
+            sidebar.classList.add("dx-sidebar-dark");
+        }
+    }
+
+    window.addEventListener("scroll", updateSidebarStyle);
+    updateSidebarStyle();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggle-dx");
+    const navList = document.getElementById("dx-List");
+
+    toggleBtn.addEventListener("click", function () {
+        navList.classList.toggle("collapsed");
+    });
+});
+// ============================ end sidebar ========================
