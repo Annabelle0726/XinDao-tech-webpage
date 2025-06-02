@@ -37,6 +37,17 @@
     <link rel="stylesheet" href="css/dx-services.css">
     <!-- Template Main CSS File -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/dx-services.js"></script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+          }
+        }
+    </script>
 </head>
 
 <body>
@@ -139,28 +150,309 @@
 <section id="hero">
     <div class="hero-content">
         <h1>数字化转型，重塑未来制造</h1>
-        <p>融合智能、效率与数据，为企业赋能</p>
+        <p>芯导助力中小企业实现可落地、可复制、可持续的数字化转型</p>
+        <a href="#consulting" class="start-btn">开启转型</a>
     </div>
     <canvas id="hero-bg"></canvas>
 </section>
 
 <!--======================== end hero ================================-->
 
+
 <!-- Divider 1 -->
 <div class="gradient-transition1"></div>
 
-<!----------------------------- loop --------------------------------->
+<!-------------------------- consulting -------------------------->
+<!-- 咨询服务能力 -->
+<div id="consulting">
+    <div class="header">
+        <h1>咨询服务能力</h1>
+        <h2>聚焦中小企业场景，提供专业化、体系化、可落地的数字化诊断服务</h2>
+        <div class="company-tag">芯导软件 · 数字化转型专家</div>
+    </div>
+    <div class="diagnostic-services"><!-- 数字化工厂诊断 -->
+        <div class="service-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <a href="consulting.html#digital-factory"><i class="fas fa-industry"></i>
+                        数字化工厂诊断</a>
+                </h2>
+                <p class="section-subtitle">工信部标准评测价值，权威评估体系助力企业数字化转型</p>
+            </div>
+
+            <div class="value-points">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>工信部标准评测价值</h3>
+                        <p>
+                            基于国家工信部数字化工厂评估标准，为企业提供权威、专业的诊断服务，助力企业精准定位数字化水平。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>权威评估体系</h3>
+                        <p>15个核心采集项+16个关键业务场景的标准化诊断，全面评估企业数字化水平，识别关键改进领域。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>四级水平判定</h3>
+                        <p>精准定位企业数字化水平：初始级 → 规范级 → 集成级 → 协同级，明确数字化转型路径。</p>
+                    </div>
+                </div>
+
+                <div class="level-indicator">
+                    <div class="level">
+                        <div class="level-name">初始级</div>
+                        <div class="level-desc">基础数字化能力</div>
+                    </div>
+                    <div class="level">
+                        <div class="level-name">规范级</div>
+                        <div class="level-desc">流程标准化</div>
+                    </div>
+                    <div class="level">
+                        <div class="level-name">集成级</div>
+                        <div class="level-desc">系统集成化</div>
+                    </div>
+                    <div class="level">
+                        <div class="level-name">协同级</div>
+                        <div class="level-desc">智能协同化</div>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>专精特新企业认定</h3>
+                        <p>提供符合专精特新企业认定的数字化水平评估报告和政策对接依据，助力企业获得政策支持。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>场景化改造指引</h3>
+                        <p>10个约束性场景+6个指导性场景的改造优先级评估，提供清晰可行的数字化转型路线图。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-database"></i> 数据采集与分析</div>
+                    <div class="feature-desc">全面采集生产数据，建立数据分析模型，实现数据驱动决策</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-network-wired"></i> 系统集成</div>
+                    <div class="feature-desc">打通ERP、MES、PLM等系统，消除信息孤岛</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-robot"></i> 自动化升级</div>
+                    <div class="feature-desc">识别自动化升级机会，提高生产效率</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-cloud"></i> 云平台应用</div>
+                    <div class="feature-desc">评估云平台应用场景，实现灵活扩展</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 精益生产诊断 -->
+        <div class="service-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <a href="consulting.html#lean-consulting"><i class="fas fa-tachometer-alt"></i>
+                        精益生产诊断</a>
+                </h2>
+                <p class="section-subtitle">全流程数字化映射分析，显著提升设备综合效率与生产管理水平</p>
+            </div>
+
+            <div class="value-points">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>服务核心价值</h3>
+                        <p>通过精益生产诊断优化生产流程，消除浪费，提高效率，实现持续改进的生产管理体系。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>设备综合效率提升</h3>
+                        <p>显著提升设备综合效率(OEE)，助力企业达到数字化工厂设备管理高级标准，降低设备停机时间。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>全流程数字化映射</h3>
+                        <p>覆盖从产品设计、工艺规划、生产制造到售后服务的完整业务环节，实现全流程数字化映射分析。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>标准化作业系统建设</h3>
+                        <p>通过数字化手段建立标准化作业系统，确保执行规范可追溯，减少人为错误，提高产品质量。</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>生产执行系统深度整合</h3>
+                        <p>实现从数据采集到决策优化的闭环管理，打通生产执行系统(MES)与上层管理系统。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-chart-pie"></i> 价值流分析</div>
+                    <div class="feature-desc">识别生产流程中的浪费环节，优化价值流动</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-stopwatch"></i> 节拍时间优化</div>
+                    <div class="feature-desc">精确计算节拍时间，平衡生产线</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-boxes"></i> 库存优化</div>
+                    <div class="feature-desc">降低在制品库存，减少资金占用</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-people-carry"></i> 人机协作</div>
+                    <div class="feature-desc">优化人机协作效率，提高劳动生产率</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-bolt"></i> 快速换模</div>
+                    <div class="feature-desc">缩短设备换模时间，提高设备利用率</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-title"><i class="fas fa-eye"></i> 可视化管理</div>
+                    <div class="feature-desc">建立生产状态可视化系统，实时监控</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------- end consulting ----------------------------->
+
+<!-- Divider 2 -->
+<div class="gradient-transition2"></div>
 
 
+<!----------------------------- #framework --------------------------------->
 <!-- 智改数转闭环路径 Section -->
 
-<section class="digital-transformation" id="loop">
+<section class="digital-transformation-1" id="framework">
     <div class="header">
         <h1>智改数转闭环路径</h1>
         <h2>芯导软件助力企业实现智能制造全流程优化与升级</h2>
-        <div class="company">芯导软件 · 引领数字化转型</div>
+        <div class="company-tag">芯导软件 · 引领数字化转型</div>
     </div>
 
+    <!--====================== steps ==============================-->
+    <div class="maturity-levels mb-2">
+        <div class="maturity-row">
+            <div class="maturity-label">成熟度很高</div>
+            <div class="maturity-items">
+                <div class="maturity-item">全流程、自主化的价值驱动生产制造</div>
+                <div class="maturity-item">应用前沿创新技术</div>
+            </div>
+        </div>
+
+        <div class="maturity-divider"></div>
+
+        <div class="maturity-row">
+            <div class="maturity-label">成熟度高</div>
+            <div class="maturity-items">
+                <div class="maturity-item">动态的需求驱动智能制造企业</div>
+            </div>
+        </div>
+
+        <div class="maturity-divider"></div>
+
+        <div class="maturity-row">
+            <div class="maturity-label">成熟度中等</div>
+            <div class="maturity-items">
+                <div class="maturity-item">基于云的内外部信息化系统集成</div>
+                <div class="maturity-item">全流程的分布式数据流</div>
+                <div class="maturity-item">应用分析和机器学习</div>
+                <div class="maturity-item">边缘智能</div>
+                <div class="maturity-item">基于IOT的实时自动化过程数据的集成</div>
+                <div class="maturity-item">能够通过移动技术访问需求信息</div>
+                <div class="maturity-item">自动化质量检测</div>
+                <div class="maturity-item">应用工业机器人、AGV</div>
+            </div>
+        </div>
+
+        <div class="maturity-divider"></div>
+
+        <div class="maturity-row">
+            <div class="maturity-label">成熟度低</div>
+            <div class="maturity-items">
+                <div class="maturity-item">用于分析的数据流</div>
+                <div class="maturity-item">KPI-S实时数据</div>
+                <div class="maturity-item">绝大多数工厂流程基于IT应用来管理</div>
+                <div class="maturity-item">部分工艺流程用IT应用来管理</div>
+                <div class="maturity-item">数据的数据分析</div>
+                <div class="maturity-item">数据和系统驱动</div>
+            </div>
+        </div>
+
+        <div class="maturity-divider"></div>
+
+        <div class="maturity-row">
+            <div class="maturity-label">成熟度很低</div>
+            <div class="maturity-items">
+                <div class="maturity-item">静态的制造工厂</div>
+                <div class="maturity-item">手工流程</div>
+                <div class="maturity-item">自动化的设备但没有数据采集</div>
+                <div class="maturity-item">数据设备</div>
+                <div class="maturity-item">人工的仪表盘和报表</div>
+                <div class="maturity-item">DCS/PLC应用</div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------- end steps ---------------------------------------->
+
+    <!--------------------------   path --------------->
     <div class="path-container">
         <!-- 数字基础+网络 -->
         <div class="path-item">
@@ -234,32 +526,442 @@
             <p class="path-description">依托领先的智能制造和智改数转经验，帮助企业了解自身能力，制定科学发展目标</p>
         </div>
     </div>
+    <!------------------------ end path    ------------------------------->
 </section>
+<!--========================== end framework ==================================-->
 
 
-<!--==================================================-->
-<!-- Divider 2 -->
-<div class="gradient-transition2"></div>
+<!-- Divider 3 -->
+<div class="gradient-transition3"></div>
 
 
+<!-- ============================ foundation ===============================-->
+<section id="foundation">
+    <div class="section-header">
+        <h2>数字化转型基础建设</h2>
+        <p>构建坚实数字化基础，赋能企业高效运营</p>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab-label active" data-tab="infra">基础设施</div>
+        <div class="tab-label" data-tab="data">数据治理</div>
+        <div class="tab-label" data-tab="cloud">云平台</div>
+        <div class="tab-label" data-tab="security">安全体系</div>
+    </div>
+
+    <div class="content-container">
+        <!-- 基础设施 -->
+        <div class="content-item active" id="infra-content">
+
+            <div class="row content-text align-items-center">
+                <!-- 左侧 col-6 -->
+                <div class="col-6">
+                    <div class="d-flex align-items-center mb-2 gap-2">
+                        <div class="content-icon me-2">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="content-title m-0">高可用基础设施</h3>
+                    </div>
+
+                    <p class="content-description">
+                        构建企业级数据中心与网络架构，实现99.99%的高可用性。采用模块化设计支持弹性扩展，
+                        通过SDN技术实现网络虚拟化，支持多云环境无缝集成。提供从边缘计算到核心数据中心的
+                        一体化解决方案，确保业务连续性和灾难恢复能力。
+                    </p>
+
+                    <div class="content-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">99.99%</div>
+                            <div class="stat-label">系统可用性</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">40%↓</div>
+                            <div class="stat-label">运维成本</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3:1</div>
+                            <div class="stat-label">资源利用率提升</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧 col-6 图片 -->
+                <div class="col-6 desc-img">
+                    <img
+                            src="https://cds.chinadaily.com.cn/dams/capital/image/202209/27/633296e1e4b013b65bf71f96.jpeg"
+                            alt=""
+                            class="img-fluid rounded"
+                    />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =================== 数据治理 =================== -->
+        <div class="content-item" id="data-content">
+            <div class="row content-text align-items-center">
+                <div class="col-6">
+                    <div class="d-flex align-items-center mb-2 gap-2">
+                        <div class="content-icon me-2">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="content-title m-0">智能数据治理</h3>
+                    </div>
+                    <p class="content-description">
+                        构建企业级数据中台，实现数据的统一采集、清洗、存储与分析。建立完善的数据质量管理体系，
+                        通过AI算法自动识别数据异常，确保数据一致性与准确性。实施数据分级分类管理，
+                        满足GDPR等合规要求，实现数据资产价值最大化。
+                    </p>
+                    <div class="content-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">80%↑</div>
+                            <div class="stat-label">数据质量</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">60%↓</div>
+                            <div class="stat-label">数据处理时间</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">合规性</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 desc-img">
+                    <img
+                            src="https://www.solinkup.com/publiccms/webfile/upload/2024/01-20/14-51-100878-1816266532.png"
+                            alt="智能数据治理"
+                            class="img-fluid rounded"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- =================== 混合云平台 =================== -->
+        <div class="content-item" id="cloud-content">
+            <div class="row content-text align-items-center">
+                <div class="col-6">
+                    <div class="d-flex align-items-center mb-2 gap-2">
+                        <div class="content-icon me-2">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="content-title m-0">混合云平台</h3>
+                    </div>
+                    <p class="content-description">
+                        构建安全可靠的混合云架构，实现公有云与私有云的无缝集成。提供一站式云管理平台，
+                        支持资源自动编排、弹性伸缩和成本优化。通过容器化技术实现应用快速部署与迁移，
+                        支持微服务架构，加速企业应用现代化进程。
+                    </p>
+                    <div class="content-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">70%↓</div>
+                            <div class="stat-label">部署时间</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">50%↓</div>
+                            <div class="stat-label">IT成本</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3X</div>
+                            <div class="stat-label">部署速度</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 desc-img">
+                    <img
+                            src="https://pic.rmb.bdstatic.com/bjh/news/3afd093391ddf91e84c7aa4176b0f060.jpeg"
+                            alt="混合云平台"
+                            class="img-fluid rounded"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- =================== 安全体系 =================== -->
+        <div class="content-item" id="security-content">
+            <div class="row content-text align-items-center">
+                <div class="col-6">
+                    <div class="d-flex align-items-center mb-2 gap-2">
+                        <div class="content-icon me-2">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="content-title m-0">全方位安全体系</h3>
+                    </div>
+                    <p class="content-description">
+                        构建纵深防御安全体系，覆盖网络、主机、应用和数据安全。采用零信任架构，
+                        实现基于身份的动态访问控制。通过AI驱动的安全威胁分析平台，实时监测和响应安全事件。
+                        建立完善的安全运营中心(SOC)，提供7×24小时安全监控与应急响应。
+                    </p>
+                    <div class="content-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label">威胁检测率</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">95%↓</div>
+                            <div class="stat-label">安全事件</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">30min</div>
+                            <div class="stat-label">响应时间</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 desc-img">
+                    <img
+                            src="https://img0.baidu.com/it/u=3751559789,571460587&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+                            alt="全方位安全体系"
+                            class="img-fluid rounded"
+                    />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ============================ end foundation ===========================================-->
+
+<!-- Divider 4 -->
+<div class="gradient-transition4"></div>
 
 
+<!-- ================================== intelligent ================================-->
+<section id="intelligent">
+    <div class="section-header">
+        <h2>智能化改造能力</h2>
+        <div class="company">芯导软件 · 智能制造解决方案专家</div>
+    </div>
+
+    <div class="pentagon-container">
+        <div class="pentagon-ring">
+            <!-- 中心区域 -->
+            <div class="center-area">
+                <h3>智能制造核心</h3>
+                <p>五大环节智能化改造，实现制造全流程优化</p>
+            </div>
+
+            <!-- 五个环节 -->
+            <div class="ring-item" style="top: 50px; left: 210px;" data-target="production">
+                <div class="item-number">①</div>
+                <div class="item-title">产线智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">产线智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">自动控制</div>
+                        <div class="app-tag">流程优化</div>
+                        <div class="app-tag">实时监控</div>
+                        <div class="app-tag">柔性生产</div>
+                        <div class="app-tag">智能调度</div>
+                        <div class="app-tag">能效管理</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 210px; left: 450px;" data-target="feeding">
+                <div class="item-number">②</div>
+                <div class="item-title">上下料智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">上下料智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">机械臂操作</div>
+                        <div class="app-tag">自动传送</div>
+                        <div class="app-tag">智能供料</div>
+                        <div class="app-tag">物料识别</div>
+                        <div class="app-tag">路径规划</div>
+                        <div class="app-tag">自动换型</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 420px; left: 350px;" data-target="inspection">
+                <div class="item-number">③</div>
+                <div class="item-title">检测智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">检测智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">印刷检测</div>
+                        <div class="app-tag">尺寸检测</div>
+                        <div class="app-tag">裂痕检测</div>
+                        <div class="app-tag">定位引实</div>
+                        <div class="app-tag">外观检测</div>
+                        <div class="app-tag">缺陷检测</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 420px; left: 70px;" data-target="logistics">
+                <div class="item-number">④</div>
+                <div class="item-title">物流智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">物流智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">AGV小车</div>
+                        <div class="app-tag">自动托盘</div>
+                        <div class="app-tag">路径优化</div>
+                        <div class="app-tag">智能仓储</div>
+                        <div class="app-tag">自动分拣</div>
+                        <div class="app-tag">实时追踪</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 210px; left: -30px;" data-target="packaging">
+                <div class="item-number">⑤</div>
+                <div class="item-title">包装智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">包装智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">自动装箱</div>
+                        <div class="app-tag">智能贴标</div>
+                        <div class="app-tag">自动覆膜</div>
+                        <div class="app-tag">条码识别</div>
+                        <div class="app-tag">重量检测</div>
+                        <div class="app-tag">自动码垛</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!---===================== end transform =================================================== -->
 
 
-<!------------------------------------------------------------------>
+<!-- Divider 5 -->
+<div class="gradient-transition5"></div>
+
+
+<!-- ============================== 产品模块 ================================= -->
+<section id="products" class="products">
+    <div class="section-header">
+        <h2 class="section-title">
+            内置应用服务
+        </h2>
+        <p class="section-subtitle">
+            专业化的工业软件解决方案，助力企业高效运营与数字化转型
+        </p>
+    </div>
+
+    <div class="app-grid">
+        <!-- MES系统 -->
+        <div class="app-card">
+            <h4 class="app-name">MES 系统</h4>
+            <p class="app-desc">制造执行系统，实现生产全过程数字化管控，优化制造流程，提升生产效率</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 实时生产监控</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 工艺路线管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 质量追溯系统</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 设备状态管理</li>
+                </ul>
+                <a href="services/mes.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <!-- EAM 系统 -->
+        <div class="app-card">
+            <h4 class="app-name">EAM 系统</h4>
+            <p class="app-desc">企业资产管理系统，优化设备维护与管理，延长设备寿命，降低运维成本</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 预防性维护管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 工单管理系统</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 备件库存管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 设备性能分析</li>
+                </ul>
+                <a href="services/eam.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <!-- SPC 系统 -->
+        <div class="app-card">
+            <h4 class="app-name">SPC 系统</h4>
+            <p class="app-desc">统计过程控制，实现质量数据实时监测，降低缺陷率，提升质量稳定性</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 实时质量监控</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 自动预警系统</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 多维度分析</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 过程能力分析</li>
+                </ul>
+                <a href="services/spc.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <!-- LIMS 系统 -->
+        <div class="app-card">
+
+            <h4 class="app-name">LIMS 系统</h4>
+            <p class="app-desc">实验室信息管理系统，提升检验效率，确保数据合规，优化实验室资源</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 样品全流程管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 仪器数据集成</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 合规性管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 报告自动生成</li>
+                </ul>
+                <a href="services/lims.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <!-- QMS 系统 -->
+        <div class="app-card">
+
+            <h4 class="app-name">QMS 系统</h4>
+            <p class="app-desc">质量管理系统，构建全面质量管控体系，确保产品质量符合行业标准</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 质量文档管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 不合格品管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 纠正预防措施</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 审核管理</li>
+                </ul>
+                <a href="services/qms.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <!-- EMS 系统 -->
+        <div class="app-card">
+            <h4 class="app-name">EMS 系统</h4>
+            <p class="app-desc">环境管理系统，实现环保合规与节能减排，助力企业绿色可持续发展</p>
+            <div class="app-footer">
+                <ul class="app-features">
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 环境数据监测</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 合规性管理</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 能源消耗分析</li>
+                    <li class="app-feature"><i class="fas fa-check-circle"></i> 碳排放管理</li>
+                </ul>
+                <a href="services/ems.html" class="app-learn-more">了解更多</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------- end products --------------->
+
+
+<!-- Divider 6 -->
+<div class="gradient-transition6"></div>
+
 
 <!--------------------------- architecture ---------------------------->
 <section class="architecture-section" id="architecture">
     <div class="container">
-        <div class="section-header"></div>
+        <div class="section-header">
+            <h3 class="section-title">系统集成架构</h3>
+            <p class="section-subtitle">构建灵活可扩展的数字平台，支撑多系统协同与数据联通</p>
+
+        </div>
 
         <div class="grid-container">
             <div class="toast-container"></div>
 
             <!-- SaaS -->
             <div class="integration-system row">
-                <div class="left-title col-2">SaaS</div>
-                <div class="right-content col-10 d-flex flex-wrap">
+                <div class="left-title col-1">SaaS</div>
+                <div class="right-content col-11 d-flex flex-wrap">
                     <div class="col">
                         <div class="sub-title">标识解析服务</div>
                         <div class="sub-items">
@@ -313,7 +1015,7 @@
 
             <!-- PaaS -->
             <div class="integration-system row paas">
-                <div class="left-title col-2">PaaS</div>
+                <div class="left-title col-1">PaaS</div>
                 <div class="right-content col-10 d-flex flex-wrap">
                     <div class="col">
                         <div class="sub-title">大数据应用平台</div>
@@ -392,16 +1094,16 @@
 
             <!-- IaaS -->
             <div class="integration-system row">
-                <div class="left-title col-2">IaaS</div>
-                <div class="right-content col-10">
+                <div class="left-title col-1">IaaS</div>
+                <div class="right-content col-11">
                     <div class="col single-title">云基础设施（服务器、存储、网络、虚拟化）</div>
                 </div>
             </div>
 
             <!-- 边缘层 -->
             <div class="integration-system row side">
-                <div class="left-title col-2">边缘层</div>
-                <div class="right-content col-10 d-flex flex-wrap">
+                <div class="left-title col-1">边缘层</div>
+                <div class="right-content col-11 d-flex flex-wrap">
                     <div class="col item-only" data-desc="连接物理设备与数字系统">设备接入</div>
                     <div class="col item-only" data-desc="转换不同通信协议">协议解析</div>
                     <div class="col item-only" data-desc="近源数据处理">边缘计算</div>
@@ -428,7 +1130,88 @@
 <!----------------------------- end architecture --------------------------------------->
 
 
+<!-- Divider 7 -->
+<div class="gradient-transition7"></div>
 
+
+<!----------------- continue optimizing --------------------------->
+<div class="optimization-container" id="optimization">
+    <div class="section-header">
+        <h1 class="section-title">持续优化</h1>
+        <p class="section-subtitle">通过创新技术手段持续提升企业精细化管理水平与核心竞争力</p>
+    </div>
+
+    <div class="optimization-grid">
+        <!-- 预测性维护 -->
+        <div class="optimization-node">
+            <div class="node-path"></div>
+            <div class="node-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <h3 class="node-title">预测性维护</h3>
+            <p class="node-desc">基于AI的设备健康监测系统，提前预测故障并自动生成维护计划，减少非计划停机时间</p>
+            <div class="node-stats">
+                <div class="stat-item">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">准确率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">45%</div>
+                    <div class="stat-label">成本降幅</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 数字孪生 -->
+        <div class="optimization-node">
+            <div class="node-path"></div>
+            <div class="node-icon">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3 class="node-title">数字孪生</h3>
+            <p class="node-desc">构建物理工厂的数字映射，实时模拟和优化生产流程，实现虚拟调试与工艺优化</p>
+            <div class="node-stats">
+                <div class="stat-item">
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">效率提升</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">试错成本</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 智能决策 -->
+        <div class="optimization-node">
+            <div class="node-path"></div>
+            <div class="node-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="node-title">智能决策</h3>
+            <p class="node-desc">基于深度学习的决策支持系统，分析复杂业务场景，提供最优策略与实时建议</p>
+            <div class="node-stats">
+                <div class="stat-item">
+                    <div class="stat-value">78%</div>
+                    <div class="stat-label">决策速度</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">准确率</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="central-circle">
+        <div class="circle-text">持续优化<br>永无止境</div>
+    </div>
+</div>
+
+<!---------------------------------------------------->
+
+
+<!------------------------------------------>
 
 
 <!-- ======= Footer ======= -->
@@ -474,9 +1257,6 @@
                     <ul>
                         <li><a href="index.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 首页</a>
                         </li>
-                        <li><a href="products.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
-                        </a></li>
-
                         <li><a href="about.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 关于我们</a>
                         </li>
                         <li><a href="about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 联系我们</a>
@@ -545,9 +1325,85 @@
 </footer>
 <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
+<div id="dx-sidebar" class="position-fixed">
+    <ul id="dx-List" class="dx-links list-unstyled">
+        <li><a href="#consulting"><i class="bi bi-chat-left-text-fill"></i> 咨询服务</a></li>
+        <li><a href="#framework"><i class="bi bi-diagram-3-fill"></i> 建设框架</a></li>
+        <li><a href="#foundation"><i class="bi bi-hdd-network-fill"></i> 基础建设</a></li>
+        <li><a href="#intelligent"><i class="bi bi-cpu-fill"></i> 系统集成</a></li>
+        <li><a href="#products"><i class="bi bi-box-seam"></i> 平台融合</a></li>
+        <li><a href="#architecture"><i class="bi bi-diagram-2"></i> 系统架构</a></li>
+        <li><a href="#optimization"><i class="bi bi-emoji-smile-fill"></i> 持续优化</a></li>
+        <li>
+            <a href="./pdf/中小企业数字化转型服务.pdf" target="_blank" title="中小企业数字化转型服务">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     viewBox="0 0 256 256">
+                    <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
+                </svg>
+                转型服务彩页
+            </a>
+        </li>
+    </ul>
+
+    <button id="toggle-dx" class="toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center ">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
+
+<script type="module">
+    import * as THREE from 'three';
+
+    const canvas = document.getElementById('hero-bg');
+    const renderer = new THREE.WebGLRenderer({canvas, alpha: true});
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.z = 300;
+
+    const particlesCount = 2000;
+    const geometry = new THREE.BufferGeometry();
+    const positions = [];
+
+    for (let i = 0; i < particlesCount; i++) {
+        positions.push(
+            (Math.random() - 0.5) * 1000,
+            (Math.random() - 0.5) * 1000,
+            (Math.random() - 0.5) * 1000
+        );
+    }
+
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+    const material = new THREE.PointsMaterial({
+        color: 0x00ffff,
+        size: 3.5,
+        sizeAttenuation: true,
+        transparent: true,
+        opacity: 0.5
+    });
+
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        particles.rotation.y += 0.0008;
+        particles.rotation.x += 0.0004;
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+</script>
 
 <!-- Vendor JS Files -->
 <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -558,7 +1414,6 @@
 <script src="vendor/glightbox/js/glightbox.min.js"></script>
 
 <!-- Template Main JS File -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.155/build/three.min.js"></script>
 
 <script src="js/transparent-nav.js"></script>
 <script src="js/dx-services.js"></script>

@@ -69,10 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("lean-consulting"),
         document.getElementById("footer"),
         document.getElementById("div-2"),
-
         document.getElementById("div-3"),
-        
-
     ];
 
     function checkSidebarBackground() {

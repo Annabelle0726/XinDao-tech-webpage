@@ -1,3 +1,16 @@
+
+:root {
+    --primary: #00a8ff;
+    --lightest-blue: #caf0f8;
+    --lighter-blue: #ade8f4;
+    --lighter-blue-1: #90e0ef;
+    --lighter-blue-2: #48cae4;
+    --blue-1: #00b4d8;
+    --blue-2: #0096c7;
+    --dark-blue: #0077b6;
+    --darker-blue: #023e8a;
+    --darkest-blue: #03045e;
+}
 /*--------------------------------------------------------------
 # Index Page
 --------------------------------------------------------------*/
@@ -12,9 +25,8 @@ section {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url(../img/hero-bg.png) top center no-repeat;
-    background-size: cover;
-}
+    background: linear-gradient(135deg, var(--lighter-blue-1), var(--lighter-blue-2));
+    }
 
 /* --------------  hero text  ----------- */
 .frosted-glass {
@@ -493,7 +505,6 @@ section {
     transform: scale(1.13) translateY(-6px);
 }
 
-/* 阴影样式：用于视觉对比 */
 .counts .count-box.light-shadow {
     box-shadow: 0 24px 64px rgba(255, 255, 255, 0.3);
 }
@@ -502,7 +513,6 @@ section {
     box-shadow: 0 20px 60px rgba(65, 84, 241, 0.4);
 }
 
-/* 默认无阴影（第一次进入） */
 .counts .count-box {
     transition: all 0.3s ease;
     transform-style: preserve-3d;
@@ -512,13 +522,11 @@ section {
     user-select: none;
 }
 
-/* Hover 和 Active 提升 */
 .counts .count-box:hover,
 .counts .count-box.active {
     transform: translateY(-8px) scale(1.04);
 }
 
-/* Shadow 类型：通过 body class 控制风格 */
 
 body.shadow-light .count-box:hover,
 body.shadow-light .count-box.active {
@@ -531,14 +539,12 @@ body.shadow-dark .count-box.active {
 }
 
 
-/* 保证 active 字体依然高亮 */
 .counts .count-box.active h3,
 .counts .count-box.active p,
 .counts .count-box.active span {
     color: #fff;
 }
 
-/* 内容结构样式 */
 .counts .count-box span {
     font-size: 48px;
     font-weight: 800;
@@ -547,7 +553,7 @@ body.shadow-dark .count-box.active {
 
 .counts .count-box h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 650;
     margin-bottom: 8px;
     color: #0b198f;
 }
@@ -625,8 +631,9 @@ dotlottie-player:hover {
 }
 
 .services .service-box h3 {
-    color: #444444;
-    font-weight: 700;
+    color: var(--blue-2);
+    font-size: 1.5rem;
+    font-weight: 635;
 }
 
 .services .service-box .read-more {

@@ -1,13 +1,442 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>设备维修权限管理系统</title>
+    <title>芯导软件 - 智能化改造能力</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', 'Segoe UI', sans-serif;
+        }
 
+        body {
+            background: linear-gradient(135deg, #0c1124, #1a213a);
+            color: #e0f0ff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #intelligent {
+            width: 100%;
+            max-width: 1400px;
+            height: 100vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(145deg, rgba(35, 65, 105, 0.95), rgba(30, 55, 90, 0.92));
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0, 10, 40, 0.5);
+        }
+
+        #intelligent::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                    radial-gradient(circle at 20% 30%, rgba(0, 195, 255, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 70%, rgba(105, 90, 255, 0.08) 0%, transparent 40%);
+            z-index: 0;
+        }
+
+        .pentagon-container {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .pentagon-ring {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        .center-area {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            background: rgba(20, 40, 70, 0.7);
+            border: 2px solid rgba(64, 140, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            box-shadow: 0 0 40px rgba(0, 114, 255, 0.3);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        .center-area h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #00f2fe;
+        }
+
+        .center-area p {
+            font-size: 1.1rem;
+            color: #a0c1ff;
+            line-height: 1.6;
+        }
+
+        .ring-item {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(25, 45, 75, 0.7);
+            border: 1px solid rgba(64, 140, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .ring-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(135deg, rgba(0, 114, 255, 0.5), rgba(0, 198, 255, 0.5));
+            transition: height 0.5s ease;
+            z-index: -1;
+        }
+
+        .ring-item:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 30px rgba(0, 114, 255, 0.5);
+            border-color: rgba(64, 140, 255, 0.6);
+            z-index: 4;
+        }
+
+        .ring-item:hover::before {
+            height: 100%;
+        }
+
+        .item-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00f2fe;
+            margin-bottom: 0.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .item-title {
+            font-size: 1.2rem;
+            color: #e0f0ff;
+            font-weight: 600;
+            text-align: center;
+            padding: 0 0.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .item-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+
+        .item-detail-title {
+            font-size: 1.4rem;
+            color: #e0f0ff;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .item-detail-subtitle {
+            font-size: 0.9rem;
+            color: #a0c1ff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(2, 0.75fr);
+            gap: 0.6rem;
+            width: 100%;
+        }
+
+        .app-tag {
+            font-size: 0.75rem;
+            color: #e0f0ff;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .app-tag:hover {
+            background: rgba(35, 65, 105, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .ring-item:hover .item-number,
+        .ring-item:hover .item-title {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .ring-item:hover .item-details {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+        /* 连接线 */
+        .connection {
+            position: absolute;
+            stroke: rgba(0, 194, 255, 0.3);
+            stroke-width: 2;
+            stroke-dasharray: 5, 5;
+            z-index: 1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .pentagon-ring {
+                transform: scale(0.9);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .pentagon-ring {
+                transform: scale(0.8);
+            }
+
+            .center-area {
+                width: 220px;
+                height: 220px;
+            }
+
+            .ring-item {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #intelligent {
+                padding: 3rem 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 1.2rem;
+            }
+
+            .pentagon-ring {
+                transform: scale(0.6);
+            }
+
+            .center-area {
+                width: 180px;
+                height: 180px;
+                padding: 1rem;
+            }
+
+            .center-area h3 {
+                font-size: 1.4rem;
+            }
+
+            .center-area p {
+                font-size: 0.9rem;
+            }
+
+            .ring-item {
+                width: 140px;
+                height: 140px;
+            }
+
+            .app-list {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+        }
+    </style>
 </head>
 <body>
+<!-- 智能化改造能力部分 -->
+<section id="intelligent">
+       <div class="pentagon-container">
+        <div class="pentagon-ring">
+            <!-- 中心区域 -->
+            <div class="center-area">
+                <h3>智能制造核心</h3>
+                <p>五大环节智能化改造，实现制造全流程优化</p>
+            </div>
 
+            <!-- 五个环节 -->
+            <div class="ring-item" style="top: 50px; left: 210px;" data-target="production">
+                <div class="item-number">①</div>
+                <div class="item-title">产线智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">产线智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">自动控制</div>
+                        <div class="app-tag">流程优化</div>
+                        <div class="app-tag">实时监控</div>
+                        <div class="app-tag">柔性生产</div>
+                        <div class="app-tag">智能调度</div>
+                        <div class="app-tag">能效管理</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 210px; left: 450px;" data-target="feeding">
+                <div class="item-number">②</div>
+                <div class="item-title">上下料智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">上下料智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">机械臂操作</div>
+                        <div class="app-tag">自动传送</div>
+                        <div class="app-tag">智能供料</div>
+                        <div class="app-tag">物料识别</div>
+                        <div class="app-tag">路径规划</div>
+                        <div class="app-tag">自动换型</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 420px; left: 350px;" data-target="inspection">
+                <div class="item-number">③</div>
+                <div class="item-title">检测智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">检测智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">印刷检测</div>
+                        <div class="app-tag">尺寸检测</div>
+                        <div class="app-tag">裂痕检测</div>
+                        <div class="app-tag">定位引实</div>
+                        <div class="app-tag">外观检测</div>
+                        <div class="app-tag">缺陷检测</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 420px; left: 70px;" data-target="logistics">
+                <div class="item-number">④</div>
+                <div class="item-title">物流智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">物流智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">AGV小车</div>
+                        <div class="app-tag">自动托盘</div>
+                        <div class="app-tag">路径优化</div>
+                        <div class="app-tag">智能仓储</div>
+                        <div class="app-tag">自动分拣</div>
+                        <div class="app-tag">实时追踪</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ring-item" style="top: 210px; left: -30px;" data-target="packaging">
+                <div class="item-number">⑤</div>
+                <div class="item-title">包装智能化</div>
+                <div class="item-details">
+                    <div class="item-detail-title">包装智能化</div>
+                    <div class="app-list">
+                        <div class="app-tag">自动装箱</div>
+                        <div class="app-tag">智能贴标</div>
+                        <div class="app-tag">自动覆膜</div>
+                        <div class="app-tag">条码识别</div>
+                        <div class="app-tag">重量检测</div>
+                        <div class="app-tag">自动码垛</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // 创建连接线
+    function createConnections() {
+        const container = document.querySelector('.pentagon-container');
+        const center = document.querySelector('.center-area');
+        const items = document.querySelectorAll('.ring-item');
+
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("class", "connections");
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+        svg.style.position = "absolute";
+        svg.style.top = "0";
+        svg.style.left = "0";
+        svg.style.zIndex = "1";
+        container.appendChild(svg);
+
+        const centerRect = center.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const centerX = centerRect.left + centerRect.width/2 - containerRect.left;
+        const centerY = centerRect.top + centerRect.height/2 - containerRect.top;
+
+        items.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            const itemX = itemRect.left + itemRect.width/2 - containerRect.left;
+            const itemY = itemRect.top + itemRect.height/2 - containerRect.top;
+
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("class", "connection");
+            line.setAttribute("x1", centerX);
+            line.setAttribute("y1", centerY);
+            line.setAttribute("x2", itemX);
+            line.setAttribute("y2", itemY);
+            svg.appendChild(line);
+        });
+    }
+
+    // 初始化
+    window.addEventListener('load', function() {
+        createParticles();
+        createConnections();
+    });
+
+    // 响应窗口调整
+    window.addEventListener('resize', function() {
+        document.querySelector('.connections')?.remove();
+        createConnections();
+    });
+</script>
 </body>
 </html>
