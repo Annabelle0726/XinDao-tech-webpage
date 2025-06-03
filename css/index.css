@@ -313,21 +313,16 @@ section {
 }
 
 .about h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 660;
     color: #4154f1;
     text-transform: uppercase;
 }
 
-.about h2 {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #012970;
-}
 
 .about p {
     margin: 15px 0 30px 0;
-    line-height: 24px;
+    font-weight: 550;
 }
 
 

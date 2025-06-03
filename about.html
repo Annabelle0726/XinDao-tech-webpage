@@ -34,7 +34,9 @@
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/contact.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/about.css">
     <!-- Template Main CSS File -->
     <link href="css/style.css" rel="stylesheet">
@@ -246,28 +248,24 @@ height:1.5vh; margin-top: -3px"></div>
     </div>
 </section>
 
-
-<section class="about"
-         style="background: linear-gradient(to top, #0077b6 0%, #00b4d8 15%, #90e0ef 30%, #caf0f8 40%, #ffffff 100%);">
-
-    <div class="container text-center" data-aos="fade-up">
+<section class="about-section">
+    <div class="container">
         <!-- 团队介绍 -->
-        <section id="team" class="team ">
-            <div class="" data-aos="fade-up">
-                <header class="section-header">
-                    <h2>团队介绍</h2>
+        <section id="team" class="team">
+            <div data-aos="fade-up">
+                <div class="section-header">
+                    <h2>专业团队介绍</h2>
                     <p>覆盖技术研发、用户体验、销售服务的全栈团队</p>
-                </header>
+                </div>
 
-                <div class="row gy-4  rounded p-4">
-
+                <div class="row gy-4 rounded">
                     <!-- 创始人 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member d-flex flex-column h-100">
+                    <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card">
                             <div class="member-img">
-                                <img src="assets/img/about/team/team.png" class="img-fluid" alt="">
+                                <img src="assets/img/about/team/51e19836-10b1-492e-a8e1-3005061d829e.png" alt="创始人">
                             </div>
-                            <div class="member-info mt-auto">
+                            <div class="member-info">
                                 <h4>创始人</h4>
                                 <span>企业战略与数字化转型专家</span>
                                 <p>具备20年的生产管理、质量管理、技术管理和制造业数字化、流程信息化建设的丰富经验</p>
@@ -276,12 +274,12 @@ height:1.5vh; margin-top: -3px"></div>
                     </div>
 
                     <!-- 技术部 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member d-flex flex-column h-100">
+                    <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-card">
                             <div class="member-img">
-                                <img src="assets/img/about/team/category_kid_placeholder.png" class="img-fluid" alt="">
+                                <img src="https://www.lafosse.com/wp-content/uploads/2024/08/high-perfoming-tech-team-working-in-office.jpeg" alt="技术团队">
                             </div>
-                            <div class="member-info mt-auto">
+                            <div class="member-info">
                                 <h4>技术部</h4>
                                 <span>系统研发与交付支持</span>
                                 <p>负责核心平台架构设计与持续优化，支持私有化部署与信创兼容</p>
@@ -290,13 +288,12 @@ height:1.5vh; margin-top: -3px"></div>
                     </div>
 
                     <!-- 销售部 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member d-flex flex-column h-100">
+                    <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-card">
                             <div class="member-img">
-                                <img src="assets/img/about/team/51e19836-10b1-492e-a8e1-3005061d829e.png"
-                                     class="img-fluid" alt="">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="销售团队">
                             </div>
-                            <div class="member-info mt-auto">
+                            <div class="member-info">
                                 <h4>销售部</h4>
                                 <span>行业解决方案顾问</span>
                                 <p>深入客户需求场景，提供全流程解决方案，覆盖系统选型、业务梳理、诊断咨询与项目规划</p>
@@ -305,28 +302,206 @@ height:1.5vh; margin-top: -3px"></div>
                     </div>
 
                     <!-- 诊断与咨询组 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
-                        <div class="member d-flex flex-column h-100">
+                    <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="team-card">
                             <div class="member-img">
-                                <img src="assets/img/about/team/3a0ff5c7-a246-4a3a-bb22-3f88dc99a468.png"
-                                     class="img-fluid" alt="">
+                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="咨询团队">
                             </div>
-                            <div class="member-info mt-auto">
+                            <div class="member-info">
                                 <h4>诊断与咨询组</h4>
                                 <span>数字化评估与项目规划</span>
                                 <p>基于多年行业积累，为制造企业提供数字化成熟度诊断、差距分析与系统落地路径建议</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </section>
-        <!-- End Team Section -->
+
+        <!-- 专业资质部分 -->
+        <section class="certs-section fade-in" data-aos="fade-up" data-aos-delay="200">
+            <div class="section-header">
+                <h2>我们的专业资质</h2>
+                <p>我们已获得多项国家及行业认证，涵盖软件能力、质量管理、信息安全等领域</p>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865485886-b6118a07-4eac-48c8-ae9a-fa7075e7df9a_1.png"
+                             class="card-img-top" alt="EAM设备管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>EAM设备管理系统</h5>
+                        <span class="cert-category">管理系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865522628-43ea3df5-8083-4c66-bd8f-cf3159ec43b8_1.png"
+                             class="card-img-top" alt="EMS能源监管管理及分析系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>EMS能源监管管理及分析系统</h5>
+                        <span class="cert-category">能源系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865586537-0f526bcd-7247-4c36-b13d-669f3b7a4000_1.png"
+                             class="card-img-top" alt="LIMS实验室能耗控制管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>LIMS实验室能耗控制管理系统</h5>
+                        <span class="cert-category">实验室认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865610537-988c311b-e34c-4e2c-8db8-d5ea4f4c9301_1.png"
+                             class="card-img-top" alt="APS智慧排产分析软件">
+                    </div>
+                    <div class="cert-info">
+                        <h5>APS智慧排产分析软件</h5>
+                        <span class="cert-category">生产系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865631081-b93cc905-75a5-4211-93d4-21976886a50a_1.png"
+                             class="card-img-top" alt="网络数字化能源(EMS)管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>网络数字化能源(EMS)管理系统</h5>
+                        <span class="cert-category">能源系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865821046-f0767201-9d56-46e4-88f3-7a5ad67c13be_1.png"
+                             class="card-img-top" alt="智慧实验室(lims)管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>智慧实验室(lims)管理系统</h5>
+                        <span class="cert-category">实验室认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748865863605-df971881-a5a7-4c6e-8b11-07dc70ffcbc5_1.png"
+                             class="card-img-top" alt="智慧实验室(lims)管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>智慧实验室(lims)管理系统</h5>
+                        <span class="cert-category">管理系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866013962-08ed4a30-bb7f-4bb4-9f26-a31a759146ba_1.png"
+                             class="card-img-top" alt="tms智慧物流货物跟踪管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>tms智慧物流货物跟踪管理系统</h5>
+                        <span class="cert-category">物流系统认证</span>
+                    </div>
+                </div>
+
+                <!-- 额外证书（默认隐藏） -->
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866035319-75110a25-f149-447b-9216-4c5cdbdd478d_1.png"
+                             class="card-img-top" alt="WMS智能仓储进销存管理软件">
+                    </div>
+                    <div class="cert-info">
+                        <h5>WMS智能仓储进销存管理软件</h5>
+                        <span class="cert-category">仓储系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866063760-f2209cb5-1684-40b4-be5d-8c6e47f3a6c2_1.jpg"
+                             class="card-img-top" alt="变电站检修巡检平台">
+                    </div>
+                    <div class="cert-info">
+                        <h5>变电站检修巡检平台</h5>
+                        <span class="cert-category">电力系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866152163-34bfd99d-1504-4d85-a2b0-a6423fdab8c3_1.png"
+                             class="card-img-top" alt="人工智能设备运维管理平台">
+                    </div>
+                    <div class="cert-info">
+                        <h5>人工智能设备运维管理平台</h5>
+                        <span class="cert-category">人工智能认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866232427-a38d9fc2-e4f1-4eaf-945a-b27458c8c6de_1.png"
+                             class="card-img-top" alt="销售订单编辑信息管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>销售订单编辑信息管理系统</h5>
+                        <span class="cert-category">销售系统认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866252203-6fb65bd2-aa4e-40b6-b8fb-7296739baf13_1.png"
+                             class="card-img-top" alt="RPA流程自动化软件">
+                    </div>
+                    <div class="cert-info">
+                        <h5>RPA流程自动化软件</h5>
+                        <span class="cert-category">自动化认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866280585-e258b6fa-a584-4268-a61b-c72f2170e526_1.png"
+                             class="card-img-top" alt="RPA流程自动化软件">
+                    </div>
+                    <div class="cert-info">
+                        <h5>RPA流程自动化软件</h5>
+                        <span class="cert-category">自动化认证</span>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none">
+                    <div class="cert-thumb">
+                        <img src="assets/img/about/certs/1748866321027-6759f04b-10c9-49a0-9922-3a47bdfc5fa8_1.png"
+                             class="card-img-top" alt="WMS仓库管理系统">
+                    </div>
+                    <div class="cert-info">
+                        <h5>WMS仓库管理系统</h5>
+                        <span class="cert-category">仓储系统认证</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn view-more-btn" id="toggleCerts">
+                    <span class="btn-label">查看更多</span> <span class="cert-count"></span>
+                </button>
+            </div>
+
+        </section>
     </div>
 </section>
-
 
 <!-- ======= Features Section ======= -->
 <section id="features" class="features"
@@ -435,6 +610,7 @@ height:1.5vh; margin-top: -3px"></div>
     </div>
 
     <!-- End Feature Icons -->
+
     <!-- 实施方式介绍 -->
     <div class="container mt-3 " data-aos="fade-up">
 
@@ -691,8 +867,6 @@ height: 10vh;"></div>
                     <ul>
                         <li><a href="index.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 首页</a>
                         </li>
-                        <li><a href="products.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
-                        </a></li>
 
                         <li><a href="about.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 关于我们</a>
                         </li>
@@ -833,8 +1007,8 @@ import * as THREE from 'three';
 <script src="vendor/purecounter/purecounter.js"></script>
 <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="vendor/glightbox/js/glightbox.min.js"></script>
-<script src="vendor/php-email-form"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Template Main JS File -->
 <script src="js/about.js"></script>
 <script src="js/main.js"></script>

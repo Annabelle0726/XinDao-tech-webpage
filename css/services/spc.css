@@ -9,42 +9,690 @@
     --dark-blue: #0077b6;
     --darker-blue: #023e8a;
     --darkest-blue: #03045e;
+    --accent-green: #2ecc71;
+    --accent-orange: #f39c12;
+    --accent-purple: #9b59b6;
 }
 
-/* ============================ architecture =========================================== */
+
+/* 渐变分割线样式 */
+.gradient-divider1, .gradient-transition2, .gradient-transition3, .gradient-transition4,
+.gradient-transition5, .gradient-transition6, .gradient-transition7, .gradient-transition8 {
+    width: 100%;
+    height: 3px;
+    position: relative;
+    z-index: 1;
+    filter: blur(1.5px);
+    opacity: 0.9;
+    margin-bottom: -1px;
+}
+
+#spc-advantages,
+#architecture-spc,
+#pain-points,
+#core-features,
+#spc-process,
+#benefits,
+#support {
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 50px rgba(0, 119, 182, 0.3),
+    0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================= end hr ============================== */
 
 
-/* 标题样式 */
-.section-title {
-    color: #005f91;
-    text-shadow: 0 2px 4px rgba(0, 60, 120, 0.2);
-    font-weight: 700;
-    margin-bottom: 8px;
+/* =============== 通用样式 =============== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem 3.7rem 0rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px) brightness(1.05) saturate(1.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-header .section-title {
+    margin-bottom: 1.2rem;
+    font-size: 2.35rem;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    font-weight: 670;
+    line-height: 1.7;
+    color: var(--blue-2);
 }
 
 .section-subtitle {
-    color: #0077b6;
-    font-size: 1.15rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 auto !important;
 }
 
-.architecture-divider {
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0, 80, 160, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 80, 160, 0.25);
+}
+
+/* ======================= end 通用 ======================= */
+
+
+/* ============================ hero ======================================= */
+
+/* =============== HERO  =============== */
+#spc-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(-135deg, rgba(230, 237, 255, 0.5), rgba(230, 237, 255, 0.55)),
+    url("https://builtin.com/sites/www.builtin.com/files/2022-12/Statistical%20Analysis.png") center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#spc-hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, rgba(0, 120, 215, 0.1) 100%);
+}
+
+#spc-hero .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.spc-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.spc-subtitle {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--darker-blue), var(--blue-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* callout 小块 */
+.spc-callout {
+    display: inline-block;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(0, 80, 160, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.callout-title {
+    font-size: 1.35rem;
+    font-weight: 570;
+    color: #012a4a;
+    margin-bottom: 1.2rem;
+}
+
+.callout-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #001f3f;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================= end hero ================================*/
+
+/* =========================== pain ============================== */
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0, 80, 160, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 80, 160, 0.25);
+}
+/* =========================== pain ============================= */
+
+/* 痛点分析容器背景改进 */
+#pain-points {
+    background: linear-gradient(135deg, #cdeaff, #e9f6ff, #f4fbff);
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+}
+
+#pain-points::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(0, 150, 199, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(2, 62, 138, 0.06) 0%, transparent 40%);
+}
+
+.pain-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+/* 卡片样式优化 */
+.pain-card {
+    padding: 2.5rem 2rem 2rem;
+    border-left: 4px solid var(--blue-1);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pain-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pain-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 200, 80, 0.04), transparent);
+    z-index: 0;
+    border-radius: 12px;
+}
+
+/* 标题样式优化 */
+.pain-title {
+    font-family: 'Segoe UI Semibold', 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--darker-blue);
+    margin-bottom: 0.75rem;
+    z-index: 1;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+/* 描述样式美化 */
+.pain-desc {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #1a3a5e;
+    opacity: 0.92;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+/* KPI 区块陶瓷态重构 */
+.pain-stats {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(5, 4, 243, 0.12), rgba(33, 24, 252, 0.08));
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px rgba(5, 3, 255, 0.1);
+    z-index: 1;
+    position: relative;
+    gap: 1rem;
+}
+
+/* 单个数据 */
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+/* 数值视觉层次优化 */
+.stat-value {
+    font-family: 'Segoe UI Bold', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 570;
+    color: var(--blue-2);
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* 标签样式优化 */
+.stat-label {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    color: #1e395c;
+    opacity: 0.85;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .pain-stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+/* =========================== end pain ============================= */
+
+/* =============== 流程部分 =============== */
+#spc-process {
+    background: linear-gradient(135deg, #b0dfff, #d0ebff, #e8f6ff);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 4rem;
+}
+
+#spc-process:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(0, 150, 199, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(2, 62, 138, 0.08) 0%, transparent 40%);
+}
+
+.process-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.process-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--blue-1), var(--blue-2));
+    z-index: 0;
+}
+
+.process-group {
+    display: flex;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.process-group:nth-child(odd) {
+    flex-direction: row;
+}
+
+.process-group:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.process-phase {
+    flex: 1;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phase-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--darker-blue);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.phase-title i {
+    background: var(--accent-orange);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.phase-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+}
+
+.phase-step {
+    background: rgba(0, 180, 216, 0.12);
+    padding: 0.6rem 1rem;
+    border-radius: 20px 28px 28px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--darkest-blue);
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.phase-step:hover {
+    background: rgba(0, 180, 216, 0.2);
+    transform: translateY(-2px);
+}
+
+.process-details {
+    flex: 1;
+    padding: 1.2rem;
+}
+
+.process-card {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 18px 32px 32px 18px;
+    padding: 1.2rem 1.6rem;
+    border-left: 5px solid var(--blue-2);
+    box-shadow: 0 4px 12px rgba(0, 150, 199, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 150, 199, 0.15);
+}
+
+.process-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 180, 216, 0.04), transparent);
+    z-index: 0;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--darker-blue);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card-list {
+    list-style: none;
+    padding-left: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card-list li {
+    position: relative;
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--darkest-blue);
+}
+
+.card-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--blue-2);
+}
+
+/* =================== end process ======================= */
+
+/* =========================== core ================================ */
+#core-features {
+    position: relative;
+    overflow: hidden;
+}
+
+#core-features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(0, 180, 216, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0, 119, 182, 0.1) 0%, transparent 40%);
+}
+
+#core-features .section-title {
+    color: var(--blue-1);
+}
+
+#core-features .container {
+    padding: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0.85fr);
+    grid-template-rows: repeat(2, 0.85fr);
+    gap: 1rem;
+    position: relative;
+    padding: 2rem 3.25rem;
+    z-index: 2;
+}
+
+.features-grid .feature-item {
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 120, 215, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 80, 160, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.features-grid .feature-item:nth-child(2) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("https://knect365.imgix.net/uploads/AdobeStock-448668320-2145x1155-deef7c8a1a5616efd781524095150ad3.png?auto=format&fit=max&w=412&dpr=5");
+}
+
+.features-grid .feature-item:nth-child(2) .feature-highlight, .features-grid .feature-item:nth-child(2) .feature-desc {
+    color: white !important;
+    font-weight: 550 !important;
+}
+
+.features-grid .feature-item:nth-child(4) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.65)),
+    url("https://reportz.io/wp-content/uploads/2019/04/high-quality-dashboards-with-Reportz.png");
+}
+
+.features-grid .feature-item:nth-child(5) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.55)),
+    url("https://blog.algorithmexamples.com/wp-content/uploads/2024/01/efficient_network_flow_algorithm.jpg");
+}
+
+.features-grid .feature-item:nth-child(6) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("https://media.istockphoto.com/id/1405973719/photo/automation-software-to-archiving-and-efficiently-manage-and-information-files-document.jpg?s=612x612&w=0&k=20&c=MyC_nm0Ro5wzbi6YexDGUzRNzZlkXlXHyoiIyfDFyjI=");
+}
+
+.features-grid .feature-item:nth-child(7) {
+    background-size: cover;
+    background-position: left;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.45)),
+    url("data:image/jpeg;base64,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");
+}
+
+.features-grid .feature-item:nth-child(7) .feature-highlight, .features-grid .feature-item:nth-child(7) .feature-desc,
+.features-grid .feature-item:nth-child(5) .feature-highlight, .features-grid .feature-item:nth-child(5) .feature-desc {
+    color: var(--darkest-blue) !important;
+}
+
+/* Hover 效果 */
+.features-grid .feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 80, 160, 0.25);
+    border-color: rgba(0, 120, 215, 0.3);
+}
+
+.features-grid .feature-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--darker-blue);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.features-grid .feature-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
     height: 3px;
-    width: 120px;
-    background: linear-gradient(90deg, #005f91, #4da9ff);
-    margin: 10px auto 20px;
-    border-radius: 3px;
+    background: var(--blue-2);
 }
 
+#core-features .feature-desc {
+    font-size: 0.85rem;
+    color: #00264d;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    flex-grow: 1;
+}
 
-/* ========================== grid =====================*/
+#core-features .feature-highlight {
+    background: rgba(0, 180, 216, 0.15);
+    padding: 0.8rem 1rem;
+    font-size: 0.75rem;
+    color: var(--darkest-blue);
+    border-left: 3px solid var(--blue-2);
+}
+
+/* 重点功能区域 */
+.features-grid .feature-item.feature-monitor {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(230, 245, 255, 0.95), rgba(255, 255, 255, 0.95));
+    border: 1px solid rgba(0, 120, 215, 0.2);
+}
+
+.features-grid .feature-item.feature-analysis {
+    grid-row: span 2;
+    border: 1px solid rgba(0, 120, 215, 0.2);
+}
+
+.features-grid .feature-item.feature-monitor .feature-title,
+.features-grid .feature-analysis .feature-title {
+    font-size: 1.45rem;
+}
+
+.features-grid .feature-monitor .feature-desc,
+.features-grid .feature-analysis .feature-desc {
+    font-size: 1rem;
+}
+
+.visual-element {
+    position: absolute;
+    z-index: 1;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.1), transparent 70%);
+    top: 10%;
+    left: 5%;
+    animation: float 8s infinite ease-in-out;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 119, 182, 0.1), transparent 70%);
+    bottom: 15%;
+    right: 8%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 150, 199, 0.05);
+    top: 20%;
+    right: 15%;
+    transform: rotate(45deg);
+    animation: rotate 20s infinite linear;
+}
+
+/* ==================== core feature =============== */
 
 
-/* ================================== 架构图 ===================================== */
+/* ============================ architecture =========================================== */
+
 #architecture-spc {
     background: linear-gradient(135deg, #a0d8ff, #c0e4ff, #d8f0fa);
-    padding: 6rem 0rem;
 }
 
 .architecture-section {
@@ -54,31 +702,15 @@
     justify-content: center;
 }
 
-.architecture-section .section-title {
+#architecture-spc .section-title {
     cursor: pointer;
-    margin-bottom: 1rem;
     font-size: 2.2rem;
-    color: #ffffff;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    font-weight: 650;
+    color: var(--lightest-blue);
+    margin-bottom: 0;
 }
 
 .architecture-section .section-subtitle {
-    font-size: 1.1rem;
     color: #0077b6;
-    font-weight: 490;
-    text-align: center;
-    margin-bottom: 2rem;
-    padding: 0.7rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.12),
-    0 2px 8px rgba(0, 180, 216, 0.18);
-    backdrop-filter: blur(6px);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .architecture-divider {
@@ -430,7 +1062,7 @@
 
 
 /* ==================== Toast ==================== */
-/* Toast 容器放到底部右侧 */
+
 .toast-container {
     position: fixed;
     /*bottom: 1.5rem;*/
@@ -577,3 +1209,521 @@
 
 
 /* =============================== end architecture================================== */
+
+/* ========== 容器与背景 ========== */
+#spc-advantages {
+    background: linear-gradient(145deg, #eef8ff, #dceeff);
+    padding: 5rem 0;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    color: #003366;
+}
+
+#spc-advantages .container {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1.5px solid rgba(0, 122, 204, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 122, 204, 0.12);
+    padding: 0rem 4.5rem 2rem;
+    backdrop-filter: blur(10px) saturate(1.3);
+}
+
+/* ========== 标签按钮区 ========== */
+#spc-advantages .spc-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-bottom: 2px solid #007acc;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+
+#spc-advantages .tab-btn {
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f9ff, #e0f2ff);
+    border: none;
+    border-right: 1px solid #b3daff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem 0;
+    color: #007acc;
+    transition: all 0.35s ease;
+    position: relative;
+    z-index: 1;
+}
+
+#spc-advantages .tab-btn:last-child {
+    border-right: none;
+}
+
+#spc-advantages .tab-btn:hover {
+    background: linear-gradient(to bottom, #e8f6ff, #d8efff);
+    color: #005999;
+}
+
+#spc-advantages .tab-btn.active {
+    background: linear-gradient(to bottom, #007acc, #005fa3);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: inset 0 -4px 10px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(0, 122, 204, 0.25);
+    z-index: 2;
+}
+
+/* ========== 内容容器 ========== */
+#spc-advantages .tab-content {
+    background: #ffffff;
+    border: 2px solid #007acc;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 8px 24px rgba(0, 122, 204, 0.08);
+    padding: 2rem 3rem;
+    margin-top: -1px;
+}
+
+#spc-advantages .tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+#spc-advantages .tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== 左侧文字内容 ========== */
+#spc-advantages .spc-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #003366;
+    line-height: 1.3;
+}
+
+#spc-advantages .spc-text h3 span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #007acc;
+    margin-top: 0.25rem;
+}
+
+#spc-advantages .spc-text p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    color: #004466;
+}
+
+#spc-advantages .spc-text ul {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+#spc-advantages .spc-text ul li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #003c66;
+    font-size: 0.98rem;
+}
+
+#spc-advantages .spc-text ul li::before {
+    content: '🟦';
+    font-size: 0.6rem;
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    color: #007acc;
+}
+#spc-advantages .spc-img {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+    background: linear-gradient(145deg, #f3fbff, #d8e9f8);
+    border: 1px solid rgba(0, 122, 204, 0.12);
+    box-shadow: inset 0 2px 4px rgba(0, 122, 204, 0.05);
+    border-radius: 12px; /* 如果您后续需要圆角 */
+}
+
+#spc-advantages .spc-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========== 响应式 ========== */
+@media (max-width: 991px) {
+    #spc-advantages .tab-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
+    #spc-advantages .tab-content {
+        padding: 2rem 1.2rem;
+    }
+
+    #spc-advantages .spc-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =============== 效益分析部分 =============== */
+#benefits {
+    background: linear-gradient(135deg, #a8e6ff, #c8eeff, #e0f6ff);
+    position: relative;
+    overflow: hidden;
+}
+
+#benefits:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(46, 204, 113, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 150, 199, 0.1) 0%, transparent 40%);
+}
+
+.benefits-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+
+.benefits-content {
+    flex: 1;
+}
+
+.benefits-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-card {
+    margin-bottom: 1.8rem;
+    border-left: 4px solid var(--accent-green);
+    position: relative;
+    overflow: hidden;
+    padding-left: 1.5rem;
+}
+
+.benefit-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), transparent);
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--darker-blue);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.benefit-title i {
+    color: var(--accent-green);
+    font-size: 1.8rem;
+}
+
+.benefit-desc {
+    font-size: 1.05rem;
+    color: #00264d;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.improvement-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.improvement-item {
+    background: rgba(46, 204, 113, 0.15);
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--darkest-blue);
+}
+
+.radar-chart {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.radar-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radar-axis {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 1px solid rgba(0, 120, 215, 0.3);
+    border-radius: 50%;
+}
+
+.radar-axis:nth-child(2) {
+    width: 60%;
+    height: 60%;
+}
+
+.radar-axis:nth-child(3) {
+    width: 40%;
+    height: 40%;
+}
+
+.radar-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radar-label {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--darkest-blue);
+}
+
+.radar-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: rgba(46, 204, 113, 0.3);
+    transition: all 1s ease;
+}
+
+/* =========================== end compact ============================= */
+
+
+/* ====================== 售后仪表式服务 ===========================*/
+#support {
+    min-height: fit-content;
+}
+
+.support-dashboard-section {
+    padding: 5rem 1rem;
+    position: relative;
+    background: linear-gradient(to bottom,
+    rgba(100, 180, 255, 0.5) 0%,
+    rgba(230, 243, 255, 0.5) 100%
+    ), url("../../assets/img/lims/767a032670fd319a6a347c9a83fb8260.jpeg") center;
+    background-size: cover;
+}
+
+
+.support-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #336699;
+    margin-bottom: 0.5rem;
+}
+
+.support-divider {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 2.5rem;
+    background: linear-gradient(90deg, #a8c8f8, #c6dcff, #a8c8f8);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(150, 180, 255, 0.3);
+}
+
+.support-flex-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.support-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 30%;
+    min-width: 280px;
+}
+
+.support-icon {
+    font-size: 2.5rem;
+    color: #5c9df5;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.support-text h4 {
+    margin: 0 0 0.4rem;
+    color: #3a6ea5;
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.support-text p {
+    margin: 0;
+    color: #023047;
+    font-size: 0.95rem;
+}
+
+/* hover 动效可选 */
+.support-feature-item:hover .support-icon {
+    transform: scale(1.1);
+}
+
+/* ======================= end support ======================== */
+
+
+/* =================================== sidebar ======================================  */
+
+#spc-sidebar {
+    top: 35%;
+    right: 20px;
+    position: fixed;
+    z-index: 999;
+    padding: 14px 16px;
+    border-radius: 14px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95); /* 白瓷感 */
+    color: skyblue;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spc-links {
+    margin: 0;
+    padding: 0;
+}
+
+.spc-links li a {
+    font-size: 14px;
+    color: #003366;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.spc-links li a:hover {
+    background-color: rgba(200, 230, 255, 0.4);
+    color: #007acc;
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5), 0 0 6px rgba(0, 160, 255, 0.2);
+}
+
+.spc-links li a svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    fill: currentColor;
+}
+
+.spc-links li a:hover svg {
+    transform: scale(1.1);
+}
+
+
+/* toggle 按钮：低透拟陶瓷块 */
+.toggle-btn {
+    /*margin-top: 10px;*/
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(240, 245, 255, 0.92);
+    border: 1px solid rgba(0, 120, 220, 0.2);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 100, 200, 0.1),
+    0 2px 8px rgba(0, 150, 255, 0.15);
+    color: #005fa3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(220, 240, 255, 0.8);
+    color: #007acc;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 140, 255, 0.2);
+}
+
+#spc-sidebar.dark-hero-mode {
+    background: rgba(240, 248, 255, 0.95); /* 非常浅的蓝白色，接近AliceBlue */
+    color: #003366; /* 深蓝字色，更有科技感 */
+    border: 1px solid rgba(0, 64, 128, 0.1); /* 带点蓝边线 */
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    0 6px 16px rgba(180, 200, 255, 0.2); /* 插入高光 + 外部柔光 */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+#spc-sidebar a {
+    color: inherit;
+}
+
+#spc-sidebar a:hover {
+    color: #00ccff;
+    background-color: rgba(0, 153, 255, 0.15);
+}
+
+.back-to-top {
+    right: 25px !important;
+    bottom: 105px !important;
+}
+
+
