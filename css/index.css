@@ -15,9 +15,18 @@
 # Index Page
 --------------------------------------------------------------*/
 section {
-
     height: 100vh;
 }
+
+@media (max-width: 768px) {
+    section {
+        min-height: auto;
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -291,16 +300,16 @@ section {
 .tech-section-1 {
     margin-top: -1px;
     background: linear-gradient(to top,
-    rgba(0, 180, 216, 0.9) 0%,      /* #00b4d8 → rgba(0, 180, 216, 0.9) */
-    rgba(144, 224, 239, 0.9) 20%,   /* #90e0ef → rgba(144, 224, 239, 0.9) */
+    rgba(0, 180, 216, 0.75) 0%,      /* #00b4d8 → rgba(0, 180, 216, 0.9) */
+    rgba(144, 224, 239, 0.85) 20%,   /* #90e0ef → rgba(144, 224, 239, 0.9) */
     rgba(202, 240, 248, 1) 50%,    /* #caf0f8 → rgba(202, 240, 248, 0.9) */
     rgba(255, 255, 255, 1) 100%)
 }
 
 .tech-section-2 {
    /*margin-top: -1px;*/
-    background: linear-gradient(to bottom, rgba(0, 180, 216, 0.9) 0%,      /* #00b4d8 → rgba(0, 180, 216, 0.9) */
-    rgba(144, 224, 239, 0.9) 20%,   /* #90e0ef → rgba(144, 224, 239, 0.9) */
+    background: linear-gradient(to bottom, rgba(0, 180, 216, 0.75) 0%,      /* #00b4d8 → rgba(0, 180, 216, 0.9) */
+    rgba(144, 224, 239, 0.85) 20%,   /* #90e0ef → rgba(144, 224, 239, 0.9) */
     rgba(202, 240, 248, 1) 50%,    /* #caf0f8 → rgba(202, 240, 248, 0.9) */
     rgba(255, 255, 255, 1) 100%);"
 }
