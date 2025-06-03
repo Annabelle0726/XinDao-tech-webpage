@@ -31,15 +31,19 @@
     <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="../css/services/mes.css">
     <link href="../css/style.css" rel="stylesheet">
-     <link rel="stylesheet" href="../css/services/spc.css">
+    <link rel="stylesheet" href="../css/services/spc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top transparent">
+<header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../index.html" class="logo d-flex align-items-center">
             <img src="../assets/img/logo.png" alt="">
@@ -53,7 +57,8 @@
 
                 <!-- 产品中心菜单触发 -->
                 <li class="dropdown megamenu position-static" id="productCenterDropdown">
-                    <a class="nav-link scrollto active"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
+                    <a class="nav-link scrollto active"><span>产品中心</span> <i
+                            class="bi bi-chevron-bar-down ms-1"></i></a>
                 </li>
 
                 <li><a class="nav-link scrollto" href="../consulting.html">诊断咨询</a></li>
@@ -131,16 +136,356 @@
 </header>
 <!-- End Header -->
 
-<!--------------------- hero--------------------------------->
-<div class="hero" id="hero" style="height: 100vh; ;"></div>
+<div class="gradient-divider1"></div>
+
+<!-- ====================== HERO ====================== -->
+<section id="spc-hero">
+    <div class="container">
+        <h1 class="spc-title">Statistical Process Control</h1>
+        <h2 class="spc-subtitle">SPC 系统解决方案</h2>
+
+        <div class="spc-callout">
+            <h3 class="callout-title">让数据真正成为预防问题的工具</h3>
+            <p class="callout-text">
+                芯导软件打造数据驱动的质量控制与过程优化平台，实现生产过程的实时监控、异常预警与持续改进
+                , 系统集成统计控制图、过程能力分析、偏差趋势监测等功能，支持实时预警与流程优化，助力企业持续改进和质量提升
+            </p>
+        </div>
+    </div>
+</section>
 <!--------------------------- end hero---------------------------->
 
-<!----------------------- architecture--------------------------------->
+<div class="gradient-divider2"></div>
+
+
+<!-- ====================== 痛点分析 ====================== -->
+<section id="pain-points">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">传统质量管理的痛点</h2>
+            <p class="section-subtitle">
+                制造业在质量管理中面临的普遍挑战与SPC系统如何解决这些问题
+            </p>
+        </div>
+
+        <div class="pain-points-grid">
+            <div class="card pain-card">
+                <h3 class="pain-title">事后补救，损失已造成</h3>
+                <p class="pain-desc">
+                    传统质检依赖抽检和最终检验，质量问题往往在批量生产后才发现，
+                    导致大量返工、报废和客户投诉，造成巨大经济损失。
+                </p>
+                <div class="pain-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">45%</div>
+                        <div class="stat-label">废品率</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">30%</div>
+                        <div class="stat-label">返工成本</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">25%</div>
+                        <div class="stat-label">客户流失</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card pain-card">
+                <h3 class="pain-title">数据分析滞后</h3>
+                <p class="pain-desc">
+                    质量数据分散在不同系统和纸质记录中，缺乏实时分析和可视化工具，
+                    决策者无法及时了解质量状况，错失改进机会。
+                </p>
+                <div class="pain-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">3-5天</div>
+                        <div class="stat-label">数据延迟</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">60%</div>
+                        <div class="stat-label">人工整理</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">40%</div>
+                        <div class="stat-label">决策失误</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card pain-card">
+                <h3 class="pain-title">过程波动难控制</h3>
+                <p class="pain-desc">
+                    生产过程波动缺乏实时监控，异常原因难以追溯，
+                    相同质量问题反复发生，过程能力无法持续提升。
+                </p>
+                <div class="pain-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">0.8</div>
+                        <div class="stat-label">平均Cpk</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">72小时</div>
+                        <div class="stat-label">问题追溯</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-label">重复问题</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================= end pain ==================================-->
+
+
+<div class="gradient-divider3"></div>
+
+<!-- ====================== SPC运行流程 ====================== -->
+<section id="spc-process">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">SPC运行流程</h2>
+            <p class="section-subtitle">
+                从准备到持续改进，系统化的SPC实施与运行框架
+            </p>
+        </div>
+
+        <div class="process-container">
+            <div class="process-line"></div>
+
+            <div class="process-group">
+                <div class="process-phase">
+                    <h3 class="phase-title"><i class="fas fa-cogs"></i>SPC实施前的准备</h3>
+                    <div class="phase-steps">
+                        <div class="phase-step">知识的准备</div>
+                        <div class="phase-step">人员的准备</div>
+                        <div class="phase-step">文件的准备</div>
+                        <div class="phase-step">实施硬件条件的准备</div>
+                    </div>
+                </div>
+                <div class="process-details">
+                    <div class="card process-card">
+                        <h4 class="card-title">实施基础建设</h4>
+                        <ul class="card-list">
+                            <li>建立SPC知识库与培训体系</li>
+                            <li>组建跨部门SPC实施团队</li>
+                            <li>制定SPC实施流程与标准</li>
+                            <li>准备必要的硬件设备与网络环境</li>
+                            <li>开发质量数据采集接口规范</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-group">
+                <div class="process-phase">
+                    <h3 class="phase-title"><i class="fas fa-rocket"></i>SPC项目实施推进</h3>
+                    <div class="phase-steps">
+                        <div class="phase-step">实施的目标</div>
+                        <div class="phase-step">硬件的安装调试</div>
+                        <div class="phase-step">软件的安装调试</div>
+                        <div class="phase-step">软件的操作培训</div>
+                    </div>
+                </div>
+                <div class="process-details">
+                    <div class="card process-card">
+                        <h4 class="card-title">系统部署与培训</h4>
+                        <ul class="card-list">
+                            <li>明确关键质量特性与过程参数</li>
+                            <li>部署数据采集设备与传感器</li>
+                            <li>安装配置SPC系统软件平台</li>
+                            <li>开展分层级操作培训与认证</li>
+                            <li>建立试点产线验证系统效果</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-group">
+                <div class="process-phase">
+                    <h3 class="phase-title"><i class="fas fa-chart-line"></i>SPC运行体系的定期评估</h3>
+                    <div class="phase-steps">
+                        <div class="phase-step">定期评估项目</div>
+                        <div class="phase-step">SPC在品质管理中的总体质量状况评估</div>
+                        <div class="phase-step">SPC运行相关工作</div>
+                    </div>
+                </div>
+                <div class="process-details">
+                    <div class="card process-card">
+                        <h4 class="card-title">运行监控与评估</h4>
+                        <ul class="card-list">
+                            <li>每月SPC运行效果分析报告</li>
+                            <li>过程能力指数(Cpk/Ppk)趋势监控</li>
+                            <li>系统使用率与数据完整性审计</li>
+                            <li>质量问题闭环处理效率评估</li>
+                            <li>年度SPC成熟度评估</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-group">
+                <div class="process-phase">
+                    <h3 class="phase-title"><i class="fas fa-sync-alt"></i>SPC运行体系的改善及提升</h3>
+                    <div class="phase-steps">
+                        <div class="phase-step">系统层面的改进</div>
+                        <div class="phase-step">管理层面的改进</div>
+                        <div class="phase-step">SPC运行流程</div>
+                    </div>
+                </div>
+                <div class="process-details">
+                    <div class="card process-card">
+                        <h4 class="card-title">持续优化与升级</h4>
+                        <ul class="card-list">
+                            <li>系统功能扩展与性能优化</li>
+                            <li>质量分析算法升级与模型优化</li>
+                            <li>跨部门质量协同流程再造</li>
+                            <li>SPC与智能制造系统深度集成</li>
+                            <li>质量文化持续建设与推广</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =================== end process ======================= -->
+
+
+<div class="gradient-divider4"></div>
+
+
+<section id="core-features">
+    <div class="visual-element circle-1"></div>
+    <div class="visual-element circle-2"></div>
+    <div class="visual-element square"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">核心功能</h2>
+            <p class="section-subtitle">
+                集数据采集、过程监控、统计分析于一体的全方位质量管理系统，助力企业实现卓越制造
+            </p>
+        </div>
+
+        <div class="features-grid spc-grid">
+            <!-- 重点：实时监控 -->
+            <div class="feature-item feature-monitor">
+                <div class="row gap-3">
+                    <div class="col-6">
+                        <h3 class="feature-title">实时过程监控</h3>
+                        <p class="feature-desc">
+                            毫秒级采集与过程参数分析，自动生成20+种控制图，快速识别偏差，保障生产稳定性
+                        </p>
+                        <div class="feature-highlight">
+                            满足高精制造行业复杂工艺要求，支持自定义报警策略
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://www.velvetech.com/wp-content/uploads/2022/07/data-analytics-role.jpg"
+                             alt=""
+                             style="object-fit:  cover; height: auto; width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 智能预警 -->
+            <div class="feature-item">
+                <div class="card-content">
+                    <h3 class="feature-title">智能预警系统</h3>
+                    <p class="feature-desc">
+                        内置AI规则引擎，异常趋势即时触发，多通道告警确保快速响应与闭环处理
+                    </p>
+                    <div class="feature-highlight">
+                        支持声光提醒、短信、邮件与移动端推送
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重点：过程能力分析 -->
+            <div class="feature-item feature-analysis">
+                <div class="card-content">
+                    <h3 class="feature-title">过程能力分析</h3>
+                    <p class="feature-desc">
+                        系统内置多种能力评估模型，自动计算Cp、Cpk、Pp、Ppk、Z值等核心指标，
+                        用于精准衡量工艺过程满足规格要求的能力。支持对单批、多批次、不同班组或设备的横向比较，
+                        结合趋势图和稳定性分析，帮助企业定位潜在风险、发现改善机会;
+                        分析结果以可视化图表和结论摘要呈现，提升质量管理的专业性与决策效率
+                    </p>
+                    <div class="feature-highlight">
+                        一键生成符合ISO与行业标准的报告，支持定制指标维度与输出格式
+                    </div>
+                    <img src="https://lpsonline.sas.upenn.edu/sites/default/files/2022-10/plpso-feratures-data-business.jpg"
+                         alt="" style="object-fit: cover; padding: 0.7rem 0.5rem;
+                          height: auto; width: 100%;">
+                </div>
+            </div>
+
+            <!-- 报告中心 -->
+            <div class="feature-item"
+                 style="">
+                <div class="card-content">
+                    <h3 class="feature-title">质量报告中心</h3>
+                    <p class="feature-desc">
+                        报告可按日报、周报、批次生成，支持PDF/Excel导出，提升质量透明度
+                    </p>
+                    <div class="feature-highlight">
+                        可自定义报表模板，支持多语言和图形展示
+                    </div>
+                </div>
+            </div>
+            <!-- 移动质量看板 -->
+            <div class="feature-item">
+                <div class="card-content">
+                    <h3 class="feature-title">移动质量看板</h3>
+                    <p class="feature-desc">
+                        可随时查看质量状态与预警详情，支持远程审核、离线操作与移动补录
+                    </p>
+                    <div class="feature-highlight">
+                        兼容iOS/Android，保障数据同步与审计合规
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="card-content">
+                    <h3 class="feature-title">规则库管理</h3>
+                    <p class="feature-desc">
+                        内建标准控制规则与企业自定义策略库，支持快速配置、复用与版本控制，适应多工艺场景
+                    </p>
+                    <div class="feature-highlight">
+                        一键调用控制图算法，灵活适配行业规范与内部要求
+                    </div>
+                </div>
+            </div>
+
+            <!-- 多源数据集成 -->
+            <div class="feature-item ">
+                <div class="card-content">
+                    <h3 class="feature-title">多源数据集成</h3>
+                    <p class="feature-desc">
+                        集成MES、ERP、PLC等系统，支持30+工业协议，实现过程与质量数据闭环贯通
+                    </p>
+                    <div class="feature-highlight">
+                        数据一致性保障，支持数据中台部署
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<div class="gradient-divider5"></div>
+
 
 <!-------------------- SPC 模块架构图 -------------------------->
-
 <section class="architecture-section" id="architecture-spc">
-    <div class="container text-center mt-3">
+    <div class="section-header">
         <h2 class="section-title">SPC模块架构图</h2>
         <div class="architecture-divider"></div>
         <p class="section-subtitle">
@@ -155,7 +500,7 @@
             <div class="vertical-title">数据源</div>
             <div class="vertical-title">控制中心</div>
             <div class="vertical-title">报警中心</div>
-<!--            <div class="vertical-title">平台设置</div>-->
+            <!--            <div class="vertical-title">平台设置</div>-->
         </div>
 
         <!-- 中部：功能模块 -->
@@ -245,8 +590,296 @@
     </div>
 
 </section>
-
 <!------------------------- end architecture ----------------------------->
+
+
+<div class="gradient-divider6"></div>
+
+
+<!-- ====================== SPC 系统优势 ====================== -->
+
+<section id="spc-advantages">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="spc-title">系统优势</h2>
+            <p class="spc-subtitle">专业、高效、灵活的质量控制解决方案，适配多种工业场景</p>
+        </div>
+
+        <div class="spc-tabs">
+            <button class="tab-btn active" data-tab="monitor">严谨流程控制</button>
+            <button class="tab-btn" data-tab="realtime">实时监控分析</button>
+            <button class="tab-btn" data-tab="ocdata">智能数据采集</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- SPC Monitor -->
+            <div class="tab-pane active" id="monitor">
+                <div class="row align-items-center no-gutters">
+                    <div class="col-lg-6 spc-text">
+                        <h3>严谨流程控制 <span>SPC Monitor</span></h3>
+                        <p>基于国际标准SPC流程，适配多行业高质量要求：</p>
+                        <ul>
+                            <li>符合 ISO/SPC 国际标准流程设计</li>
+                            <li>支持多种控制图类型与参数预设</li>
+                            <li>失控自动识别与闭环响应</li>
+                            <li>适配离散型制造业中批次/多工位数据</li>
+                            <li>内置流程卡片与过程履历记录</li>
+                            <li>行业模板库覆盖汽车、医疗、航天场景</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 spc-img">
+                        <img src="../assets/img/spc/查看控制图/鍧囧€艰繍琛屾椂闂碄2x.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPC Real-Time -->
+            <div class="tab-pane" id="realtime">
+                <div class="row align-items-center no-gutters">
+                    <div class="col-lg-6 spc-text">
+                        <h3>实时监控分析 <span>SPC Real-Time</span></h3>
+                        <p>服务于大数据工业场景，支持自动化高速数据处理：</p>
+                        <ul>
+                            <li>毫秒级报警触发与推送机制</li>
+                            <li>动态控制图多维建模与切换</li>
+                            <li>支持MES/PLC系统数据实时接入</li>
+                            <li>数据维度自动标签与追溯路径生成</li>
+                            <li>高吞吐数据库支持千万级点位</li>
+                            <li>适用于电子、半导体、连续制造等场景</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 spc-img">
+                        <img src="../assets/img/spc/查看控制图/姝ｆ€佹楠孈2x.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- OCData -->
+            <div class="tab-pane" id="ocdata">
+                <div class="row align-items-center no-gutters">
+                    <div class="col-lg-6 spc-text">
+                        <h3>智能数据采集 <span>OCData</span></h3>
+                        <p>统一采集与处理端，实现多源质量数据融合：</p>
+                        <ul>
+                            <li>支持串口设备、手工录入、文件自动导入</li>
+                            <li>结构化检验单动态构建</li>
+                            <li>可视化采集流程配置与任务调度</li>
+                            <li>内置采集异常检测与自动修正算法</li>
+                            <li>与SPC系统双向通信、实时同步</li>
+                            <li>适配多车间、多工厂、实验室等多节点场景</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 spc-img">
+                        <img src="../assets/img/spc/查看控制图/鎺у埗鍥継2x.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--======================== end ad ================== -->
+
+
+<div class="gradient-divider7"></div>
+
+
+<!-- ====================== 效益分析 ====================== -->
+<section id="benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">SPC系统实施效益</h2>
+            <p class="section-subtitle">
+                基于真实客户数据的效益分析，展示SPC系统带来的可量化价值
+            </p>
+        </div>
+
+        <div class="benefits-container">
+            <div class="benefits-content">
+                <div class="benefit-card">
+                    <h3 class="benefit-title"><i class="fas fa-chart-line"></i>质量成本显著降低</h3>
+                    <p class="benefit-desc">
+                        通过实时监控和预警，提前发现并解决质量问题，
+                        减少废品和返工，平均降低质量成本35-50%。
+                    </p>
+                    <div class="improvement-list">
+                        <span class="improvement-item">废品率降低42%</span>
+                        <span class="improvement-item">返工成本减少38%</span>
+                        <span class="improvement-item">客户投诉下降65%</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <h3 class="benefit-title"><i class="fas fa-bolt"></i>生产效率大幅提升</h3>
+                    <p class="benefit-desc">
+                        减少停机时间和调整次数，优化生产过程，
+                        平均提升设备综合效率(OEE)15-25%。
+                    </p>
+                    <div class="improvement-list">
+                        <span class="improvement-item">设备利用率提升18%</span>
+                        <span class="improvement-item">换线时间缩短30%</span>
+                        <span class="improvement-item">产能提升22%</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <h3 class="benefit-title"><i class="fas fa-certificate"></i>过程能力持续改进</h3>
+                    <p class="benefit-desc">
+                        实时Cpk监控和根本原因分析，推动过程能力指数稳定提升，
+                        实现六西格玛质量水平。
+                    </p>
+                    <div class="improvement-list">
+                        <span class="improvement-item">Cpk提升至1.67+</span>
+                        <span class="improvement-item">过程变异减少45%</span>
+                        <span class="improvement-item">质量一致性提升60%</span>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <h3 class="benefit-title"><i class="fas fa-users"></i>质量文化全面建立</h3>
+                    <p class="benefit-desc">
+                        全员参与质量改进，数据驱动的决策机制，
+                        形成持续改进的质量文化。
+                    </p>
+                    <div class="improvement-list">
+                        <span class="improvement-item">改进提案增加300%</span>
+                        <span class="improvement-item">质量问题解决速度提高70%</span>
+                        <span class="improvement-item">员工质量意识提升85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits-visual">
+                <div class="radar-chart">
+                    <div class="radar-grid">
+                        <div class="radar-axis"></div>
+                        <div class="radar-axis"></div>
+                        <div class="radar-axis"></div>
+
+                        <div class="radar-label" style="top: 0; left: 50%;">质量成本</div>
+                        <div class="radar-label" style="top: 50%; right: 0;">生产效率</div>
+                        <div class="radar-label" style="bottom: 0; left: 50%;">过程能力</div>
+                        <div class="radar-label" style="top: 50%; left: 0;">质量文化</div>
+
+                        <div class="radar-area" id="radar-area"></div>
+
+                        <div class="radar-point" style="top: 10%; left: 50%;"></div>
+                        <div class="radar-point" style="top: 50%; right: 10%;"></div>
+                        <div class="radar-point" style="bottom: 10%; left: 50%;"></div>
+                        <div class="radar-point" style="top: 50%; left: 10%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================== end benefits ==========================-->
+
+
+<div class="gradient-divider8"></div>
+
+
+<!-- 售后服务区 -->
+<section class="support-dashboard-section" id="support">
+    <div class="container">
+        <h2 class="support-title">售后服务</h2>
+        <div class="support-divider"></div>
+
+        <div class="support-flex-features">
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748144650750" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="3139" width="48" height="48">
+                        <path d="M217.545 526.053a290.373 288.278 0 1 0 580.746 0 290.373 288.278 0 1 0-580.746 0z"
+                              fill="#E9EAEB" p-id="3140"></path>
+                        <path d="M614.125 754.796c-40.026-35.691-108.953-61.918-162.345-61.195a384.515 384.515 0 0 0-58.884 61.99c-30.2-10.332-63.075-43.35-92.191-78.68s-55.055-74.129-59.39-105.774a384.443 384.443 0 0 0 72.25-45.807c10.91-52.237-1.445-124.92-28.9-171.305-31.645-5.274-108.375-3.757-163.213 21.675-22.614 67.265-30.2 219.062 96.02 378.663C349.69 909.05 501.994 908.76 572.366 899.585c35.402-49.635 41.038-112.71 41.76-144.789z"
+                              fill="#A3D4FF" p-id="3141"></path>
+                        <path d="M522.585 918.587c-85.617 0-208.803-27.166-317.323-154.037C85.182 612.68 76.946 457.343 106.28 370.282l2.24-6.647 6.358-2.89c57.077-25.938 135.252-28.9 172.533-22.543l7.225 1.229 3.829 6.502c29.406 49.997 42.339 126.871 30.706 182.793l-1.084 5.13-3.901 3.54a396.725 396.725 0 0 1-64.086 42.627c6.647 22.398 24.565 51.442 53.393 86.7s53.899 58.234 74.562 69.144a397.375 397.375 0 0 1 54.115-55.272l4.19-3.179h5.275c57.367-0.505 130.05 26.878 173.4 65.387l5.636 4.985v7.225c-1.229 43.35-9.97 104.618-44.868 153.315l-4.046 5.707-7.225 0.94a400.916 400.916 0 0 1-51.947 3.612zM134.819 387.26c-10.188 36.125-40.1 185.394 95.442 356.771 119.068 139.226 256.993 148.474 333.073 140.02 24.998-38.436 32.801-85.905 34.607-122.03a256.415 256.415 0 0 0-140.526-52.381 391.812 391.812 0 0 0-51.225 55.055l-7.225 9.97-11.488-3.974c-28.9-9.826-61.196-37.208-99.416-83.665s-58.812-83.666-62.93-113.722l-1.156-11.993 10.838-4.986a391.306 391.306 0 0 0 63.869-39.665 256.488 256.488 0 0 0-24.132-147.679c-30.562-3.251-92.48-0.94-139.731 18.28z"
+                              fill="#2A5082" p-id="3142"></path>
+                        <path d="M556.325 560.444H427.287v-38.22l54.62-53.032a284.16 284.16 0 0 0 28.54-29.695 64.52 64.52 0 0 0 9.753-16.473 34.825 34.825 0 0 0 2.53-14.089c0-0.65 0-16.328-23.049-22.036s-44.65 9.61-56.355 27.383l-26.949-17.774c21.675-32.801 58.234-49.274 91.18-40.893 37.425 9.465 47.396 38.003 47.396 53.32a66.542 66.542 0 0 1-5.13 26.805 96.237 96.237 0 0 1-14.811 24.42 309.808 309.808 0 0 1-31.212 32.513l-36.342 35.475h88.867z m145.223 0h-32.296v-48.408H572.51V467.82l71.6-117.117h57.8v129.11h16.112v32.224h-16.473z m-96.815-80.631h64.52v-96.888h-7.226l-57.8 93.925z"
+                              fill="#2A5082" p-id="3143"></path>
+                        <path d="M514.06 1004.276A498.525 498.525 0 0 1 15.894 505.75h32.296A466.374 466.374 0 0 0 514.059 971.62zM1012.15 505.75h-32.224A465.724 465.724 0 0 0 599.675 47.974l5.925-31.718A498.02 498.02 0 0 1 1012.15 505.75zM766.79 944.742l-16.112-27.961a476.85 476.85 0 0 0 205.84-240.304l30.129 11.633A508.857 508.857 0 0 1 766.79 944.742z"
+                              fill="#BCC0C4" p-id="3144"></path>
+                        <path d="M642.592 906.016l-11.199-30.273A379.168 379.168 0 1 0 194.28 295.719l-26.01-19.074a411.392 411.392 0 1 1 474.322 629.37z"
+                              fill="#2A5082" p-id="3145"></path>
+                        <path d="M556.325 608.851h32.296v32.224h-32.296z m64.52 0h32.295v32.224h-32.295z m64.591 0h32.296v32.224h-32.296z"
+                              fill="#2A5082" p-id="3146"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>7×24小时支持</h4>
+                    <p>400热线 + 远程诊断</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748145257992" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="7477" width="48" height="48">
+                        <path d="M577.8 644.2c25.7 0 46.6-20.9 46.6-46.6 0-25.7-20.9-46.6-46.6-46.6-25.7-0.1-46.6 20.8-46.6 46.6 0 25.7 20.9 46.6 46.6 46.6zM444.6 617.9c25 0 45.4-20.3 45.4-45.4 0-25.1-20.3-45.5-45.4-45.5-25.1 0.1-45.5 20.4-45.5 45.5 0.1 24.9 20.4 45.4 45.5 45.4zM539 525.7c18.4 0 33.2-14.9 33.2-33.2 0-18.4-14.9-33.2-33.2-33.2-18.4 0-33.2 14.9-33.2 33.2 0 18.3 14.9 33.2 33.2 33.2z"
+                              fill="#1296f9" p-id="7478"></path>
+                        <path d="M443.7 325.2l7.1-11.8H575l7.1 11.8c8.9 14.6 21.9 36.5 37 62 19-7.5 37.8-15.6 56.4-24.5-13.4-22.3-27.2-45.2-41.6-68.7V122.1h11.2c16.3 0 29.4-13.1 29.4-29.2 0-16.2-13.1-29.4-29.3-29.2l-264.7-0.1c-16.2 0.1-29.4 13.1-29.4 29.4 0 16.2 13.1 29.3 29.4 29.2h11.2v172.1c-37.5 61.5-71.9 119-103.1 171.8 26.5-3.7 52.9-7.7 79.2-12.2 30.7-52.8 59.3-101.5 75.9-128.7z"
+                              fill="#1296f9" p-id="7479"></path>
+                        <path d="M239.7 675.7c12.2-20.9 73.5-127.8 128.1-221.8-26.3 4.5-52.7 8.5-79.2 12.2-102.4 173.5-168.3 293.8-184.7 324.2 174-27.1 351-59.1 520.8-114.5l-385-0.1zM675.5 362.7c-18.6 8.9-37.4 17-56.4 24.5 42.4 72 101.8 174.8 138.7 239.4 19.4-8.1 38.7-16.6 57.9-25.6-38.2-66.4-85.3-147-140.2-238.3z"
+                              fill="#1296f9" p-id="7480"></path>
+                        <path d="M815.7 601c-19.2 8.9-38.5 17.5-57.9 25.6 12.3 21.5 22 38.7 27.8 49.2H624.7c-169.9 55.4-346.8 87.4-520.8 114.5-2.7 4.9-4.2 7.8-4.2 7.8-28.2 83.7 2.8 160.6 92.9 160.6H833c90 0 121.1-77.6 92.8-161.3 0-0.1-39.8-73.9-110.1-196.4z"
+                              fill="#1296f9" p-id="7481"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>定期健康检查</h4>
+                    <p>季度性能优化报告</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748145337923" class="icon" viewBox="0 0 1034 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="9757" width="48" height="48">
+                        <path d="M491.492169 512m-470.460777 0a470.460777 470.460777 0 1 0 940.921554 0 470.460777 470.460777 0 1 0-940.921554 0Z"
+                              fill="#70C4FF" p-id="9758"></path>
+                        <path d="M485.261285 57.145509s-47.072247 265.851027 55.3884 285.237382 146.77469-8.307845 199.38827 44.309889 170.842516 34.394477 174.464736-19.386355c0 0-72.004089-268.621693-429.241406-310.160916zM194.054717 864.796774s108.666607 16.528457 208.477052-25.106306c105.704861-44.093885 201.465231-149.807054 147.634552-275.558743C465.501077 366.388408 383.635576 471.017403 412.364103 315.785327c28.724373-155.232076-61.527897-217.100595-124.480589-217.100595s-337.672343 410.465677-93.828797 766.112042z"
+                              fill="#A3D9FF" opacity=".26" p-id="9759"></path>
+                        <path d="M171.233068 856.285387s94.27742 15.63121 180.878392-23.739665c91.71445-41.692918 174.79705-141.665366 128.090348-260.546468-73.457962-186.972196-144.485879-88.038229-119.562345-234.81292s-53.390363-205.274378-108.00198-205.274378c-54.619924 0-292.971985 388.105114-81.404415 724.373431z"
+                              fill="#A3D9FF" opacity=".26" p-id="9760"></path>
+                        <path d="M185.073937 147.364547c149.416585 22.929651 95.585906 150.558913 137.710832 299.792726 27.336963 96.815467 68.614488 82.667208 105.580243 154.471908 56.464266 74.662599-216.003959 324.005939-362.093253 115.703352-144.801577-357.540553 118.802178-569.967986 118.802178-569.967986z"
+                              fill="#9EE3C3" p-id="9761"></path>
+                        <path d="M210.267476 815.165711c-62.587147 0-117.086608-30.535483-157.595658-88.299927l-1.088328-1.549413-0.710321-1.752955c-77.100952-190.365951-39.524571-340.318392 5.574564-432.589467 48.862588-99.972448 115.395961-154.284982 118.204013-156.54887l5.703335-4.594238 7.244441 1.113251c116.463519 17.870174 123.40057 95.747909 131.425947 185.925408 3.402062 38.199469 7.256902 81.499955 19.756054 125.772459 14.555344 51.546022 32.479518 68.020478 53.240823 87.099443 15.84306 14.559498 33.779696 31.042261 50.511695 63.106388 14.061027 19.768516 13.288397 47.711951-2.234811 78.912061-34.311398 68.971726-132.015804 143.405859-230.031754 143.40586z m-129.307447-105.850248c34.340476 48.189653 77.836196 72.61887 129.307447 72.618869 90.106882 0 174.211347-72.585638 200.277209-124.97906 9.790795-19.685438 11.456518-36.201433 4.569315-45.30683l-0.864016-1.142329-0.65632-1.275254c-14.20226-27.586198-28.707757-40.916135-44.060654-55.022855-22.427026-20.615916-45.622529-41.925538-62.736688-102.539571-13.342398-47.263328-17.342626-92.204613-20.87346-131.857956-7.668141-86.110809-12.382842-139.056703-95.884988-154.750221-16.445378 14.85858-66.662145 64.065944-104.363144 141.78583-60.39803 124.517975-61.980675 259.927534-4.714701 402.469377z"
+                              fill="#6E6E96" p-id="9762"></path>
+                        <path d="M531.506902 43.250639s-73.703043 251.225066 88.258387 251.225066c164.578401 0 195.433736 148.984577 298.359623 19.049888-109.759089-264.405462-386.61801-270.274954-386.61801-270.274954z"
+                              fill="#9EE3C3" p-id="9763"></path>
+                        <path d="M838.552376 383.332257h-0.020769c-26.531102-0.004154-49.963377-13.155472-77.100952-28.383751-36.633441-20.557761-78.156048-43.861265-141.665366-43.861266-40.600436 0-71.792239-14.164875-92.707238-42.095848-56.181799-75.032298-13.342398-224.112416-11.493903-230.422224l3.580681-12.204223 12.71931 0.270005c2.953439 0.062309 73.325036 1.939882 158.181361 37.256529 78.558978 32.695522 184.558767 101.438782 243.432308 243.257843l3.746838 9.026473-6.06888 7.659833c-32.595828 41.148754-61.158198 59.496629-92.60339 59.496629z m-294.425858-322.55622c-3.41037 14.227184-8.573696 38.83502-11.149127 66.529219-5.088555 54.82762 2.068653 96.944238 20.698994 121.80131 14.501343 19.34897 36.1142 28.75345 66.08475 28.75345 72.195169 0 119.732656 26.676489 157.932126 48.110728 24.022133 13.479478 42.99725 24.130135 60.8425 24.134289h0.012461c11.822063 0 30.6601-4.270232 60.335722-39.304413-44.135424-100.321377-118.266322-172.877938-220.465272-215.738108-58.719846-24.628605-110.913879-32.076588-134.292154-34.286475z"
+                              fill="#6E6E96" p-id="9764"></path>
+                        <path d="M487.338246 37.385301C227.510407 37.385301 21.031392 248.018238 21.031392 507.846078s206.479015 470.460777 466.306854 470.460777 470.460777-210.632938 470.460778-470.460777S747.166086 37.385301 487.338246 37.385301z m339.840691 523.921757c-16.607381 57.984601-116.833218 40.068734-156.64441 83.186447-32.392286 35.084028-1.050942 134.304616-44.538354 155.290231-50.05061 24.142596-106.178408 37.65946-165.467341 37.65946-65.665204 0 80.062698-119.778349 26.119863-149.001193-19.191121-10.401421-29.040071 46.889475-38.079005-80.357626-3.318984-46.727472-70.550216-68.394331-114.573485-175.374446-11.057741-26.871723-31.715197-216.074576-39.815345-205.26607-49.847068 66.462757-8.307845 274.76119 38.768557 383.544107 29.754545 68.755722-171.735609 188.259912-171.73561 81.429339 0-211.584186-95.498674-86.966517-82.027503-236.316639C98.10742 246.356669 249.920818 74.770601 460.528832 74.770601c88.848244 0 179.1919 25.550776 243.702313 76.681406 30.506405 24.163366 55.234705 54.063299 71.302076 89.666566 28.196825 62.487453-197.224077 22.327332-176.728624 32.583367 41.796766 20.919153 254.959442 98.663962 232.411952 92.536927-294.151699-79.933927-11.23636 67.974784 10.642349 89.870109 36.500515 36.492207-5.113478 71.783931-14.679961 105.198082z"
+                              fill="#6E6E96" opacity=".2" p-id="9765"></path>
+                        <path d="M487.948873 994.926698c-192.563376 0-375.306879-114.922414-451.996592-304.067112-48.883358-120.567595-47.886416-252.957252 2.799743-372.781294C89.442338 198.254249 183.761297 105.343469 304.328892 56.460112s252.957252-47.894724 372.77714 2.799743c119.824042 50.690314 212.730668 145.005119 261.609872 265.576868a487.363087 487.363087 0 0 1 33.243841 133.095824 16.615689 16.615689 0 1 1-33.05276 3.414525 454.189863 454.189863 0 0 0-30.98826-124.023658c-45.547758-112.346982-132.115499-200.231516-243.764622-247.461613-111.644969-47.23425-234.999846-48.160575-347.342675-2.608663-112.338674 45.551912-200.219054 132.123806-247.44915 243.772929-47.23425 111.644969-48.160575 235.004-2.608664 347.346829 94.032339 231.909328 359.206276 344.090153 591.115604 250.057814a16.615689 16.615689 0 0 1 12.486691 30.79718c-59.750018 24.225675-121.581152 35.698808-182.407036 35.698808z"
+                              fill="#6E6E96" p-id="9766"></path>
+                        <path d="M845.032495 975.478034c-7.946453 9.483405-20.944076 9.483405-28.89053 0l-168.179851-201.045685c-7.946453-9.50002-4.315925-17.272009 8.062763-17.272009h61.872672c12.382842 0 22.510105-10.127263 22.510105-22.505951l0.008308-214.159618c0-12.378688 10.127263-22.510105 22.514259-22.510105h135.318173c12.382842 0 22.510105 10.131416 22.510104 22.510105v214.159618c0 12.378688 10.131416 22.505951 22.514259 22.505951h61.880981c12.374535 0 16.01337 7.771989 8.062763 17.272009l-168.184006 201.045685z"
+                              fill="#EBEBFF" p-id="9767"></path>
+                        <path d="M845.032495 975.478034c-7.946453 9.483405-20.944076 9.483405-28.89053 0l-168.179851-201.045685c-7.946453-9.50002-4.315925-17.272009 8.062763-17.272009h61.872672c12.382842 0 22.510105-10.127263 22.510105-22.505951l0.008308-214.159618c0-12.378688 10.127263-22.510105 22.514259-22.510105h135.318173c12.382842 0 22.510105 10.131416 22.510104 22.510105v214.159618c0 12.378688 10.131416 22.505951 22.514259 22.505951h61.880981c12.374535 0 16.01337 7.771989 8.062763 17.272009l-168.184006 201.045685z"
+                              fill="#EBEBFF" opacity=".41" p-id="9768"></path>
+                        <path d="M1005.162045 768.371776h-40.039656l-120.089894 143.551247c-7.946453 9.487559-20.944076 9.487559-28.89053 0l-120.081585-143.551247h-40.035503c-12.382842 0-16.009217 7.776143-8.062763 17.267855l168.179851 201.045685c7.946453 9.487559 20.944076 9.487559 28.89053 0l168.192314-201.045685c7.958915-9.491712 4.320079-17.267855-8.062764-17.267855z"
+                              fill="#6E6E96" opacity=".15" p-id="9769"></path>
+                        <path d="M747.357166 504.298628h173.40964v40.504896h-173.40964z" fill="#FFFFFF" opacity=".4"
+                              p-id="9770"></path>
+                        <path d="M830.589307 999.205238c-10.318343 0-20.229602-4.760395-27.183267-13.055778L635.21788 785.091313c-11.506365-13.757791-7.954761-25.488467-5.89857-29.895778 2.060345-4.407312 8.781392-14.650884 26.709721-14.650884h61.872672c3.19852 0 5.894416-2.695896 5.894416-5.890262l0.008308-214.159618c0-21.575472 17.554476-39.125794 39.129948-39.125794h135.318172c21.571318 0 39.125794 17.550322 39.125795 39.125794v214.159618c0 3.194366 2.700049 5.890262 5.898569 5.890262h61.880981c17.924175 0 24.653529 10.25188 26.70972 14.659191 2.060345 4.407312 5.607795 16.142142-5.902724 29.891625L857.780883 986.141152c-6.961974 8.307845-16.873232 13.064086-27.191576 13.064086z m-161.512806-225.429209l159.813852 191.04304c1.428949 1.703108 1.964805 1.71557 3.406216-0.012462l159.809699-191.030578h-48.833511c-21.575472 0-39.129948-17.550322-39.129948-39.12164v-214.159618c0-3.19852-2.695896-5.894416-5.894415-5.894416h-135.318173c-3.19852 0-5.89857 2.695896-5.89857 5.894416l-0.008308 214.159618c0 21.571318-17.554476 39.12164-39.125794 39.12164h-48.821048z"
+                              fill="#6E6E96" p-id="9771"></path>
+                        <path d="M830.589307 999.205238c-10.318343 0-20.229602-4.760395-27.183267-13.055778L635.21788 785.091313c-11.506365-13.757791-7.954761-25.488467-5.89857-29.895778 2.060345-4.407312 8.781392-14.650884 26.709721-14.650884h61.872672c3.19852 0 5.894416-2.695896 5.894416-5.890262l0.008308-214.159618c0-21.575472 17.554476-39.125794 39.129948-39.125794h135.318172c21.571318 0 39.125794 17.550322 39.125795 39.125794v214.159618c0 3.194366 2.700049 5.890262 5.898569 5.890262h61.880981c17.924175 0 24.653529 10.25188 26.70972 14.659191 2.060345 4.407312 5.607795 16.142142-5.902724 29.891625L857.780883 986.141152c-6.961974 8.307845-16.873232 13.064086-27.191576 13.064086z m-161.512806-225.429209l159.813852 191.04304c1.428949 1.703108 1.964805 1.71557 3.406216-0.012462l159.809699-191.030578h-48.833511c-21.575472 0-39.129948-17.550322-39.129948-39.12164v-214.159618c0-3.19852-2.695896-5.894416-5.894415-5.894416h-135.318173c-3.19852 0-5.89857 2.695896-5.89857 5.894416l-0.008308 214.159618c0 21.571318-17.554476 39.12164-39.125794 39.12164h-48.821048z"
+                              fill="#6E6E96" opacity=".41" p-id="9772"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>免费更新服务</h4>
+                    <p>国标变更与安全补丁</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!------------------- end aftersale --------------------------------->
+
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -291,21 +924,22 @@
                     <ul>
                         <li><a href="../index.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 首页</a>
                         </li>
-                        <li><a href="../products.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 产品中心
-                        </a></li>
-
                         <li><a href="../about.html"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 关于我们</a>
                         </li>
-                        <li><a href="../about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 联系我们</a>
+                        <li><a href="../about.html#contact"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            联系我们</a>
                         </li>
 
-                        <li><a href="../support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 常见问题</a>
+                        <li><a href="../support.html#faq"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            常见问题</a>
                         </li>
-                        <li><a href="../support.html#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i> 服务条款</a>
+                        <li><a href="../support.html#terms"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                            服务条款</a>
                         </li>
                         <li><a href="../support.html#privacy"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
                             隐私政策</a></li>
-                        <li><a href="../support.html#aftersales"><i class="bi bi-arrow-right-circle text-primary me-1"></i>
+                        <li><a href="../support.html#aftersales"><i
+                                class="bi bi-arrow-right-circle text-primary me-1"></i>
                             售后服务</a></li>
 
                     </ul>
@@ -360,8 +994,35 @@
 </footer>
 <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+<div id="spc-sidebar" class="position-fixed">
+    <ul id="spcList" class="spc-links list-unstyled">
+        <li><a href="#pain-points"><i class="bi bi-search me-1"></i> 痛点诊断</a></li>
+        <li><a href="#spc-process"><i class="bi bi-clock-history"></i> 运行流程</a></li>
+
+        <li><a href="#core-features"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
+        <li><a href="#architecture-spc"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
+
+        <li><a href="#spc-advantages"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
+        <li><a href="#benefits"><i class="bi bi-bar-chart-line me-1"></i> 效益分析</a></li>
+        <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
+        <li>
+            <a href="../pdf/SPC.pdf" target="_blank" title="SPC彩页">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     viewBox="0 0 256 256">
+                    <path d="M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z"/>
+                </svg>
+                SPC彩页
+            </a>
+        </li>
+    </ul>
+    <button id="toggle-spc" class="toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center ">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
+
 
 <!-- Vendor JS Files -->
 <script src="../vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -370,8 +1031,7 @@
 <script src="../vendor/purecounter/purecounter.js"></script>
 <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="../vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/services/spc.js"></script>
-<script src="../assets/js/transparent-nav.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/services/spc.js"></script>
 </body>
 </html>
