@@ -216,88 +216,49 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // =========================== end foundation =======================
 
-
 // ========================== intelligent ===============================
 
-
-// 创建连接线
-function createText() {
-    const container = document.querySelector('.pentagon-container');
-    const center = document.querySelector('.center-area');
-    const items = document.querySelectorAll('.ring-item');
-
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("class", "connections");
-    svg.setAttribute("width", "100%");
-    svg.setAttribute("height", "100%");
-    svg.style.position = "absolute";
-    svg.style.top = "0";
-    svg.style.left = "0";
-    svg.style.zIndex = "1";
-    container.appendChild(svg);
-
-    const centerRect = center.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
-
-    const centerX = centerRect.left + centerRect.width/2 - containerRect.left;
-    const centerY = centerRect.top + centerRect.height/2 - containerRect.top;
-
-    items.forEach(item => {
-        const itemRect = item.getBoundingClientRect();
-        const itemX = itemRect.left + itemRect.width/2 - containerRect.left;
-        const itemY = itemRect.top + itemRect.height/2 - containerRect.top;
-
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("class", "connection");
-        line.setAttribute("x1", centerX);
-        line.setAttribute("y1", centerY);
-        line.setAttribute("x2", itemX);
-        line.setAttribute("y2", itemY);
-        svg.appendChild(line);
-    });
-}
-
-// 初始化
-window.addEventListener('load', function() {
-
-    createText();
-});
-
-// 响应窗口调整
-window.addEventListener('resize', function() {
-    document.querySelector('.connections')?.remove();
-    createText();
-});
-
-// 创建连接线
 function createConnections() {
     const container = document.querySelector('.pentagon-container');
     const center = document.querySelector('.center-area');
     const items = document.querySelectorAll('.ring-item');
 
+    // 如果不存在或条件不满足则跳过
+    if (!container || !center || items.length === 0) return;
+
+    // 移动端不显示连接线（如 CSS 中已隐藏）
+    if (window.innerWidth <= 768) return;
+
+    // 清除旧连接线
+    document.querySelector('.connections')?.remove();
+
+    // 创建新的 SVG 容器
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("class", "connections");
+    svg.classList.add("connections");
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", "100%");
-    svg.style.position = "absolute";
-    svg.style.top = "0";
-    svg.style.left = "0";
-    svg.style.zIndex = "1";
+    Object.assign(svg.style, {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        zIndex: "1"
+    });
     container.appendChild(svg);
 
+    // 计算中心点
     const centerRect = center.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
-
     const centerX = centerRect.left + centerRect.width / 2 - containerRect.left;
     const centerY = centerRect.top + centerRect.height / 2 - containerRect.top;
 
+    // 绘制每条连接线
     items.forEach(item => {
         const itemRect = item.getBoundingClientRect();
         const itemX = itemRect.left + itemRect.width / 2 - containerRect.left;
         const itemY = itemRect.top + itemRect.height / 2 - containerRect.top;
 
         const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("class", "connection");
+        line.classList.add("connection");
         line.setAttribute("x1", centerX);
         line.setAttribute("y1", centerY);
         line.setAttribute("x2", itemX);
@@ -306,22 +267,43 @@ function createConnections() {
     });
 }
 
-// 初始化
-window.addEventListener('load', function () {
-
+// 统一初始化和响应窗口变化
+function initPentagonDiagram() {
     createConnections();
+}
 
-    // 初始化显示第一个环节
-    const firstItem = document.querySelector('.ring-item');
-    firstItem.click();
+// 页面加载时初始化
+window.addEventListener('load', initPentagonDiagram);
+
+// 页面大小变化时重新绘制连接线
+window.addEventListener('resize', initPentagonDiagram);
+
+
+function setupMobileToggle() {
+    if (window.innerWidth > 768) return;
+
+    const items = document.querySelectorAll('.ring-item');
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            // 切换激活状态
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+            } else {
+                // 清除其他激活项
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+window.addEventListener('load', setupMobileToggle);
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.ring-item').forEach(i => i.classList.remove('active'));
+    setupMobileToggle();
 });
 
-// 响应窗口调整
-window.addEventListener('resize', function () {
-    document.querySelector('.connections')?.remove();
-    createConnections();
-});
-// ======================== end intelligent =================================
+// ======================== end intelligent ===============================
 
 // ======================= optimize =============================
 document.addEventListener('DOMContentLoaded', function () {
