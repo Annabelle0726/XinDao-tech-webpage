@@ -3,137 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLUX TMS 运输管理系统</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>QMS系统亮点展示 | 芯导软件</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-1: #0066cc;
+            --blue-2: #004d99;
+            --blue-3: #003366;
+            --light-blue: #d9ebff;
+            --white: #ffffff;
+            --gray-1: #f8f9fa;
+            --gray-2: #e9ecef;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #d9ebff, #e6f2ff);
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* =============== 通用样式 =============== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(6px) brightness(1.05) saturate(1.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header .section-title {
+            margin-bottom: 1.2rem;
+            font-size: 2.35rem;
+            font-weight: 670;
+            line-height: 1.7;
+            text-shadow: 0 1px 2px rgba(0, 91, 172, 0.1);
+            color: var(--blue-2);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(0, 0, 0, 0.75);
+            max-width: 700px;
+            margin: 0 auto !important;
+        }
+
+
+    </style>
 </head>
 <body>
-<div class="header">
-    <h1>TMS 运输管理系统架构</h1>
-    <p class="subtitle">智能化的运输管理解决方案，优化物流流程，提升运输效率，降低运营成本</p>
-</div>
+<!-- 亮点展示区域 -->
 
-<div class="stats-bar">
-    <div class="stat-card">
-        <h3>今日运单量</h3>
-        <div class="value">1,248</div>
-    </div>
-    <div class="stat-card">
-        <h3>准时送达率</h3>
-        <div class="value">98.7%</div>
-    </div>
-    <div class="stat-card">
-        <h3>在途车辆</h3>
-        <div class="value">86</div>
-    </div>
-    <div class="stat-card">
-        <h3>异常处理</h3>
-        <div class="value">12</div>
-    </div>
-</div>
+<script>
 
-<div class="tms-layout">
-    <div class="toast-container"></div>
-
-    <!-- APP -->
-    <div class="column">
-        <div class="module-title">APP</div>
-        <div class="card" data-desc="货物发出登记与追踪">提货</div>
-        <div class="card" data-desc="货物卸载信息记录与确认">卸货</div>
-        <div class="card" data-desc="车辆装载信息登记与管理">装车</div>
-        <div class="card" data-desc="客户签收确认与记录">签收</div>
-        <div class="card" data-desc="实时查询运单状态与详情">运单查询</div>
-        <div class="card" data-desc="运输单证与现场照片上传">图片上传</div>
-        <div class="card" data-desc="第三方系统数据接口配置">接口管理</div>
-        <div class="card" data-desc="运输异常情况预警配置">预警</div>
-        <div class="card" data-desc="实时车辆定位与轨迹跟踪">GPS平台</div>
-        <div class="card" data-desc="运输状态短信通知服务">短信平台</div>
-    </div>
-
-    <!-- 业务规则 -->
-    <div class="column">
-        <div class="module-title">业务规则</div>
-        <div class="card" data-desc="系统全局参数与基础配置">系统配置</div>
-        <div class="card" data-desc="运输检查点设置与管理">检查点配置</div>
-        <div class="card" data-desc="数据列表字段显示配置">列表配置</div>
-        <div class="card" data-desc="下拉选项配置与管理">下拉框配置</div>
-        <div class="card" data-desc="界面布局与页面自定义">页面配置</div>
-        <div class="card" data-desc="运输调度规则与策略">调度规则</div>
-        <div class="card" data-desc="货物跟踪规则与流程">跟踪规则</div>
-        <div class="card" data-desc="消息推送规则与模板">消息推送</div>
-        <div class="card" data-desc="公告内容发布与管理">公告栏管理</div>
-        <div class="card" data-desc="定时任务与规则配置">定时器</div>
-    </div>
-
-    <!-- 订单管理 + 调度管理 + 执行管理（合并小分组） -->
-    <div class="column">
-        <div class="module-title">订单管理</div>
-        <div class="card" data-desc="创建新运输订单">订单建立</div>
-        <div class="card" data-desc="订单审核流程管理">订单审核</div>
-        <div class="card" data-desc="多条件查询订单详情">订单查询</div>
-        <div class="card" data-desc="大订单拆分策略配置">订单拆分</div>
-
-        <div class="module-title">调度管理</div>
-        <div class="card" data-desc="提货计划与资源分配">提货调度</div>
-        <div class="card" data-desc="干线运输计划安排">干线调度</div>
-        <div class="card" data-desc="市内配送调度管理">市内调度</div>
-        <div class="card" data-desc="运输波次匹配策略">波次匹配</div>
-
-        <div class="module-title">执行管理</div>
-        <div class="card" data-desc="车辆装车登记确认">装车</div>
-        <div class="card" data-desc="车辆发运确认操作">发运确认</div>
-        <div class="card" data-desc="货物卸货入库记录">卸货入库</div>
-        <div class="card" data-desc="运输过程实时跟踪">在线跟踪</div>
-        <div class="card" data-desc="货物到达签收确认">到达签收</div>
-           </div>
-
-    <!-- 统计分析 -->
-    <div class="column">
-        <div class="module-title">统计分析</div>
-        <div class="card" data-desc="送货及时率统计与分析">送货及时率</div>
-        <div class="card" data-desc="货物签收完好率统计">签收完好率</div>
-        <div class="card" data-desc="人员作业效率指标">人员作业指标</div>
-        <div class="card" data-desc="运输工具使用率分析">运输工具负荷</div>
-        <div class="card" data-desc="运输成本费用分析">运输费用指标</div>
-        <div class="card" data-desc="客户满意度调查统计">客户满意度</div>
-        <div class="card" data-desc="承运商绩效评估">承运商考核</div>
-        <div class="card" data-desc="关键绩效指标展示">KPI</div>
-        <div class="card" data-desc="自定义条件数据查询">自定义查询</div>
-        <div class="card" data-desc="自定义报表模板设计">自定义报表</div>
-    </div>
-
-    <!-- 应收费用 -->
-    <div class="column">
-        <div class="module-title">应收费用</div>
-        <div class="card" data-desc="承运商结算费率设置">应付费率</div>
-        <div class="card" data-desc="司机运费结算管理">司机运费结算</div>
-        <div class="card" data-desc="承运商费用审核流程">费用审核</div>
-        <div class="card" data-desc="应付账单管理">应付账单</div>
-        <div class="card" data-desc="承运商账单核销">账单核销</div>
-        <div class="card" data-desc="客户费率设置与管理">费率设置</div>
-        <div class="card" data-desc="客户费用账单管理">费用账单</div>
-        <div class="card" data-desc="账单发票管理流程">账单发票</div>
-        <div class="card" data-desc="客户对账与核销流程">账单核销</div>
-    </div>
-
-
-<!-- 基础设置 -->
-<div class="bottom">
-    <div class="module-title">基础设置</div>
-    <div class="card" data-desc="产品基础信息管理">产品档案</div>
-    <div class="card" data-desc="客户信息维护管理">客户档案</div>
-    <div class="card" data-desc="承运商信息管理">承运商档案</div>
-    <div class="card" data-desc="公司组织结构配置">组织机构</div>
-    <div class="card" data-desc="行政区域划分管理">行政区域</div>
-    <div class="card" data-desc="运输人员信息管理">人员管理</div>
-    <div class="card" data-desc="运输车辆信息管理">车辆管理</div>
-    <div class="card" data-desc="车辆类型配置管理">车型管理</div>
-    <div class="card" data-desc="提送货地址管理">提送货地址</div>
-    <div class="card" data-desc="运输证件管理">证件管理</div>
-    <div class="card" data-desc="运输路线管理">路线管理</div>
-    <div class="card" data-desc="车辆加油管理">加油管理</div>
-</div>
-</div>
-
+</script>
 </body>
 </html>
