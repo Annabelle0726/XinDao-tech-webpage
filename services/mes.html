@@ -339,9 +339,30 @@
 </footer>
 <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+<div id="mes-sidebar" class="position-fixed">
+    <ul id="mes-List" class="mes-links list-unstyled">
+        <li><a href="#pain"><i class="bi bi-search me-1"></i> 痛点诊断</a></li>
+        <li><a href="#workflow"><i class="bi bi-kanban me-1"></i> 实施流程</a></li>
+        <li><a href="#architecture"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
+        <li><a href="#core"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
+        <li><a href="#highlights"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
+        <li><a href="#compact"><i class="bi bi-bar-chart-line me-1"></i> 效益分析</a></li>
+        <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
+        <li>
+            <a href="../pdf/MES.pdf" target="_blank" title="MES系统彩页">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i> MES彩页
+            </a>
+        </li>
+    </ul>
 
+    <button id="toggle-mes" class="toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
 <!-- Vendor JS Files -->
 <script src="../vendor/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="../vendor/aos/aos.js"></script>

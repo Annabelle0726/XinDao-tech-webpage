@@ -33,8 +33,10 @@
     <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="../css/services/tms.css">
     <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/services/tms.css">
+
+
 </head>
 <body>
 
@@ -133,12 +135,70 @@
 
 
 <!-- ========================= hero ===================================== -->
-<div class="hero" id="hero">
+<section id="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">运输管理，不止于调度</h1>
+            <p class="hero-subtitle"><span id="typed-text"></span></p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> 立即开始
+                </button>
 
-</div>
+            </div>
+        </div>
+    </div>
+    <div class="tech-grid">
+        <div class="tech-item">
+            <i class="fas fa-brain tech-icon"></i>
+            <span class="tech-text">AI智能调度</span>
+        </div>
+        <div class="tech-item">
+            <i class="fas fa-map-marked-alt tech-icon"></i>
+            <span class="tech-text">实时路径优化</span>
+        </div>
+        <div class="tech-item">
+            <i class="fas fa-chart-network tech-icon"></i>
+            <span class="tech-text">全链路可视化</span>
+        </div>
+        <div class="tech-item">
+            <i class="fas fa-robot tech-icon"></i>
+            <span class="tech-text">智能预测分析</span>
+        </div>
+        <div class="tech-item">
+            <i class="fas fa-shield-alt tech-icon"></i>
+            <span class="tech-text">区块链存证</span>
+        </div>
+    </div>
+
+</section>
+
 <!-- ========================= hero ===================================== -->
 
 
+<!-- ============================ pain ============================= -->
+<section id="pain">
+    <div class="container-2">
+        <div class="section-header">
+            <h2 class="section-title">运输管理中的关键痛点</h2>
+            <p class="section-subtitle">聚焦核心难题，挖掘TMS系统优化潜力</p>
+        </div>
+
+        <div class="pain-map">
+            <div class="truck-icon"></div>
+
+            <div class="pain-label" style="left: 15%;" data-title="运输效率低下：人工调度效率低，车辆空驶率高，路线规划不合理，导致运输成本增加15-25%"></div>
+            <div class="pain-label" style="left: 35%;" data-title="过程不可控：运输过程缺乏实时监控，异常处理滞后，货物丢失损坏率高达3.5%"></div>
+            <div class="pain-label" style="left: 55%;" data-title="成本核算困难：运输成本分散在多系统中，难以精准核算，成本分析滞后15-30天"></div>
+            <div class="pain-label" style="left: 75%;" data-title="对账流程复杂：承运商对账依赖人工，错误率高，结算周期长达30-45天"></div>
+            <div class="pain-label" style="left: 90%;" data-title="车辆调度失衡：高峰期调度不及时，部分线路车辆资源浪费，影响整体运输效率"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ pain ============================= -->
+
+<!--================ end process ======================== -->
 <section id="workflow">
     <div class="container">
         <div class="section-header">
@@ -152,20 +212,26 @@
             <!-- 第1步：订单智能接入 -->
             <div class="process-node">
                 <div class="process-content left floating">
-                    <h3 class="process-title"><i class="fas fa-cloud-upload-alt"></i> 订单智能接入</h3>
+                    <h3 class="process-title"> 订单智能接入</h3>
                     <p class="process-desc">多渠道订单自动接入系统，通过智能识别技术自动解析订单内容，支持API、EDI、Excel等多种接入方式，10秒内完成订单标准化处理。</p>
 
                     <div class="process-details">
                         <div class="detail-item">
-                            <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="detail-icon">
+
+                            </div>
                             <div class="detail-content">自动识别200+种订单格式，准确率99.8%</div>
                         </div>
                         <div class="detail-item">
-                            <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="detail-icon">
+
+                            </div>
                             <div class="detail-content">智能校验订单完整性，自动补全缺失信息</div>
                         </div>
                         <div class="detail-item">
-                            <div class="detail-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="detail-icon">
+
+                            </div>
                             <div class="detail-content">异常订单自动标记并通知相关人员</div>
                         </div>
                     </div>
@@ -193,7 +259,7 @@
                 </div>
 
                 <div class="process-icon left pulse">
-                    <i class="fas fa-sign-in-alt"></i>
+
                 </div>
             </div>
 
@@ -441,6 +507,142 @@
 </section>
 
 
+<!--================ end process ======================== -->
+
+
+<!--========================= architecture =======================================-->
+<section class="architecture-section" id="architecture">
+
+    <div class="header">
+        <h1>TMS 运输管理系统架构</h1>
+        <p class="subtitle">智能化的运输管理解决方案，优化物流流程，提升运输效率，降低运营成本</p>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-card">
+            <h3>今日运单量</h3>
+            <div class="value">1,248</div>
+        </div>
+        <div class="stat-card">
+            <h3>准时送达率</h3>
+            <div class="value">98.7%</div>
+        </div>
+        <div class="stat-card">
+            <h3>在途车辆</h3>
+            <div class="value">86</div>
+        </div>
+        <div class="stat-card">
+            <h3>异常处理</h3>
+            <div class="value">12</div>
+        </div>
+    </div>
+
+    <div class="tms-layout">
+        <div class="toast-container"></div>
+
+        <!-- APP -->
+        <div class="column">
+            <div class="module-title">APP</div>
+            <div class="card" data-desc="货物发出登记与追踪">提货</div>
+            <div class="card" data-desc="货物卸载信息记录与确认">卸货</div>
+            <div class="card" data-desc="车辆装载信息登记与管理">装车</div>
+            <div class="card" data-desc="客户签收确认与记录">签收</div>
+            <div class="card" data-desc="实时查询运单状态与详情">运单查询</div>
+            <div class="card" data-desc="运输单证与现场照片上传">图片上传</div>
+            <div class="card" data-desc="第三方系统数据接口配置">接口管理</div>
+            <div class="card" data-desc="运输异常情况预警配置">预警</div>
+            <div class="card" data-desc="实时车辆定位与轨迹跟踪">GPS平台</div>
+            <div class="card" data-desc="运输状态短信通知服务">短信平台</div>
+        </div>
+
+        <!-- 业务规则 -->
+        <div class="column">
+            <div class="module-title">业务规则</div>
+            <div class="card" data-desc="系统全局参数与基础配置">系统配置</div>
+            <div class="card" data-desc="运输检查点设置与管理">检查点配置</div>
+            <div class="card" data-desc="数据列表字段显示配置">列表配置</div>
+            <div class="card" data-desc="下拉选项配置与管理">下拉框配置</div>
+            <div class="card" data-desc="界面布局与页面自定义">页面配置</div>
+            <div class="card" data-desc="运输调度规则与策略">调度规则</div>
+            <div class="card" data-desc="货物跟踪规则与流程">跟踪规则</div>
+            <div class="card" data-desc="消息推送规则与模板">消息推送</div>
+            <div class="card" data-desc="公告内容发布与管理">公告栏管理</div>
+            <div class="card" data-desc="定时任务与规则配置">定时器</div>
+        </div>
+
+        <!-- 订单管理 + 调度管理  -->
+        <div class="column">
+            <div class="module-title">订单管理</div>
+            <div class="card" data-desc="创建新运输订单">订单建立</div>
+            <div class="card" data-desc="订单审核流程管理">订单审核</div>
+            <div class="card" data-desc="多条件查询订单详情">订单查询</div>
+            <div class="card" data-desc="大订单拆分策略配置">订单拆分</div>
+
+            <div class="module-title">调度管理</div>
+            <div class="card" data-desc="提货计划与资源分配">提货调度</div>
+            <div class="card" data-desc="干线运输计划安排">干线调度</div>
+            <div class="card" data-desc="市内配送调度管理">市内调度</div>
+            <div class="card" data-desc="车辆装车登记确认">装车</div>
+            <div class="card" data-desc="车辆发运确认操作">发运确认</div>
+            <div class="card" data-desc="运输过程实时跟踪">在线跟踪</div>
+            <div class="card" data-desc="货物到达签收确认">到达签收</div>
+        </div>
+
+        <!-- 统计分析 -->
+        <div class="column">
+            <div class="module-title">统计分析</div>
+            <div class="card" data-desc="送货及时率统计与分析">送货及时率</div>
+            <div class="card" data-desc="货物签收完好率统计">签收完好率</div>
+            <div class="card" data-desc="人员作业效率指标">人员作业指标</div>
+            <div class="card" data-desc="运输工具使用率分析">运输工具负荷</div>
+            <div class="card" data-desc="运输成本费用分析">运输费用指标</div>
+            <div class="card" data-desc="客户满意度调查统计">客户满意度</div>
+            <div class="card" data-desc="承运商绩效评估">承运商考核</div>
+            <div class="card" data-desc="关键绩效指标展示">KPI</div>
+            <div class="card" data-desc="自定义条件数据查询">自定义查询</div>
+            <div class="card" data-desc="自定义报表模板设计">自定义报表</div>
+        </div>
+
+        <!-- 应收费用 -->
+        <div class="column">
+            <div class="module-title">应收费用</div>
+            <div class="card" data-desc="承运商结算费率设置">应付费率</div>
+            <div class="card" data-desc="司机运费结算管理">司机运费结算</div>
+            <div class="card" data-desc="承运商费用审核流程">费用审核</div>
+            <div class="card" data-desc="应付账单管理">应付账单</div>
+            <div class="card" data-desc="承运商账单核销">账单核销</div>
+            <div class="card" data-desc="客户费率设置与管理">费率设置</div>
+            <div class="card" data-desc="客户费用账单管理">费用账单</div>
+            <div class="card" data-desc="账单发票管理流程">账单发票</div>
+            <div class="card" data-desc="客户对账与核销流程">账单核销</div>
+        </div>
+
+
+        <!-- 基础设置 -->
+        <div class="bottom">
+            <div class="module-title">基础设置</div>
+            <div class="card" data-desc="产品基础信息管理">产品档案</div>
+            <div class="card" data-desc="客户信息维护管理">客户档案</div>
+            <div class="card" data-desc="承运商信息管理">承运商档案</div>
+            <div class="card" data-desc="公司组织结构配置">组织机构</div>
+            <div class="card" data-desc="行政区域划分管理">行政区域</div>
+            <div class="card" data-desc="运输人员信息管理">人员管理</div>
+            <div class="card" data-desc="运输车辆信息管理">车辆管理</div>
+            <div class="card" data-desc="车辆类型配置管理">车型管理</div>
+            <div class="card" data-desc="提送货地址管理">提送货地址</div>
+            <div class="card" data-desc="运输证件管理">证件管理</div>
+            <div class="card" data-desc="运输路线管理">路线管理</div>
+            <div class="card" data-desc="车辆加油管理">加油管理</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--========================= end architecture =======================================-->
+
+
+
 <!--============================ core ==================================== -->
 
 <section id="core">
@@ -643,11 +845,11 @@
     </div>
 </section>
 
-
 <!--=============================== end core ======================================-->
 
 
-<section class="tms-features-grid">
+<!--=============================== features ======================================-->
+<section class="tms-features-grid" id="highlights">
     <!-- 重点卡片：运输效率提升 -->
     <div class="tms-feature-card highlight" style="background-image: url('your-image1.jpg');">
         <div class="overlay"></div>
@@ -705,134 +907,184 @@
     </div>
 </section>
 
+<!--=============================== end features ======================================-->
 
-<!--========================= architecture =======================================-->
-<section class="architecture-section" id="architecture">
 
-    <div class="header">
-        <h1>TMS 运输管理系统架构</h1>
-        <p class="subtitle">智能化的运输管理解决方案，优化物流流程，提升运输效率，降低运营成本</p>
+
+
+<!--========================= benefits =======================================-->
+
+<section id="benefits">
+    <div class="section-header">
+        <h2 class="section-title">FLUX TMS 核心效益</h2>
+        <p class="section-subtitle">通过智能化运输管理系统，实现物流效率革命性提升与成本优化</p>
     </div>
 
-    <div class="stats-bar">
-        <div class="stat-card">
-            <h3>今日运单量</h3>
-            <div class="value">1,248</div>
+    <!-- 效益1：运输效率提升 -->
+    <div class="benefit-container">
+        <div class="benefit-content">
+            <h3 class="benefit-title"><i class="fas fa-tachometer-alt"></i> 运输效率提升</h3>
+            <p class="benefit-desc">
+                FLUX TMS 通过AI智能调度算法，实时优化运输路线和车辆分配，减少空驶里程和等待时间。系统自动匹配最优车辆与货物组合，提高装载率，减少无效运输。动态路径规划引擎考虑实时交通、天气和路况，确保运输效率最大化。
+            </p>
+
+            <div class="benefit-stats">
+                <div class="stat-item">
+                    <div class="stat-value">35%↑</div>
+                    <div class="stat-label">车辆利用率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">28%↓</div>
+                    <div class="stat-label">空驶率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">99.5%</div>
+                    <div class="stat-label">准时率</div>
+                </div>
+            </div>
+
+            <ul class="benefit-list">
+                <li>智能调度算法减少人工干预时间70%</li>
+                <li>动态路径优化缩短平均运输时间22%</li>
+                <li>实时交通数据集成避免拥堵延误</li>
+                <li>自动装载方案提升车辆装载率15-25%</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">AI调度引擎</span>
+                <span class="tech-tag">实时路径优化</span>
+                <span class="tech-tag">智能装载算法</span>
+            </div>
         </div>
-        <div class="stat-card">
-            <h3>准时送达率</h3>
-            <div class="value">98.7%</div>
-        </div>
-        <div class="stat-card">
-            <h3>在途车辆</h3>
-            <div class="value">86</div>
-        </div>
-        <div class="stat-card">
-            <h3>异常处理</h3>
-            <div class="value">12</div>
-        </div>
+
+        <div class="benefit-image benefit-image-1"></div>
     </div>
 
-    <div class="tms-layout">
-        <div class="toast-container"></div>
+    <!-- 效益2：成本控制优化 -->
+    <div class="benefit-container reverse">
+        <div class="benefit-image benefit-image-2"></div>
 
-        <!-- APP -->
-        <div class="column">
-            <div class="module-title">APP</div>
-            <div class="card" data-desc="货物发出登记与追踪">提货</div>
-            <div class="card" data-desc="货物卸载信息记录与确认">卸货</div>
-            <div class="card" data-desc="车辆装载信息登记与管理">装车</div>
-            <div class="card" data-desc="客户签收确认与记录">签收</div>
-            <div class="card" data-desc="实时查询运单状态与详情">运单查询</div>
-            <div class="card" data-desc="运输单证与现场照片上传">图片上传</div>
-            <div class="card" data-desc="第三方系统数据接口配置">接口管理</div>
-            <div class="card" data-desc="运输异常情况预警配置">预警</div>
-            <div class="card" data-desc="实时车辆定位与轨迹跟踪">GPS平台</div>
-            <div class="card" data-desc="运输状态短信通知服务">短信平台</div>
-        </div>
+        <div class="benefit-content">
+            <h3 class="benefit-title"><i class="fas fa-chart-line"></i> 成本控制优化</h3>
+            <p class="benefit-desc">
+                精细化成本核算系统自动采集运输全链路费用数据，通过AI算法识别成本优化点。系统提供多维成本分析报表，帮助企业精确掌握各项运输成本构成。智能合约管理减少人工对账错误，自动化结算流程缩短付款周期。
+            </p>
 
-        <!-- 业务规则 -->
-        <div class="column">
-            <div class="module-title">业务规则</div>
-            <div class="card" data-desc="系统全局参数与基础配置">系统配置</div>
-            <div class="card" data-desc="运输检查点设置与管理">检查点配置</div>
-            <div class="card" data-desc="数据列表字段显示配置">列表配置</div>
-            <div class="card" data-desc="下拉选项配置与管理">下拉框配置</div>
-            <div class="card" data-desc="界面布局与页面自定义">页面配置</div>
-            <div class="card" data-desc="运输调度规则与策略">调度规则</div>
-            <div class="card" data-desc="货物跟踪规则与流程">跟踪规则</div>
-            <div class="card" data-desc="消息推送规则与模板">消息推送</div>
-            <div class="card" data-desc="公告内容发布与管理">公告栏管理</div>
-            <div class="card" data-desc="定时任务与规则配置">定时器</div>
-        </div>
+            <div class="benefit-stats">
+                <div class="stat-item">
+                    <div class="stat-value">25%↓</div>
+                    <div class="stat-label">运输成本</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">40%↓</div>
+                    <div class="stat-label">对账时间</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">95%↓</div>
+                    <div class="stat-label">核算错误</div>
+                </div>
+            </div>
 
-        <!-- 订单管理 + 调度管理  -->
-        <div class="column">
-            <div class="module-title">订单管理</div>
-            <div class="card" data-desc="创建新运输订单">订单建立</div>
-            <div class="card" data-desc="订单审核流程管理">订单审核</div>
-            <div class="card" data-desc="多条件查询订单详情">订单查询</div>
-            <div class="card" data-desc="大订单拆分策略配置">订单拆分</div>
+            <ul class="benefit-list">
+                <li>燃油消耗监控降低油耗成本15-20%</li>
+                <li>异常费用自动识别减少损失5-8%</li>
+                <li>智能合约管理缩短结算周期50%</li>
+                <li>多维成本分析报表辅助决策优化</li>
+            </ul>
 
-            <div class="module-title">调度管理</div>
-            <div class="card" data-desc="提货计划与资源分配">提货调度</div>
-            <div class="card" data-desc="干线运输计划安排">干线调度</div>
-            <div class="card" data-desc="市内配送调度管理">市内调度</div>
-            <div class="card" data-desc="车辆装车登记确认">装车</div>
-            <div class="card" data-desc="车辆发运确认操作">发运确认</div>
-            <div class="card" data-desc="运输过程实时跟踪">在线跟踪</div>
-            <div class="card" data-desc="货物到达签收确认">到达签收</div>
-        </div>
-
-        <!-- 统计分析 -->
-        <div class="column">
-            <div class="module-title">统计分析</div>
-            <div class="card" data-desc="送货及时率统计与分析">送货及时率</div>
-            <div class="card" data-desc="货物签收完好率统计">签收完好率</div>
-            <div class="card" data-desc="人员作业效率指标">人员作业指标</div>
-            <div class="card" data-desc="运输工具使用率分析">运输工具负荷</div>
-            <div class="card" data-desc="运输成本费用分析">运输费用指标</div>
-            <div class="card" data-desc="客户满意度调查统计">客户满意度</div>
-            <div class="card" data-desc="承运商绩效评估">承运商考核</div>
-            <div class="card" data-desc="关键绩效指标展示">KPI</div>
-            <div class="card" data-desc="自定义条件数据查询">自定义查询</div>
-            <div class="card" data-desc="自定义报表模板设计">自定义报表</div>
-        </div>
-
-        <!-- 应收费用 -->
-        <div class="column">
-            <div class="module-title">应收费用</div>
-            <div class="card" data-desc="承运商结算费率设置">应付费率</div>
-            <div class="card" data-desc="司机运费结算管理">司机运费结算</div>
-            <div class="card" data-desc="承运商费用审核流程">费用审核</div>
-            <div class="card" data-desc="应付账单管理">应付账单</div>
-            <div class="card" data-desc="承运商账单核销">账单核销</div>
-            <div class="card" data-desc="客户费率设置与管理">费率设置</div>
-            <div class="card" data-desc="客户费用账单管理">费用账单</div>
-            <div class="card" data-desc="账单发票管理流程">账单发票</div>
-            <div class="card" data-desc="客户对账与核销流程">账单核销</div>
-        </div>
-
-
-        <!-- 基础设置 -->
-        <div class="bottom">
-            <div class="module-title">基础设置</div>
-            <div class="card" data-desc="产品基础信息管理">产品档案</div>
-            <div class="card" data-desc="客户信息维护管理">客户档案</div>
-            <div class="card" data-desc="承运商信息管理">承运商档案</div>
-            <div class="card" data-desc="公司组织结构配置">组织机构</div>
-            <div class="card" data-desc="行政区域划分管理">行政区域</div>
-            <div class="card" data-desc="运输人员信息管理">人员管理</div>
-            <div class="card" data-desc="运输车辆信息管理">车辆管理</div>
-            <div class="card" data-desc="车辆类型配置管理">车型管理</div>
-            <div class="card" data-desc="提送货地址管理">提送货地址</div>
-            <div class="card" data-desc="运输证件管理">证件管理</div>
-            <div class="card" data-desc="运输路线管理">路线管理</div>
-            <div class="card" data-desc="车辆加油管理">加油管理</div>
+            <div class="tech-tags">
+                <span class="tech-tag">智能成本核算</span>
+                <span class="tech-tag">异常检测系统</span>
+                <span class="tech-tag">区块链合约</span>
+            </div>
         </div>
     </div>
 
+    <!-- 效益3：运营可视可控 -->
+    <div class="benefit-container">
+        <div class="benefit-content">
+            <h3 class="benefit-title"><i class="fas fa-eye"></i> 运营可视可控</h3>
+            <p class="benefit-desc">
+                全链路可视化监控系统集成IoT设备与GPS定位，实时追踪货物状态与位置。异常预警系统提前识别潜在风险，自动触发应对流程。多维度KPI看板提供实时运营数据，支持管理决策。电子围栏技术自动更新运输状态，减少人工操作。
+            </p>
+
+            <div class="benefit-stats">
+                <div class="stat-item">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">状态准确率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3s</div>
+                    <div class="stat-label">预警响应</div>
+                </div>
+                <div class="tech-tag">
+                    <div class="stat-value">30+</div>
+                    <div class="stat-label">监控维度</div>
+                </div>
+            </div>
+
+            <ul class="benefit-list">
+                <li>货物温湿度实时监控减少损耗95%</li>
+                <li>电子围栏自动触发状态更新</li>
+                <li>异常情况3秒内预警通知</li>
+                <li>多层级KPI实时可视化展示</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">全链路可视化</span>
+                <span class="tech-tag">IoT监控</span>
+                <span class="tech-tag">智能预警系统</span>
+            </div>
+        </div>
+
+        <div class="benefit-image benefit-image-3"></div>
+    </div>
+
+    <!-- 效益4：决策智能支持 -->
+    <div class="benefit-container reverse">
+        <div class="benefit-image benefit-image-4"></div>
+
+        <div class="benefit-content">
+            <h3 class="benefit-title"><i class="fas fa-brain"></i> 决策智能支持</h3>
+            <p class="benefit-desc">
+                基于机器学习的预测分析模型，准确预测运输需求、货物量波动和潜在风险。智能报表系统提供30+维度分析，帮助企业优化资源配置。KPI考核系统自动评估承运商绩效，持续优化供应链生态。系统每月自动生成优化建议报告，形成持续改进闭环。
+            </p>
+
+            <div class="benefit-stats">
+                <div class="stat-item">
+                    <div class="stat-value">93%</div>
+                    <div class="stat-label">预测准确率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">30+</div>
+                    <div class="stat-label">分析维度</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5%↑</div>
+                    <div class="stat-label">月度优化</div>
+                </div>
+            </div>
+
+            <ul class="benefit-list">
+                <li>需求预测准确率提升至93%</li>
+                <li>智能报告生成减少人工分析时间80%</li>
+                <li>承运商自动考核提升供应链效率</li>
+                <li>月度优化建议持续改进运营</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">预测分析</span>
+                <span class="tech-tag">智能决策</span>
+                <span class="tech-tag">数据挖掘</span>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!--========================= end benefits =======================================-->
+
+
+
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -943,8 +1195,44 @@
 </footer>
 <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+<div id="tms-sidebar" class="position-fixed">
+    <ul id="tms-List" class="tms-links list-unstyled">
+        <li><a href="#pain"><i class="bi bi-search me-1"></i> 痛点诊断</a></li>
+        <li><a href="#workflow"><i class="bi bi-kanban me-1"></i> 实施流程</a></li>
+        <li><a href="#architecture"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
+        <li><a href="#core"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
+        <li><a href="#highlights"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
+        <li><a href="#compact"><i class="bi bi-bar-chart-line me-1"></i> 效益分析</a></li>
+        <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
+        <li>
+            <a href="../pdf/TMS.pdf" target="_blank" title="中小企业数字化转型服务">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i> TMS彩页
+            </a>
+        </li>
+    </ul>
+
+    <button id="toggle-tms" class="toggle-btn">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
+<!-- CDN -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    new Typed("#typed-text", {
+        strings: ["芯导 · TMS 利用人工智能与大数据技术，解决传统运输管理的痛点，实现运输全流程的智能化、可视化与自动化管理"],
+        typeSpeed: 78,
+        startDelay: 300,
+        showCursor: true,
+        lifeLikeCursor: true,
+        autoInsertCss: true,
+        loop: false
+    });
+</script>
 
 <!-- Vendor JS Files -->
 <script src="../vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -955,6 +1243,7 @@
 <script src="../vendor/glightbox/js/glightbox.min.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/toast.js"></script>
+
 <script src="../js/transparent-nav.js"></script>
 <script src="../js/services/tms.js"></script>
 </body>

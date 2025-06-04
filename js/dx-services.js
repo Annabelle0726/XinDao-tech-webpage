@@ -275,7 +275,6 @@ function initPentagonDiagram() {
 // 页面加载时初始化
 window.addEventListener('load', initPentagonDiagram);
 
-// 页面大小变化时重新绘制连接线
 window.addEventListener('resize', initPentagonDiagram);
 
 
@@ -285,11 +284,10 @@ function setupMobileToggle() {
     const items = document.querySelectorAll('.ring-item');
     items.forEach(item => {
         item.addEventListener('click', () => {
-            // 切换激活状态
+            // switch
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
             } else {
-                // 清除其他激活项
                 items.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
             }
@@ -378,8 +376,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("dx-sidebar");
-    const lightSections = ["products", "architecture", "optimization"]; // 偏深色背景
-    const darkSections = ["hero", "consulting", "framework", "foundation", "intelligent"]; // 偏浅色背景
+    const lightSections = ["architecture", "optimization"]; // 偏深色背景
+    const darkSections = ["hero", "consulting", "framework","products", "foundation", "intelligent"]; // 偏浅色背景
 
     function getCurrentSection() {
         const scrollY = window.scrollY + window.innerHeight / 2;

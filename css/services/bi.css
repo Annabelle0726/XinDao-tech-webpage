@@ -240,3 +240,113 @@
 }
 
 /* ========================== end architecture ====================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ========================== BI sidebar ======================== */
+
+#bi-sidebar {
+    position: fixed;
+    top: 25%;
+    right: 20px;
+    z-index: 999;
+    padding: 12px 16px;
+    border-radius: 14px;
+    max-width: 200px;
+    background: linear-gradient(135deg, #f0f6ff, #e6edf9); /* 银蓝渐变 */
+    border: 1px solid rgba(160, 190, 230, 0.4);
+    box-shadow:
+            inset 0 1px 2px rgba(255, 255, 255, 0.5),
+            0 6px 16px rgba(0, 80, 160, 0.08);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #002f5e;
+    transition: all 0.3s ease;
+}
+
+.bi-links {
+    margin: 0;
+    transition: height 0.4s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.bi-links li {
+    margin-bottom: 6px;
+}
+
+.bi-links li a {
+    font-size: 14px;
+    color: #003366;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.bi-links li a:hover {
+    background-color: rgba(0, 80, 160, 0.08);
+    color: #001a40;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 0 6px rgba(0, 80, 160, 0.15);
+}
+
+.bi-links li a i {
+    font-size: 1rem;
+    flex-shrink: 0;
+    color: #4a90e2;
+    transition: transform 0.2s ease;
+}
+
+.bi-links li a:hover i {
+    transform: scale(1.1);
+    color: #357abd;
+}
+
+.toggle-btn {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4a90e2, #6aaeff);
+    box-shadow: 0 4px 12px rgba(0, 120, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #5b9dec;
+    transform: scale(1.05);
+}
+
+.toggle-btn i {
+    font-size: 20px;
+}
+
+.bi-links.collapsed {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
