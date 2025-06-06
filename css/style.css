@@ -440,6 +440,10 @@ header.header.fixed-top {
     transition: background 450ms ease, box-shadow 450ms ease;
 }
 
+#megamenuPanel .container {
+    padding: 0;
+}
+
 .megamenu-panel .container .row .col-lg-4 h6 a.text-dark.fw-bold {
     color: #1a1a1a;
     font-size: 1rem;

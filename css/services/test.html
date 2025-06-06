@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芯导MES系统优势 - 智能制造解决方案</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066cc;
+            --secondary: #6aaeff;
+            --accent: #00c9ff;
+            --dark: #1a365d;
+            --light: #f8fbff;
+            --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a365d, #0a2a4a);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .highlight-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .radar-section {
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(106, 174, 255, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .accordion {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            overflow: hidden;
+            background: rgba(0, 102, 204, 0.15);
+            border: 1px solid rgba(106, 174, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .accordion-item.active {
+            background: rgba(0, 102, 204, 0.3);
+            box-shadow: 0 10px 30px rgba(106, 174, 255, 0.2);
+        }
+
+        .accordion-header {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .accordion-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.24rem;
+            font-weight: 550;
+        }
+
+        .accordion-icon {
+            font-size: 1.24rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(135deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .accordion-inner {
+            padding: 0 30px 30px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+            gap: 10px;
+        }
+
+        .benefit-card {
+            background: rgba(106, 174, 255, 0.15);
+            padding: 1rem;
+            border: 1px solid rgba(106, 174, 255, 0.3);
+        }
+
+        .benefit-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .benefit-title i {
+            font-size: 1rem;
+        }
+
+        .benefit-desc {
+            font-size: 0.75rem;
+            line-height: 1.3;
+            color: #c2e0ff;
+        }
+
+        .benefit-stats {
+            display: flex;
+            gap: 8px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-badge {
+            background: rgba(0, 201, 255, 0.2);
+            padding: 8px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <i class="fas fa-microchip logo-icon"></i>
+            <div class="logo-text">芯导软件</div>
+        </div>
+        <h1>MES系统核心优势</h1>
+        <p class="subtitle">芯导MES制造执行系统通过连接计划与执行、设备与人、数据与流程，实现从订单驱动到现场作业的闭环管理</p>
+    </header>
+
+    <div class="highlight-container">
+        <div class="radar-section">
+            <h2 class="section-title">系统实施效益对比</h2>
+            <div class="chart-container">
+                <canvas id="benefitChart" style="height: 450px;
+    width: 450px;"></canvas>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion">
+                <!--  1 -->
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-bolt"></i>
+                            <span>打通计划与执行</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content" style="max-height: 1000px;">
+                        <div class="accordion-inner">
+                            <p>
+                                芯导MES系统通过先进的数据整合技术，实现了计划层与执行层的无缝对接，消除了传统制造中的信息断层问题。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-link"></i>
+                                        <h3>ERP/MES无缝集成</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        实现与SAP、Oracle、用友等主流ERP系统的深度集成，确保订单信息、物料数据、生产计划实时同步，减少人工录入错误，提升数据流转效率达60%。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-clock"></i>
+                                            <span>数据延迟减少80%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>准确率99.8%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <h3>实时生产进度跟踪</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        通过物联网技术实时采集各工序生产数据，管理者可随时查看订单完成情况、设备运行状态和产能利用率，异常情况自动触发预警机制。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>生产效率+35%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-bell"></i>
+                                            <span>异常响应时间-70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <h3>多工厂协同管理</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        支持跨地域多工厂统一管理平台，实现产能共享、订单协同和资源优化配置，特别适合集团化制造企业，减少跨厂协调时间40%以上。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-globe"></i>
+                                            <span>支持10+工厂协同</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-truck"></i>
+                                            <span>物流成本-25%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-robot"></i>
+                                        <h3>智能排产优化</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        基于AI算法的智能排产系统，综合考虑设备能力、物料供应、人员技能等多维度因素，自动生成最优生产计划，提升设备利用率至92%。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-cogs"></i>
+                                            <span>换线时间-45%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-calendar-check"></i>
+                                            <span>准时交付率99.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-eye"></i>
+                            <span>提升现场透明度</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>
+                                芯导MES系统通过全方位数据采集和可视化技术，实现制造过程全透明化管理，让管理者对生产现场了如指掌。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-tv"></i>
+                                        <h3>智能电子看板</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        车间级电子看板实时显示生产进度、质量指标、设备状态等关键数据，支持多屏联动，异常情况自动变色报警，提升现场管理效率50%。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h3>移动端实时监控</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        支持手机APP和微信小程序，管理者可随时随地查看生产报表、设备状态和异常报警，实现移动办公，决策响应速度提升60%。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-search"></i>
+                                        <h3>全流程追溯系统</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        从原材料到成品的全流程数据追溯，支持正向和反向追溯，质量问题可在5分钟内定位到具体工序、设备和操作人员。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <h3>实时数据分析</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        内置30+种数据分析模型，实时生成OEE、良率、工时等关键指标报表，支持自定义分析维度，数据呈现延迟小于3秒。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-cogs"></i>
+                            <span>模块化灵活配置</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>
+                                芯导MES系统采用模块化架构设计，可根据企业实际需求灵活配置功能组合，支持快速部署和持续扩展。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-puzzle-piece"></i>
+                                        <h3>按需功能组合</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        提供12个核心功能模块，企业可根据实际需求选择启用，避免为不需要的功能付费，初始投资降低40%。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-industry"></i>
+                                        <h3>多行业适配</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        已为电子、汽车、医疗、机械等8大行业提供专属解决方案，包含行业最佳实践模板，实施周期缩短50%。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <h3>低代码开发平台</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        内置低代码开发平台，支持企业自主开发定制功能，无需专业编程知识，二次开发效率提升3倍。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <h3>云原生架构</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        支持公有云、私有云和混合云部署，弹性扩展计算资源，系统扩容可在1小时内完成，适应业务快速增长。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-undo"></i>
+                            <span>降低返工率</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>
+                                通过标准化流程和实时质量监控，芯导MES系统有效降低产品不良率和返工成本，提升产品质量稳定性。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-clipboard-check"></i>
+                                        <h3>标准化作业指导</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        图文并茂的电子作业指导书，精确到每个工位的操作步骤和质量要求，新员工培训时间减少65%，操作失误率降低55%。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-search-plus"></i>
+                                        <h3>实时质量监控</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        关键工序设置质量检测点，自动采集质量数据，异常情况实时报警，质量问题发现时间从小时级缩短至分钟级。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <h3>SPC过程控制</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        内置SPC统计过程控制系统，自动生成X-R、P、Cpk等控制图，实时监控过程能力，预防质量波动。
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-redo"></i>
+                                        <h3>闭环纠正措施</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        质量问题自动触发纠正措施流程，跟踪问题解决全过程，确保整改措施有效执行，防止问题重复发生。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>数据驱动决策</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>
+                                芯导MES系统以数据为核心驱动力，帮助企业构建实时感知、智能分析、精准决策的一体化管理机制，提升运营洞察力与响应速度。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-database"></i>
+                                        <h3>统一数据底座</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        建立统一的数据采集与存储平台，实现各系统间数据标准化、集中化管理，确保数据一致性与可追溯性。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-compress-arrows-alt"></i>
+                                            <span>数据孤岛减少90%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-folder-open"></i>
+                                            <span>数据可用率98.5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-brain"></i>
+                                        <h3>智能数据分析引擎</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        内置AI分析模型与BI图表组件，支持异常预测、瓶颈分析和多维KPI对比，助力科学决策。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <span>预测准确率高达94%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-balance-scale"></i>
+                                            <span>决策效率+70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--            6-->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-title">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>强化安全与合规</span>
+                        </div>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>
+                                芯导MES系统内置多级权限与操作审计机制，全面保障生产过程的数据安全与操作合规，助力企业满足各类质量与行业标准要求。</p>
+
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-user-shield"></i>
+                                        <h3>精细化权限控制</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        按岗位、角色、工序灵活配置权限，确保关键操作人员仅能访问相关模块，支持访问日志全记录与追溯。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-key"></i>
+                                            <span>权限误操作率降低95%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-shield-virus"></i>
+                                            <span>权限合规性达100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <div class="benefit-title">
+                                        <i class="fas fa-file-contract"></i>
+                                        <h3>多标准质量体系支持</h3>
+                                    </div>
+                                    <div class="benefit-desc">
+                                        支持ISO9001、IATF16949、GMP等多种行业质量管理体系，内建文档审批、版本管理与留痕功能。
+                                    </div>
+                                    <div class="benefit-stats">
+                                        <div class="stat-badge">
+                                            <i class="fas fa-certificate"></i>
+                                            <span>合规文档通过率98%</span>
+                                        </div>
+                                        <div class="stat-badge">
+                                            <i class="fas fa-search-dollar"></i>
+                                            <span>审计时间减少60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 初始化雷达图
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('benefitChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['生产效率', '质量管控', '设备效率', '交付速度', '数据可视', '流程优化'],
+                datasets: [{
+                    label: '实施前',
+                    data: [65, 59, 70, 62, 58, 60],
+                    fill: true,
+                    backgroundColor: 'rgba(106, 174, 255, 0.2)',
+                    borderColor: 'rgb(106, 174, 255)',
+                    pointBackgroundColor: 'rgb(106, 174, 255)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(106, 174, 255)'
+                }, {
+                    label: '实施芯导MES后',
+                    data: [95, 90, 95, 92, 88, 93],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 201, 255, 0.2)',
+                    borderColor: 'rgb(0, 201, 255)',
+                    pointBackgroundColor: 'rgb(0, 201, 255)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(0, 201, 255)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true,
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 14,
+                                family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                            },
+                            color: '#c2e0ff'
+                        },
+                        ticks: {
+                            display: false,
+                            stepSize: 20
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14,
+                                family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                            },
+                            color: '#c2e0ff'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 手风琴功能
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // 关闭所有项目
+                accordionItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-content').style.maxHeight = null;
+                });
+
+                // 如果点击的不是当前活动项，则打开它
+                if (!isActive) {
+                    item.classList.add('active');
+                    const content = item.querySelector('.accordion-content');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+        const firstContent = document.querySelector('.accordion-item.active .accordion-content');
+        firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+    });
+</script>
+</body>
+</html>
