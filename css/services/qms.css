@@ -377,7 +377,6 @@ section {
     padding: 14px 18px;
 }
 
-/* 描述内容样式微调 */
 .qms-description {
     margin-top: 10px;
     font-size: 0.9rem;
@@ -386,7 +385,6 @@ section {
     display: none;
 }
 
-/* 🎉 Toast 样式升级为玻璃感 */
 .toast-container {
     position: fixed;
     bottom: 30px;
@@ -479,7 +477,7 @@ section {
 
 .highlight-image {
     flex: 0 0 50%;
-    height: 100%;
+    height: 450px;
     background-size: cover;
     background-position: center;
 }
@@ -522,7 +520,6 @@ section {
     font-weight: bold;
 }
 
-/* 奇数行：文字在左，图片在右 */
 .highlight-row:nth-child(odd) .highlight-content {
     order: 1;
 }
@@ -531,7 +528,6 @@ section {
     order: 2;
 }
 
-/* 偶数行：图片在左，文字在右 */
 .highlight-row:nth-child(even) .highlight-content {
     order: 2;
 }
@@ -540,22 +536,12 @@ section {
     order: 1;
 }
 
-/* 图片占位样式 */
-.feature-1 { background: linear-gradient(135deg, #e6f0ff, #cce0ff); }
-.feature-2 { background: linear-gradient(135deg, #e0f7ff, #c2ebff); }
-.feature-3 { background: linear-gradient(135deg, #e6f7ff, #ccefff); }
-.feature-4 { background: linear-gradient(135deg, #e0f0ff, #c2e0ff); }
+.feature-1 { background-image: url("https://cdn.prod.website-files.com/656a6f5ca4824808211181c5/673655ae09d6671fcb042de0_MAR-497-Human-in-the-Loop.jpg"); }
+.feature-2 { background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*hok7gfsR_47E8L40nxBKZg.png") }
+.feature-3 { background-image: linear-gradient(135deg, #e6f7ff, #ccefff); }
+.feature-4 { background-image: linear-gradient(135deg, #e0f0ff, #c2e0ff); }
 
-.feature-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-2);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
+
 
 /* =============== 响应式调整 =============== */
 @media (max-width: 992px) {
@@ -676,7 +662,6 @@ section {
 }
 
 .toggle-btn {
-    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -704,6 +689,7 @@ section {
     height: 0;
     opacity: 0;
     pointer-events: none;
+    width: 0;
 }
 
 
