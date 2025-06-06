@@ -1453,7 +1453,7 @@ section {
 
 
 .highlight-section .container {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     position: relative;
     z-index: 2;
 }
@@ -1466,7 +1466,7 @@ section {
 }
 
 .insight-block {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(-135deg, var(--lighter-blue), var(--lighter-blue-2));
     padding: 1.6rem;
     border: 1px solid rgba(0, 120, 215, 0.15);
     box-shadow: 0 6px 24px rgba(0, 80, 160, 0.12);
@@ -1566,7 +1566,8 @@ section {
 .benefit-title {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--dark-blue);
+    font-weight: 540;
+    color: white;
 }
 
 .benefit-desc {

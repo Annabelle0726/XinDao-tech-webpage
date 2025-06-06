@@ -16,6 +16,9 @@
     --gradient: linear-gradient(135deg, var(--primary), var(--accent));
 }
 
+body {
+    background: linear-gradient(135deg, #1a365d, #0a2a4a);
+}
 
 section {
     padding: 6rem 0;
@@ -37,26 +40,39 @@ section {
 }
 
 .section-header .section-title {
-    font-size: 2.4rem;
-    color: #fff;
-    font-weight: 670;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    display: inline-block;
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-header .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0.75rem auto 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border-radius: 3px;
+    opacity: 0.9;
 }
 
 .section-header .section-subtitle {
-    font-size: 1.2rem;
-    color: #a0d2eb;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 700px;
-    margin: 0 auto;
-    font-weight: 520;
-    line-height: 1.6;
+    margin: 1rem auto 0;
+    font-weight: 400;
+    line-height: 1.8;
+    text-shadow: 0 0 6px rgba(0, 198, 255, 0.15);
+    opacity: 0.92;
 }
-
-
 /* ================= hero ======================  */
 
 .hero-section-mes {
@@ -84,6 +100,7 @@ section {
     top: -200px;
     left: -200px;
 }
+
 .hero-section-mes::after {
     bottom: -200px;
     right: -100px;
@@ -116,7 +133,7 @@ section {
 .hero-glass-card h2 {
     font-size: 1.35rem;
     font-weight: 580;
-    color: var(--primary);
+    color: var(--lighter-blue);
     margin-bottom: 30px;
     position: relative;
 }
@@ -164,26 +181,14 @@ section {
 /* ============== end hero ==================== */
 
 /* ============ MES 架构图样式 ============== */
-.architecture-section {
-    padding: 60px 40px;
+#mes-architecture {
     background: linear-gradient(135deg, #f8fbff, #e6f4ff);
     border-top: 4px solid #6aaeff;
     border-bottom: 4px solid #6aaeff;
 }
 
-.architecture-section .section-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #0b1c3c;
-    margin-bottom: 8px;
-}
-
-.architecture-section .section-subtitle {
-    font-size: 15px;
-    font-weight: 400;
-    color: #3b82f6;
-    max-width: 620px;
-    margin: 0 auto;
+#mes-architecture #grid-container {
+    padding: 0 40px;
 }
 
 #grid-container .card {
@@ -213,23 +218,25 @@ section {
     padding: 8px 12px;
 }
 
-/* 卡片容器 */
 #grid-container .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
+
 .nowrap-container {
     flex-wrap: nowrap;
     display: flex;
     overflow-x: auto;
     padding-bottom: 4px;
 }
+
 .nowrap-container .card {
     flex: 0 0 auto !important;
     min-width: 120px;
     white-space: nowrap;
 }
+
 .wrap-container {
     flex-wrap: wrap;
     row-gap: 8px;
@@ -291,14 +298,13 @@ section {
 
 
 /* ====================== core ========================= */
-
-
 #core {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1a365d, #0066cc);
     color: white;
     min-height: 100vh;
-    }
+
+}
 
 #core .content-wrapper {
     display: flex;
@@ -497,6 +503,155 @@ section {
 
 
 /* ====================== end core ========================= */
+
+
+/* ========================== highlights ======================== */
+
+:root {
+    --primary: #0066cc;
+    --secondary: #6aaeff;
+    --accent: #00c9ff;
+    --dark: #1a365d;
+    --light: #f8fbff;
+    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+#highlights {
+    color: white;
+}
+
+#highlights .container {
+    padding: 0px;
+}
+
+.highlight-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.radar-section {
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(106, 174, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.chart-container {
+    height: 450px;
+    width: 450px
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.accordion {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    overflow: hidden;
+    background: rgba(0, 102, 204, 0.15);
+    border: 1px solid rgba(106, 174, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+.accordion-item.active {
+    background: rgba(0, 102, 204, 0.3);
+    box-shadow: 0 10px 30px rgba(106, 174, 255, 0.2);
+}
+
+.accordion-header {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.24rem;
+    font-weight: 550;
+}
+
+.accordion-icon {
+    font-size: 1.24rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(135deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-inner {
+    padding: 0 30px 30px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    gap: 10px;
+}
+
+.benefit-card {
+    background: rgba(106, 174, 255, 0.15);
+    padding: 1rem;
+    border: 1px solid rgba(106, 174, 255, 0.3);
+}
+
+.benefit-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.benefit-title h3 {
+    font-size: 1rem;
+}
+
+.benefit-title i {
+    font-size: 1rem;
+}
+
+.benefit-desc {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    color: #c2e0ff;
+}
+
+.benefit-stats {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    background: rgba(0, 201, 255, 0.2);
+    padding: 8px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* ========================== end highlights ======================== */
 
 
 
