@@ -31,10 +31,15 @@
     <link href="../vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="../css/services/mes.css">
     <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/services/mes.css">
+
 </head>
 <body>
 
@@ -129,7 +134,170 @@
         </div>
     </div>
 </header>
-<!-- End Header -->
+<!---------------- End Header ------------------>
+
+<!---------------- hero ------------------>
+
+<section class="hero-section-mes">
+    <div class="container">
+        <div class="hero-glass-card">
+            <h1>MES制造执行系统</h1>
+            <h2>智能制造执行管理平台</h2>
+            <p>芯导MES制造执行系统通过连接计划与执行、设备与人、数据与流程，实现从订单驱动到现场作业的闭环管理，提升生产透明度、质量稳定性与交付响应速度。</p>
+        </div>
+    </div>
+</section>
+
+
+<!---------------- end hero ------------------>
+
+
+
+
+
+<!---------------- core ------------------>
+
+<div id="core">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="details-section">
+                <h2 class="section-title">
+                    <i class="fas fa-cube"></i>
+                    系统功能详情
+                </h2>
+                <div class="controls">
+                    <div class="control-item active" data-view="front">
+                        <i class="fas fa-tasks"></i>
+                        <span>生产排程</span>
+                    </div>
+                    <div class="control-item" data-view="back">
+                        <i class="fas fa-database"></i>
+                        <span>数据采集</span>
+                    </div>
+                    <div class="control-item" data-view="right">
+                        <i class="fas fa-book-open"></i>
+                        <span>作业指导</span>
+                    </div>
+                    <div class="control-item" data-view="left">
+                        <i class="fas fa-chart-line"></i>
+                        <span>数据分析</span>
+                    </div>
+                    <div class="control-item" data-view="top">
+                        <i class="fas fa-eye"></i>
+                        <span>实时监控</span>
+                    </div>
+                    <div class="control-item" data-view="bottom">
+                        <i class="fas fa-cogs"></i>
+                        <span>系统集成</span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="feature-detail" id="front-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-tasks"></i>
+                            生产排程管理
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES的生产排程管理模块通过内置的高级排程算法（APS），结合实时订单、设备负载与工艺约束，自动生成满足交期与效率要求的最优排程方案。系统支持多维度资源配置（如人、机、料、法），可实现多工厂协同调度，自动识别瓶颈资源，动态调整计划应对异常。用户可在甘特图中直观查看排程状态，并进行拖拽优化，灵活应对产线突发情况。
+                        </p>
+                    </div>
+                    <div class="feature-detail" id="back-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-database"></i>
+                            实时数据采集
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES依托工业物联网（IIoT）平台，支持与各类机台、PLC、传感器进行高速通信，实现关键生产数据（如设备状态、工艺参数、良品/不良品计数等）的自动采集。系统内置多协议网关，兼容OPC
+                            UA、Modbus、SECS/GEM等主流工业协议，并具备异常数据筛选与边缘预处理能力，确保数据准确性与实时性。所有采集数据可无缝接入后续分析、预警与追溯模块，构建统一的数据驱动底座。
+                        </p>
+                    </div>
+                    <div class="feature-detail" id="right-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-book-open"></i>
+                            作业指导
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES的作业指导模块支持电子化的标准作业流程（eSOP）创建与推送。系统基于当前生产工单、产品型号与工艺版本，自动匹配对应的操作规范，并将图文、视频或AR指导内容实时呈现在操作终端或穿戴设备上。每一道工序均配有质量控制节点与扫码校验机制，确保作业执行过程合规可控。此外，版本控制机制支持多语种及多产品线共存更新，使操作员即使在频繁换线环境下也能快速掌握关键工艺要点。
+                        </p>
+                    </div>
+                    <div class="feature-detail" id="left-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-chart-line"></i>
+                            数据分析
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES内置强大的制造数据分析引擎，支持对设备稼动率（OEE）、良率、工单周期、能耗、停机原因、维修频次等核心指标进行多维统计与可视化。系统可通过配置KPI仪表盘，结合分时段、班组、工艺路径等维度自动生成高频分析报表。所有分析结果可导出、联动预警模块，亦支持通过API供外部BI工具调用，助力管理层洞察工厂运营瓶颈，科学决策排程优化、人员分配与质量改善。
+                        </p>
+                    </div>
+                    <div class="feature-detail" id="top-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-eye"></i>
+                            实时监控
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES提供覆盖订单执行、设备状态、品质趋势、工单达成情况的全流程可视化监控界面。系统通过工业大屏、Web平台及移动终端，实时展现各车间、产线的稼动效率与异常状态，并支持多级权限下的数据透视与下钻。异常状况如停机、超工时、NG率过高等，可配置预警规则并自动推送至责任人员，实现跨部门联动处理机制，帮助制造现场实现真正的“透明工厂”管理。
+                        </p>
+                    </div>
+                    <div class="feature-detail" id="bottom-detail">
+                        <h3 class="feature-title">
+                            <i class="fas fa-cogs"></i>
+                            系统集成
+                        </h3>
+                        <p class="feature-description">
+                            芯导MES具备完整的系统集成架构，支持与ERP（如SAP、用友）、PLM、WMS、QMS、SCADA等系统进行多方向数据交互。通过RESTful
+                            API、MQ消息队列及数据库映射等多种集成方式，系统可实现工单下发、物料同步、质量闭环、设备状态回传等全链条业务对接。同时，系统还提供集成监控工具与接口日志追踪，确保企业级IT系统间信息传递的稳定性、安全性与可追溯性，为数字化转型打下坚实基础。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="visual-section">
+
+                <div class="scene">
+                    <div class="cube" id="cube">
+                        <div class="cube-face cube-face-front">
+                            <i class="fas fa-tasks"></i>
+                            <h3>生产排程管理</h3>
+                            <p>智能订单分配与资源调度</p>
+                        </div>
+                        <div class="cube-face cube-face-back">
+                            <i class="fas fa-database"></i>
+                            <h3>实时数据采集</h3>
+                            <p>设备状态与生产数据监控</p>
+                        </div>
+                        <div class="cube-face cube-face-right">
+                            <i class="fas fa-book-open"></i>
+                            <h3>作业指导</h3>
+                            <p>标准化工艺与操作流程</p>
+                        </div>
+                        <div class="cube-face cube-face-left">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>数据分析</h3>
+                            <p>OEE、良率等关键指标分析</p>
+                        </div>
+                        <div class="cube-face cube-face-top">
+                            <i class="fas fa-eye"></i>
+                            <h3>实时监控</h3>
+                            <p>生产进度可视化跟踪</p>
+                        </div>
+                        <div class="cube-face cube-face-bottom">
+                            <i class="fas fa-cogs"></i>
+                            <h3>系统集成</h3>
+                            <p>与ERP、PLM无缝衔接</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!---------------- end core ------------------>
+
+
 <section class="architecture-section" id="mes-architecture">
     <div class="section-header">
         <h2 class="section-title">制造执行系统架构图</h2>

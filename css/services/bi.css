@@ -12,6 +12,14 @@
 }
 
 
+
+
+
+
+
+
+
+
 /* ================= architecture ====================== */
 
 
@@ -315,7 +323,6 @@
 }
 
 .toggle-btn {
-    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,6 +350,7 @@
     height: 0;
     opacity: 0;
     pointer-events: none;
+    width: 0;
 }
 
 

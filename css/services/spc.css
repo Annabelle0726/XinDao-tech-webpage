@@ -315,17 +315,77 @@ section {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .pain-stats {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+@media (max-width: 1024px) {
+    .pain-points-grid {
+        gap: 2rem;
     }
-    .stat-item {
-        margin-bottom: 1rem;
+    .pain-card {
+        padding: 2rem 1.5rem;
     }
 }
 
+@media (max-width: 768px) {
+    .pain-points-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .pain-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .pain-title {
+        font-size: 1.25rem;
+    }
+
+    .pain-desc {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pain-card {
+        border-left: 3px solid var(--blue-1);
+        border-radius: 10px;
+        padding: 1.5rem 1rem;
+    }
+
+    .pain-title {
+        font-size: 1.15rem;
+    }
+
+    .pain-desc {
+        font-size: 0.9rem;
+    }
+
+    .stat-value {
+        font-size: 1.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .pain-stats {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .stat-item {
+        text-align: left;
+    }
+}
 
 
 /* =========================== end pain ============================= */
@@ -492,6 +552,75 @@ section {
     height: 8px;
     border-radius: 50%;
     background: var(--blue-2);
+}
+
+/* 添加基础移动端样式 */
+@media (max-width: 767px) {
+    .process-group {
+        flex-direction: column !important; /* 确保在小屏幕上统一垂直排列 */
+        margin-bottom: 24px;
+    }
+
+    .process-line {
+        width: 2px; /* 在小屏幕上减小线条宽度 */
+        left: 20px; /* 调整线条位置 */
+    }
+
+    .process-phase {
+        padding: 1rem; /* 减少内边距 */
+    }
+
+    .phase-title {
+        font-size: 1.2rem; /* 减小标题字体大小 */
+        margin-bottom: 0.5rem;
+    }
+
+    .phase-step {
+        font-size: 0.8rem; /* 减小步骤文本大小 */
+        padding: 0.4rem 0.8rem;
+    }
+
+    .process-card {
+        padding: 1rem; /* 减少卡片内边距 */
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-list li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 平板和桌面设备 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .process-line {
+        width: 3px; /* 中等屏幕上线条稍粗 */
+    }
+}
+
+@media (max-width: 767px) {
+    .icon {
+        width: 24px !important; /* 减小图标尺寸 */
+        height: 24px !important;
+    }
+
+    .process-phase h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* 调整图标和文本间距 */
+    }
+}
+
+@media (hover: none) {
+    .phase-step:hover,
+    .process-card:hover {
+        transform: none; /* 在不支持悬停的设备上禁用变换效果 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 使用更适合触摸设备的阴影 */
+    }
 }
 
 /* =================== end process ======================= */
@@ -694,6 +823,133 @@ section {
     right: 15%;
     transform: rotate(45deg);
     animation: rotate 20s infinite linear;
+}
+
+/* ==================== 核心功能移动端 Flex 列优化 ==================== */
+
+/* 手机/小屏设备（≤767px） */
+@media (max-width: 767px) {
+    /* 核心网格容器转为 Flex 列布局 */
+    .features-grid {
+        display: flex;
+        flex-direction: column; /* 垂直排列 */
+        grid-template-columns: unset !important; /* 清除网格列 */
+        grid-template-rows: unset !important; /* 清除网格行 */
+        gap: 1.2rem; /* 增大卡片间距 */
+        padding: 1rem 0.8rem; /* 减少内边距适配小屏 */
+    }
+
+    /* 单个功能卡片整体样式 */
+    .feature-item {
+        display: flex; /* 内部转为 Flex */
+        flex-direction: column; /* 内容垂直排列 */
+        padding: 1rem 0.8rem; /* 卡片内边距 */
+        border: none; /* 移除边框 */
+        box-shadow: 0 3px 12px rgba(0, 80, 160, 0.12); /* 更柔和的阴影 */
+        border-radius: 12px; /* 圆角提升触控感 */
+        overflow: hidden; /* 保持溢出隐藏 */
+    }
+
+    /* 卡片内容区域（原 .row 或 .card-content） */
+    .feature-item > * {
+        width: 100%; /* 宽度占满卡片 */
+        display: flex; /* 内部 Flex */
+        flex-direction: column; /* 内容垂直排列 */
+    }
+
+    /* 图片样式调整（移到文字下方） */
+    .feature-item img {
+        width: 100%; /* 宽度占满 */
+        height: auto; /* 高度自适应 */
+        object-fit: cover; /* 保持比例 */
+        margin-top: 0.8rem; /* 图片与文字间距 */
+        border-radius: 8px; /* 图片圆角 */
+    }
+
+    /* 文字内容区域（原 .col-6 或 .card-content） */
+    .feature-item .col-6,
+    .feature-item .card-content {
+        padding: 0; /* 清除原内边距 */
+        margin-bottom: 0.8rem; /* 与图片的间距 */
+    }
+
+    /* 标题样式优化 */
+    .feature-title {
+        font-size: 1.15rem; /* 更小的标题 */
+        margin-bottom: 0.6rem; /* 标题与描述的间距 */
+        padding-bottom: 0.5rem; /* 下划线空间 */
+    }
+
+    .feature-title::after {
+        width: 30px; /* 缩小下划线宽度 */
+        left: 0; /* 左对齐 */
+    }
+
+    /* 描述文字优化 */
+    .feature-desc {
+        font-size: 0.78rem; /* 更易读的小屏字体 */
+        line-height: 1.6; /* 行高增加 */
+        color: #00264d; /* 保持深色 */
+        margin-bottom: 1rem; /* 与高亮标签的间距 */
+        flex-grow: 0; /* 取消弹性增长 */
+    }
+
+    /* 高亮标签优化 */
+    .feature-highlight {
+        font-size: 0.68rem; /* 更小的高亮 */
+        padding: 0.5rem 0.7rem; /* 内边距缩小 */
+        border-left-width: 2px; /* 左边框更细 */
+        background: rgba(0, 180, 216, 0.12); /* 透明度降低 */
+        color: var(--darkest-blue); /* 保持深蓝 */
+    }
+
+    /* 重点功能特殊调整（如实时监控、过程能力分析） */
+    .feature-monitor,
+    .feature-analysis {
+        grid-column: unset !important; /* 清除网格跨度 */
+        grid-row: unset !important;
+    }
+
+    .feature-monitor .feature-desc,
+    .feature-analysis .feature-desc {
+        font-size: 0.8rem; /* 重点功能描述稍大 */
+        line-height: 1.65; /* 行高更舒适 */
+    }
+
+    /* 视觉元素调整（小屏隐藏或缩小） */
+    .visual-element {
+        display: none; /* 小屏隐藏装饰性图形 */
+    }
+
+    .square {
+        display: block; /* 可选：保留一个装饰元素 */
+        width: 80px;
+        height: 80px;
+        top: auto;
+        bottom: 2%;
+        right: 5%;
+    }
+}
+
+/* 超小屏幕（≤480px）补充优化 */
+@media (max-width: 480px) {
+    .feature-item {
+        border-radius: 10px; /* 更圆润的边角 */
+    }
+
+    .feature-title {
+        font-size: 1.1rem; /* 进一步缩小标题 */
+    }
+
+    .feature-highlight {
+        font-size: 0.65rem; /* 高亮标签更小 */
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* 图片高度限制（防止过长） */
+    .feature-item img {
+        max-height: 180px; /* 限制最大高度 */
+    }
 }
 
 /* ==================== core feature =============== */
@@ -1086,80 +1342,6 @@ section {
 
 /* ====================== end grid =========================*/
 
-/* 响应式调整 */
-@media (max-width: 1200px) {
-    .spc-architecture-grid {
-        grid-template-columns: 100px repeat(3, 1fr) 130px;
-    }
-
-    .vertical-title {
-        width: 90px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .spc-architecture-grid {
-        grid-template-columns: 80px repeat(3, 1fr) 110px;
-        gap: 8px;
-    }
-
-    .spc-block, .spc-side-group {
-        padding: 12px;
-    }
-
-    .item {
-        padding: 8px 6px;
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .spc-architecture-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .spc-side-title {
-        grid-column: 1;
-        grid-row: 1;
-        flex-direction: row;
-        overflow-x: auto;
-        padding: 10px 0;
-        margin-bottom: 15px;
-    }
-
-    .vertical-title {
-        transform: none;
-        width: auto;
-        height: auto;
-        padding: 10px 15px;
-        margin: 0 8px;
-        min-width: 100px;
-    }
-
-    .spc-center-blocks {
-        grid-column: 1;
-        grid-row: 2;
-        grid-template-columns: 1fr;
-    }
-
-    .spc-side-right {
-        grid-column: 1;
-        grid-row: 3;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .spc-side-group {
-        flex: 1;
-        min-width: 200px;
-        margin-bottom: 0;
-    }
-}
-
-
 /* ==================== Toast ==================== */
 
 .toast-container {
@@ -1198,28 +1380,24 @@ section {
     will-change: transform, opacity;
 }
 
-/* 显示时 */
 .toast-message.show {
     opacity: 1;
     transform: translateX(0) scale(1);
     animation: toastPopIn 0.6s ease;
 }
 
-/* 消失时 */
 .toast-message.fade-out {
     opacity: 0;
     transform: translateX(-100%) scale(0.95);
     transition: transform 0.8s ease-in, opacity 0.6s ease-in;
 }
 
-/* 内容区 */
 .toast-content {
     position: relative;
     z-index: 2;
     line-height: 1.5;
 }
 
-/* 内部柔光流动感 */
 .toast-message::before {
     content: '';
     position: absolute;
@@ -1258,7 +1436,6 @@ section {
     animation: glowBorder 4s linear infinite;
 }
 
-/* 动画定义 */
 @keyframes glowBorder {
     0% {
         transform: translateX(0%);
@@ -1291,21 +1468,221 @@ section {
     }
 }
 
-/* 移动端优化 */
-@media (max-width: 768px) {
-    .toast-container {
-        right: 1rem;
-        left: 1rem;
-        bottom: 1rem;
-        align-items: center;
+/* ============================ 响应式媒体查询 ============================ */
+
+/* ============================ 小屏幕响应式优化 ============================ */
+
+/* 小屏幕设备（≤767px） */
+@media (max-width: 767px) {
+    /* 主布局转为单列，允许垂直滚动 */
+    .spc-architecture-grid {
+        grid-template-columns: 1fr !important; /* 单列布局 */
+        grid-template-rows: auto auto auto auto; /* 自动行高 */
+        height: auto !important; /* 取消固定高度 */
+        padding: 1rem 1rem 2rem; /* 减少内边距 */
+        gap: 1.5rem; /* 增大间距 */
+        overflow-y: auto; /* 内容溢出时滚动 */
+        max-height: 90vh; /* 限制最大高度 */
     }
 
+    /* 侧边栏标题块（原左侧） */
+    .spc-side-title {
+        grid-column: 1 !important; /* 强制占满单列 */
+        grid-row: 1; /* 放在第一行 */
+        padding: 0.75rem 0.5rem; /* 减少内边距 */
+    }
+
+    .spc-side-title .vertical-title {
+        writing-mode: horizontal-tb !important; /* 改为水平文字 */
+        padding: 0.5rem 0.75rem !important; /* 调整内边距 */
+        font-size: 1rem !important; /* 缩小字体 */
+        border-radius: 8px; /* 调整圆角 */
+        justify-content: flex-start !important; /* 文字左对齐 */
+        white-space: normal; /* 允许换行 */
+        word-break: break-word; /* 单词换行 */
+    }
+
+    /* 中间内容块（原中部） */
+    .spc-center-blocks {
+        grid-column: 1 !important; /* 强制占满单列 */
+        grid-row: 2; /* 放在第二行 */
+        gap: 1rem; /* 减少组间间距 */
+        max-height: 40vh; /* 限制最大高度 */
+        overflow-y: auto; /* 内容溢出时滚动 */
+    }
+
+    /* 数据中心块（原数据源） */
+    .spc-center-blocks .data-center {
+        margin-bottom: 0.25rem; /* 减少块间距 */
+    }
+
+    /* 控制中心块（原控制中心） */
+    .spc-center-blocks .business-center {
+        margin-bottom: 0.25rem; /* 减少块间距 */
+    }
+
+    /* 右侧内容块（原右侧） */
+    .spc-side-right {
+        grid-column: 1 !important; /* 强制占满单列 */
+        grid-row: 3; /* 放在第三行 */
+        padding: 0.5rem 0.5rem; /* 减少内边距 */
+        max-height: 40vh; /* 限制最大高度 */
+        overflow-y: auto; /* 内容溢出时滚动 */
+    }
+
+    /* 功能项卡片适配小屏幕 */
+    .item {
+        flex: 1 1 calc(50% - 0.5rem) !important; /* 两列排列（减去间距） */
+        font-size: 0.75rem !important; /* 缩小字体 */
+        padding: 0.4rem 0.5rem !important; /* 减少内边距 */
+        white-space: nowrap; /* 禁止换行 */
+        overflow: hidden; /* 隐藏溢出 */
+        text-overflow: ellipsis; /* 显示省略号 */
+    }
+
+    .business-center .block-items .item {
+        flex: 1 1 100% !important; /* 单列排列 */
+        font-size: 0.65rem !important;
+    }
+
+    /* 分组卡片适配小屏幕 */
+    .spc-side-group {
+        padding: 1rem 0.5rem !important; /* 减少内边距 */
+        max-height: 30vh; /* 限制最大高度 */
+        overflow-y: auto; /* 内容溢出时滚动 */
+    }
+
+    .spc-side-group .side-title {
+        font-size: 1rem !important; /* 缩小字体 */
+        padding-left: 0.4rem !important; /* 减少左边距 */
+    }
+
+    .spc-side-group .item {
+        font-size: 0.75rem !important; /* 缩小字体 */
+        padding: 0.5rem !important; /* 调整内边距 */
+    }
+
+    /* Toast提示适配小屏幕 */
     .toast-message {
-        max-width: 100%;
-        width: 100%;
+        min-width: 220px !important; /* 缩小最小宽度 */
+        max-width: 90vw !important; /* 最大宽度不超过视口90% */
+        font-size: 0.9rem !important; /* 缩小字体 */
+        padding: 0.6rem 1rem !important; /* 减少内边距 */
     }
 }
 
+/* 超小屏幕（≤480px）补充优化 */
+@media (max-width: 480px) {
+    .spc-architecture-grid {
+        gap: 1rem; /* 进一步减小间距 */
+        padding: 1rem 0.8rem; /* 减少内边距 */
+    }
+
+    /* 侧边栏标题块文字优化 */
+    .spc-side-title .vertical-title {
+        font-size: 0.9rem !important; /* 更小的字体 */
+        padding: 0.4rem 0.6rem !important; /* 更小的内边距 */
+    }
+
+    /* 中间内容块滚动条样式 */
+    .spc-center-blocks::-webkit-scrollbar {
+        width: 6px; /* 滚动条宽度 */
+    }
+
+    .spc-center-blocks::-webkit-scrollbar-thumb {
+        background: rgba(0, 180, 216, 0.3); /* 滚动条颜色 */
+        border-radius: 3px; /* 滚动条圆角 */
+    }
+
+    /* 右侧栏滚动条样式 */
+    .spc-side-right::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .spc-side-right::-webkit-scrollbar-thumb {
+        background: rgba(0, 180, 216, 0.3);
+        border-radius: 3px;
+    }
+
+    /* 功能项卡片优化 */
+    .item {
+        flex: 1 1 100% !important; /* 超小屏单列排列 */
+        margin-bottom: 0.3rem; /* 增加间距 */
+    }
+}
+
+/* 平板屏幕（768px-1023px） */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .spc-architecture-grid {
+        grid-template-columns: 1fr 7fr 1.5fr; /* 调整列宽比例 */
+        gap: 1rem 1rem; /* 减少间距 */
+        padding: 1rem 2rem 2rem; /* 调整内边距 */
+    }
+
+    .spc-side-title {
+        grid-template-rows: 0.5fr 0.6fr 0.8fr; /* 调整行高比例 */
+        padding: 0.75rem 0.5rem; /* 减少内边距 */
+    }
+
+    .spc-side-title .vertical-title {
+        font-size: 1rem; /* 调整字体大小 */
+        padding: 1.5rem 0.5rem; /* 调整内边距 */
+    }
+
+    .spc-center-blocks {
+        grid-template-rows: 0.7fr 0.8fr 1.2fr; /* 调整行高比例 */
+        gap: 1rem; /* 减少组间间距 */
+    }
+
+    .spc-side-right {
+        grid-template-rows: 0.8fr 0.8fr; /* 调整行高比例 */
+        padding: 0.75rem 0.5rem; /* 减少内边距 */
+    }
+
+    /* 功能项卡片适配平板 */
+    .item {
+        flex: 1 1 100px; /* 调整最小宽度 */
+        font-size: 0.8rem; /* 调整字体大小 */
+    }
+
+    .business-center .block-items .item {
+        flex: 1 1 80px; /* 调整最小宽度 */
+        font-size: 0.65rem; /* 调整字体大小 */
+    }
+
+    /* 分组卡片适配平板 */
+    .spc-side-group {
+        padding: 1.1rem; /* 调整内边距 */
+    }
+
+    .spc-side-group .side-title {
+        font-size: 1.05rem; /* 调整字体大小 */
+    }
+}
+
+/* 桌面屏幕（≥1024px，可选优化） */
+@media (min-width: 1024px) {
+    /* 可选：进一步优化大屏幕细节 */
+    .spc-architecture-grid {
+        gap: 1rem 1.45rem; /* 恢复原始间距 */
+        padding: 0 4rem 2rem; /* 恢复原始内边距 */
+    }
+
+    .spc-side-title .vertical-title {
+        font-size: 1.15rem; /* 恢复原始字体大小 */
+        padding: 2rem 0.75rem; /* 恢复原始内边距 */
+    }
+
+    .item {
+        flex: 1 1 120px; /* 恢复原始最小宽度 */
+        font-size: 0.82rem; /* 恢复原始字体大小 */
+    }
+
+    .business-center .block-items .item {
+        flex: 1 1 90px; /* 恢复原始最小宽度 */
+        font-size: 0.72rem; /* 恢复原始字体大小 */
+    }
+}
 
 /* =============================== end architecture================================== */
 
@@ -1633,7 +2010,118 @@ section {
     background: rgba(46, 204, 113, 0.3);
     transition: all 1s ease;
 }
+/* ==================== 效益分析小屏Flex列优化 ==================== */
 
+/* 小屏幕设备（≤767px） */
+@media (max-width: 767px) {
+    /* 整体容器转为垂直Flex布局 */
+    .benefits-container {
+        flex-direction: column; /* 垂直排列 */
+        gap: 1.5rem; /* 增大卡片与图表间距 */
+        padding: 1rem 0.8rem; /* 减少内边距适配小屏 */
+    }
+
+    /* 文字内容区占满宽度 */
+    .benefits-content {
+        width: 100%; /* 宽度100% */
+        display: flex; /* 内部Flex */
+        flex-direction: column; /* 卡片垂直排列 */
+        gap: 1.2rem; /* 卡片间距 */
+    }
+
+    /* 图表区占满宽度 */
+    .benefits-visual {
+        width: 100%; /* 宽度100% */
+        max-width: unset; /* 清除最大宽度限制 */
+    }
+
+    /* 单个效益卡片样式优化 */
+    .benefit-card {
+        padding: 1rem 0.8rem; /* 减少内边距 */
+        border-left: 3px solid var(--accent-green); /* 缩小左边框 */
+        margin-bottom: 0; /* 清除底部边距（由容器gap控制） */
+    }
+
+    /* 卡片标题优化 */
+    .benefit-title {
+        font-size: 1.2rem; /* 更小的标题 */
+        margin-bottom: 0.6rem; /* 标题与描述的间距 */
+    }
+
+    .benefit-title i {
+        font-size: 1.4rem; /* 图标缩小 */
+    }
+
+    /* 卡片描述优化 */
+    .benefit-desc {
+        font-size: 0.9rem; /* 更易读的小屏字体 */
+        line-height: 1.6; /* 行高增加 */
+        margin-bottom: 0.8rem; /* 与列表的间距 */
+    }
+
+    /* 改进列表优化 */
+    .improvement-list {
+        flex-wrap: nowrap; /* 强制单行（溢出时滚动） */
+        gap: 0.5rem; /* 缩小列表项间距 */
+        padding-right: 0.5rem; /* 防止文字被遮挡 */
+        overflow-x: auto; /* 超出部分横向滚动 */
+    }
+
+    .improvement-item {
+        font-size: 0.8rem; /* 列表项字体缩小 */
+        padding: 0.5rem 0.8rem; /* 减少内边距 */
+        border-radius: 20px; /* 更圆润的边角 */
+    }
+
+    /* 雷达图优化 */
+    .radar-chart {
+        max-width: 300px; /* 限制最大宽度 */
+        height: 300px; /* 固定高度 */
+        margin: 0 auto; /* 居中显示 */
+    }
+
+    .radar-axis {
+        border-width: 1px; /* 缩小轴线粗细 */
+    }
+
+    .radar-label {
+        font-size: 0.8rem; /* 标签字体缩小 */
+    }
+
+    .radar-point {
+        width: 10px; /* 缩小点大小 */
+        height: 10px;
+    }
+
+    /* 装饰性元素隐藏 */
+    #benefits:before {
+        background: none; /* 移除径向渐变背景 */
+    }
+}
+
+@media (max-width: 480px) {
+    .benefit-card {
+        border-left: none; /* 超小屏移除左边框 */
+        border-radius: 10px; /* 添加圆角提升触控感 */
+        box-shadow: 0 2px 8px rgba(0, 80, 160, 0.1); /* 更柔和的阴影 */
+    }
+
+    .improvement-list {
+        overflow-x: visible; /* 超小屏允许列表换行 */
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .improvement-item {
+        font-size: 0.75rem; /* 进一步缩小列表项 */
+        padding: 0.4rem 0.6rem;
+    }
+
+    .radar-chart {
+        max-width: 250px; /* 更小屏幕调整尺寸 */
+        height: 250px;
+    }
+}
 /* =========================== end compact ============================= */
 
 

@@ -93,6 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// ===================================== sidebar ==================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggle-qms");
+    const navList = document.getElementById("qms-List");
+
+    toggleBtn.addEventListener("click", function () {
+        navList.classList.toggle("collapsed");
+    });
+});
+
+// ======================================== end sidebar ==========================
+
 
 
 
