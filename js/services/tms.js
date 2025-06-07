@@ -358,15 +358,15 @@ function updateProcessDisplay(stepIndex) {
     const detailsContainer = document.getElementById('processDetails');
     detailsContainer.innerHTML = `
                 <div class="process-header">
-                    <div class="process-icon pulse">
+                    <div class="mes-process-icon pulse">
                         <i class="${step.icon}"></i>
                     </div>
                     <div>
-                        <h3 class="process-title">${step.title}</h3>
+                        <h3 class="mes-process-title">${step.title}</h3>
                         <p class="process-subtitle">流程能力评估: ${Math.round(step.radarData.reduce((a, b) => a + b, 0) / step.radarData.length)}%</p>
                     </div>
                 </div>
-                <p class="process-desc">${step.desc}</p>
+                <p class="mes-process-desc">${step.desc}</p>
 
                 <div class="process-stats">
                     ${step.stats.map(stat => `

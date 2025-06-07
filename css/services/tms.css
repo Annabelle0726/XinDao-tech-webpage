@@ -672,7 +672,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.process-icon {
+.mes-process-icon {
     transform: translateY(-4px);
     width: 48px;
     height: 48px;
@@ -688,7 +688,7 @@ section {
     overflow: hidden;
 }
 
-.process-title {
+.mes-process-title {
     font-size: 1.4rem;
     color: #fff;
     margin-bottom: 0.3rem;
@@ -699,7 +699,7 @@ section {
     color: #a0d2eb;
 }
 
-.process-desc {
+.mes-process-desc {
     font-size: 0.95rem;
     color: #c1d1e8;
     line-height: 1.8;
@@ -853,13 +853,13 @@ section {
         gap: 1rem;
     }
 
-    .process-icon {
+    .mes-process-icon {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
     }
 
-    .process-title {
+    .mes-process-title {
         font-size: 1.2rem;
     }
 
@@ -867,7 +867,7 @@ section {
         font-size: 0.85rem;
     }
 
-    .process-desc,
+    .mes-process-desc,
     .process-highlights li {
         font-size: 0.92rem;
     }

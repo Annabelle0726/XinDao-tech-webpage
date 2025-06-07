@@ -35,13 +35,15 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/services/ems.css">
+
     <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/services/ems.css">
+
 </head>
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top transparent">
+<header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../index.html" class="logo d-flex align-items-center">
             <img src="../assets/img/logo.png" alt="">
@@ -137,10 +139,23 @@
 <!--=========== hero ============= -->
 <section class="hero" id="hero">
 
+    <div class="hero-ems-content">
+        <h1 class="hero-title">EMS能源管理系统解决方案</h1>
+        <h2 class="hero-subtitle">打造能源透明化与智能控制一体化平台</h2>
+        <p class="hero-description">
+            芯导EMS以“可视、可控、可优”为核心理念，构建一体化能源数据平台，助力制造企业实现能效跃迁与绿色低碳转型，赋能每一度能源的最大价值
+        </p>
+        <a href="#pain" class="hero-btn">了解更多</a>
+
+    </div>
+    <img src="../assets/img/ems/efficient_energy_management_ntpc_school_of_management.png"
+         alt="" style="object-fit: cover; width: 400px; height: 400px;">
 
 </section>
 <!-- ================ end hero =================== -->
-<div class="gradient-transition1"></div>
+
+
+<div class="gradient-transition"></div>
 
 <!-- ============ pain =============== -->
 <section id="pain" class="pain">
@@ -148,16 +163,19 @@
 </section>
 <!-- ================ end pain ======================== -->
 
-<div class="gradient-transition2"></div>
+
+<div class="gradient-transition"></div>
 
 
-<!-- ============= feature ============== -->
-<section class="feature-section" id="features">
+<!-- ============= workflow ============== -->
+<section class="workflow" id="workflow">
 
 </section>
-<!--------------------- end feature -------------------->
+<!--------------------- end workflow -------------------->
 
-<div class="gradient-transition3"></div>
+
+<div class="gradient-transition"></div>
+
 
 <!-- ============= architecture =============== -->
 <section class="architecture-section" id="architecture">
@@ -261,41 +279,511 @@
 
 <!-- ================= end architecture====================== -->
 
-<div class="gradient-transition4"></div>
-<!--==================== ad ================================-->
-<section class="advantages-circular adv-background" id="advantages">
-    <div class="container">
+<div class="gradient-transition"></div>
 
+
+<!--==================== core ================================-->
+
+<section id="core-highlights">
+    <div class="circuit-board" id="circuit"></div>
+
+    <div class="section-header">
+        <h2 class="section-title">能源系统核心功能</h2>
+        <p class="section-subtitle">芯导EMS能源管理系统的创新设计和技术优势，助力企业实现能源智能化管理</p>
+    </div>
+
+    <div class="core-highlights-container">
+        <div class="energy-central">
+            <div class="central-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h2 class="central-title">智能能源中枢</h2>
+            <p class="central-desc">基于AI的核心控制系统，实现能源管理智能化</p>
+        </div>
+
+        <!-- 1 -->
+        <div class="core-node node-1">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="node-title">实时能源监控</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统提供毫秒级数据采集能力，实时监控电力、水力、燃气、蒸汽等多种能源介质的消耗情况。通过先进的传感器网络，系统能够捕捉到设备级能耗数据，精确到每一台机器的能耗曲线。</p>
+                    <p>
+                        监控中心采用三维可视化技术，构建企业能源流动全景图，直观展示能源在企业内的流动路径和使用情况。当能耗超过预设阈值时，系统自动触发多级告警机制，通过短信、邮件、APP推送等多种方式即时通知管理人员。</p>
+                    <p>
+                        系统支持自定义监控看板，可根据不同部门需求展示相关能耗指标。历史数据存储周期可达10年，支持快速回溯分析。通过API接口，可与第三方系统无缝集成，实现数据共享。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="core-node node-2">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="node-title">智能能效分析</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统内置先进的AI分析引擎，对海量能耗数据进行深度挖掘。通过机器学习算法，系统能够识别出潜在的节能机会和能源浪费点，生成详细的能效诊断报告。</p>
+                    <p>
+                        分析模块支持多维度数据对比，包括时间维度（同比、环比）、设备维度、产线维度和产品维度等。系统能够自动建立能耗基准线，实时监测能耗偏差，并提供优化建议。通过能效分析，企业平均可降低15-25%的能源成本。</p>
+                    <p>
+                        系统提供能效对标功能，支持与行业标杆企业进行对比分析。基于分析结果，系统可自动生成节能改造建议，包括投资回报率计算和实施方案。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="core-node node-3">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3 class="node-title">动态负荷调度</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        基于电价波动和设备特性，系统智能规划能源使用时段，最大化利用谷电降低能耗成本。负荷调度引擎能够根据生产计划和设备优先级，自动优化设备启停顺序。</p>
+                    <p>
+                        在电网高峰时段，系统自动启动需求响应策略，调节非关键设备运行状态，确保生产连续性的同时降低峰值负荷。系统支持与电网公司需求响应平台对接，参与电网调峰，获取额外收益。通过智能调度，企业可降低20-35%的峰值电费。</p>
+                    <p>
+                        系统提供负荷预测功能，准确率高达95%。基于预测结果，可提前调整生产计划，优化能源使用。调度策略支持人工审核和自动执行两种模式，确保生产安全。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="core-node node-4">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="node-title">碳足迹管理</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>系统精确计算企业生产过程中产生的碳排放量，建立完整的碳足迹追踪体系。采用国际通用的GHG
+                        Protocol标准，覆盖范围一、范围二和范围三碳排放。</p>
+                    <p>通过可视化仪表盘展示碳排放热点区域，帮助企业识别减排机会。系统提供碳减排路径规划，设定阶段性减排目标，并监控实施进度。结合碳交易市场数据，为企业提供碳资产管理和交易建议。系统自动生成符合ISO
+                        14064标准的碳报告，满足环保合规要求。</p>
+                    <p>
+                        系统支持碳配额管理，实时跟踪企业碳配额使用情况。提供碳减排项目评估工具，帮助企业选择最优减排方案。与政府监管平台对接，实现碳排放数据一键报送。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="core-node node-5">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="node-title">设备能效优化</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统实时监测关键设备的运行效率和能耗指标，包括电机、压缩机、制冷机组等高耗能设备。通过设备性能曲线分析，识别设备运行在低效区的情况。</p>
+                    <p>
+                        系统提供设备级能效对标功能，支持同类型设备能效排名，发现能效落后设备。基于设备运行数据，系统生成设备能效优化方案，包括参数调整、维护建议和更换建议。实施优化方案后，设备平均能效可提升8-15%。</p>
+                    <p>
+                        系统建立设备健康档案，记录全生命周期能效表现。提供设备能效预警功能，当能效下降超过阈值时自动提醒。支持设备能效模拟分析，评估不同工况下的能效表现。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="core-node node-6">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h3 class="node-title">可再生能源整合</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统无缝集成光伏发电、风力发电等可再生能源，优化传统能源与清洁能源的协同使用。通过智能预测算法，系统能够预测未来24小时可再生能源发电量。</p>
+                    <p>
+                        基于发电预测和负荷预测，系统自动优化能源调度策略，最大化可再生能源消纳比例。系统支持微电网运行模式，在电网故障时自动切换到离网运行，保障关键负荷供电。通过可再生能源整合，企业可降低10-30%的电网购电成本。</p>
+                    <p>
+                        系统提供可再生能源发电效率分析，识别影响发电量的关键因素。支持多种储能系统接入，优化储能充放电策略。提供绿电证书管理功能，追踪可再生能源使用情况。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="core-node node-7">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="node-title">智能报告系统</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统提供强大的报表功能，支持自定义报表模板和自动化报告生成。预置多种行业标准报表模板，包括能源审计报告、节能评估报告、碳排放报告等。</p>
+                    <p>
+                        报表系统支持多层级数据钻取，从企业级报表到设备级明细数据。系统能够自动识别异常数据点，并在报告中突出显示。支持与企业现有BI系统集成，实现能源数据与生产、财务数据的综合分析。报告可通过多种格式导出，并支持定时自动发送。</p>
+                    <p>
+                        系统提供报告智能解读功能，自动生成关键发现和建议。支持多语言报告生成，满足国际化企业需求。报告数据可视化程度高，支持交互式图表展示。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="core-node node-8">
+            <div class="node-header">
+                <div class="node-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="node-title">移动监控平台</h3>
+                <div class="node-chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="node-content">
+                <div class="node-desc">
+                    <p>
+                        系统提供全功能移动APP，支持iOS和Android平台。通过移动端，管理人员可随时随地监控企业能耗状况，接收实时告警通知，查看能效分析报告。</p>
+                    <p>
+                        APP支持关键数据可视化展示，包括实时能耗曲线、能耗排名、节能目标进度等。管理人员可通过移动端远程控制设备，调整运行参数，审批能源工单。系统支持离线模式，在网络中断时仍可查看最近数据，网络恢复后自动同步。</p>
+                    <p>
+                        移动端提供语音控制功能，支持语音查询能耗数据。集成消息推送功能，重要告警信息即时送达。支持多人协同工作，能源工单可分配给特定人员处理。</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+<!--==================== end core ================================-->
+
+
+<div class="gradient-transition"></div>
+
+
+<!--==================== ad ================================-->
+<section id="energy-highlight" class="highlight-section">
+    <div class="container">
+
+        <div class="energy-header">
+            <h1 class="section-title">能源管理系统 · 系统亮点</h1>
+            <p class="section-subtitle">
+                芯导EMS涵盖七大系统亮点，涵盖能源感知、智能调控、碳排放追踪、能效分析等多方面功能，协助企业全面提升能源利用效率，实现绿色可持续发展。
+            </p>
+        </div>
+
+        <div class="insight-grid">
+
+            <!-- 卡片1 -->
+            <div class="insight-block">
+                <h3 class="insight-title">AI能效优化引擎</h3>
+                <p class="insight-desc">
+                    系统利用人工智能算法实时监测设备运行状态，识别高耗能环节并提供针对性优化建议。持续学习设备历史行为，主动调整运行参数，实现能源效率最大化。
+                </p>
+            </div>
+
+            <!-- 卡片2 -->
+            <div class="insight-block span-2">
+                <div class="insight-content"><h3 class="insight-title">碳排放全流程追踪</h3>
+                    <p class="insight-desc">
+                        自动采集电力、蒸汽、燃气等碳源数据，按国际碳核算标准生成多维碳报告，并辅助企业制定减排路径，实现透明化、合规化碳管理。
+
+                    </p>
+                </div>
+                <div class="insight-feature-img"><img
+                        src="https://www.axiomtek.com/Download/images/carbon-emission-tracking.jpg" alt=""></div>
+
+            </div>
+
+            <!-- 卡片3 -->
+            <div class="insight-block">
+                <h3 class="insight-title">智能负荷动态调度</h3>
+                <p class="insight-desc">
+                    根据实时电价、设备优先级与工艺需求自动排程负载，平衡产能与能耗，特别在用电高峰期主动执行削峰策略，提升电能使用性价比。
+                </p>
+            </div>
+
+            <!-- 卡片4 -->
+            <div class="insight-block">
+                <h3 class="insight-title">能源流可视化分析</h3>
+                <p class="insight-desc">
+                    构建多能源统一展示平台，结合3D虚拟工厂和多维热力图，实现能源从源头到终端的流向追踪与趋势识别，助力现场管理人员快速判断与优化。
+                </p>
+            </div>
+
+            <!-- 卡片5 -->
+            <div class="insight-block">
+                <h3 class="insight-title">远程集中控制策略</h3>
+                <p class="insight-desc">
+                    利用IoT设备对各类能源终端进行远程控制，可按时段、场景设定执行策略。支持预警联动控制与APP远程管理，增强运行弹性与安全性。
+                </p>
+            </div>
+
+            <!-- 卡片6 -->
+            <div class="insight-block span-2">
+                <div><h3 class="insight-title">多能源协同管理</h3>
+                    <p class="insight-desc">
+                        实现电、水、气、蒸汽等多能源统一管理，打通信息孤岛，支持清洁能源接入与互补控制。以结构化视图辅助企业规划最优能源组合。
+                    </p></div>
+                <div class="insight-feature-img"><img
+                        src="https://energy.mit.edu/wp-content/uploads/2022/07/Option-2_1000x667.jpg" alt=""></div>
+            </div>
+
+            <!-- 7 -->
+            <div class="insight-block">
+                <h3 class="insight-title">能耗预测与预算控制</h3>
+                <p class="insight-desc">
+                    系统基于历史数据与未来计划生成能源消耗预测模型，按部门、产线进行能源预算分解，提供偏差报警与成本对比，强化能源财务管理能力。
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!--------------------- end ad ----------------------------->
 
-<div class="gradient-transition5"></div>
-<!------------------------- process ------------------------>
+<div class="gradient-transition"></div>
 
-<section id="process">
 
+<!------------------------- benefit ------------------------>
+<section id="benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">能源管理核心效益</h2>
+            <p class="section-subtitle">芯导EMS系统为企业带来的全方位价值，实现经济效益与环境效益的双赢</p>
+        </div>
+
+        <div class="energy-station">
+            <!-- 左列 -->
+            <div class="station-column">
+                <div class="benefit-module">
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="module-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h2 class="module-title">经济效益</h2></div>
+                    <div class="module-desc">
+                        <p>
+                            通过智能调度和能效优化，显著降低企业能源支出，提高整体盈利能力。系统自动分析电价波动，优化设备运行时间，最大化利用谷电。</p>
+                    </div>
+                    <div class="module-details">
+                        <p>平均实现25-40%的能源成本节约，部分高耗能企业可达50%以上</p>
+                        <p>通过需求响应参与电网调峰，获取额外补贴收益</p>
+                        <p>减少设备维护成本，延长关键设备使用寿命15-20%</p>
+                        <p>优化能源采购策略，降低能源单价8-12%</p>
+                        <p>提高产能利用率，单位产品能耗降低20-30%</p>
+                    </div>
+                    <div class="toggle-details">
+                        <span>查看更多效益</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="benefit-module">
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="d-flex gap-2 align-items-center">
+                            <div class="module-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h2 class="module-title">运营效益</h2></div>
+                    </div>
+
+                    <div class="module-desc">
+                        <p>
+                            提升能源管理精细化水平，实现数据驱动的决策。自动化监控和预警减少人工巡检工作量，提高管理效率。</p>
+                    </div>
+                    <div class="module-details">
+                        <p>实现能源数据95%以上的准确率和实时性</p>
+                        <p>减少能源管理人工成本30-50%，降低人为错误</p>
+                        <p>设备故障预警准确率达90%，减少非计划停机</p>
+                        <p>生产与能源数据联动分析，优化生产排程</p>
+                        <p>实现多厂区能源数据统一管理，提升集团管控能力</p>
+                    </div>
+                    <div class="toggle-details">
+                        <span>查看更多效益</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中心转换站 -->
+            <div class="station-center">
+                <div class="energy-converter">
+                    <div class="converter-pulse" style="animation-delay: 0s;"></div>
+                    <div class="converter-pulse" style="animation-delay: 1s;"></div>
+                    <div class="converter-pulse" style="animation-delay: 2s;"></div>
+                    <div class="converter-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h2 class="converter-title">能源效益转换站</h2>
+                    <p class="converter-desc">芯导EMS系统将能源数据转化为企业价值</p>
+                </div>
+            </div>
+
+            <!-- 右列 -->
+            <div class="station-column">
+                <div class="benefit-module">
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="module-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h2 class="module-title">环境效益</h2></div>
+                    <div class="module-desc">
+                        <p>
+                            显著降低企业碳足迹，助力实现碳中和目标。系统精确追踪碳排放，优化能源结构，提高清洁能源使用比例。</p>
+                    </div>
+                    <div class="module-details">
+                        <p>实现30-50%的碳排放减少，满足日益严格的环保法规要求</p>
+                        <p>提高可再生能源利用率20-35%，降低对传统能源依赖</p>
+                        <p>减少废弃物产生，降低环境治理成本15-25%</p>
+                        <p>提升企业ESG评级，增强资本市场认可度</p>
+                        <p>支持碳交易市场参与，创造额外碳资产收益</p>
+                    </div>
+                    <div class="toggle-details">
+                        <span>查看更多效益</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="benefit-module">
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="module-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h2 class="module-title">社会效益</h2></div>
+                    <div class="module-desc">
+                        <p>提升企业社会形象和品牌价值，增强市场竞争力。绿色能源实践获得政府支持和消费者认可。</p>
+                    </div>
+                    <div class="module-details">
+                        <p>提升企业绿色形象，客户满意度提高80%以上</p>
+                        <p>获得政府绿色补贴和税收优惠，降低合规成本</p>
+                        <p>增强员工环保意识，提高团队凝聚力</p>
+                        <p>作为行业标杆案例，提升品牌影响力2-3倍</p>
+                        <p>提高产品绿色竞争力，开拓环保意识强的消费市场</p>
+                    </div>
+                    <div class="toggle-details">
+                        <span>查看更多效益</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 能源管道 -->
+            <div class="energy-pipeline" style="top: 20%; left: 25%; width: 200px; transform: rotate(0deg);"></div>
+            <div class="energy-pipeline" style="top: 30%; left: 25%; width: 200px; transform: rotate(0deg);"></div>
+            <div class="energy-pipeline" style="top: 80%; left: 25%; width: 200px; transform: rotate(0deg);"></div>
+            <div class="energy-pipeline" style="top: 70%; left: 25%; width: 200px; transform: rotate(0deg);"></div>
+
+            <div class="energy-pipeline" style="top: 20%; right: 25%; width: 200px; transform: rotate(180deg);"></div>
+            <div class="energy-pipeline" style="top: 30%; right: 25%; width: 200px; transform: rotate(180deg);"></div>
+            <div class="energy-pipeline" style="top: 80%; right: 25%; width: 200px; transform: rotate(180deg);"></div>
+            <div class="energy-pipeline" style="top: 70%; right: 25%; width: 200px; transform: rotate(180deg);"></div>
+
+            <!-- 能源流动 -->
+            <div class="energy-flow" style="top: 20%; left: 25%;"></div>
+            <div class="energy-flow" style="top: 30%; left: 25%; animation-delay: 0.5s;"></div>
+            <div class="energy-flow" style="top: 80%; left: 25%; animation-delay: 1s;"></div>
+            <div class="energy-flow" style="top: 70%; left: 25%; animation-delay: 1.5s;"></div>
+
+            <div class="energy-flow" style="top: 20%; right: 25%; animation-delay: 0.5s;"></div>
+            <div class="energy-flow" style="top: 30%; right: 25%; animation-delay: 1s;"></div>
+            <div class="energy-flow" style="top: 80%; right: 25%; animation-delay: 1.5s;"></div>
+            <div class="energy-flow" style="top: 70%; right: 25%; animation-delay: 2s;"></div>
+        </div>
+    </div>
 </section>
 
-
-<!----------------------- end process --------------------------------->
-
-
-<!----------------------------------------------------->
-<div class="gradient-transition5"></div>
+<!----------------------- end benefit --------------------------------->
 
 
-<div class="gradient-transition6"></div>
+<div class="gradient-transition"></div>
 
 <!---------------------------- aftersale -------------------->
+<section class="support-dashboard-section" id="support">
+    <div class="support-dashboard-container">
+        <div class="section-header">
+            <h2 class="section-title">售后服务</h2></div>
 
+        <div class="support-flex-features">
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1749274389277" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="3428" width="48" height="48">
+                        <path d="M871.673333 770.813333a53.393333 53.393333 0 0 1 0 75.42l-37.713333 37.713334c-27.866667 27.866667-64.52 44.84-108.946667 50.46a264.333333 264.333333 0 0 1-33.213333 2.04c-32.333333 0-67.22-5.46-104.146667-16.32C487.42 890.666667 382 824.226667 290.9 733.1S133.333333 536.586667 103.873333 436.346667c-14.666667-49.94-19.493333-96.153333-14.28-137.333334 5.62-44.426667 22.593333-81.08 50.46-108.946666l37.713334-37.713334a53.393333 53.393333 0 0 1 75.42 0l165.94 165.933334a53.4 53.4 0 0 1 0 75.426666l-37.713334 37.686667c-21.333333 21.333333-0.1 90.413333 60.34 150.846667s129.486667 81.7 150.846667 60.34l37.713333-37.713334a53.4 53.4 0 0 1 75.426667 0zM746.666667 341.333333h64v21.333334a21.333333 21.333333 0 0 0 42.666666 0V277.333333a21.333333 21.333333 0 0 0-42.666666 0v21.333334h-34.4l33.333333-99.92a21.333333 21.333333 0 0 0-40.48-13.493334l-42.666667 128A21.333333 21.333333 0 0 0 746.666667 341.333333z m-96.186667-61.033333c-17.333333 10.24-30.666667 22.58-39.686667 36.666667A83.646667 83.646667 0 0 0 597.333333 362.666667a21.333333 21.333333 0 0 0 21.333334 21.333333h85.333333a21.333333 21.333333 0 0 0 0-42.666667h-58.093333q7.9-13.42 26.28-24.3C706.46 296.78 725.333333 267.526667 725.333333 234.666667a64 64 0 0 0-128 0 21.333333 21.333333 0 0 0 42.666667 0 21.333333 21.333333 0 0 1 42.666667 0c0 22-17.5 36.96-32.186667 45.633333zM960 256a63.726667 63.726667 0 0 0-21.333333 3.653333V192a21.333333 21.333333 0 0 0-42.666667 0v170.666667a21.333333 21.333333 0 0 0 42.666667 0v-42.666667a21.333333 21.333333 0 0 1 42.666666 0v42.666667a21.333333 21.333333 0 0 0 42.666667 0v-42.666667a64.073333 64.073333 0 0 0-64-64z"
+                              fill="#80b918" p-id="3429"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>7×24小时支持</h4>
+                    <p>400热线 + 远程诊断</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1749274488006" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="4775" id="mx_n_1749274488008" width="48" height="48">
+                        <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#11B880"
+                              p-id="4776"></path>
+                        <path d="M644.992 256A179.2 179.2 0 0 0 512 314.944 182.016 182.016 0 0 0 379.008 256 192 192 0 0 0 192 452.224a197.408 197.408 0 0 0 7.392 53.376h127.2a1000.288 1000.288 0 0 0 48.352-98.24c18.368-36.48 56.256-28.992 64 11.52l27.52 144.32 27.424-60.8c16.96-36.608 54.848-32 64.96 7.52l9.6 37.408 26.88-34.56 7.52-10.304h108.32a28.8 28.8 0 0 1 0 56.832h-83.904l-33.824 45.504c-21.696 29.76-57.024 21.6-66.592-15.52l-6.112-23.808-0.672-2.752-29.952 70.208c-17.504 37.792-55.84 31.136-63.68-10.048l-27.52-144.8-37.312 70.208-7.232 14.336h-130.432c6.944 12.096 14.176 23.04 20.672 32.896 65.408 99.2 229.696 221.6 236.8 226.08a52.416 52.416 0 0 0 30.56 10.432 49.344 49.344 0 0 0 30.592-10.432c7.104-5.216 170.656-127.584 236.8-226.08a251.648 251.648 0 0 0 52.608-143.264A192 192 0 0 0 645.024 256"
+                              fill="#FFFFFF" p-id="4777"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>定期健康检查</h4>
+                    <p>季度性能优化报告</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1749274566161" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="8205" width="48" height="48">
+                        <path d="M512 2.66666667C233.62399967 2.66666667 8 228.29066634 8 506.66666667s225.62399967 504 504 504 504-225.62399967 504-504-225.62399967-504-504-504zM176.00000033 497.87466623c0-2.35199967 0.27999956-4.64800022 0.67199934-6.88799967C176.39200011 489.81066623 176.00000033 488.690667 176.00000033 487.45866656c0-3.528 0.83999967-6.77600044 2.016-9.91199967C192.85599978 305.738667 336.32800044 170.666667 512 170.666667c78.12 0 149.57599978 27.10399978 206.52799978 71.90399967l35.56000055-34.55199956a28.84000022 28.84000022 0 0 1 55.49600011 10.63999912v134.40000066c0 15.90399956-12.87999956 28.78400011-28.78400011 28.78400011h-134.40000066a28.78400011 28.78400011 0 0 1-21.83999934-47.31999989l-0.22400044-0.28000055 40.37600011-39.312A259.72800033 259.72800033 0 0 0 512 245.09066667c-141.23200022 0-256.032 112.00000022-261.12800011 252h-0.05600011l0.05600011 0.78399956a37.40800022 37.40800022 0 1 1-74.87199956 0zM847.99999967 506.66666667a335.99999967 335.99999967 0 0 1-335.99999967 335.99999967 331.18400011 331.18400011 0 0 1-205.91199956-71.95999978l-38.24800088 37.96800033a28.05599967 28.05599967 0 0 1-17.136 13.32799945l-1.45599989 1.512-0.05600011-1.17599934c-2.07200011 0.33599967-3.91999978 1.12000022-5.99199989 1.11999923a28.78400011 28.78400011 0 0 1-28.78400011-28.78399912v-134.40000066c0-15.90399956 12.87999956-28.78400011 28.78400011-28.78400011h108.92000011l0.72800044-0.72799945 0.72799945 0.72799945H377.60000033c15.90399956 0 28.78400011 12.87999956 28.78400011 28.78400011a27.27200011 27.27200011 0 0 1-9.80000044 20.664l-37.46400033 37.18399978a258.72000033 258.72000033 0 0 0 152.88000033 50.17600055 261.576 261.576 0 0 0 261.576-260.90399967c-0.16800033-1.56800011-0.44799989-3.08000011-0.44799989-4.70400033 0-0.67200033 0.16800033-1.34399967 0.22399945-2.016a39.312 39.312 0 0 1-0.16799934-3.58400011h0.56000011a37.35200011 37.35200011 0 0 1 73.80799945 0h0.05600011l0.05600011 1.45599989c0.05600011 1.39999978 0.33599967 2.68800033 0.33599967 4.08800011l-0.11199923 1.34399967L847.99999967 506.66666667z"
+                              fill="#36ab60" p-id="8206"></path>
+                    </svg>
 
-<section id="aftersale">
-
+                </div>
+                <div class="support-text">
+                    <h4>免费更新服务</h4>
+                    <p>国标变更与安全补丁</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<!------------------- end aftersale --------------------------------->
 
-<div class="gradient-transition7"></div>
-<!----------------------------- end aftersale ----------------->
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
@@ -418,7 +906,7 @@
         <li><a href="#workflow"><i class="bi bi-kanban me-1"></i> 实施流程</a></li>
         <li><a href="#architecture"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
         <li><a href="#core"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
-        <li><a href="#highlights"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
+        <li><a href="#energy-highlight"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
         <li><a href="#compact"><i class="bi bi-bar-chart-line me-1"></i> 效益分析</a></li>
         <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
         <li>
@@ -451,6 +939,5 @@
 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 <script src="../js/main.js"></script>
-<script src="../js/transparent-nav.js"></script>
 </body>
 </html>

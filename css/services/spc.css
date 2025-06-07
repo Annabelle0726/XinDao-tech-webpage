@@ -490,7 +490,7 @@ section {
     padding: 1.2rem;
 }
 
-.process-card {
+.mes-process-card {
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -502,12 +502,12 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.process-card:hover {
+.mes-process-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 150, 199, 0.15);
 }
 
-.process-card:before {
+.mes-process-card:before {
     content: '';
     position: absolute;
     top: 0;
@@ -580,7 +580,7 @@ section {
         padding: 0.4rem 0.8rem;
     }
 
-    .process-card {
+    .mes-process-card {
         padding: 1rem; /* 减少卡片内边距 */
     }
 
@@ -617,7 +617,7 @@ section {
 
 @media (hover: none) {
     .phase-step:hover,
-    .process-card:hover {
+    .mes-process-card:hover {
         transform: none; /* 在不支持悬停的设备上禁用变换效果 */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 使用更适合触摸设备的阴影 */
     }

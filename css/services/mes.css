@@ -28,6 +28,23 @@ section {
     0 5px 30px rgba(0, 0, 0, 0.1);
 }
 
+.divider {
+    width: 100%;
+    height: 2px;
+    position: relative;
+    z-index: 1;
+    filter: blur(1.5px);
+    opacity: 0.9;
+    margin-bottom: -1px;
+    background: linear-gradient(
+            90deg,
+            rgba(74, 140, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(74, 140, 255, 0.05) 100%
+    );
+}
+
+
 .container {
     padding: 1rem 2rem;
 }
@@ -174,18 +191,408 @@ section {
         font-size: 1rem;
     }
 }
-
-
-
-
 /* ============== end hero ==================== */
 
-/* ============ MES 架构图样式 ============== */
-#mes-architecture {
-    background: linear-gradient(135deg, #f8fbff, #e6f4ff);
-    border-top: 4px solid #6aaeff;
-    border-bottom: 4px solid #6aaeff;
+
+/* ============== pain ==================== */
+
+#mes-painpoints .container {
+    position: relative;
+    padding: 1rem 0.75rem;
 }
+
+#mes-painpoints .painpoints-grid {
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    justify-content: center;
+}
+
+#mes-painpoints .painpoint-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(77, 166, 255, 0.3);
+    padding: 2.2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s forwards;
+    z-index: 2;
+}
+
+#mes-painpoints .painpoint-card:nth-child(4n+1),
+#mes-painpoints .painpoint-card:nth-child(4n+4) {
+    transform: translateY(-40px);
+}
+
+#mes-painpoints .painpoint-card:nth-child(4n+2),
+#mes-painpoints .painpoint-card:nth-child(4n+3) {
+    transform: translateY(40px);
+}
+
+#mes-painpoints .painpoint-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 25px 60px rgba(0, 102, 204, 0.5);
+}
+
+#mes-painpoints .painpoint-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#mes-painpoints .painpoint-title i {
+    font-size: 1.8rem;
+    color: var(--highlight);
+}
+
+#mes-painpoints .painpoint-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #c2e0ff;
+    margin-bottom: 1.8rem;
+}
+
+#mes-painpoints .painpoint-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+#mes-painpoints .stat-label {
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+#mes-painpoints .stat-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+#mes-painpoints .progress-container {
+    margin-top: 1.2rem;
+}
+
+#mes-painpoints .progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+#mes-painpoints .progress-title {
+    font-size: 0.95rem;
+    color: var(--light);
+}
+
+#mes-painpoints .progress-value {
+    font-size: 1.05rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+#mes-painpoints .progress-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+#mes-painpoints .progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    width: 0;
+    position: relative;
+    transition: width 1.5s ease-out;
+}
+
+#mes-painpoints .progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressGlow 2s infinite;
+}
+
+#mes-painpoints .factory-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.05;
+    background:
+            radial-gradient(circle at 20% 30%, var(--accent) 0%, transparent 20%),
+            radial-gradient(circle at 80% 70%, var(--secondary) 0%, transparent 20%);
+}
+
+#mes-painpoints .circuit-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(rgba(77, 166, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 166, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+#mes-painpoints .z-connector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#mes-painpoints .z-line {
+    position: absolute;
+    stroke: rgba(0, 201, 255, 0.3);
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 5, 5;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progressGlow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 1100px) {
+    #mes-painpoints .painpoints-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #mes-painpoints .painpoint-card {
+        transform: translateY(0) !important;
+    }
+
+    #mes-painpoints .section-title {
+        font-size: 2.4rem;
+    }
+
+    #mes-painpoints .z-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #mes-painpoints .section-title {
+        font-size: 2rem;
+    }
+
+    #mes-painpoints .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    #mes-painpoints .painpoint-card {
+        padding: 1.8rem;
+    }
+}
+
+/* ============== end pain ==================== */
+
+
+
+/* ============ process ============== */
+.mes-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.mes-process-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(77, 166, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 0.88rem;
+}
+
+.mes-process-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.4);
+}
+
+.mes-process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+}
+
+.mes-process-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.mes-process-icon {
+    font-size: 1.8rem;
+    color: var(--highlight);
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+
+.mes-process-card:hover .mes-process-icon {
+    transform: scale(1.1);
+}
+
+.mes-process-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--light);
+    margin: 0;
+}
+
+.mes-process-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+}
+
+.mes-process-meta .meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.meta-item i {
+    font-size: 1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+}
+
+.meta-value {
+    font-weight: 500;
+    color: var(--light);
+}
+
+.mes-process-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #c2e0ff;
+    margin-bottom: 1.5rem;
+}
+
+.mes-process-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.mes-process-card.active .mes-process-meta {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.meta-item i {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.meta-label {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.meta-value {
+    color: var(--light);
+}
+
+
+@media (max-width: 1024px) {
+    .mes-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mes-process-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+/* ============ end process ============== */
+
+/* ============ MES 架构图样式 ============== */
+/*#mes-architecture {*/
+/*    background: linear-gradient(135deg, var(--darker-blue), var(--dark-blue));*/
+/*    border-top: 4px solid #6aaeff;*/
+/*    border-bottom: 4px solid #6aaeff;*/
+/*}*/
+
+/*#mes-architecture .section-header .section-title {*/
+/*    background: linear-gradient(90deg, var(--darker-blue) 0%, var(--dark-blue) 100%);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*}*/
+
+/*#mes-architecture .section-subtitle {*/
+/*    color: var(--blue-2);*/
+/*}*/
 
 #mes-architecture #grid-container {
     padding: 0 40px;
@@ -201,15 +608,22 @@ section {
     text-align: center;
     color: #003366;
     box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer !important;
     user-select: none;
 }
 
-#grid-container .card:hover {
+#grid-container .layer0 .card {
+    cursor: auto !important;
+}
+
+#grid-container .layer .card:hover {
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+}
+
+#grid-container .layer .card:hover {
     background: #d0e7ff;
     box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
-    transform: translateY(-2px);
+    /*transform: translateY(-1px);*/
 }
 
 #grid-container .card.small {
@@ -257,10 +671,10 @@ section {
     background: #ffffff;
 }
 
-/* ============ Toast 样式 ============== */
+/* ============ Toast ============== */
 .toast-container {
     position: fixed;
-    bottom: 32px;
+    bottom: 3rem;
     right: 32px;
     z-index: 9999;
     display: flex;
@@ -501,7 +915,133 @@ section {
     line-height: 1.5;
 }
 
+@media (max-width: 1024px) {
+    #core .content-wrapper {
+        flex-direction: column;
+    }
 
+    #core .details-section {
+        min-width: 100%;
+    }
+
+    .visual-section {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #core .details-section {
+        flex-direction: column;
+    }
+
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .scene {
+        height: 400px;
+    }
+
+    .cube {
+        width: 220px;
+        height: 220px;
+    }
+
+    .cube-face {
+        padding: 12px;
+    }
+
+    .cube-face i {
+        font-size: 2.4rem;
+        margin-bottom: 12px;
+    }
+
+    .cube-face h3 {
+        font-size: 1.1rem;
+    }
+
+    .cube-face p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #core {
+        min-height: auto;
+    }
+
+    #core .content-wrapper {
+        gap: 16px;
+    }
+
+    #core .details-section {
+        padding: 20px 16px;
+    }
+
+    #core .details-section .section-title {
+        font-size: 1.2rem;
+    }
+
+    #core .details-section .feature-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    #core .details-section .feature-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .controls {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 8px;
+        padding: 16px;
+    }
+
+    .control-item {
+        padding: 10px 8px;
+    }
+
+    .control-item i {
+        font-size: 1.2rem;
+    }
+
+    .scene {
+        height: 350px;
+    }
+
+    .cube {
+        width: 180px;
+        height: 180px;
+    }
+
+    .cube-face {
+        padding: 10px;
+    }
+
+    .cube-face i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .cube-face h3 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .cube-face p {
+        font-size: 0.7rem;
+    }
+
+    .feature-highlight h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature-highlight li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+}
 /* ====================== end core ========================= */
 
 
@@ -548,24 +1088,24 @@ section {
     height: 100% !important;
 }
 
-.accordion {
+#highlights .accordion {
     max-width: 700px;
     margin: 0 auto;
 }
 
-.accordion-item {
+#highlights .accordion-item {
     overflow: hidden;
     background: rgba(0, 102, 204, 0.15);
     border: 1px solid rgba(106, 174, 255, 0.3);
     transition: all 0.4s ease;
 }
 
-.accordion-item.active {
+#highlights .accordion-item.active {
     background: rgba(0, 102, 204, 0.3);
     box-shadow: 0 10px 30px rgba(106, 174, 255, 0.2);
 }
 
-.accordion-header {
+#highlights .accordion-header {
     padding: 1rem 2rem;
     cursor: pointer;
     display: flex;
@@ -573,7 +1113,7 @@ section {
     justify-content: space-between;
 }
 
-.accordion-title {
+#highlights .accordion-title {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -581,40 +1121,41 @@ section {
     font-weight: 550;
 }
 
-.accordion-icon {
+#highlights .accordion-icon {
     font-size: 1.24rem;
     color: var(--accent);
     transition: transform 0.3s ease;
 }
 
-.accordion-item.active .accordion-icon {
+#highlights .accordion-item.active .accordion-icon {
     transform: rotate(135deg);
 }
 
-.accordion-content {
+#highlights .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
     background: rgba(0, 0, 0, 0.2);
 }
 
-.accordion-inner {
+#highlights .accordion-inner {
     padding: 0 30px 30px;
 }
 
-.benefits-grid {
+
+#highlights .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     gap: 10px;
 }
 
-.benefit-card {
+#highlights .benefit-card {
     background: rgba(106, 174, 255, 0.15);
     padding: 1rem;
     border: 1px solid rgba(106, 174, 255, 0.3);
 }
 
-.benefit-title {
+#highlights .benefit-title {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -622,21 +1163,21 @@ section {
     color: var(--accent);
 }
 
-.benefit-title h3 {
+#highlights .benefit-title h3 {
     font-size: 1rem;
 }
 
-.benefit-title i {
+#highlights .benefit-title i {
     font-size: 1rem;
 }
 
-.benefit-desc {
+#highlights .benefit-desc {
     font-size: 0.75rem;
     line-height: 1.3;
     color: #c2e0ff;
 }
 
-.benefit-stats {
+#highlights .benefit-stats {
     display: flex;
     gap: 8px;
     margin-top: 20px;
@@ -651,7 +1192,499 @@ section {
     align-items: center;
     gap: 8px;
 }
+
+@media (max-width: 1024px) {
+    .highlight-container {
+        flex-direction: column;
+    }
+
+    .radar-section {
+        padding: 30px;
+    }
+
+    .chart-container {
+        height: 400px;
+        width: 400px;
+    }
+
+    #highlights .accordion {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    #highlights .accordion-inner {
+        padding: 0 20px 20px;
+    }
+
+    .benefit-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 350px;
+        width: 350px;
+    }
+
+    #highlights .accordion-header {
+        padding: 0.8rem 1.5rem;
+    }
+
+    #highlights .accordion-title {
+        font-size: 1.1rem;
+    }
+
+    #highlights .accordion-icon {
+        font-size: 1.1rem;
+    }
+
+    .benefit-card {
+        padding: 0.8rem;
+    }
+
+    .benefit-title h3 {
+        font-size: 0.9rem;
+    }
+
+    .benefit-desc {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .stat-badge {
+        font-size: 0.6rem;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .radar-section {
+        padding: 20px;
+    }
+
+    .chart-container {
+        height: 300px;
+        width: 300px;
+    }
+
+    #highlights .section-title {
+        font-size: 1.5rem;
+    }
+
+    #highlights .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    #highlights .accordion-header {
+        padding: 0.7rem 1.2rem;
+    }
+
+    #highlights .accordion-inner {
+        padding: 0 15px 15px;
+    }
+
+    .benefit-card {
+        padding: 0.6rem;
+    }
+
+    .benefit-title {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .benefit-title h3 {
+        font-size: 0.8rem;
+    }
+
+    .benefit-title i {
+        font-size: 0.8rem;
+    }
+
+    .benefit-desc {
+        font-size: 0.65rem;
+    }
+
+    .stat-badge {
+        font-size: 0.5rem;
+        padding: 4px;
+        gap: 4px;
+    }
+}
 /* ========================== end highlights ======================== */
+
+
+
+ :root {
+     --primary: #0066cc;
+     --secondary: #4da6ff;
+     --accent: #00c9ff;
+     --highlight: #ff9a00;
+     --dark: #0c1e3d;
+     --light: #e6f4ff;
+     --success: #00d998;
+     --warning: #ff9a00;
+     --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+ }
+
+/* ====================== benefits ===========================*/
+.benefits-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+#benefits .benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(77, 166, 255, 0.3);
+    padding: 2.2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+#benefits .benefit-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(77, 166, 255, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+#benefits .benefit-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#benefits .benefit-icon {
+    width: 65px;
+    height: 65px;
+    background: rgba(0, 102, 204, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.1);
+}
+
+
+#benefits .benefit-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+}
+
+#benefits .benefit-content {
+    margin-bottom: 1.8rem;
+}
+
+#benefits .benefit-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #c2e0ff;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-quote {
+    background: rgba(0, 102, 204, 0.2);
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+    border-left: 3px solid var(--highlight);
+    font-style: italic;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--light);
+}
+
+.quote-author {
+    text-align: right;
+    margin-top: 0.8rem;
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+/* 进度条容器 */
+.progress-container {
+    margin-top: 1.8rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    align-items: center;
+}
+
+.progress-title {
+    font-size: 1.05rem;
+    color: var(--light);
+    position: relative;
+    display: inline-block;
+}
+
+.progress-value {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    width: 0;
+    position: relative;
+    transition: width 1.5s ease-out;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressGlow 2s infinite;
+}
+
+#benefits .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+#benefits .accordion-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #c2e0ff;
+    margin-bottom: 1.2rem;
+}
+
+#benefits .accordion-toggle {
+    display: inline-block;
+    color: var(--accent);
+    margin-top: 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#benefits .accordion-toggle::after {
+    content: ' ▼';
+    font-size: 0.8rem;
+}
+
+#benefits .accordion-toggle.active::after {
+    content: ' ▲';
+}
+
+/* 高亮术语 */
+.highlight-term {
+    color: var(--highlight);
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.highlight-term:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+
+/* 背景元素 */
+.factory-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.05;
+    background:
+            radial-gradient(circle at 20% 30%, var(--accent) 0%, transparent 20%),
+            radial-gradient(circle at 80% 70%, var(--secondary) 0%, transparent 20%);
+}
+
+.circuit-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(rgba(77, 166, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 166, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+@keyframes progressGlow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 响应式设计 */
+@media (max-width: 1100px) {
+    .benefits-showcase {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #benefits .benefit-card {
+        padding: 1.6rem;
+    }
+
+    #benefits .benefit-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ====================== end benefits ===========================*/
+
+
+
+/* ====================== support ===========================*/
+
+.support-dashboard-section {
+    padding: 5rem 1rem;
+    position: relative;
+    background: linear-gradient(to bottom,
+    rgba(100, 180, 255, 0.5) 0%,
+    rgba(230, 243, 255, 0.5) 100%
+    ), url("../../assets/img/lims/767a032670fd319a6a347c9a83fb8260.jpeg") center;
+    background-size: cover;
+}
+
+.support-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.support-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #336699;
+    margin-bottom: 0.5rem;
+}
+
+.support-divider {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 2.5rem;
+    background: linear-gradient(90deg, #a8c8f8, #c6dcff, #a8c8f8);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(150, 180, 255, 0.3);
+}
+
+.support-flex-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.support-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 30%;
+    min-width: 280px;
+}
+
+.support-icon {
+    font-size: 2.5rem;
+    color: #5c9df5;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.support-text h4 {
+    margin: 0 0 0.4rem;
+    color: #3a6ea5;
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.support-text p {
+    margin: 0;
+    color: #023047;
+    font-size: 0.95rem;
+}
+
+.support-feature-item:hover .support-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .support-flex-features {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .support-feature-item {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+
+    .support-icon {
+        font-size: 2rem;
+    }
+
+    .support-text h4 {
+        font-size: 1rem;
+    }
+
+    .support-text p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ======================= end support ======================== */
 
 
 

@@ -625,13 +625,13 @@
     padding: 2rem 0;
 }
 
-.process-card {
+.mes-process-card {
     transition: all 0.3s ease;
     border-top: 3px solid transparent;
     border-radius: 8px 10px;
 }
 
-.process-card:hover {
+.mes-process-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     border-top-color: var(--bs-primary);
@@ -645,13 +645,13 @@
     transform: translateX(-50%);
 }
 
-.process-icon .icon-wrapper {
+.mes-process-icon .icon-wrapper {
     width: 60px;
     height: 60px;
     transition: all 0.3s ease;
 }
 
-.process-card:hover .icon-wrapper {
+.mes-process-card:hover .icon-wrapper {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -666,7 +666,7 @@
         display: none;
     }
 
-    .process-card {
+    .mes-process-card {
         margin-bottom: 2rem;
     }
 }
