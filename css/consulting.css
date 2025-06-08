@@ -682,15 +682,12 @@
     animation: pulse 2s infinite;
 }
 
-/* =============================
-# sidebar
-=============================== */
-/* 隐藏用 */
+/* ============================= # sidebar =============================== */
+
 .hidden {
     display: none !important;
 }
 
-/* 切换按钮样式 */
 .glass-toggle-btn {
     display: flex;
     align-items: center;
@@ -730,6 +727,7 @@
     box-shadow: 0 8px 28px rgba(0, 153, 255, 0.15);
     transition: all 0.3s ease-in-out;
     display: flex;
+    flex-direction:  column;
     align-items: center;
 }
 
@@ -756,9 +754,7 @@
     color: #00bfff;
 }
 
-/* ========================
-# download
-================ */
+/* ======================= # download ================ */
 .diagnostic-links li a svg {
     width: 16px;
     height: 16px;
@@ -796,8 +792,6 @@
     background-color: rgba(0, 153, 255, 0.2);
     color: #00d4ff;
 }
-
-
 
 .back-to-top {
     right: -15px !important;

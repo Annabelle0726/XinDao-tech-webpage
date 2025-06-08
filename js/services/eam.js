@@ -50,68 +50,40 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
+// ======================== pain ==========================
 // pain cards
-// ==================================================
-
 document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.querySelector('.stack-panel-cards');
     let cards = Array.from(cardContainer.querySelectorAll('.stack-panel-card'));
-    let isAnimating = false;
 
-    function getTransform(index) {
-        if (index === 0) return 'translateY(0) rotateX(0) scale(1)';
-        if (index === 1) return 'translateY(20px) rotateX(-6deg) scale(0.97)';
-        if (index === 2) return 'translateY(40px) rotateX(-12deg) scale(0.94)';
-        if (index === 3) return 'translateY(60px) rotateX(-18deg) scale(0.91)';
-        if (index === 4) return 'translateY(80px) rotateX(-24deg) scale(0.88)';
-        return `translateY(${index * 20}px) rotateX(-${index * 6}deg) scale(${1 - index * 0.03})`;
-    }
-
-
-    function updateStack() {
+    // 移除原有的索引设置和点击事件
+    function resetCards() {
         cards.forEach((card, i) => {
             card.dataset.index = i;
-            card.style.zIndex = cards.length - i;
-            card.style.transform = getTransform(i);
             card.classList.remove('active', 'slide-out');
         });
-        // 添加 active 到堆顶卡片
-        if (cards[0]) {
-            cards[0].classList.add('active');
-        }
     }
-
-    function handleCardClick() {
-        if (isAnimating) return;
-        isAnimating = true;
-
-        const topCard = cards[0];
-        topCard.classList.add('slide-out');
-
-        // 等待动画结束后执行 DOM 顺序调整
-        topCard.addEventListener('animationend', () => {
-            topCard.classList.remove('slide-out');
-
-            // 移动到数组最后
-            cards.push(cards.shift());
-
-            // 重新挂载顺序
-            cards.forEach(card => cardContainer.appendChild(card));
-
-            updateStack();
-            isAnimating = false;
-        }, {once: true});
-    }
-
-
-    // 添加点击事件（只允许顶部卡片点击）
-    cardContainer.addEventListener('click', () => {
-        handleCardClick();
-    });
 
     // 初始化
-    updateStack();
+    resetCards();
+
+    // 点击任意卡片时，将其移动到底部（平铺模式下的交互）
+    cardContainer.addEventListener('click', (e) => {
+        const clickedCard = e.target.closest('.stack-panel-card');
+        if (!clickedCard) return;
+
+        // 添加动画效果
+        clickedCard.classList.add('slide-out');
+
+        setTimeout(() => {
+            // 移动到底部
+            cardContainer.appendChild(clickedCard);
+            // 重置所有卡片状态
+            resetCards();
+        }, 300);
+    });
 });
+// ======================== pain ==========================
 
 
 // ======================== ad ===================================
@@ -124,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ===================== end ad ============================
+
 
 // ====================== process========================================
 document.addEventListener('DOMContentLoaded', function () {
@@ -310,8 +283,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // ================================= maintain ================
-
-
 // 权限数据定义
 const permissions = {
     admin: {

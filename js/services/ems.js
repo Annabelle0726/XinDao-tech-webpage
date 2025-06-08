@@ -1,3 +1,191 @@
+// ===================== pain =====================
+
+function makeCrackDraggable(crack) {
+    let isDragging = false;
+    let isClick = true;
+    let offsetX = 0, offsetY = 0;
+    let startX = 0, startY = 0;
+
+    crack.style.position = 'absolute';
+    crack.style.cursor = 'grab';
+
+    const wall = document.querySelector('.energy-wall');
+
+    const onMouseMove = (e) => {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+
+        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+            isClick = false;
+
+            let newX = e.clientX - offsetX;
+            let newY = e.clientY - offsetY;
+
+            // 限制在 wall 内
+            const maxX = wall.clientWidth - crack.offsetWidth;
+            const maxY = wall.clientHeight - crack.offsetHeight;
+
+            newX = Math.max(0, Math.min(newX, maxX));
+            newY = Math.max(0, Math.min(newY, maxY));
+
+            crack.style.left = `${newX}px`;
+            crack.style.top = `${newY}px`;
+
+            drawHookConnectors();
+        }
+    };
+
+    const onMouseUp = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        crack.style.cursor = 'grab';
+
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+
+        if (isClick) crack.click();
+    };
+
+    crack.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        isClick = true;
+
+        offsetX = e.clientX - crack.offsetLeft;
+        offsetY = e.clientY - crack.offsetTop;
+        startX = e.clientX;
+        startY = e.clientY;
+
+        crack.style.cursor = 'grabbing';
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
+}
+
+function initCrackAnimations() {
+    const cracks = document.querySelectorAll('.wall-crack');
+
+    cracks.forEach((crack, index) => {
+        crack.style.opacity = '0';
+        crack.style.transform = 'scale(0.8)';
+        crack.style.transition = 'all 0.5s ease-out';
+
+        setTimeout(() => {
+            crack.style.opacity = '1';
+            crack.style.transform = 'scale(1)';
+        }, 300 * index);
+
+        makeCrackDraggable(crack);
+    });
+
+    drawHookConnectors();
+}
+
+function drawHookConnectors() {
+    const connectors = document.querySelector('.connectors');
+    const wall = document.querySelector('.energy-wall');
+    const cracks = document.querySelectorAll('.wall-crack');
+
+    connectors.innerHTML = '';
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", "100%");
+    svg.setAttribute("viewBox", `0 0 ${wall.offsetWidth} ${wall.offsetHeight}`);
+    svg.style.position = "absolute";
+    svg.style.top = "0";
+    svg.style.left = "0";
+    svg.style.zIndex = "1";
+    connectors.appendChild(svg);
+
+    const centerX = wall.offsetWidth / 2;
+    const centerY = wall.offsetHeight / 2;
+
+    cracks.forEach(crack => {
+        const crackRect = crack.getBoundingClientRect();
+        const wallRect = wall.getBoundingClientRect();
+
+        const crackCenterX = crackRect.left - wallRect.left + crackRect.width / 2;
+        const crackCenterY = crackRect.top - wallRect.top + crackRect.height / 2;
+
+        const dx = centerX - crackCenterX;
+        const dy = centerY - crackCenterY;
+        const offsetX = Math.abs(dx) * 0.3;
+        const offsetY = Math.abs(dy) * 0.3;
+
+        let pathD = `M ${crackCenterX} ${crackCenterY}`;
+
+        if (crackCenterX < centerX && crackCenterY < centerY) {
+            pathD += ` C ${crackCenterX + offsetX} ${crackCenterY} ${centerX} ${crackCenterY + offsetY} ${centerX} ${centerY}`;
+        } else if (crackCenterX > centerX && crackCenterY < centerY) {
+            pathD += ` C ${crackCenterX - offsetX} ${crackCenterY} ${centerX} ${crackCenterY + offsetY} ${centerX} ${centerY}`;
+        } else if (crackCenterX < centerX && crackCenterY > centerY) {
+            pathD += ` C ${crackCenterX} ${crackCenterY - offsetY} ${crackCenterX + offsetX} ${centerY} ${centerX} ${centerY}`;
+        } else if (crackCenterX > centerX && crackCenterY > centerY) {
+            pathD += ` C ${crackCenterX} ${crackCenterY - offsetY} ${crackCenterX - offsetX} ${centerY} ${centerX} ${centerY}`;
+        } else {
+            // 垂直方向连线
+            pathD += ` L ${crackCenterX} ${crackCenterY + 50}`;
+            pathD += ` C ${crackCenterX} ${crackCenterY + 50} ${centerX} ${crackCenterY + 50} ${centerX} ${centerY}`;
+        }
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", pathD);
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", "var(--energy-danger)");
+        path.setAttribute("stroke-width", "2");
+        path.setAttribute("stroke-dasharray", "10,5");
+        path.setAttribute("opacity", "0");
+
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+        path.style.transition = "stroke-dashoffset 1.5s ease-in-out, opacity 0.5s ease";
+
+        svg.appendChild(path);
+
+        // 启动动画
+        requestAnimationFrame(() => {
+            path.style.strokeDashoffset = "0";
+            path.style.opacity = "0.7";
+        });
+    });
+}
+
+function initAccordions() {
+    const impactHeaders = document.querySelectorAll('.impact-header');
+
+    impactHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const current = this.closest('.crack-impact');
+
+            // 关闭其他所有手风琴
+            document.querySelectorAll('.crack-impact.active').forEach(item => {
+                if (item !== current) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // 切换当前项
+            current.classList.toggle('active');
+        });
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    initCrackAnimations();
+    initAccordions();
+
+    window.addEventListener('resize', function() {
+        drawHookConnectors();
+    });
+});
+
+// ======================= end pain ==================================
+
+
+
 // ======================= core ==================================
 
 // 创建电路板背景

@@ -13,12 +13,17 @@
     --text-dark: #003366;
     --text-medium: #336699;
     --text-light: #6699cc;
+    --white: #ffffff;
+    --gray-1: #f8f9fa;
+    --gray-2: #e9ecef;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --red: #e74c3c;
+    --green: #27ae60;
+    --orange: #f39c12;
+    --purple: #8e44ad;
 }
 
-.
-    /* 渐变分割线样式 */
-.gradient-divider1, .gradient-transition2, .gradient-transition3, .gradient-transition4,
-.gradient-transition5, .gradient-transition6, .gradient-transition7, .gradient-transition8 {
+.gradient-divider{
     width: 100%;
     height: 3px;
     position: relative;
@@ -28,13 +33,7 @@
     margin-bottom: -1px;
 }
 
-#spc-advantages,
-#architecture-spc,
-#pain-points,
-#core-features,
-#spc-process,
-#benefits,
-#support {
+section {
     position: relative;
     overflow: hidden;
     padding: 6rem 0;
@@ -54,14 +53,6 @@
     padding: 0rem 3.7rem 0rem;
 }
 
-section {
-    min-height: 100vh;
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(6px) brightness(1.05) saturate(1.1);
-}
-
 .section-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -70,11 +61,18 @@ section {
 
 .section-header .section-title {
     margin-bottom: 1.2rem;
-    font-size: 2.35rem;
-    font-weight: 670;
-    line-height: 1.7;
-    text-shadow: 0 1px 2px rgba(0, 91, 172, 0.1);
-    color: var(--blue-2);
+    font-size: 2.45rem;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.015em;
+    color: #2a9fd6;
+    background: linear-gradient(90deg, #48bfe3, #56cfe1, #64dfdf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 1px 2px rgba(0, 80, 130, 0.2),
+    0 0 2px rgba(0, 150, 200, 0.08);
 }
 
 .section-subtitle {
@@ -86,94 +84,244 @@ section {
 
 
 /* ========================== hero ================================= */
-
-
 #qms-hero {
-    min-height: 100vh;
+    backdrop-filter: blur(2.5px);
     display: flex;
-    align-items: center;
-    background: linear-gradient(-135deg, rgba(230, 240, 255, 0.7), rgba(230, 240, 255, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    padding: 4rem 1rem;
+    background: linear-gradient(-135deg, rgba(230, 240, 255, 0.7), rgba(230, 240, 255, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;position: relative;
     overflow: hidden;
-    padding: 4rem 0;
-}
-
-#qms-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, rgba(0,102,204,0.1) 100%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+    font-family: "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--darker-blue);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+#qms-hero .hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #0a3e75;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
 }
 
-.hero-subtitle {
-    font-size: 2rem;
+#qms-hero .hero-subtitle {
+    font-size: 1.6rem;
     font-weight: 600;
-    color: var(--dark-blue);
-    margin-bottom: 2rem;
-    background: linear-gradient(90deg, var(--darker-blue), var(--blue-2));
+    background: linear-gradient(90deg, #3399ff, #56cfe1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
 }
 
-.hero-description {
-    font-size: 1.3rem;
-    color: var(--text-medium);
-    margin-bottom: 3rem;
-    opacity: 0.9;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+#qms-hero .hero-description {
+    font-size: 1.15rem;
+    color: rgba(20, 40, 70, 0.9);
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
 }
 
-.hero-stats {
+#qms-hero .hero-stats {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 3rem 0;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.stat-item {
+#qms-hero .stat-item {
+    flex: 1 1 180px;
+    min-width: 160px;
     text-align: center;
-    min-width: 150px;
+    transition: transform 0.3s ease;
 }
 
-.stat-value {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--blue-2);
+#qms-hero .stat-item:hover {
+    transform: scale(1.05);
+}
+
+#qms-hero .stat-value {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #007acc;
     margin-bottom: 0.5rem;
 }
 
-.stat-label {
+#qms-hero .stat-label {
+    font-size: 1rem;
+    color: #445;
+    opacity: 0.85;
+}
+
+#qms-hero .hero-cta .btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
     font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--text-medium);
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    box-shadow: 0 4px 14px rgba(0, 160, 210, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#qms-hero .hero-cta .btn:hover {
+    background: linear-gradient(135deg, #0077b6, #023e8a);
+    transform: translateY(-2px);
 }
 
 
-
-
 /* ======================= end hero ==================================== */
+
+
+/* =============== pain =============== */
+.pain-points-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(245, 249, 255, 0.95));
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0, 91, 172, 0.15);
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 3rem 0;
+    backdrop-filter: blur(8px);
+}
+
+.pain-points-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.pain-point-card {
+    flex: 0 0 calc(50% - 2rem);
+    margin: 1rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+}
+
+.pain-point-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.pain-header {
+    padding: 1.8rem 1.8rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.pain-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.icon-problem { background: var(--red); color: white; }
+.icon-solution { background: var(--green); color: white; }
+
+.pain-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    padding-right: 70px;
+}
+
+.problem .pain-title {
+    color: var(--red);
+}
+
+.solution .pain-title {
+    color: var(--green);
+}
+
+.pain-content {
+    padding: 0 1.8rem 1.8rem;
+    font-size: 0.95rem;
+    color: #444;
+    flex-grow: 1;
+}
+
+.problem {
+    border-top: 4px solid var(--red);
+}
+
+.solution {
+    border-top: 4px solid var(--green);
+}
+
+.problem-list {
+    padding: 0 0 15px 0;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.problem-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+}
+
+.problem-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--red);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.solution-list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0 0 15px 0;
+}
+
+.solution-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+}
+
+.solution-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.benefit-tag {
+    display: inline-block;
+    background: rgba(39, 174, 96, 0.1);
+    color: var(--green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ======================= end pain ==================================== */
+
 
 
 /* ======================= features ==================================== */

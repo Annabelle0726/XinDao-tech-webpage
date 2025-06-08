@@ -218,37 +218,152 @@
 
 })();
 
-
 // NavBar
+window.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header');
+    const megamenuPanel = document.getElementById('megamenuPanel');
+    const productCenterDropdown = document.getElementById('productCenterDropdown');
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNav = document.querySelector('.navbar-mobile');
+    const toggleTransparentBtn = document.getElementById('toggleTransparent');
+    const simulateScrollBtn = document.getElementById('simulateScroll');
 
-const dropdown = document.getElementById('productCenterDropdown');
-const megamenu = document.getElementById('megamenuPanel');
+    let isTransparent = false;
+    let isScrolled = false;
 
+    // 桌面端菜单交互
+    if (productCenterDropdown) {
+        productCenterDropdown.addEventListener('mouseenter', function() {
+            megamenuPanel.style.display = 'block';
+        });
 
-dropdown.addEventListener('mouseenter', () => {
-    megamenu.style.display = 'block';
-});
+        productCenterDropdown.addEventListener('mouseleave', function() {
+            setTimeout(function() {
+                if (!megamenuPanel.matches(':hover')) {
+                    megamenuPanel.style.display = 'none';
+                }
+            }, 200);
+        });
 
-dropdown.addEventListener('mouseleave', () => {
-    // 延迟关闭给用户一点时间移过去
-    setTimeout(() => {
-        if (!megamenu.matches(':hover')) {
-            megamenu.style.display = 'none';
+        megamenuPanel.addEventListener('mouseleave', function() {
+            megamenuPanel.style.display = 'none';
+        });
+    }
+
+// 移动端菜单切换
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('bi-x');
+            document.body.classList.toggle('mobile-nav-active');
+
+            // 使用更可靠的方式检查移动菜单是否存在
+            const mobileMenuUl = mobileNav.querySelector('ul') || document.createElement('ul');
+
+            // 只在需要时构建菜单
+            if (mobileMenuUl.children.length === 0) {
+                // 从桌面菜单克隆内容
+                const mainNavUl = document.querySelector('.navbar ul');
+                if (mainNavUl) {
+                    const mainNavClone = mainNavUl.cloneNode(true);
+
+                    // 特殊处理产品中心菜单
+                    const productCenterItem = mainNavClone.querySelector('#productCenterDropdown');
+                    if (productCenterItem) {
+                        const productCenterCloned = productCenterItem.cloneNode(false);
+
+                        // 添加回产品中心菜单项
+                        const clonedLink = productCenterItem.querySelector('a').cloneNode(true);
+                        productCenterCloned.appendChild(clonedLink);
+
+                        // 添加产品中心的下拉菜单
+                        const dropdownContainer = document.createElement('div');
+                        dropdownContainer.className = 'dropdown-menu';
+
+                        // 获取所有产品项
+                        const products = document.querySelectorAll('#megamenuPanel .col');
+                        const productsList = document.createElement('ul');
+
+                        products.forEach(item => {
+                            const li = document.createElement('li');
+                            const a = item.querySelector('a').cloneNode(true);
+                            li.appendChild(a);
+                            productsList.appendChild(li);
+                        });
+
+                        dropdownContainer.appendChild(productsList);
+                        productCenterCloned.appendChild(dropdownContainer);
+                        productCenterCloned.classList.add('dropdown');
+
+                        // 替换原来的产品中心项
+                        mainNavClone.replaceChild(productCenterCloned, productCenterItem);
+                    }
+
+                    // 添加到移动菜单
+                    mobileMenuUl.innerHTML = mainNavClone.innerHTML;
+
+                    // 确保有容器
+                    if (!mobileMenuUl.parentNode) {
+                        mobileNav.appendChild(mobileMenuUl);
+                    }
+                }
+            }
+
+            // 显示移动菜单
+            mobileNav.style.display = 'block';
+        });
+    }
+    // 移动端二级菜单切换
+    document.addEventListener('click', function(e) {
+        if (document.body.classList.contains('mobile-nav-active')) {
+            if (e.target.closest('.dropdown > a')) {
+                const dropdown = e.target.closest('.dropdown');
+                dropdown.classList.toggle('dropdown-active');
+            }
         }
-    }, 200);
+    });
+
+    // 透明模式切换
+    if (toggleTransparentBtn) {
+        toggleTransparentBtn.addEventListener('click', function() {
+            isTransparent = !isTransparent;
+            header.classList.toggle('transparent', isTransparent);
+
+            if (isTransparent) {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // 模拟滚动效果
+    if (simulateScrollBtn) {
+        simulateScrollBtn.addEventListener('click', function() {
+            isScrolled = !isScrolled;
+            header.classList.toggle('scrolled', isScrolled);
+            header.classList.remove('transparent');
+            isTransparent = false;
+        });
+    }
+
+    // 实际滚动效果
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+            isScrolled = true;
+
+            if (isTransparent) {
+                header.classList.remove('transparent');
+                isTransparent = false;
+            }
+        } else {
+            header.classList.remove('scrolled');
+            isScrolled = false;
+        }
+    });
 });
 
-megamenu.addEventListener('mouseleave', () => {
-    megamenu.style.display = 'none';
-});
 
-// 保证在 megamenu 上时不被关掉
-megamenu.addEventListener('mouseenter', () => {
-    megamenu.style.display = 'block';
-});
 
-// ========================== sidebar ===================================
-
+// ====================================
 
 // 锚点
 
