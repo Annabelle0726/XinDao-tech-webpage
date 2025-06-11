@@ -470,7 +470,7 @@ hr.style-two {
     transform: translateY(2px);
     transition: transform 300ms ease-in-out;
     color: #0077c8;
-    margin-left: 4px; /* 减小左边距 */
+    margin-left: 4px;
 }
 
 .navbar li:hover .bi-chevron-bar-down {
@@ -518,7 +518,11 @@ hr.style-two {
     color: #1a1a1a;
     font-size: 1rem; /* 稍小字体 */
     font-weight: 585 !important;
-    padding-left: 0; /* 完全靠左 */
+    padding-left: 0;
+}
+
+.megamenu-panel.dropdown-menu-custom .container h6 a .icon.text-danger {
+    color: green !important;
 }
 
 .megamenu-panel .col-lg-4:hover {
@@ -646,7 +650,7 @@ hr.style-two {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px; /* 增加点击区域 */
+    padding: 8px;
 }
 
 @media (min-width: 1026px) {
