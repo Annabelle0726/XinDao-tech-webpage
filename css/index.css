@@ -335,6 +335,27 @@ section {
 }
 
 
+@media (max-width: 768px) {
+    .about .row > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about video {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+
+    }
+
+    .about .content {
+        padding: 20px;
+    }
+}
+
+
 /*--------------------------------------------------------------
 # Values
 --------------------------------------------------------------*/
@@ -492,19 +513,18 @@ section {
     user-select: none;
 }
 
-/* 悬浮通用 */
+
 .counts .count-box:hover {
     transform: translateY(-10px) rotateX(1deg) rotateY(-1deg) scale(1.03);
 }
 
-/* active 状态：高亮卡片 */
 .counts .count-box.active {
     background: linear-gradient(135deg, #4154f1, #657eff);
     color: #fff;
     transform: scale(1.1) translateY(-4px);
 }
 
-/* active 叠加悬浮动画 */
+
 .counts .count-box.active:hover {
     transform: scale(1.13) translateY(-6px);
 }
@@ -578,6 +598,10 @@ body.shadow-dark .count-box.active {
     .counts .count-box {
         flex: 1 1 100%;
         margin-bottom: 20px;
+    }
+
+    .counts {
+        padding: 45px 0;
     }
 }
 
