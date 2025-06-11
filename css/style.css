@@ -655,6 +655,12 @@ hr.style-two {
     }
 }
 
+@media (min-width: 992px) {
+    .navbar-mobile {
+        display: none !important;
+    }
+}
+
 @media (max-width: 991px) {
     .navbar ul {
         display: none;
