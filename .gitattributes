@@ -2,4 +2,3 @@ D:/Projects/XinDao/XinDao-tech/assets/video/consulting/consulting-v1.mp4 filter=
 assets/img/consulting/invideo-ai-1080_*.mp4 filter=lfs diff=lfs merge=lfs -text
 video/consulting/dx1.mp4 filter=lfs diff=lfs merge=lfs -text
 video/consulting/dx2.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
