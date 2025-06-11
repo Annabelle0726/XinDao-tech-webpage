@@ -5149,7 +5149,7 @@ textarea.form-control-lg {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
 
-.toast {
+.toastMsg {
   width: 350px;
   max-width: 100%;
   font-size: 0.875rem;
@@ -5160,10 +5160,10 @@ textarea.form-control-lg {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
-.toast:not(.showing):not(.show) {
+.toastMsg:not(.showing):not(.show) {
   opacity: 0;
 }
-.toast.hide {
+.toastMsg.hide {
   display: none;
 }
 

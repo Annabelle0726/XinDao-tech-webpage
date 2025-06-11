@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -38,8 +38,11 @@
 
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/services/qms.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
+
 
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top transparent">
@@ -51,87 +54,117 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto " href="../index.html">首页</a></li>
+                <li><a class="nav-link scrollto" href="../index.html">首页</a></li>
                 <li><a class="nav-link scrollto" href="../dx-services.html">数字化转型</a></li>
-
-                <!-- 产品中心菜单触发 -->
                 <li class="dropdown megamenu position-static" id="productCenterDropdown">
                     <a class="nav-link scrollto active"><span>产品中心</span> <i class="bi bi-chevron-bar-down ms-1"></i></a>
                 </li>
-
                 <li><a class="nav-link scrollto" href="../consulting.html">诊断咨询</a></li>
                 <li><a class="nav-link scrollto" href="../about.html">关于我们</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-    </div>
-
-    <!-- head width megamenu -->
-    <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
-        <div class="container py-4">
-            <div class="row" style="margin: 0 !important;">
-
-                <!-- MES -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/mes.html" class="text-dark fw-bold">
-                        <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
-                    <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+        <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
+            <div class="container py-4">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/mes.html" class="text-dark fw-bold">
+                            <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
+                        <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/eam.html" class="text-dark fw-bold">
+                            <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
+                        <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/lims.html" class="text-dark fw-bold">
+                            <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
+                        <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/qms.html" class="text-dark fw-bold">
+                            <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
+                        <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/ems.html" class="text-dark fw-bold">
+                            <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
+                        <p class="text-muted">监控能源使用，提升能效水平，支持"双碳"目标落地</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/spc.html" class="text-dark fw-bold">
+                            <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
+                        <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/tms.html" class="text-dark fw-bold">
+                            <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
+                        <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/bi.html" class="text-dark fw-bold">
+                            <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
+                        <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
+                    </div>
                 </div>
-
-                <!-- EAM -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/eam.html" class="text-dark fw-bold">
-                        <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
-                    <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
-                </div>
-
-                <!-- LIMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/lims.html" class="text-dark fw-bold">
-                        <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
-                    <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
-                </div>
-
-                <!-- QMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/qms.html" class="text-dark fw-bold">
-                        <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
-                    <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
-                </div>
-
-                <!-- EMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/ems.html" class="text-dark fw-bold">
-                        <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
-                    <p class="text-muted">监控能源使用，提升能效水平，支持“双碳”目标落地</p>
-                </div>
-
-                <!--                SPC-->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="eam.html" class="text-dark fw-bold">
-                        <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
-                    <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
-                </div>
-
-                <!-- TMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/tms.html" class="text-dark fw-bold">
-                        <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
-                    <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
-                </div>
-
-                <!-- BI -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/bi.html" class="text-dark fw-bold">
-                        <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
-                    <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
-                </div>
-
             </div>
-
         </div>
+        <button class="mobile-nav-toggle" id="mobileToggle">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
 </header>
+
+<!-- 移动端菜单 -->
+<div class="navbar-mobile" id="navbarMobile">
+    <ul>
+        <li><a class="nav-link scrollto" href="../index.html">首页</a></li>
+        <li><a class="nav-link scrollto" href="../dx-services.html">数字化转型</a></li>
+        <li class="dropdown">
+            <a class="nav-link scrollto active" id="mobileDropdown">
+                <span>产品中心</span> <i class="bi bi-chevron-down ms-1"></i>
+            </a>
+            <div class="dropdown-content" id="mobileDropdownContent">
+                <div class="mobile-menu-item">
+                    <a href="../services/mes.html"><i class="bi bi-gear-wide-connected"></i> MES 生产制造执行系统</a>
+                    <span class="mobile-menu-desc">实现生产过程的精细化管理与实时控制</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/eam.html"><i class="bi bi-tools"></i> EAM 设备资产管理系统</a>
+                    <span class="mobile-menu-desc">全生命周期管理设备资产</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/lims.html"><i class="bi bi-file-earmark-text"></i> LIMS 实验室管理系统</a>
+                    <span class="mobile-menu-desc">提升实验室数据可靠性与流程规范化</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/qms.html"><i class="bi bi-shield-check"></i> QMS 质量管理系统</a>
+                    <span class="mobile-menu-desc">覆盖产品全生命周期的质量管控</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/ems.html"><i class="bi bi-lightning-charge"></i> EMS 能源管理系统</a>
+                    <span class="mobile-menu-desc">监控能源使用，提升能效水平</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/spc.html"><i class="bi bi-bar-chart-line"></i> SPC 统计过程控制系统</a>
+                    <span class="mobile-menu-desc">实现过程稳定与质量预警</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/tms.html"><i class="bi bi-truck"></i> TMS 运输管理系统</a>
+                    <span class="mobile-menu-desc">运输调度、路径可视与成本管控</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/bi.html"><i class="bi bi-pie-chart-fill"></i> BI 数据分析系统</a>
+                    <span class="mobile-menu-desc">实现数据可视化与业务分析</span>
+                </div>
+            </div>
+        </li>
+        <li><a class="nav-link scrollto" href="../consulting.html">诊断咨询</a></li>
+        <li><a class="nav-link scrollto" href="../about.html">关于我们</a></li>
+    </ul>
+</div>
+
+
 <!-- End Header -->
 
 
@@ -175,9 +208,14 @@
 
 <!-- ====================== end hero ====================== -->
 
+<div class="gradient-divider"></div>
+
 <!-- ====================== pain ====================== -->
 
 <section class="pain-points-section" id="pain">
+    <div class="qms-bg"></div>
+    <div class="qms-grid"></div>
+
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">企业质量管理面临的痛点</h2>
@@ -213,12 +251,18 @@
                     <h3 class="pain-title">统一数据平台，智能分析预警</h3>
                 </div>
                 <div class="pain-content">
-                    <p>芯导QMS建立集中式质量数据仓库，实现全流程数据整合：</p>
+                    <p>芯导QMS建立集中式<span class="highlight-tooltip">质量数据仓库
+                            <span class="tooltip-text">整合企业所有质量数据源，形成统一的中央数据存储库，支持多维度数据分析</span>
+                        </span>，实现全流程数据整合：</p>
                     <ul class="solution-list">
                         <li>集成来料检验、生产过程、出货检验等全流程数据</li>
                         <li>多维度数据可视化分析，实时生成质量报表</li>
-                        <li>智能预警机制，关键指标异常自动报警</li>
-                        <li>内置SPC分析工具，实现质量趋势预测</li>
+                        <li><span class="highlight-tooltip">智能预警机制
+                                <span class="tooltip-text">基于预设规则自动监控质量指标，异常情况立即通知相关人员</span>
+                            </span>，关键指标异常自动报警</li>
+                        <li>内置<span class="highlight-tooltip">SPC分析工具
+                                <span class="tooltip-text">统计过程控制(SPC)工具，实时监控生产过程稳定性，预测质量趋势</span>
+                            </span>，实现质量趋势预测</li>
                     </ul>
                     <div class="benefit-tag">质量分析效率提升70%</div>
                 </div>
@@ -236,7 +280,9 @@
                     <p>质量问题处理流程不透明，缺乏有效跟踪机制：</p>
                     <ul class="problem-list">
                         <li>问题处理过程缺乏标准化流程</li>
-                        <li>纠正预防措施(CAPA)执行不到位</li>
+                        <li><span class="highlight-tooltip">纠正预防措施(CAPA)
+                                <span class="tooltip-text">纠正与预防措施系统，用于解决质量问题并防止其再次发生</span>
+                            </span>执行不到位</li>
                         <li>问题处理进度不透明，责任不明确</li>
                         <li>相同问题在不同产线/批次重复发生</li>
                     </ul>
@@ -254,9 +300,13 @@
                 <div class="pain-content">
                     <p>建立从问题发现到验证的全流程闭环管理机制：</p>
                     <ul class="solution-list">
-                        <li>标准化8D/CAPA问题处理流程</li>
+                        <li>标准化<span class="highlight-tooltip">8D/CAPA
+                                <span class="tooltip-text">8D问题解决方法与纠正预防措施相结合的系统化流程</span>
+                            </span>问题处理流程</li>
                         <li>自动化任务分配与进度跟踪</li>
-                        <li>根本原因分析(RCA)工具支持</li>
+                        <li><span class="highlight-tooltip">根本原因分析(RCA)
+                                <span class="tooltip-text">通过鱼骨图、5Why分析等工具深入挖掘问题根本原因</span>
+                            </span>工具支持</li>
                         <li>效果验证机制确保措施有效性</li>
                     </ul>
                     <div class="benefit-tag">问题复发率降低80%</div>
@@ -291,7 +341,9 @@
                     <h3 class="pain-title">供应商全生命周期协同管理</h3>
                 </div>
                 <div class="pain-content">
-                    <p>建立供应商协同管理平台，实现质量共治：</p>
+                    <p>建立<span class="highlight-tooltip">供应商协同管理平台
+                            <span class="tooltip-text">集成供应商准入、评估、改进、淘汰全流程的数字化平台</span>
+                        </span>，实现质量共治：</p>
                     <ul class="solution-list">
                         <li>供应商资质电子化管理与自动提醒</li>
                         <li>在线协同处理来料质量问题</li>
@@ -316,7 +368,9 @@
                         <li>文件版本混乱，新旧版本并存</li>
                         <li>审批流程冗长，效率低下</li>
                         <li>文件查找困难，权限控制不足</li>
-                        <li>合规审计准备耗时耗力</li>
+                        <li><span class="highlight-tooltip">合规审计
+                                <span class="tooltip-text">ISO、GMP等质量体系认证所需的合规性审查</span>
+                            </span>准备耗时耗力</li>
                     </ul>
                 </div>
             </div>
@@ -333,7 +387,9 @@
                     <p>实现质量文档全生命周期管理：</p>
                     <ul class="solution-list">
                         <li>自动化版本控制与发布流程</li>
-                        <li>电子审批与电子签名支持</li>
+                        <li><span class="highlight-tooltip">电子审批与电子签名
+                                <span class="tooltip-text">符合FDA 21 CFR Part 11的电子签名解决方案</span>
+                            </span>支持</li>
                         <li>精细化权限管理与操作审计</li>
                         <li>一键生成合规审计所需文件</li>
                     </ul>
@@ -346,96 +402,118 @@
 
 <!-- ====================== end pain ====================== -->
 
-
+<div class="gradient-divider"></div>
 
 
 <!-- ====================== core ====================== -->
-<section id="qms-features">
+<section class="features-section" id="core">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">核心功能</h2>
-            <p class="section-subtitle">
-                覆盖质量全生命周期的功能模块，助力企业实现卓越质量管理
-            </p>
+            <h2 class="section-title">QMS核心功能</h2>
+            <p class="section-subtitle">芯导软件质量管理系统解决方案，为企业构建全流程质量闭环与标准化管理体系</p>
         </div>
 
-        <div class="features-grid">
-            <div class="card feature-item">
-                <i class="fas fa-file-contract feature-icon"></i>
-                <h3 class="feature-title">质量文件管理</h3>
-                <p class="feature-desc">
-                    集中管理质量手册、程序文件、作业指导书等文档，实现版本控制、
-                    审批流程和权限管理，确保文件有效性。
-                </p>
-                <div class="feature-highlight">
-                    支持ISO 9001、IATF 16949等标准文档管理
+        <!-- 功能1: 质量数据分析与可视化 -->
+        <div class="feature-row animate-feature" style="animation-delay: 0.1s">
+            <div class="feature-chart">
+                <div class="chart-decoration decoration-1"></div>
+                <div class="chart-container">
+                    <canvas id="qualityAnalysisChart"></canvas>
                 </div>
             </div>
+            <div class="feature-content">
+                <h3 class="feature-title">质量数据分析与可视化</h3>
+                <div class="feature-description">
+                    <p>芯导QMS系统提供全面的质量数据采集、分析与可视化功能，帮助企业实时监控质量指标，识别潜在问题。系统整合来自供应链、生产过程、成品检验和客户反馈的全方位质量数据，通过智能算法进行深度分析。</p>
+                    <p>我们的系统支持多维度数据钻取分析，可按照产品线、时间周期、生产批次、供应商等多种维度进行数据切片分析。内置SPC（统计过程控制）工具可自动识别质量异常趋势，提前预警潜在风险，帮助质量管理人员快速定位问题根源。</p>
+                </div>
+                <ul class="feature-benefits">
+                    <li>实时监控关键质量指标(KQI)波动</li>
+                    <li>多维度数据钻取分析能力</li>
+                    <li>自动生成柏拉图、直方图、控制图等专业图表</li>
+                    <li>异常趋势自动预警，减少质量事故</li>
+                    <li>支持移动端实时查看质量仪表盘</li>
+                </ul>
+            </div>
+        </div>
 
-            <div class="card feature-item">
-                <i class="fas fa-clipboard-list feature-icon"></i>
-                <h3 class="feature-title">检验计划管理</h3>
-                <p class="feature-desc">
-                    制定和管理原材料、过程、成品检验计划，支持抽样方案管理、
-                    检验标准库和自动任务分配。
-                </p>
-                <div class="feature-highlight">
-                    支持GB/T 2828、MIL-STD-105E等抽样标准
+        <!-- 功能2: 闭环问题管理 -->
+        <div class="feature-row animate-feature" style="animation-delay: 0.2s">
+            <div class="feature-content">
+                <h3 class="feature-title">闭环问题管理(CAPA)</h3>
+                <div class="feature-description">
+                    <p>实现质量问题从发现到解决的全流程闭环管理，确保每个问题得到彻底解决。系统提供标准化的8D问题解决方法框架，支持自定义CAPA（纠正与预防措施）流程，确保质量问题处理流程规范化、标准化。</p>
+                    <p>通过自动化工作流引擎，系统可自动分配任务、跟踪处理进度并发送提醒通知。每个问题处理过程都有完整的电子记录，包括根本原因分析(RCA)、纠正措施、预防措施和效果验证等环节，确保问题不复发，形成持续改进的质量文化。</p>
+                </div>
+                <ul class="feature-benefits">
+                    <li>标准化8D/CAPA问题处理流程</li>
+                    <li>自动化任务分配与进度跟踪</li>
+                    <li>根本原因分析(RCA)工具支持</li>
+                    <li>效果验证机制确保措施有效性</li>
+                    <li>完整的问题处理过程电子记录</li>
+                </ul>
+            </div>
+            <div class="feature-chart">
+                <div class="chart-decoration decoration-2"></div>
+                <div class="chart-container">
+                    <canvas id="capaManagementChart"></canvas>
                 </div>
             </div>
+        </div>
 
-            <div class="card feature-item">
-                <i class="fas fa-chart-line feature-icon"></i>
-                <h3 class="feature-title">SPC过程控制</h3>
-                <p class="feature-desc">
-                    实时监控关键过程参数，自动生成控制图，实现过程能力分析、
-                    异常预警和根本原因分析。
-                </p>
-                <div class="feature-highlight">
-                    支持20+种控制图类型和AI异常检测
+        <!-- 功能3: 供应商质量管理 -->
+        <div class="feature-row animate-feature" style="animation-delay: 0.3s">
+            <div class="feature-chart">
+                <div class="chart-decoration decoration-3"></div>
+                <div class="chart-container">
+                    <canvas id="supplierQualityChart"></canvas>
                 </div>
             </div>
-
-            <div class="card feature-item">
-                <i class="fas fa-exclamation-triangle feature-icon"></i>
-                <h3 class="feature-title">不合格品管理</h3>
-                <p class="feature-desc">
-                    全流程管理不合格品处理，包括标识、隔离、评审、处置和跟踪，
-                    支持8D、5Why等分析方法。
-                </p>
-                <div class="feature-highlight">
-                    闭环跟踪不合格品处理流程
+            <div class="feature-content">
+                <h3 class="feature-title">供应商质量管理</h3>
+                <div class="feature-description">
+                    <p>建立供应商全生命周期质量管理体系，从供应商准入、绩效评估到持续改进形成闭环管理。系统提供供应商资质管理、来料检验管理、质量问题协同处理等功能，实现供应链质量透明化。</p>
+                    <p>通过多维度供应商评分模型（包括来料合格率、交货及时率、问题响应速度等指标），系统自动生成供应商绩效评分和评级。供应商可通过专属门户查看自身绩效数据、质量问题整改要求，实现质量协同共治，提升供应链整体质量水平。</p>
                 </div>
+                <ul class="feature-benefits">
+                    <li>供应商资质电子化管理</li>
+                    <li>多维度供应商绩效评估体系</li>
+                    <li>来料检验数据实时采集与分析</li>
+                    <li>在线协同处理供应商质量问题</li>
+                    <li>供应商门户实现质量数据透明共享</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="card feature-item">
-                <i class="fas fa-tools feature-icon"></i>
-                <h3 class="feature-title">纠正预防措施</h3>
-                <p class="feature-desc">
-                    管理纠正和预防措施流程，跟踪措施执行效果，形成质量闭环管理，
-                    防止问题重复发生。
-                </p>
-                <div class="feature-highlight">
-                    支持PDCA循环和措施效果验证
+        <!-- 功能4: 文档控制与合规管理 -->
+        <div class="feature-row animate-feature" style="animation-delay: 0.4s">
+            <div class="feature-content">
+                <h3 class="feature-title">文档控制与合规管理</h3>
+                <div class="feature-description">
+                    <p>实现质量体系文件的全生命周期管理，确保文档版本准确、权限受控、变更可追溯。系统提供文档创建、审批、发布、修订、废止等全流程管理功能，符合ISO 9001、GMP等质量管理体系要求。</p>
+                    <p>通过严格的版本控制和权限管理，确保员工始终使用最新版本文档。系统自动记录每次文档修改内容、修改人和修改时间，支持版本对比和快速回滚。结合电子签名技术，满足合规性要求，大幅减少文档管理时间成本，提高审计效率。</p>
                 </div>
+                <ul class="feature-benefits">
+                    <li>自动化版本控制与发布流程</li>
+                    <li>电子审批与电子签名支持</li>
+                    <li>精细化权限管理与操作审计</li>
+                    <li>一键生成合规审计所需文件</li>
+                    <li>文档全文检索与快速定位</li>
+                </ul>
             </div>
-
-            <div class="card feature-item">
-                <i class="fas fa-chart-pie feature-icon"></i>
-                <h3 class="feature-title">质量分析报告</h3>
-                <p class="feature-desc">
-                    自动生成各类质量报告和仪表盘，支持多维度分析，
-                    为管理层提供决策支持。
-                </p>
-                <div class="feature-highlight">
-                    一键导出PDF/Excel/PPT格式报告
+            <div class="feature-chart">
+                <div class="chart-container">
+                    <canvas id="documentControlChart"></canvas>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- ====================== end core ====================== -->
 
+
+<div class="gradient-divider"></div>
 
 
 <!-- ====================== highlights ====================== -->
@@ -506,7 +584,7 @@
     <!-- 亮点4: 文档版本与权限控制 -->
     <div class="highlight-row">
         <div class="highlight-image feature-4">
-            <div class="feature-image">文档版本控制示意图</div>
+
         </div>
         <div class="highlight-content">
             <h3 class="highlight-title">文档版本与权限控制</h3>
@@ -526,7 +604,7 @@
 </section>
 <!-- ====================== end highlights ====================== -->
 
-
+<div class="gradient-divider"></div>
 
 <!-- ====================== architecture ====================== -->
 
@@ -628,7 +706,7 @@
 <!-- ====================== end architecture ====================== -->
 
 
-
+<div class="gradient-divider"></div>
 
 
 <!------------------- aftersale --------------------------------->
@@ -729,7 +807,7 @@
 <!------------------- end aftersale --------------------------------->
 
 
-
+<div class="gradient-divider"></div>
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -851,9 +929,8 @@
 <div id="qms-sidebar" class="position-fixed">
     <ul id="qms-List" class="qms-links list-unstyled">
         <li><a href="#pain"><i class="bi bi-search me-1"></i> 痛点诊断</a></li>
-        <li><a href="#workflow"><i class="bi bi-kanban me-1"></i> 实施流程</a></li>
         <li><a href="#architecture-qms"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
-        <li><a href="#qms-features"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
+        <li><a href="#core"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
         <li><a href="#highlights"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
         <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
         <li>

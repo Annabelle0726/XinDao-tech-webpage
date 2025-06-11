@@ -92,8 +92,100 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".ad-card-inner");
     setTimeout(() => {
         cards.forEach(card => card.classList.add("enter"));
-    }, 100); // 延迟100ms触发，确保页面元素加载
+    }, 100);
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const MOBILE_MAX = 768;
+//     const cards = document.querySelectorAll('.ad-card');
+//     let activeHandlers = false;
+//
+//     function enableCardDrag() {
+//         if (activeHandlers) return;
+//         activeHandlers = true;
+//
+//         cards.forEach(card => {
+//             let isDragging = false;
+//             let startX = 0, startY = 0;
+//             let currentX = 0, currentY = 0;
+//
+//             const onMouseDown = (e) => {
+//                 e.preventDefault();
+//                 isDragging = true;
+//                 card.classList.add('dragging');
+//                 startX = e.clientX - currentX;
+//                 startY = e.clientY - currentY;
+//                 document.addEventListener('mousemove', onMouseMove);
+//                 document.addEventListener('mouseup', onMouseUp);
+//             };
+//
+//             const onMouseMove = (e) => {
+//                 if (!isDragging) return;
+//                 currentX = e.clientX - startX;
+//                 currentY = e.clientY - startY;
+//                 card.style.transform = `translate(${currentX}px, ${currentY}px)`;
+//             };
+//
+//             const onMouseUp = () => {
+//                 isDragging = false;
+//                 card.classList.remove('dragging');
+//                 document.removeEventListener('mousemove', onMouseMove);
+//                 document.removeEventListener('mouseup', onMouseUp);
+//             };
+//
+//             const onTouchStart = (e) => {
+//                 isDragging = true;
+//                 card.classList.add('dragging');
+//                 const touch = e.touches[0];
+//                 startX = touch.clientX - currentX;
+//                 startY = touch.clientY - currentY;
+//                 document.addEventListener('touchmove', onTouchMove, { passive: false });
+//                 document.addEventListener('touchend', onTouchEnd);
+//             };
+//
+//             const onTouchMove = (e) => {
+//                 if (!isDragging) return;
+//                 e.preventDefault();
+//                 const touch = e.touches[0];
+//                 currentX = touch.clientX - startX;
+//                 currentY = touch.clientY - startY;
+//                 card.style.transform = `translate(${currentX}px, ${currentY}px)`;
+//             };
+//
+//             const onTouchEnd = () => {
+//                 isDragging = false;
+//                 card.classList.remove('dragging');
+//                 document.removeEventListener('touchmove', onTouchMove);
+//                 document.removeEventListener('touchend', onTouchEnd);
+//             };
+//
+//             card.addEventListener('mousedown', onMouseDown);
+//             card.addEventListener('touchstart', onTouchStart);
+//         });
+//     }
+//
+//     function disableCardDrag() {
+//         if (!activeHandlers) return;
+//         activeHandlers = false;
+//         cards.forEach(card => {
+//             card.classList.remove('dragging');
+//             card.style.transform = ''; // 恢复初始化位置
+//             card.replaceWith(card.cloneNode(true)); // 移除所有事件监听
+//         });
+//     }
+//
+//     function checkScreen() {
+//         if (window.innerWidth <= MOBILE_MAX) {
+//             enableCardDrag();
+//         } else {
+//             disableCardDrag();
+//         }
+//     }
+//
+//     checkScreen();
+//     window.addEventListener('resize', checkScreen);
+// });
+
 
 // ===================== end ad ============================
 

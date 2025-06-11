@@ -223,7 +223,7 @@ section {
     color: #a0d2eb;
 }
 
-/* 平板及以下适配 */
+
 @media (max-width: 1024px) {
     .hero-content {
         flex-direction: column;
@@ -544,27 +544,8 @@ section {
 }
 
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
     .pain-container {
-        height: 300px;
-    }
-
-    .pain-detail {
-        width: 90%;
-        top: calc(50% - 120px);
-    }
-}
-
-@media (max-width: 768px) {
-    .pain-container {
-        height: auto; /* 避免固定高度导致遮挡 */
+        height: auto;
         padding: 2rem 1rem;
     }
 
@@ -585,13 +566,14 @@ section {
     .pain-point {
         position: relative;
         top: auto;
+        height: auto;
         left: auto !important;
-        width: 100%;
-        max-width: 100%;
+        width: 80%;
+        /*max-width: 100%;*/
         margin: 1rem auto;
         flex-direction: row;
         justify-content: flex-start;
-        padding: 0.75rem 1rem;
+        padding: 1rem 1.5rem;
         border-radius: 12px;
         background: rgba(74, 140, 255, 0.15);
         box-shadow: none;
@@ -609,7 +591,6 @@ section {
 
     .pain-detail {
         position: relative;
-        left: auto;
         top: auto;
         transform: none;
         margin-top: 1rem;
@@ -625,6 +606,30 @@ section {
     .pain-stat {
         padding: 0.3rem 0.7rem;
         font-size: 0.85rem;
+    }
+
+    .truck {
+        animation: truckDriveMobile 15s linear infinite;
+    }
+
+    @keyframes truckDriveMobile {
+        0% { left: -50px; transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { left: 100%; transform: translateY(0); }
+    }
+}
+
+@media (max-width: 480px) {
+    .pain-detail h3 {
+        font-size: 1.1rem;
+    }
+
+    .pain-desc {
+        font-size: 0.9rem;
+    }
+
+    .pain-close {
+        font-size: 1rem;
     }
 }
 /* ================= end pain ========================== */
@@ -751,8 +756,8 @@ section {
 .process-highlights {
     list-style-type: none;
     margin-top: 1rem;
-    padding-left: 0; /* 去除 ul 默认内边距 */
-    margin-left: 0;  /* 确保无额外外边距 */
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .process-highlights li {
@@ -760,8 +765,8 @@ section {
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
     color: #c1d1e8;
-    padding-left: 1rem; /* 移除内部缩进 */
-    text-align: left; /* 明确声明左对齐文本 */
+    padding-left: 1rem;
+    text-align: left;
 }
 
 
@@ -831,6 +836,10 @@ section {
 }
 
 @media (max-width: 992px) {
+    #workflow .container, #benefits .container {
+        padding: 1rem 1.5rem;
+    }
+
     .radar-container {
         flex-direction: column;
         align-items: stretch;
@@ -883,20 +892,11 @@ section {
 }
 
 @media (max-width: 576px) {
-    #workflow {
+    #workflow .container {
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    .section-title {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .section-subtitle {
-        font-size: 0.95rem;
-        text-align: center;
-    }
 
     .radar-chart-container {
         height: 280px;
@@ -1073,7 +1073,7 @@ section {
     pointer-events: none;
     user-select: none;
 }
-.toast {
+.toastMsg {
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -1103,7 +1103,7 @@ section {
     pointer-events: none;
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.toast.show {
+.toastMsg.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -1172,53 +1172,28 @@ section {
     font-size: 0.9rem;
     padding: 20px;
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .tms-layout {
         flex-direction: column;
         align-items: center;
     }
 
     .column {
-        max-width: 100%;
         width: 100%;
-        padding: 1rem;
+        max-width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 20px;
     }
 
     .bottom {
         flex-direction: column;
-        align-items: center;
     }
 
-    #architecture .bottom .card {
-        flex: 0 0 calc(33.33% - 10px);
-        max-width: calc(33.33% - 10px);
+    .bottom .card {
+        flex: 0 0 calc(25% - 15px);
         height: auto;
-    }
-
-    .stats-bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat-card {
-        min-width: 80%;
-    }
-}
-
-
-/* ----------- 手机设备（480px 以下） ------------ */
-@media (max-width: 480px) {
-    .section-header h1 {
-        font-size: 1.4rem;
-    }
-
-    .section-header p {
-        font-size: 0.9rem;
-    }
-
-    .column {
-        padding: 0.8rem;
+        padding: 8px;
+        font-size: 0.8rem;
     }
 
     .module-title {
@@ -1226,34 +1201,35 @@ section {
     }
 
     #architecture .card {
+        height: 40px;
         font-size: 0.8rem;
-        height: auto;
-        min-width: unset;
-        padding: 8px;
-    }
-
-    #architecture .bottom .card {
-        flex: 0 0 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-    }
-
-    .stat-card {
-        padding: 10px 15px;
-    }
-
-    .stat-card .value {
-        font-size: 1.4rem;
-    }
-
-    .toast {
-        right: 20px;
-        bottom: 20px;
-        font-size: 14px;
-        padding: 12px 16px;
-        max-width: 90%;
+        min-width: 100px;
     }
 }
 
+@media (max-width: 480px) {
+    .stats-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .bottom .card {
+        flex: 0 0 calc(50% - 15px);
+        height: auto;
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+
+    .module-title::before {
+        width: 3px;
+        height: 15px;
+    }
+}
 /* ============================ end architecture ====================== */
 
 
@@ -1522,40 +1498,69 @@ section {
     gap: 1.25rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     .insight-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
     }
 
     .insight-focus {
-        grid-column: span 2 !important;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .insight-feature-img {
-        text-align: center;
-        width: 100%;
-    }
-
-    .insight-feature-img img {
-        max-width: 100%;
-        object-fit: cover;
-        border-radius: 6px;
+        grid-column: span 2;
     }
 }
 
 @media (max-width: 768px) {
+    .highlight-section .container {
+        padding: 1rem;
+    }
+
     .insight-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .insight-focus {
+        grid-column: span 1;
         flex-direction: column;
         gap: 1rem;
     }
+
+    .insight-block {
+        padding: 1.2rem;
+    }
+
+    .insight-title {
+        font-size: 1.1rem;
+    }
+
+    .insight-desc {
+        font-size: 0.85rem;
+    }
+
+    .insight-feature-img img {
+        max-width: 100%;
+        box-shadow: 0 3px 10px rgba(0, 60, 120, 0.1);
+    }
 }
 
+@media (max-width: 480px) {
+    .insight-title {
+        font-size: 1rem;
+    }
+
+    .insight-title::after {
+        width: 30px;
+    }
+
+    .insight-desc {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .insight-block {
+        padding: 1rem;
+    }
+}
 
 /* ====================== end highlight ===================================*/
 

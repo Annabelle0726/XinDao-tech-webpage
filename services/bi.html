@@ -37,10 +37,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/services/bi.css">
     <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
 </head>
 <body>
 
-<!-- ======= Header ======= -->
+<!-- ======================== Header ===================== -->
 <header id="header" class="header fixed-top transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../index.html" class="logo d-flex align-items-center">
@@ -50,117 +55,260 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto " href="../index.html">首页</a></li>
+                <li><a class="nav-link scrollto" href="../index.html">首页</a></li>
                 <li><a class="nav-link scrollto" href="../dx-services.html">数字化转型</a></li>
-
-                <!-- 产品中心菜单触发 -->
                 <li class="dropdown megamenu position-static" id="productCenterDropdown">
                     <a class="nav-link scrollto active"><span>产品中心</span> <i
                             class="bi bi-chevron-bar-down ms-1"></i></a>
                 </li>
-
                 <li><a class="nav-link scrollto" href="../consulting.html">诊断咨询</a></li>
                 <li><a class="nav-link scrollto" href="../about.html">关于我们</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-    </div>
-
-    <!-- head width megamenu -->
-    <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
-        <div class="container py-4">
-            <div class="row" style="margin: 0 !important;">
-
-                <!-- MES -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/mes.html" class="text-dark fw-bold">
-                        <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
-                    <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+        <div class="megamenu-panel dropdown-menu-custom" id="megamenuPanel">
+            <div class="container py-4">
+                <div class="row" style="margin: 0 !important;">
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/mes.html" class="text-dark fw-bold">
+                            <i class="bi bi-gear-wide-connected icon text-primary"></i> MES 生产制造执行系统</a></h6>
+                        <p class="text-muted">实现生产过程的精细化管理与实时控制，提升现场执行力</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/eam.html" class="text-dark fw-bold">
+                            <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
+                        <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/lims.html" class="text-dark fw-bold">
+                            <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
+                        <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/qms.html" class="text-dark fw-bold">
+                            <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
+                        <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/ems.html" class="text-dark fw-bold">
+                            <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
+                        <p class="text-muted">监控能源使用，提升能效水平，支持"双碳"目标落地</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/spc.html" class="text-dark fw-bold">
+                            <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
+                        <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/tms.html" class="text-dark fw-bold">
+                            <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
+                        <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
+                    </div>
+                    <div class="col-lg-4 mb-1">
+                        <h6><a href="../services/bi.html" class="text-dark fw-bold">
+                            <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
+                        <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
+                    </div>
                 </div>
-
-                <!-- EAM -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/eam.html" class="text-dark fw-bold">
-                        <i class="bi bi-tools icon text-info"></i> EAM 设备资产管理系统</a></h6>
-                    <p class="text-muted">全生命周期管理设备资产，提升设备可用率与运维效率</p>
-                </div>
-
-                <!-- LIMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/lims.html" class="text-dark fw-bold">
-                        <i class="bi bi-file-earmark-text icon text-success"></i> LIMS 实验室管理系统</a></h6>
-                    <p class="text-muted">提升实验室数据可靠性与流程规范化</p>
-                </div>
-
-                <!-- QMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/qms.html" class="text-dark fw-bold">
-                        <i class="bi bi-shield-check icon text-warning"></i> QMS 质量管理系统</a></h6>
-                    <p class="text-muted">覆盖产品全生命周期的质量管控，强化质量闭环机制</p>
-                </div>
-
-                <!-- EMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/ems.html" class="text-dark fw-bold">
-                        <i class="bi bi-lightning-charge icon text-danger"></i> EMS 能源管理系统</a></h6>
-                    <p class="text-muted">监控能源使用，提升能效水平，支持“双碳”目标落地</p>
-                </div>
-
-                <!--                SPC-->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="spc.html" class="text-dark fw-bold">
-                        <i class="bi bi-bar-chart-line icon text-secondary"></i> SPC 统计过程控制系统</a></h6>
-                    <p class="text-muted">基于统计方法控制生产波动，实现过程稳定与质量预警</p>
-                </div>
-
-                <!-- TMS -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/tms.html" class="text-dark fw-bold">
-                        <i class="bi bi-truck icon text-primary"></i> TMS 运输管理系统</a></h6>
-                    <p class="text-muted">让车队更智慧，运输调度、路径可视与成本管控更高效</p>
-                </div>
-
-                <!-- BI -->
-                <div class="col-lg-4 mb-1">
-                    <h6><a href="../services/bi.html" class="text-dark fw-bold">
-                        <i class="bi bi-pie-chart-fill icon text-info"></i> BI 数据分析系统</a></h6>
-                    <p class="text-muted">实现数据可视化、趋势洞察、业务分析与决策支持</p>
-                </div>
-
             </div>
-
         </div>
+        <button class="mobile-nav-toggle" id="mobileToggle">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
 </header>
-<!-- End Header -->
+<!-- 移动端菜单 -->
+<div class="navbar-mobile" id="navbarMobile">
+    <ul>
+        <li><a class="nav-link scrollto" href="../index.html">首页</a></li>
+        <li><a class="nav-link scrollto" href="../dx-services.html">数字化转型</a></li>
+        <li class="dropdown">
+            <a class="nav-link scrollto active" id="mobileDropdown">
+                <span>产品中心</span> <i class="bi bi-chevron-down ms-1"></i>
+            </a>
+            <div class="dropdown-content" id="mobileDropdownContent">
+                <div class="mobile-menu-item">
+                    <a href="../services/mes.html"><i class="bi bi-gear-wide-connected"></i> MES 生产制造执行系统</a>
+                    <span class="mobile-menu-desc">实现生产过程的精细化管理与实时控制</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/eam.html"><i class="bi bi-tools"></i> EAM 设备资产管理系统</a>
+                    <span class="mobile-menu-desc">全生命周期管理设备资产</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/lims.html"><i class="bi bi-file-earmark-text"></i> LIMS 实验室管理系统</a>
+                    <span class="mobile-menu-desc">提升实验室数据可靠性与流程规范化</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/qms.html"><i class="bi bi-shield-check"></i> QMS 质量管理系统</a>
+                    <span class="mobile-menu-desc">覆盖产品全生命周期的质量管控</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/ems.html"><i class="bi bi-lightning-charge"></i> EMS 能源管理系统</a>
+                    <span class="mobile-menu-desc">监控能源使用，提升能效水平</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/spc.html"><i class="bi bi-bar-chart-line"></i> SPC 统计过程控制系统</a>
+                    <span class="mobile-menu-desc">实现过程稳定与质量预警</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/tms.html"><i class="bi bi-truck"></i> TMS 运输管理系统</a>
+                    <span class="mobile-menu-desc">运输调度、路径可视与成本管控</span>
+                </div>
+                <div class="mobile-menu-item">
+                    <a href="../services/bi.html"><i class="bi bi-pie-chart-fill"></i> BI 数据分析系统</a>
+                    <span class="mobile-menu-desc">实现数据可视化与业务分析</span>
+                </div>
+            </div>
+        </li>
+        <li><a class="nav-link scrollto" href="../consulting.html">诊断咨询</a></li>
+        <li><a class="nav-link scrollto" href="../about.html">关于我们</a></li>
+    </ul>
+</div>
+<!-------------------- End Header ----------------------------->
 
-<!--=========== hero ============= -->
-<section class="hero" id="hero">
 
+<!--=========================== hero =================================== -->
+<section class="hero" id="bi-hero">
 
+    <div class="hero-content">
+        <div class="ceramic-card">
+            <h1>智能商业决策，数据驱动未来</h1>
+            <p>芯导BI系统将复杂数据转化为直观洞察，帮助企业快速做出精准决策，提升业务表现与竞争力</p>
+            <div class="hero-buttons">
+                <a href="#pain" class="cta-button">立即体验</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-
+<div class="gradient-divider"></div>
 
 <!-- ================ end hero =================== -->
-<div class="gradient-transition1"></div>
+
 
 <!-- ============ pain =============== -->
-<section id="pain" class="pain">
+<section class="pain" id="pain">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">传统BI无法解决的<span style="color:#d32f2f;">痛点</span></h2>
+            <p class="section-subtitle">在数据爆炸的时代，企业面对的是无法等待的决策时机，而传统工具却让人寸步难行</p>
+        </div>
 
+        <div class="pain-container">
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3>数据孤岛问题 <span class="severity-tag">严重</span></h3>
+                <p>数据被锁在各个系统里，想整合就像拼图少了块，领导决策像戴着眼罩摸黑前行。</p>
+            </div>
+
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <h3>分析效率低下 <span class="severity-tag">严重</span></h3>
+                <p>做个报表得两天，市场却只给你两小时反应时间。每次都慢半拍，像在与时间赛跑中被绊住脚。</p>
+            </div>
+
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>洞察能力不足 <span class="severity-tag">中度</span></h3>
+                <p>看似数据满天飞，实则只是堆表格。你试图找到规律，却像在沙堆里找金子，费力又无果。</p>
+            </div>
+
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>移动体验缺失 <span class="severity-tag">中度</span></h3>
+                <p>出差途中，业务数据“断了线”。老板要你汇报数据，只能说“回到办公室再说”。</p>
+            </div>
+
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-user-lock"></i>
+                </div>
+                <h3>安全与合规风险 <span class="severity-tag">高危</span></h3>
+                <p>权限混乱，谁能看什么没人说得清。一不小心，核心数据就被随手转发，监管红线随时踩爆。</p>
+            </div>
+
+            <div class="pain-point ceramic-card" style="border-left: 6px solid #d32f2f;">
+                <div class="pain-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3>高昂的总拥有成本 <span class="severity-tag">中度</span></h3>
+                <p>工具部署遥遥无期，培训一堆人却没人会用。业务没提升，账单却月月都来，从不缺席。</p>
+            </div>
+        </div>
+    </div>
 </section>
+
+
+<!-- Solution Section -->
+<section class="solution-section" id="solution">
+    <div class=container>
+        <div class="section-header">
+            <h2 class="section-title">芯导BI：重新定义商业智能</h2>
+            <p class="section-subtitle">
+                我们的解决方案整合了AI技术与直观可视化，将数据转化为可执行的商业洞察，帮助您突破传统BI的局限，实现数据驱动的决策文化。</p>
+        </div>
+
+        <div class="solution-content">
+            <div class="solution-text ceramic-card">
+
+                <div class="bi-solution-features">
+                    <div class="bi-feature-card">
+                        <div class="bi-feature-label">01</div>
+                        <div class="bi-feature-body">
+                            <h4 class="bi-feature-title">智能洞察引擎</h4>
+                            <p class="bi-feature-desc">融合 AI 规则模型与图形分析，自动发现潜在趋势与业务异常</p>
+                        </div>
+                    </div>
+
+                    <div class="bi-feature-card">
+                        <div class="bi-feature-label">02</div>
+                        <div class="bi-feature-body">
+                            <h4 class="bi-feature-title">秒级数据联动</h4>
+                            <p class="bi-feature-desc">数据变更实时驱动仪表板更新，业务监控更精准、更敏捷</p>
+                        </div>
+                    </div>
+
+                    <div class="bi-feature-card">
+                        <div class="bi-feature-label">03</div>
+                        <div class="bi-feature-body">
+                            <h4 class="bi-feature-title">可插拔式集成</h4>
+                            <p class="bi-feature-desc">兼容ERP、MES、CRM等主流系统，快速完成异构数据融合</p>
+                        </div>
+                    </div>
+
+                    <div class="bi-feature-card">
+                        <div class="bi-feature-label">04</div>
+                        <div class="bi-feature-body">
+                            <h4 class="bi-feature-title">全栈安全防护</h4>
+                            <p class="bi-feature-desc">从访问控制到传输加密，全流程保护关键商业数据</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#architecture" class="cta-button bi-cta-button">了解解决方案</a>
+            </div>
+
+        <div class="solution-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                 alt="芯导BI仪表盘" class="dashboard-img">
+        </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- ================ end pain ======================== -->
 
-<div class="gradient-transition2"></div>
+<div class="gradient-divider"></div>
 
-
-<!-- ============= feature ============== -->
-<section class="feature-section" id="features">
-
-</section>
-<!--------------------- end feature -------------------->
-
-<div class="gradient-transition3"></div>
 
 <!-- ============= architecture =============== -->
 <section class="architecture-section" id="architecture">
@@ -250,19 +398,414 @@
 <!-- ================= end architecture ====================== -->
 
 
-<div class="gradient-transition4"></div>
-<!--==================== ad ================================-->
-<section class="advantages-circular adv-background" id="advantages">
+<div class="gradient-divider"></div>
+
+<!-- ============= feature ============== -->
+
+<section class="features-section" id="features">
+
     <div class="container">
 
+        <div class="section-header">
+            <div class="section-title">
+                核心功能
+            </div>
+            <div class="section-subtitle">释放数据价值，构建驱动决策的智能引擎</div>
+        </div>
+
+        <div class="feature-container">
+            <!-- 功能1 - 智能数据融合 -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3 class="feature-title">智能数据融合</h3>
+                    <p class="feature-desc">
+                        芯导BI系统打破数据孤岛，实现跨系统、多源异构数据的无缝整合。通过智能ETL引擎自动清洗、转换和加载数据，建立统一的企业数据仓库。系统支持实时数据流处理，确保分析结果始终基于最新数据。无论您的数据存储在云端、本地数据库还是第三方应用，我们的系统都能高效整合，形成360度业务视图。数据融合过程采用先进的增量更新技术，大幅降低资源消耗，提升数据处理效率。
+                    </p>
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="dataIntegrationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能2 - AI预测分析 -->
+            <div class="feature-block even">
+                <div class="feature-content">
+                    <h3 class="feature-title">AI预测分析</h3>
+                    <p class="feature-desc">
+                        集成机器学习算法，对业务趋势进行智能预测。系统自动识别关键业务指标的变化规律，生成销售预测、库存预警和客户流失分析。通过时间序列分析和回归模型，为企业提供前瞻性决策支持。我们的预测模型基于深度学习技术，能够自动优化参数并适应业务变化。系统支持多场景预测，包括市场需求预测、财务预测、人力资源规划等，帮助企业提前布局，把握市场机遇。
+                    </p>
+
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="aiPredictionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能3 - 实时可视化看板 -->
+            <div class="feature-block">
+                <div class="feature-content">
+
+                    <h3 class="feature-title">实时可视化看板</h3>
+                    <p class="feature-desc">
+                        提供高度可定制的交互式仪表盘，将复杂数据转化为直观的视觉呈现。支持50+图表类型和智能图表推荐，可根据用户角色自动生成个性化视图。看板支持钻取、筛选和下钻分析，实现数据探索自由。实时数据刷新功能确保您始终看到最新业务状态，多屏联动技术让您在不同设备间无缝切换。系统内置智能预警功能，当关键指标超出阈值时自动通知相关人员。
+                    </p>
+
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="dashboardChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能4 - 智能数据助手 -->
+            <div class="feature-block even">
+                <div class="feature-content">
+
+                    <h3 class="feature-title">智能数据助手</h3>
+                    <p class="feature-desc">
+                        基于NLP技术的智能分析助手，用户可通过自然语言提问获取数据洞察。系统理解业务语义，自动生成分析报告并解释数据异常。支持语音交互，让数据分析像对话一样简单自然。智能助手能够理解复杂查询，如"上季度华东地区销售额最高的产品是什么？"，并自动生成可视化结果。系统持续学习用户查询模式，提供越来越精准的分析建议。
+                    </p>
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="assistantChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能5 - 移动决策中心 -->
+            <div class="feature-block">
+                <div class="feature-content">
+
+                    <h3 class="feature-title">移动决策中心</h3>
+                    <p class="feature-desc">
+                        随时随地通过移动设备访问关键业务指标。系统自动推送异常预警和重要报告到移动端，支持离线数据查看和审批流程处理。手势交互和语音控制让移动端分析体验流畅高效。移动应用提供与桌面端一致的功能体验，包括数据筛选、图表交互和报告生成。支持iOS、Android和鸿蒙系统，确保在各种设备上都能获得最佳体验。
+                    </p>
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="mobileChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能6 - 协同决策平台 -->
+            <div class="feature-block even">
+                <div class="feature-content">
+
+                    <h3 class="feature-title">协同决策平台</h3>
+                    <p class="feature-desc">
+                        内置协作工作区，支持团队在数据上下文中直接讨论和决策。可标记数据点、添加批注并@相关人员，系统自动记录分析过程和决策依据。支持版本控制和审计追踪，确保决策可追溯。协作平台整合了即时通讯、任务分配和文档共享功能，使团队能够围绕数据进行高效协作。系统提供决策时间线功能，完整记录从数据发现到最终决策的全过程。
+                    </p>
+                </div>
+                <div class="feature-chart">
+                    <div class="chart-container">
+                        <canvas id="collaborationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+
+<!--------------------- end feature -------------------->
+
+
+<div class="gradient-divider"></div>
+
+
+<!--==================== ad ================================-->
+<section id="advantages">
+    <img src="../assets/img/bi/统计.svg"
+         alt="" style="position: absolute; top: 25px; right: 65px; z-index: -1;
+width: 200px; height: 200px;">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title">芯导智能BI系统</div>
+            <div class="section-subtitle">交互式数据分析平台，让数据洞察触手可及</div>
+        </div>
+
+        <div class="feature-section">
+            <div class="container">
+                <h2 class="feature-title">芯导BI系统核心优势</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h6 class="feature-title1">实时数据处理</h6>
+                        <p class="feature-desc">支持TB级数据实时处理，毫秒级响应时间，确保您始终基于最新数据做出决策</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>
+                                我们的实时数据处理引擎采用分布式架构，能够同时处理来自多个数据源的TB级数据流。通过内存计算技术和智能缓存机制，实现毫秒级响应，确保决策者随时获取最新业务洞察。</p>
+                            <ul>
+                                <li>支持每秒百万级事件处理</li>
+                                <li>端到端延迟低于100毫秒</li>
+                                <li>自动数据质量检测与修复</li>
+                                <li>实时预警与异常检测</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h6 class="feature-title1">AI智能分析</h6>
+                        <p class="feature-desc">集成机器学习算法，自动识别数据模式，提供预测性洞察和优化建议</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>
+                                系统内置15+种机器学习算法，覆盖分类、回归、聚类、时间序列预测等多种分析场景。自动特征工程和模型选择功能让非技术人员也能轻松构建预测模型。</p>
+                            <ul>
+                                <li>自动异常检测与根因分析</li>
+                                <li>销售预测准确率高达92%</li>
+                                <li>客户流失预警提前30天</li>
+                                <li>动态模型自动优化</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h6 class="feature-title1">跨平台支持</h6>
+                        <p class="feature-desc">全面支持桌面、平板和移动设备，随时随地访问您的数据分析仪表板</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>
+                                响应式设计确保在所有设备上获得最佳体验，从4K大屏到手机小屏都能完美适配。离线模式支持在没有网络连接时继续查看和分析数据。</p>
+                            <ul>
+                                <li>iOS/Android/鸿蒙原生应用</li>
+                                <li>自适应屏幕尺寸和方向</li>
+                                <li>离线数据缓存与分析</li>
+                                <li>移动端手势操作优化</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h6 class="feature-title1">企业级安全</h6>
+                        <p class="feature-desc">银行级数据加密和权限管理，确保您的业务数据安全无虞</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>
+                                采用AES-256加密算法保护数据安全，支持基于角色的细粒度权限控制。完整审计日志记录所有数据访问和操作，满足GDPR等合规要求。</p>
+                            <ul>
+                                <li>数据在传输和存储时加密</li>
+                                <li>多因素身份验证</li>
+                                <li>字段级数据权限控制</li>
+                                <li>完整的操作审计日志</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h6 class="feature-title1">无缝集成</h6>
+                        <p class="feature-desc">轻松集成ERP、CRM、MES等各类业务系统，打破数据孤岛</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>预置20+种常见业务系统的连接器，支持REST
+                                API、JDBC、ODBC等多种集成方式。可视化数据管道设计器让ETL流程配置变得简单直观。</p>
+                            <ul>
+                                <li>零代码数据源连接</li>
+                                <li>自动模式识别与映射</li>
+                                <li>增量数据同步</li>
+                                <li>数据质量监控面板</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h6 class="feature-title1">协同分析</h6>
+                        <p class="feature-desc">支持团队协作分析，共享洞察，共同制定数据驱动的业务决策</p>
+                        <button class="learn-more-btn">Learn More</button>
+                        <div class="feature-details">
+                            <p>
+                                内置协作工作区支持团队成员实时讨论数据发现，添加批注和标记关键洞察。版本控制功能记录分析过程，决策时间线展示从数据到决策的全过程。</p>
+                            <ul>
+                                <li>实时协作编辑</li>
+                                <li>数据点批注与讨论</li>
+                                <li>分析过程版本控制</li>
+                                <li>决策时间线追溯</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </section>
 <!--------------------- end ad ----------------------------->
 
-<div class="gradient-transition5"></div>
+
+<div class="gradient-divider"></div>
+
 <!------------------------- process ------------------------>
 
 <section id="process">
+    <img src="../assets/img/bi/Fotolia_66914686_S.png"
+         alt=""
+         style="width: 300px; height: auto; object-fit: cover; position: absolute;
+         top: 20px; right: 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h3 class="section-title">芯导BI系统 - 高级数据分析平台</h3>
+            <p class="section-subtitle">上传CSV或Excel文件，进行专业的数据可视化分析</p>
+        </div>
+
+        <div class="upload-section">
+            <h2 class="" style="
+            margin-bottom: 20px; font-size: 1.28rem;
+    color: var(--primary-color);
+    font-weight: 560;
+    position: relative;
+    padding-bottom: 10px;">上传您的数据文件</h2>
+            <div class="upload-container" id="upload-area">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <p class="upload-text">拖放CSV或Excel文件到此处，或点击选择文件</p>
+                <button class="upload-btn">
+                    <i class="fas fa-file-upload"></i> 选择文件
+                </button>
+                <input type="file" id="file-input" accept=".csv,.xlsx,.xls" style="display: none;">
+            </div>
+            <div class="file-info" id="file-info" style="display: none;">
+                <i class="fas fa-file-alt"></i>
+                <span id="file-name">文件名.csv</span> |
+                <span id="file-size">0 KB</span> |
+                <span id="row-count">0 行</span>
+            </div>
+        </div>
+
+
+
+
+        <div class="interactive-section" id="analysis-section" style="display: none;">
+            <h2 class="feature-title1" style="padding: 20px 30px 0; font-size: 1.8rem;">数据分析与可视化</h2>
+
+            <div class="interactive-container">
+                <div class="chart-controls">
+                    <div class="control-group">
+                        <h3>选择图表类型</h3>
+                        <div class="chart-types">
+                            <div class="chart-type-btn active" data-type="bar">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>柱状图</span>
+                            </div>
+                            <div class="chart-type-btn" data-type="line">
+                                <i class="fas fa-chart-line"></i>
+                                <span>折线图</span>
+                            </div>
+                            <div class="chart-type-btn" data-type="pie">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>饼图</span>
+                            </div>
+                            <div class="chart-type-btn" data-type="scatter">
+                                <i class="fas fa-braille"></i>
+                                <span>散点图</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>选择数据列</h3>
+                        <div class="data-columns">
+                            <div class="column-group">
+                                <label for="x-axis">X轴数据列</label>
+                                <select id="x-axis">
+                                    <option value="">-- 选择列 --</option>
+                                </select>
+                            </div>
+                            <div class="column-group">
+                                <label for="y-axis">Y轴数据列</label>
+                                <select id="y-axis">
+                                    <option value="">-- 选择列 --</option>
+                                </select>
+                            </div>
+                            <div class="column-group">
+                                <label for="label-column">标签列</label>
+                                <select id="label-column">
+                                    <option value="">-- 选择列 --</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3>图表样式</h3>
+                        <div class="data-columns">
+                            <div class="column-group">
+                                <label for="color-scheme">配色方案</label>
+                                <select id="color-scheme">
+                                    <option value="blue">蓝色主题</option>
+                                    <option value="green">绿色主题</option>
+                                    <option value="red">红色主题</option>
+                                    <option value="purple">紫色主题</option>
+                                </select>
+                            </div>
+                            <div class="column-group">
+                                <label for="chart-style">图表风格</label>
+                                <select id="chart-style">
+                                    <option value="standard">标准风格</option>
+                                    <option value="minimalist">简约风格</option>
+                                    <option value="modern">现代风格</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-display">
+                    <div class="chart-header">
+                        <div class="chart-title" id="chart-title">数据分析图表</div>
+                        <div class="chart-actions">
+                            <div class="action-btn" id="download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>导出图表</span>
+                            </div>
+                            <div class="action-btn" id="refresh-btn">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>重新分析</span>
+                            </div>
+                            <div class="action-btn" id="export-data-btn">
+                                <i class="fas fa-file-export"></i>
+                                <span>导出数据</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="interactiveChart" class="chart-canvas"></canvas>
+                    </div>
+
+                    <div class="chart-description">
+                        <h4>数据分析洞察</h4>
+                        <p id="insight-text">
+                            请上传数据文件并选择X轴和Y轴数据列以生成数据分析洞察。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-table-container">
+                <h3>数据预览</h3>
+                <table id="data-table">
+                    <thead>
+                    <tr>
+                        <!-- 表头将由JS动态生成 -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- 数据行将由JS动态生成 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="toastMsg" id="toastMsg"></div>
 
 </section>
 
@@ -271,20 +814,106 @@
 
 
 <!----------------------------------------------------->
-<div class="gradient-transition5"></div>
 
 
-<div class="gradient-transition6"></div>
+<!------------------- aftersale --------------------------------->
+<section class="support-dashboard-section" id="support">
+    <div class="support-dashboard-container">
+        <h2 class="support-title">售后服务</h2>
+        <div class="support-divider"></div>
 
-<!---------------------------- aftersale -------------------->
-
-
-<section id="aftersale">
-
+        <div class="support-flex-features">
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748144650750" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="3139" width="48" height="48">
+                        <path d="M217.545 526.053a290.373 288.278 0 1 0 580.746 0 290.373 288.278 0 1 0-580.746 0z"
+                              fill="#E9EAEB" p-id="3140"></path>
+                        <path d="M614.125 754.796c-40.026-35.691-108.953-61.918-162.345-61.195a384.515 384.515 0 0 0-58.884 61.99c-30.2-10.332-63.075-43.35-92.191-78.68s-55.055-74.129-59.39-105.774a384.443 384.443 0 0 0 72.25-45.807c10.91-52.237-1.445-124.92-28.9-171.305-31.645-5.274-108.375-3.757-163.213 21.675-22.614 67.265-30.2 219.062 96.02 378.663C349.69 909.05 501.994 908.76 572.366 899.585c35.402-49.635 41.038-112.71 41.76-144.789z"
+                              fill="#A3D4FF" p-id="3141"></path>
+                        <path d="M522.585 918.587c-85.617 0-208.803-27.166-317.323-154.037C85.182 612.68 76.946 457.343 106.28 370.282l2.24-6.647 6.358-2.89c57.077-25.938 135.252-28.9 172.533-22.543l7.225 1.229 3.829 6.502c29.406 49.997 42.339 126.871 30.706 182.793l-1.084 5.13-3.901 3.54a396.725 396.725 0 0 1-64.086 42.627c6.647 22.398 24.565 51.442 53.393 86.7s53.899 58.234 74.562 69.144a397.375 397.375 0 0 1 54.115-55.272l4.19-3.179h5.275c57.367-0.505 130.05 26.878 173.4 65.387l5.636 4.985v7.225c-1.229 43.35-9.97 104.618-44.868 153.315l-4.046 5.707-7.225 0.94a400.916 400.916 0 0 1-51.947 3.612zM134.819 387.26c-10.188 36.125-40.1 185.394 95.442 356.771 119.068 139.226 256.993 148.474 333.073 140.02 24.998-38.436 32.801-85.905 34.607-122.03a256.415 256.415 0 0 0-140.526-52.381 391.812 391.812 0 0 0-51.225 55.055l-7.225 9.97-11.488-3.974c-28.9-9.826-61.196-37.208-99.416-83.665s-58.812-83.666-62.93-113.722l-1.156-11.993 10.838-4.986a391.306 391.306 0 0 0 63.869-39.665 256.488 256.488 0 0 0-24.132-147.679c-30.562-3.251-92.48-0.94-139.731 18.28z"
+                              fill="#2A5082" p-id="3142"></path>
+                        <path d="M556.325 560.444H427.287v-38.22l54.62-53.032a284.16 284.16 0 0 0 28.54-29.695 64.52 64.52 0 0 0 9.753-16.473 34.825 34.825 0 0 0 2.53-14.089c0-0.65 0-16.328-23.049-22.036s-44.65 9.61-56.355 27.383l-26.949-17.774c21.675-32.801 58.234-49.274 91.18-40.893 37.425 9.465 47.396 38.003 47.396 53.32a66.542 66.542 0 0 1-5.13 26.805 96.237 96.237 0 0 1-14.811 24.42 309.808 309.808 0 0 1-31.212 32.513l-36.342 35.475h88.867z m145.223 0h-32.296v-48.408H572.51V467.82l71.6-117.117h57.8v129.11h16.112v32.224h-16.473z m-96.815-80.631h64.52v-96.888h-7.226l-57.8 93.925z"
+                              fill="#2A5082" p-id="3143"></path>
+                        <path d="M514.06 1004.276A498.525 498.525 0 0 1 15.894 505.75h32.296A466.374 466.374 0 0 0 514.059 971.62zM1012.15 505.75h-32.224A465.724 465.724 0 0 0 599.675 47.974l5.925-31.718A498.02 498.02 0 0 1 1012.15 505.75zM766.79 944.742l-16.112-27.961a476.85 476.85 0 0 0 205.84-240.304l30.129 11.633A508.857 508.857 0 0 1 766.79 944.742z"
+                              fill="#BCC0C4" p-id="3144"></path>
+                        <path d="M642.592 906.016l-11.199-30.273A379.168 379.168 0 1 0 194.28 295.719l-26.01-19.074a411.392 411.392 0 1 1 474.322 629.37z"
+                              fill="#2A5082" p-id="3145"></path>
+                        <path d="M556.325 608.851h32.296v32.224h-32.296z m64.52 0h32.295v32.224h-32.295z m64.591 0h32.296v32.224h-32.296z"
+                              fill="#2A5082" p-id="3146"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>7×24小时支持</h4>
+                    <p>400热线 + 远程诊断</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748145257992" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="7477" width="48" height="48">
+                        <path d="M577.8 644.2c25.7 0 46.6-20.9 46.6-46.6 0-25.7-20.9-46.6-46.6-46.6-25.7-0.1-46.6 20.8-46.6 46.6 0 25.7 20.9 46.6 46.6 46.6zM444.6 617.9c25 0 45.4-20.3 45.4-45.4 0-25.1-20.3-45.5-45.4-45.5-25.1 0.1-45.5 20.4-45.5 45.5 0.1 24.9 20.4 45.4 45.5 45.4zM539 525.7c18.4 0 33.2-14.9 33.2-33.2 0-18.4-14.9-33.2-33.2-33.2-18.4 0-33.2 14.9-33.2 33.2 0 18.3 14.9 33.2 33.2 33.2z"
+                              fill="#1296f9" p-id="7478"></path>
+                        <path d="M443.7 325.2l7.1-11.8H575l7.1 11.8c8.9 14.6 21.9 36.5 37 62 19-7.5 37.8-15.6 56.4-24.5-13.4-22.3-27.2-45.2-41.6-68.7V122.1h11.2c16.3 0 29.4-13.1 29.4-29.2 0-16.2-13.1-29.4-29.3-29.2l-264.7-0.1c-16.2 0.1-29.4 13.1-29.4 29.4 0 16.2 13.1 29.3 29.4 29.2h11.2v172.1c-37.5 61.5-71.9 119-103.1 171.8 26.5-3.7 52.9-7.7 79.2-12.2 30.7-52.8 59.3-101.5 75.9-128.7z"
+                              fill="#1296f9" p-id="7479"></path>
+                        <path d="M239.7 675.7c12.2-20.9 73.5-127.8 128.1-221.8-26.3 4.5-52.7 8.5-79.2 12.2-102.4 173.5-168.3 293.8-184.7 324.2 174-27.1 351-59.1 520.8-114.5l-385-0.1zM675.5 362.7c-18.6 8.9-37.4 17-56.4 24.5 42.4 72 101.8 174.8 138.7 239.4 19.4-8.1 38.7-16.6 57.9-25.6-38.2-66.4-85.3-147-140.2-238.3z"
+                              fill="#1296f9" p-id="7480"></path>
+                        <path d="M815.7 601c-19.2 8.9-38.5 17.5-57.9 25.6 12.3 21.5 22 38.7 27.8 49.2H624.7c-169.9 55.4-346.8 87.4-520.8 114.5-2.7 4.9-4.2 7.8-4.2 7.8-28.2 83.7 2.8 160.6 92.9 160.6H833c90 0 121.1-77.6 92.8-161.3 0-0.1-39.8-73.9-110.1-196.4z"
+                              fill="#1296f9" p-id="7481"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>定期健康检查</h4>
+                    <p>季度性能优化报告</p>
+                </div>
+            </div>
+            <div class="support-feature-item">
+                <div class="support-icon">
+                    <svg t="1748145337923" class="icon" viewBox="0 0 1034 1024" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg" p-id="9757" width="48" height="48">
+                        <path d="M491.492169 512m-470.460777 0a470.460777 470.460777 0 1 0 940.921554 0 470.460777 470.460777 0 1 0-940.921554 0Z"
+                              fill="#70C4FF" p-id="9758"></path>
+                        <path d="M485.261285 57.145509s-47.072247 265.851027 55.3884 285.237382 146.77469-8.307845 199.38827 44.309889 170.842516 34.394477 174.464736-19.386355c0 0-72.004089-268.621693-429.241406-310.160916zM194.054717 864.796774s108.666607 16.528457 208.477052-25.106306c105.704861-44.093885 201.465231-149.807054 147.634552-275.558743C465.501077 366.388408 383.635576 471.017403 412.364103 315.785327c28.724373-155.232076-61.527897-217.100595-124.480589-217.100595s-337.672343 410.465677-93.828797 766.112042z"
+                              fill="#A3D9FF" opacity=".26" p-id="9759"></path>
+                        <path d="M171.233068 856.285387s94.27742 15.63121 180.878392-23.739665c91.71445-41.692918 174.79705-141.665366 128.090348-260.546468-73.457962-186.972196-144.485879-88.038229-119.562345-234.81292s-53.390363-205.274378-108.00198-205.274378c-54.619924 0-292.971985 388.105114-81.404415 724.373431z"
+                              fill="#A3D9FF" opacity=".26" p-id="9760"></path>
+                        <path d="M185.073937 147.364547c149.416585 22.929651 95.585906 150.558913 137.710832 299.792726 27.336963 96.815467 68.614488 82.667208 105.580243 154.471908 56.464266 74.662599-216.003959 324.005939-362.093253 115.703352-144.801577-357.540553 118.802178-569.967986 118.802178-569.967986z"
+                              fill="#9EE3C3" p-id="9761"></path>
+                        <path d="M210.267476 815.165711c-62.587147 0-117.086608-30.535483-157.595658-88.299927l-1.088328-1.549413-0.710321-1.752955c-77.100952-190.365951-39.524571-340.318392 5.574564-432.589467 48.862588-99.972448 115.395961-154.284982 118.204013-156.54887l5.703335-4.594238 7.244441 1.113251c116.463519 17.870174 123.40057 95.747909 131.425947 185.925408 3.402062 38.199469 7.256902 81.499955 19.756054 125.772459 14.555344 51.546022 32.479518 68.020478 53.240823 87.099443 15.84306 14.559498 33.779696 31.042261 50.511695 63.106388 14.061027 19.768516 13.288397 47.711951-2.234811 78.912061-34.311398 68.971726-132.015804 143.405859-230.031754 143.40586z m-129.307447-105.850248c34.340476 48.189653 77.836196 72.61887 129.307447 72.618869 90.106882 0 174.211347-72.585638 200.277209-124.97906 9.790795-19.685438 11.456518-36.201433 4.569315-45.30683l-0.864016-1.142329-0.65632-1.275254c-14.20226-27.586198-28.707757-40.916135-44.060654-55.022855-22.427026-20.615916-45.622529-41.925538-62.736688-102.539571-13.342398-47.263328-17.342626-92.204613-20.87346-131.857956-7.668141-86.110809-12.382842-139.056703-95.884988-154.750221-16.445378 14.85858-66.662145 64.065944-104.363144 141.78583-60.39803 124.517975-61.980675 259.927534-4.714701 402.469377z"
+                              fill="#6E6E96" p-id="9762"></path>
+                        <path d="M531.506902 43.250639s-73.703043 251.225066 88.258387 251.225066c164.578401 0 195.433736 148.984577 298.359623 19.049888-109.759089-264.405462-386.61801-270.274954-386.61801-270.274954z"
+                              fill="#9EE3C3" p-id="9763"></path>
+                        <path d="M838.552376 383.332257h-0.020769c-26.531102-0.004154-49.963377-13.155472-77.100952-28.383751-36.633441-20.557761-78.156048-43.861265-141.665366-43.861266-40.600436 0-71.792239-14.164875-92.707238-42.095848-56.181799-75.032298-13.342398-224.112416-11.493903-230.422224l3.580681-12.204223 12.71931 0.270005c2.953439 0.062309 73.325036 1.939882 158.181361 37.256529 78.558978 32.695522 184.558767 101.438782 243.432308 243.257843l3.746838 9.026473-6.06888 7.659833c-32.595828 41.148754-61.158198 59.496629-92.60339 59.496629z m-294.425858-322.55622c-3.41037 14.227184-8.573696 38.83502-11.149127 66.529219-5.088555 54.82762 2.068653 96.944238 20.698994 121.80131 14.501343 19.34897 36.1142 28.75345 66.08475 28.75345 72.195169 0 119.732656 26.676489 157.932126 48.110728 24.022133 13.479478 42.99725 24.130135 60.8425 24.134289h0.012461c11.822063 0 30.6601-4.270232 60.335722-39.304413-44.135424-100.321377-118.266322-172.877938-220.465272-215.738108-58.719846-24.628605-110.913879-32.076588-134.292154-34.286475z"
+                              fill="#6E6E96" p-id="9764"></path>
+                        <path d="M487.338246 37.385301C227.510407 37.385301 21.031392 248.018238 21.031392 507.846078s206.479015 470.460777 466.306854 470.460777 470.460777-210.632938 470.460778-470.460777S747.166086 37.385301 487.338246 37.385301z m339.840691 523.921757c-16.607381 57.984601-116.833218 40.068734-156.64441 83.186447-32.392286 35.084028-1.050942 134.304616-44.538354 155.290231-50.05061 24.142596-106.178408 37.65946-165.467341 37.65946-65.665204 0 80.062698-119.778349 26.119863-149.001193-19.191121-10.401421-29.040071 46.889475-38.079005-80.357626-3.318984-46.727472-70.550216-68.394331-114.573485-175.374446-11.057741-26.871723-31.715197-216.074576-39.815345-205.26607-49.847068 66.462757-8.307845 274.76119 38.768557 383.544107 29.754545 68.755722-171.735609 188.259912-171.73561 81.429339 0-211.584186-95.498674-86.966517-82.027503-236.316639C98.10742 246.356669 249.920818 74.770601 460.528832 74.770601c88.848244 0 179.1919 25.550776 243.702313 76.681406 30.506405 24.163366 55.234705 54.063299 71.302076 89.666566 28.196825 62.487453-197.224077 22.327332-176.728624 32.583367 41.796766 20.919153 254.959442 98.663962 232.411952 92.536927-294.151699-79.933927-11.23636 67.974784 10.642349 89.870109 36.500515 36.492207-5.113478 71.783931-14.679961 105.198082z"
+                              fill="#6E6E96" opacity=".2" p-id="9765"></path>
+                        <path d="M487.948873 994.926698c-192.563376 0-375.306879-114.922414-451.996592-304.067112-48.883358-120.567595-47.886416-252.957252 2.799743-372.781294C89.442338 198.254249 183.761297 105.343469 304.328892 56.460112s252.957252-47.894724 372.77714 2.799743c119.824042 50.690314 212.730668 145.005119 261.609872 265.576868a487.363087 487.363087 0 0 1 33.243841 133.095824 16.615689 16.615689 0 1 1-33.05276 3.414525 454.189863 454.189863 0 0 0-30.98826-124.023658c-45.547758-112.346982-132.115499-200.231516-243.764622-247.461613-111.644969-47.23425-234.999846-48.160575-347.342675-2.608663-112.338674 45.551912-200.219054 132.123806-247.44915 243.772929-47.23425 111.644969-48.160575 235.004-2.608664 347.346829 94.032339 231.909328 359.206276 344.090153 591.115604 250.057814a16.615689 16.615689 0 0 1 12.486691 30.79718c-59.750018 24.225675-121.581152 35.698808-182.407036 35.698808z"
+                              fill="#6E6E96" p-id="9766"></path>
+                        <path d="M845.032495 975.478034c-7.946453 9.483405-20.944076 9.483405-28.89053 0l-168.179851-201.045685c-7.946453-9.50002-4.315925-17.272009 8.062763-17.272009h61.872672c12.382842 0 22.510105-10.127263 22.510105-22.505951l0.008308-214.159618c0-12.378688 10.127263-22.510105 22.514259-22.510105h135.318173c12.382842 0 22.510105 10.131416 22.510104 22.510105v214.159618c0 12.378688 10.131416 22.505951 22.514259 22.505951h61.880981c12.374535 0 16.01337 7.771989 8.062763 17.272009l-168.184006 201.045685z"
+                              fill="#EBEBFF" p-id="9767"></path>
+                        <path d="M845.032495 975.478034c-7.946453 9.483405-20.944076 9.483405-28.89053 0l-168.179851-201.045685c-7.946453-9.50002-4.315925-17.272009 8.062763-17.272009h61.872672c12.382842 0 22.510105-10.127263 22.510105-22.505951l0.008308-214.159618c0-12.378688 10.127263-22.510105 22.514259-22.510105h135.318173c12.382842 0 22.510105 10.131416 22.510104 22.510105v214.159618c0 12.378688 10.131416 22.505951 22.514259 22.505951h61.880981c12.374535 0 16.01337 7.771989 8.062763 17.272009l-168.184006 201.045685z"
+                              fill="#EBEBFF" opacity=".41" p-id="9768"></path>
+                        <path d="M1005.162045 768.371776h-40.039656l-120.089894 143.551247c-7.946453 9.487559-20.944076 9.487559-28.89053 0l-120.081585-143.551247h-40.035503c-12.382842 0-16.009217 7.776143-8.062763 17.267855l168.179851 201.045685c7.946453 9.487559 20.944076 9.487559 28.89053 0l168.192314-201.045685c7.958915-9.491712 4.320079-17.267855-8.062764-17.267855z"
+                              fill="#6E6E96" opacity=".15" p-id="9769"></path>
+                        <path d="M747.357166 504.298628h173.40964v40.504896h-173.40964z" fill="#FFFFFF" opacity=".4"
+                              p-id="9770"></path>
+                        <path d="M830.589307 999.205238c-10.318343 0-20.229602-4.760395-27.183267-13.055778L635.21788 785.091313c-11.506365-13.757791-7.954761-25.488467-5.89857-29.895778 2.060345-4.407312 8.781392-14.650884 26.709721-14.650884h61.872672c3.19852 0 5.894416-2.695896 5.894416-5.890262l0.008308-214.159618c0-21.575472 17.554476-39.125794 39.129948-39.125794h135.318172c21.571318 0 39.125794 17.550322 39.125795 39.125794v214.159618c0 3.194366 2.700049 5.890262 5.898569 5.890262h61.880981c17.924175 0 24.653529 10.25188 26.70972 14.659191 2.060345 4.407312 5.607795 16.142142-5.902724 29.891625L857.780883 986.141152c-6.961974 8.307845-16.873232 13.064086-27.191576 13.064086z m-161.512806-225.429209l159.813852 191.04304c1.428949 1.703108 1.964805 1.71557 3.406216-0.012462l159.809699-191.030578h-48.833511c-21.575472 0-39.129948-17.550322-39.129948-39.12164v-214.159618c0-3.19852-2.695896-5.894416-5.894415-5.894416h-135.318173c-3.19852 0-5.89857 2.695896-5.89857 5.894416l-0.008308 214.159618c0 21.571318-17.554476 39.12164-39.125794 39.12164h-48.821048z"
+                              fill="#6E6E96" p-id="9771"></path>
+                        <path d="M830.589307 999.205238c-10.318343 0-20.229602-4.760395-27.183267-13.055778L635.21788 785.091313c-11.506365-13.757791-7.954761-25.488467-5.89857-29.895778 2.060345-4.407312 8.781392-14.650884 26.709721-14.650884h61.872672c3.19852 0 5.894416-2.695896 5.894416-5.890262l0.008308-214.159618c0-21.575472 17.554476-39.125794 39.129948-39.125794h135.318172c21.571318 0 39.125794 17.550322 39.125795 39.125794v214.159618c0 3.194366 2.700049 5.890262 5.898569 5.890262h61.880981c17.924175 0 24.653529 10.25188 26.70972 14.659191 2.060345 4.407312 5.607795 16.142142-5.902724 29.891625L857.780883 986.141152c-6.961974 8.307845-16.873232 13.064086-27.191576 13.064086z m-161.512806-225.429209l159.813852 191.04304c1.428949 1.703108 1.964805 1.71557 3.406216-0.012462l159.809699-191.030578h-48.833511c-21.575472 0-39.129948-17.550322-39.129948-39.12164v-214.159618c0-3.19852-2.695896-5.894416-5.894415-5.894416h-135.318173c-3.19852 0-5.89857 2.695896-5.89857 5.894416l-0.008308 214.159618c0 21.571318-17.554476 39.12164-39.125794 39.12164h-48.821048z"
+                              fill="#6E6E96" opacity=".41" p-id="9772"></path>
+                    </svg>
+                </div>
+                <div class="support-text">
+                    <h4>免费更新服务</h4>
+                    <p>国标变更与安全补丁</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+<!------------------- end aftersale --------------------------------->
 
-<div class="gradient-transition7"></div>
-<!----------------------------- end aftersale ----------------->
+
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
 
@@ -402,14 +1031,15 @@
 <!-- End Footer -->
 
 
+
 <div id="bi-sidebar" class="position-fixed">
     <ul id="bi-List" class="bi-links list-unstyled">
         <li><a href="#pain"><i class="bi bi-search me-1"></i> 痛点诊断</a></li>
-        <li><a href="#workflow"><i class="bi bi-kanban me-1"></i> 实施流程</a></li>
+        <li><a href="#solution"><i class="bi bi-bar-chart-line me-1"></i> 解决方案</a></li>
+
         <li><a href="#architecture"><i class="bi bi-tools me-1"></i> 架构设计</a></li>
-        <li><a href="#core"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
-        <li><a href="#highlights"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
-        <li><a href="#compact"><i class="bi bi-bar-chart-line me-1"></i> 效益分析</a></li>
+        <li><a href="#features"><i class="bi bi-cpu me-1"></i> 核心功能</a></li>
+        <li><a href="#advantages"><i class="bi bi-stars me-1"></i> 系统亮点</a></li>
         <li><a href="#support"><i class="bi bi-question-diamond-fill me-1"></i> 支持服务</a></li>
         <li>
             <a href="../pdf/BI.pdf" target="_blank" title="商业智能系统彩页">

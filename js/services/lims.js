@@ -20,169 +20,7 @@ counters.forEach(counter => {
 });
 
 
-// core
-// --------------------------------------------------------------------- js animation
-// wave
-function initDataWave() {
-    const canvas = document.getElementById('dataWaveCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = canvas.offsetWidth;
-    let phase = 0;
-
-    // 动态计算波浪高度
-    function calculateAmplitude() {
-        return window.innerWidth > 768 ? 12 : 8;
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // 主波浪线（科技蓝）
-        ctx.beginPath();
-        ctx.strokeStyle = 'rgba(72, 202, 228, 0.7)';
-        ctx.lineWidth = 2;
-        for (let x = 0; x < canvas.width; x++) {
-            const y = Math.sin(x * 0.03 + phase) * calculateAmplitude() + 30;
-            ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-
-        // 辅助波纹（浅色光晕）
-        ctx.beginPath();
-        ctx.strokeStyle = 'rgba(202, 240, 248, 0.3)';
-        ctx.lineWidth = 4;
-        for (let x = 0; x < canvas.width; x++) {
-            const y = Math.sin(x * 0.03 + phase + 1) * (calculateAmplitude() - 2) + 30;
-            ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-
-        phase += 0.08;
-        requestAnimationFrame(draw);
-    }
-
-    function updateIntegrity() {
-        let value = 97.5; // 初始值更高
-        const element = document.getElementById('integrityValue');
-        const meter = document.getElementById('integrityMeter');
-
-        const interval = setInterval(() => {
-            // 波动增长算法（最终趋近100%）
-            value = Math.min(100, value + (Math.random() * 0.15 - 0.05));
-            element.textContent = value.toFixed(1);
-
-            // 更新仪表圆环
-            const dashValue = (value / 100) * 50; // 周长计算
-            meter.setAttribute('stroke-dasharray', `${dashValue} 100`);
-
-            // 颜色反馈
-            if (value > 99) {
-                meter.setAttribute('stroke', '#4cc9f0');
-            } else if (value > 95) {
-                meter.setAttribute('stroke', '#00b4d8');
-            }
-        }, 1800);
-    }
-
-    draw();
-    updateIntegrity();
-    window.addEventListener('resize', () => {
-        canvas.width = canvas.offsetWidth;
-    });
-}
-
-// 页面加载后启动
-document.addEventListener('DOMContentLoaded', initDataWave);
-
-// -------------------------------------- 智能采样路径动画集成 ----------------------------------------------------
-function animateSamplePath() {
-    const path = document.getElementById('samplePath');
-    const dot = document.getElementById('sampleDot');
-    const pathLength = path.getTotalLength();
-
-    // 初始化路径
-    path.style.strokeDasharray = pathLength;
-    path.style.strokeDashoffset = pathLength;
-    // 使用GSAP动画
-    gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 6,
-        ease: "power2.inOut",
-        onComplete: () => {
-            // 路径绘制完成后启动圆点动画
-            gsap.to(dot, {
-                motionPath: {
-                    path: "#samplePath",
-                    align: "#samplePath"
-                },
-                duration: 8,
-                repeat: -1,
-                ease: "none"
-            });
-        }
-    });
-}
-
-// 滚动到该区域时触发
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            animateSamplePath();
-            observer.unobserve(entries[0].target);
-        }
-    }, {threshold: 0.3});
-
-    observer.observe(document.querySelector('.sample-path-container'));
-});
-
-// =========================================================================================
-
-// flip care
-document.querySelectorAll('.timeline-item').forEach(step => {
-    const dot = step.querySelector('.timeline-dot');
-    const card = step.querySelector('.flip-card-inner');
-
-    dot.addEventListener('click', () => {
-        const isActive = dot.classList.contains('active');
-
-        // 清除所有
-        document.querySelectorAll('.timeline-dot').forEach(d => d.classList.remove('active'));
-        document.querySelectorAll('.flip-card-inner').forEach(c => c.classList.remove('flipped'));
-
-        // 激活当前（如果之前不是 active）
-        if (!isActive) {
-            dot.classList.add('active');
-            card.classList.add('flipped');
-        }
-    });
-});
-
-//  --------------------------------------------------------------------------
-
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll('.pain-card');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {threshold: 0.3});
-
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        observer.observe(card);
-    });
-});
-
-// 架构图
-// ====================================================
-// =====================================
-//      LIMS 架构图交互增强逻辑
-// =====================================
+// =================== 架构图 ==================
 
 const itemDescriptions = {
     "供应商合格率": "统计各类供应商质检通过情况",
@@ -317,6 +155,172 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// =================== end architecture ========================
+
+
+
+// ------------------------------ core --------------------------------------- js animation
+// wave
+function initDataWave() {
+    const canvas = document.getElementById('dataWaveCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth;
+    let phase = 0;
+
+    // 动态计算波浪高度
+    function calculateAmplitude() {
+        return window.innerWidth > 768 ? 12 : 8;
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 主波浪线（科技蓝）
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(72, 202, 228, 0.7)';
+        ctx.lineWidth = 2;
+        for (let x = 0; x < canvas.width; x++) {
+            const y = Math.sin(x * 0.03 + phase) * calculateAmplitude() + 30;
+            ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        // 辅助波纹（浅色光晕）
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(202, 240, 248, 0.3)';
+        ctx.lineWidth = 4;
+        for (let x = 0; x < canvas.width; x++) {
+            const y = Math.sin(x * 0.03 + phase + 1) * (calculateAmplitude() - 2) + 30;
+            ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        phase += 0.08;
+        requestAnimationFrame(draw);
+    }
+
+    function updateIntegrity() {
+        let value = 97.5; // 初始值更高
+        const element = document.getElementById('integrityValue');
+        const meter = document.getElementById('integrityMeter');
+
+        const interval = setInterval(() => {
+            // 波动增长算法（最终趋近100%）
+            value = Math.min(100, value + (Math.random() * 0.15 - 0.05));
+            element.textContent = value.toFixed(1);
+
+            // 更新仪表圆环
+            const dashValue = (value / 100) * 50; // 周长计算
+            meter.setAttribute('stroke-dasharray', `${dashValue} 100`);
+
+            // 颜色反馈
+            if (value > 99) {
+                meter.setAttribute('stroke', '#4cc9f0');
+            } else if (value > 95) {
+                meter.setAttribute('stroke', '#00b4d8');
+            }
+        }, 1800);
+    }
+
+    draw();
+    updateIntegrity();
+    window.addEventListener('resize', () => {
+        canvas.width = canvas.offsetWidth;
+    });
+}
+
+// 页面加载后启动
+document.addEventListener('DOMContentLoaded', initDataWave);
+
+// -------------------------------------- 智能采样路径动画集成 ----------------------------------------------------
+function animateSamplePath() {
+    const path = document.getElementById('samplePath');
+    const dot = document.getElementById('sampleDot');
+    const pathLength = path.getTotalLength();
+
+    // 初始化路径
+    path.style.strokeDasharray = pathLength;
+    path.style.strokeDashoffset = pathLength;
+    // 使用GSAP动画
+    gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 6,
+        ease: "power2.inOut",
+        onComplete: () => {
+            // 路径绘制完成后启动圆点动画
+            gsap.to(dot, {
+                motionPath: {
+                    path: "#samplePath",
+                    align: "#samplePath"
+                },
+                duration: 8,
+                repeat: -1,
+                ease: "none"
+            });
+        }
+    });
+}
+
+// 滚动到该区域时触发
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateSamplePath();
+            observer.unobserve(entries[0].target);
+        }
+    }, {threshold: 0.3});
+
+    observer.observe(document.querySelector('.sample-path-container'));
+});
+
+// =========================================================================================
+
+// flip card
+document.querySelectorAll('.timeline-item').forEach(step => {
+    const dot = step.querySelector('.timeline-dot');
+    const card = step.querySelector('.flip-card-inner');
+
+    dot.addEventListener('click', () => {
+        const isActive = dot.classList.contains('active');
+
+        // 清除所有
+        document.querySelectorAll('.timeline-dot').forEach(d => d.classList.remove('active'));
+        document.querySelectorAll('.flip-card-inner').forEach(c => c.classList.remove('flipped'));
+
+        // 激活当前（如果之前不是 active）
+        if (!isActive) {
+            dot.classList.add('active');
+            card.classList.add('flipped');
+        }
+    });
+});
+
+//  --------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.pain-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.3});
+
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        observer.observe(card);
+    });
+});
+
+// ========================= end core ================================================================
+
+
+
+
 // process
 // =============================== 采集动画 ========================== 
 
@@ -379,6 +383,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// ========================================== end highlights ========================================
+
+
 
 // ========================================== sidebar ========================================
 
@@ -402,7 +409,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // sidebar toggle
-
 document.getElementById("toggle-lims").addEventListener("click", function () {
     const list = document.getElementById("limsList");
     list.style.display = list.style.display === "none" ? "block" : "none";

@@ -869,7 +869,7 @@ section {
 
 }
 
-.toast {
+.toastMsg {
     --toast-bg: rgba(0, 100, 80, 0.85);
     --toast-border: rgba(140, 255, 210, 0.2);
     color: #d8fff6;
@@ -893,12 +893,12 @@ section {
     pointer-events: auto;
 }
 
-.toast.show {
+.toastMsg.show {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
-.toast.hide {
+.toastMsg.hide {
     opacity: 0;
     transform: translateY(-15px) scale(0.98);
     transition: opacity 0.2s ease-in,
@@ -906,7 +906,7 @@ section {
 }
 
 
-.toast::after {
+.toastMsg::after {
     content: '';
     position: absolute;
     top: -1px;
@@ -934,7 +934,7 @@ section {
     }
 }
 
-.toast:active {
+.toastMsg:active {
     transform: scale(0.98) translateY(1px);
 }
 

@@ -1,3 +1,106 @@
+
+// NavBar
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header');
+    const megamenuPanel = document.getElementById('megamenuPanel');
+    const productCenterDropdown = document.getElementById('productCenterDropdown');
+    const mobileToggle = document.getElementById('mobileToggle');
+    // const mobileClose = document.getElementById('mobileClose');
+    const navbarMobile = document.getElementById('navbarMobile');
+    const mobileDropdown = document.getElementById('mobileDropdown');
+    const mobileDropdownContent = document.getElementById('mobileDropdownContent');
+
+    // 桌面端菜单交互
+    if (productCenterDropdown) {
+        productCenterDropdown.addEventListener('mouseenter', function() {
+            megamenuPanel.style.display = 'block';
+        });
+
+        productCenterDropdown.addEventListener('mouseleave', function() {
+            setTimeout(function() {
+                if (!megamenuPanel.matches(':hover')) {
+                    megamenuPanel.style.display = 'none';
+                }
+            }, 200);
+        });
+
+        megamenuPanel.addEventListener('mouseleave', function() {
+            megamenuPanel.style.display = 'none';
+        });
+    }
+
+    // 移动端菜单切换
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function () {
+            navbarMobile.classList.toggle('active');
+
+            // 可选：切换图标样式
+            this.classList.toggle('open'); // 可用于切换 icon
+        });
+    }
+
+    // 移动端产品中心下拉菜单
+    if (mobileDropdown) {
+        mobileDropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileDropdownContent.classList.toggle('active');
+
+            // 旋转图标
+            const chevron = this.querySelector('.bi-chevron-down');
+            chevron.style.transform = mobileDropdownContent.classList.contains('active') ?
+                'rotate(180deg)' : 'rotate(0)';
+        });
+    }
+
+    // 滚动效果
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+            header.classList.remove('transparent');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // 点击菜单项关闭移动菜单
+    document.querySelectorAll('.navbar-mobile a').forEach(link => {
+        if (!link.querySelector('i')) {
+            link.addEventListener('click', function() {
+                navbarMobile.classList.remove('active');
+            });
+        }
+    });
+});
+
+
+
+
+// ====================================
+
+// 锚点
+
+document.querySelectorAll('a.scrollto[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetID);
+
+        if (targetEl) {
+            const headerOffset = document.querySelector('#header')?.offsetHeight || 80;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
 (function () {
     "use strict";
 
@@ -217,174 +320,4 @@
     });
 
 })();
-
-// NavBar
-window.addEventListener('DOMContentLoaded', function() {
-    const header = document.getElementById('header');
-    const megamenuPanel = document.getElementById('megamenuPanel');
-    const productCenterDropdown = document.getElementById('productCenterDropdown');
-    const mobileToggle = document.querySelector('.mobile-nav-toggle');
-    const mobileNav = document.querySelector('.navbar-mobile');
-    const toggleTransparentBtn = document.getElementById('toggleTransparent');
-    const simulateScrollBtn = document.getElementById('simulateScroll');
-
-    let isTransparent = false;
-    let isScrolled = false;
-
-    // 桌面端菜单交互
-    if (productCenterDropdown) {
-        productCenterDropdown.addEventListener('mouseenter', function() {
-            megamenuPanel.style.display = 'block';
-        });
-
-        productCenterDropdown.addEventListener('mouseleave', function() {
-            setTimeout(function() {
-                if (!megamenuPanel.matches(':hover')) {
-                    megamenuPanel.style.display = 'none';
-                }
-            }, 200);
-        });
-
-        megamenuPanel.addEventListener('mouseleave', function() {
-            megamenuPanel.style.display = 'none';
-        });
-    }
-
-// 移动端菜单切换
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function() {
-            this.classList.toggle('bi-x');
-            document.body.classList.toggle('mobile-nav-active');
-
-            // 使用更可靠的方式检查移动菜单是否存在
-            const mobileMenuUl = mobileNav.querySelector('ul') || document.createElement('ul');
-
-            // 只在需要时构建菜单
-            if (mobileMenuUl.children.length === 0) {
-                // 从桌面菜单克隆内容
-                const mainNavUl = document.querySelector('.navbar ul');
-                if (mainNavUl) {
-                    const mainNavClone = mainNavUl.cloneNode(true);
-
-                    // 特殊处理产品中心菜单
-                    const productCenterItem = mainNavClone.querySelector('#productCenterDropdown');
-                    if (productCenterItem) {
-                        const productCenterCloned = productCenterItem.cloneNode(false);
-
-                        // 添加回产品中心菜单项
-                        const clonedLink = productCenterItem.querySelector('a').cloneNode(true);
-                        productCenterCloned.appendChild(clonedLink);
-
-                        // 添加产品中心的下拉菜单
-                        const dropdownContainer = document.createElement('div');
-                        dropdownContainer.className = 'dropdown-menu';
-
-                        // 获取所有产品项
-                        const products = document.querySelectorAll('#megamenuPanel .col');
-                        const productsList = document.createElement('ul');
-
-                        products.forEach(item => {
-                            const li = document.createElement('li');
-                            const a = item.querySelector('a').cloneNode(true);
-                            li.appendChild(a);
-                            productsList.appendChild(li);
-                        });
-
-                        dropdownContainer.appendChild(productsList);
-                        productCenterCloned.appendChild(dropdownContainer);
-                        productCenterCloned.classList.add('dropdown');
-
-                        // 替换原来的产品中心项
-                        mainNavClone.replaceChild(productCenterCloned, productCenterItem);
-                    }
-
-                    // 添加到移动菜单
-                    mobileMenuUl.innerHTML = mainNavClone.innerHTML;
-
-                    // 确保有容器
-                    if (!mobileMenuUl.parentNode) {
-                        mobileNav.appendChild(mobileMenuUl);
-                    }
-                }
-            }
-
-            // 显示移动菜单
-            mobileNav.style.display = 'block';
-        });
-    }
-    // 移动端二级菜单切换
-    document.addEventListener('click', function(e) {
-        if (document.body.classList.contains('mobile-nav-active')) {
-            if (e.target.closest('.dropdown > a')) {
-                const dropdown = e.target.closest('.dropdown');
-                dropdown.classList.toggle('dropdown-active');
-            }
-        }
-    });
-
-    // 透明模式切换
-    if (toggleTransparentBtn) {
-        toggleTransparentBtn.addEventListener('click', function() {
-            isTransparent = !isTransparent;
-            header.classList.toggle('transparent', isTransparent);
-
-            if (isTransparent) {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // 模拟滚动效果
-    if (simulateScrollBtn) {
-        simulateScrollBtn.addEventListener('click', function() {
-            isScrolled = !isScrolled;
-            header.classList.toggle('scrolled', isScrolled);
-            header.classList.remove('transparent');
-            isTransparent = false;
-        });
-    }
-
-    // 实际滚动效果
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-            isScrolled = true;
-
-            if (isTransparent) {
-                header.classList.remove('transparent');
-                isTransparent = false;
-            }
-        } else {
-            header.classList.remove('scrolled');
-            isScrolled = false;
-        }
-    });
-});
-
-
-
-// ====================================
-
-// 锚点
-
-document.querySelectorAll('a.scrollto[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetID = this.getAttribute('href').substring(1);
-        const targetEl = document.getElementById(targetID);
-
-        if (targetEl) {
-            const headerOffset = document.querySelector('#header')?.offsetHeight || 80;
-            const elementPosition = targetEl.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-
 

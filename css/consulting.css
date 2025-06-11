@@ -9,6 +9,9 @@
     pointer-events: none;
 }
 
+section {
+    padding: 0 !important;
+}
 
 .hero-img {
     background: linear-gradient(rgba(0, 16, 40, 0.25),
@@ -167,17 +170,20 @@
 ================================== */
 
 #diagnostic-pain {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
-    background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.2)),
-            url("../assets/img/consulting/pain1.png") center no-repeat;
 }
 
-.bg-wrapper {
-    position: relative;
+#diagnostic-pain:before {
+    position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.2)),
+    url("../assets/img/consulting/pain2.png") center no-repeat;
 }
 
 

@@ -15,7 +15,6 @@ setInterval(() => {
 
 // ================================ pain ==============
 
-// 痛点数据
 const painPoints = [
     {
         title: "运输效率低下",
@@ -69,11 +68,10 @@ const painPoints = [
     }
 ];
 
-// 获取DOM元素
+
 const painPointElements = document.querySelectorAll('.pain-point');
 const painDetailElement = document.getElementById('painDetail');
 
-// 添加点击事件
 painPointElements.forEach(point => {
     point.addEventListener('click', function () {
         const index = this.getAttribute('data-index') - 1;
@@ -126,7 +124,8 @@ setInterval(() => {
     const truckLeft = parseFloat(getComputedStyle(truck).left) / parseFloat(getComputedStyle(truck.parentElement).width) * 100;
 
     painPointsPositions.forEach((pos, index) => {
-        if (Math.abs(truckLeft - pos) < 2) { // 卡车接近痛点时
+        if (Math.abs(truckLeft - pos) < 2) {
+            // 卡车接近痛点时
             const point = document.querySelector(`.pain-point[data-index="${index + 1}"]`);
             point.style.animation = 'painPulse 0.5s 3';
 
@@ -409,7 +408,6 @@ function updateProcessDisplay(stepIndex) {
     });
 }
 
-// 暴露函数给全局作用域
 window.updateProcessDisplay = updateProcessDisplay;
 
 // ============================ end process =====================================

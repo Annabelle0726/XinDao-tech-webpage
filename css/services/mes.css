@@ -682,7 +682,7 @@ section {
     gap: 12px;
 }
 
-.toast {
+.toastMsg {
     min-width: 240px;
     max-width: 360px;
     background: linear-gradient(135deg, #e0f2ff, #cce6ff);
@@ -699,12 +699,12 @@ section {
     cursor: pointer;
 }
 
-.toast.show {
+.toastMsg.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-.toast.hide {
+.toastMsg.hide {
     opacity: 0;
     transform: translateY(20px);
 }

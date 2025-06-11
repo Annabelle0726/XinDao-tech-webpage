@@ -276,7 +276,6 @@
     transform-origin: bottom center;
 }
 
-/* 更细腻的翻页滑出动画 */
 .stack-panel-card.slide-out {
     animation: flipOutSmooth 0.45s cubic-bezier(0.45, 0, 0.2, 1) forwards;
 }
@@ -447,10 +446,11 @@
 }
 
 @media (max-width: 768px) {
-    .stack-container {
+    #pain .stack-container {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem 0;
+        margin: auto;
     }
 
     .col-3 {
@@ -461,10 +461,11 @@
         width: 100%;
         padding-right: 0;
         height: auto;
+        justify-items: center;
     }
 
     .stack-panel-cards {
-        position: static; /* 改为静态定位，取消绝对定位 */
+        position: static;
         width: 100%;
         max-width: 100%;
         perspective: 1000px;
@@ -485,23 +486,23 @@
         color: #003366;
         height: auto;
         min-height: 280px;
-        padding: 1.2rem 1.5rem;
+        padding: 1.2rem 1.7rem;
         border-radius: 12px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         font-size: 0.9rem;
         display: flex;
         flex-direction: column;
-        margin-bottom: 0; /* 取消底部边距 */
+        margin-bottom: 0;
+
     }
 
-    /* 取消原有的堆叠效果 */
     .stack-panel-card[data-index="0"],
     .stack-panel-card[data-index="1"],
     .stack-panel-card[data-index="2"],
     .stack-panel-card[data-index="3"],
     .stack-panel-card[data-index="4"] {
         transform: none; /* 取消transform */
-        z-index: 1; /* 统一z-index */
+        z-index: 1;
     }
 
     .stack-panel-card.active {
@@ -514,7 +515,6 @@
         transform: translateY(-30px);
     }
 
-    /* 其他元素样式调整 */
     .spc-badge {
         width: 3rem;
         height: 3rem;
@@ -540,8 +540,8 @@
         gap: 0.5rem;
     }
 
-    .spc-stats {
-        flex-direction: column;
+    #pain .spc-stats {
+        /*flex-direction: column;*/
         gap: 0.8rem;
         margin-top: 0.5rem;
     }
@@ -675,14 +675,12 @@
     margin-bottom: 2rem;
 }
 
-/* 分组标签 */
 .spc-group {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-/* 统计数据区块 */
 .spc-stat {
     background: #d8ecff;
     padding: 0.8rem 1.4rem;
@@ -752,8 +750,6 @@
     box-shadow: 0 8px 18px rgba(0, 153, 255, 0.45);
 }
 
-
-/* 响应式容器调整 */
 @media (max-width: 768px) {
     .stack-panel-card {
         padding: 1.5rem;
@@ -761,11 +757,6 @@
 
     .spc-content p {
         max-width: 100%;
-    }
-
-    .spc-stats {
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .spc-tags {
@@ -851,11 +842,9 @@
     pointer-events: none;
     backdrop-filter: blur(1px);
 
-    /* 添加动画效果增强现代感 */
     transition: all 0.3s ease;
 }
 
-/* 鼠标悬停效果 */
 #pain .title-highlight:hover::after {
     transform: rotate(-1.25deg) scale(1.05);
     opacity: 0.9;
@@ -1185,7 +1174,6 @@
     cursor: pointer !important;
 }
 
-/* 第二行卡片稍小（可选） */
 #grid-container .card.small {
     flex: 1 1 100px;
     font-size: 13px;
@@ -1238,7 +1226,7 @@
 
 }
 
-.toast {
+.toastMsg {
     --toast-bg: rgba(60, 80, 100, 0.85); /* 调亮背景色，降低不透明度 */
     --toast-border: rgba(120, 180, 220, 0.1); /* 更浅的边框色 */
 
@@ -1262,20 +1250,19 @@
     pointer-events: auto;
 }
 
-.toast.show {
+.toastMsg.show {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
-.toast.hide {
+.toastMsg.hide {
     opacity: 0;
     transform: translateY(-15px) scale(0.98);
     transition: opacity 0.2s ease-in,
     transform 0.25s ease-in;
 }
 
-/* 流光边框效果 */
-.toast::after {
+.toastMsg::after {
     content: '';
     position: absolute;
     top: -1px;
@@ -1303,17 +1290,24 @@
     }
 }
 
-.toast:active {
+.toastMsg:active {
     transform: scale(0.98) translateY(1px);
+}
+
+
+@media (max-width: 768px)  {
+    .grid-container {
+        padding: 1rem 2rem;
+    }
 }
 
 /* ========================== end architecture ====================== */
 
-/* ==================== 中央辐射布局 ==================== */
+
+/* ================ ad =====================*/
 #advantages {
     background: linear-gradient(135deg, #e8f2fb, #d4ebfc);
 }
-
 
 .adv-background::before {
     content: '';
@@ -1356,7 +1350,6 @@
     margin: 0 auto;
 }
 
-/* ==================== 中心标题 ==================== */
 .adv-center-circle {
     position: absolute;
     top: 50%;
@@ -1401,7 +1394,6 @@
     0 4px 6px rgba(0, 120, 255, 0.2);
 }
 
-/* ==================== 卡片定位容器 ==================== */
 .ad-card {
     position: absolute;
     top: 50%;
@@ -1409,14 +1401,9 @@
     width: 240px;
     height: auto;
     transform-origin: center;
-    /* 禁止 hover transform 应用于此层 */
     pointer-events: none;
 }
 
-/* ==================== 卡片视觉容器（浮动、动效） ==================== */
-
-
-/* 卡片内部容器：浮动 + 发光核心结构 */
 .ad-card-inner {
     display: block;
     position: relative;
@@ -1446,8 +1433,6 @@
     pointer-events: none;
 }
 
-
-/* 高亮卡片 */
 .ad-card-inner.highlight {
     background: linear-gradient(145deg, #c7e9ff, #d8f3ff);
     box-shadow: 0 15px 40px rgba(0, 140, 255, 0.25),
@@ -1455,22 +1440,17 @@
     border: 1px solid rgba(0, 140, 255, 0.25);
 }
 
-/* 普通卡片 */
 .ad-card-inner:not(.highlight) {
     background: linear-gradient(145deg, #f3f9fd, #f1f7fc);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(200, 220, 255, 0.15);
 }
 
-
-/* 加载后进入状态 */
 .ad-card-inner.enter {
     opacity: 1;
     transform: scale(1);
 }
 
-
-/* ==================== 卡片内容美化 ==================== */
 .ad-card-inner h3 {
     color: var(--darkest-blue);
     font-size: 1.06rem;
@@ -1489,7 +1469,6 @@
     background-repeat: no-repeat;
 }
 
-/* 图标设置 */
 .ad-card:nth-child(7) h3::before {
     background-image: url('../../assets/img/eam/protection_colorful.svg');
 }
@@ -1544,7 +1523,6 @@
     font-weight: bold;
 }
 
-/* ==================== 卡片辐射定位 ==================== */
 .ad-card:nth-child(1) {
     transform: translate(420px, 0px) translate(-50%, -50%);
 }
@@ -1577,22 +1555,43 @@
     transform: translate(297px, -212px) translate(-50%, -50%);
 }
 
-
-/* ==================== 响应式支持 ==================== */
 @media (max-width: 768px) {
+    #advantages .dotlottie {
+        display: none;
+    }
+
+    .adv-center-circle {
+        position: relative;
+    }
+
     .adv-radial-container {
-        height: 640px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 1rem;
+        padding: 1rem;
+        height: auto !important;
+        overflow: visible !important;
     }
 
     .ad-card {
-        width: 180px;
+        position: static !important;
+        width: 100% !important;
+        transform: none !important;
+        pointer-events: auto;
+        cursor: auto;
     }
 
     .ad-card-inner {
-        padding: 18px;
-        font-size: 0.9rem;
+        padding: 1.2rem 1rem !important;
+        min-height: 180px;
+    }
+
+    .ad-card-glow {
+        display: none;
     }
 }
+
 
 
 /* ================================== end ad-card =========================================================*/
@@ -1663,7 +1662,6 @@
     padding: 0.5rem;
 }
 
-/* 陶瓷导航项样式 */
 .step-nav-item {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
@@ -1744,8 +1742,6 @@
     z-index: 1;
 }
 
-
-/* 陶瓷详情卡片样式 */
 .step-detail-card {
     background: rgba(255, 255, 255, 0.97);
     border-radius: 12px;
@@ -1885,7 +1881,6 @@
     font-size: 1rem
 }
 
-/* 响应式设计 */
 @media (max-width: 1200px) {
     #process {
         padding: 0 3rem;
@@ -2290,6 +2285,200 @@
     font-style: italic;
 }
 
+
+@media (max-width: 768px) {
+    #process {
+        padding: 30px 15px;
+    }
+
+    #permission-system img {
+        display: none;
+    }
+
+    .section-header {
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .steps-nav {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #00a8ff #e4f1fd;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .steps-nav::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .steps-nav::-webkit-scrollbar-thumb {
+        background: #00a8ff;
+        border-radius: 3px;
+    }
+
+    .step-nav-item {
+        flex: 0 0 auto;
+        min-width: 120px;
+        padding: 10px;
+    }
+
+    /* 右侧详情布局调整 */
+    .step-detail-container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .step-detail-card {
+        padding: 20px;
+    }
+
+    .detail-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .detail-icon {
+        margin-bottom: 10px;
+    }
+
+    .detail-content {
+        gap: 20px;
+    }
+
+    .detail-section {
+        padding: 10px;
+    }
+
+    .detail-stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 100px;
+    }
+
+    /* 权限系统部分 */
+    #permission-system {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .permission-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .roles-panel {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .role-item {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .permission-content {
+        overflow-x: auto;
+    }
+
+    .permission-header {
+        grid-template-columns: 1fr;
+    }
+
+    .permission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .permission-column {
+        padding: 10px;
+    }
+
+    .permission-column.emergency {
+        border-right: none;
+        border-bottom: 2px dashed rgba(0, 102, 204, 0.1);
+    }
+
+    .permission-items {
+        grid-template-columns: 1fr;
+    }
+
+    .column-title {
+        justify-content: flex-start;
+    }
+
+    .empty-permission {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #process {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .steps-nav {
+        gap: 10px;
+    }
+
+    .step-nav-item {
+        min-width: 100px;
+        padding: 8px;
+    }
+
+    .step-nav-icon i {
+        font-size: 1.2rem;
+    }
+
+    .detail-stats .stat-item {
+        flex: 1 1 100%;
+    }
+
+    .permission-container {
+        gap: 15px;
+    }
+
+    .permission-header {
+        font-size: 1rem;
+    }
+
+    .permission-category {
+        font-size: 1rem;
+    }
+
+    .permission-item {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+    }
+
+    .permission-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .permission-icon i {
+        font-size: 14px;
+    }
+}
 /*===================== end maintain =================================*/
 
 
@@ -2364,7 +2553,6 @@
 }
 
 
-/* 拟陶瓷卡片样式 */
 .service-card {
     border-radius: 14px;
     padding: 1.2rem 1rem;
@@ -2494,8 +2682,8 @@
 
 @media (max-width: 1100px) {
     .service-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
     }
 
     #aftersale {
